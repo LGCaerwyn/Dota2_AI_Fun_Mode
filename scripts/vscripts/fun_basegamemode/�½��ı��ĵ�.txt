@@ -1,0 +1,15 @@
+                Timers:CreateTimer(function() 
+    
+                    local total_player_count = PlayerResource:GetPlayerCount() 
+                    for playerID = 0, total_player_count - 1 do           
+                        local player = PlayerResource:GetPlayer(playerID)
+                        if player == nil then break end  --试玩模式移除英雄时可能导致player为nil
+                        local hero = player:GetAssignedHero()
+                        if hero == nil then break end  --开始计时后有些英雄尚未出生
+                    --****************
+                    modifier_Fun_BaseGameMode_neutral_items_for_AI(hero)
+                    --****************
+                    end
+                return 0.2
+                end
+                )

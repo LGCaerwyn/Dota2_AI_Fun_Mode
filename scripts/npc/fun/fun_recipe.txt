@@ -1,0 +1,609 @@
+//========================================
+//这里存放自定义物品的合成卷轴
+//合成品在Fun_Items.txt中
+
+//  #1600  卷轴：AI的阿哈利姆神杖           "item_recipe_fun_Aghanims_Scepter_AI"    
+//  #1601  卷轴：阿哈利姆的长袍              "item_recipe_fun_Aghanims_Robe"                         
+//  #1602  卷轴：阿哈利姆的赝品              "item_recipe_fun_Aghanims_Fake_Scepter"                                        
+//  #1603  卷轴：灵界芒果                       "item_recipe_fun_greater_mango"                              
+//  #1604  卷轴：墨丘利的护手                 "item_recipe_fun_Mercurys_gloves"                       
+//  #1605  卷轴：定海神针                       "item_recipe_fun_monkey_king_bar"                     
+//  #1606  卷轴：科勒的超级匕首             "item_recipe_fun_super_blink_dagger"                        
+//  #1607  卷轴：大师之笛-力量               "item_recipe_fun_grandmasters_glaive_str"               
+//  #1608  卷轴：大师之笛-敏捷               "item_recipe_fun_grandmasters_glaive_agi"             
+//  #1609  卷轴：大师之笛-智力               "item_recipe_fun_grandmasters_glaive_int"             
+//  #1610  卷轴：大师之笛-融合               "item_recipe_fun_grandmasters_glaive_all"            
+//  #1611  卷轴：上古狂战斧                    "item_recipe_bfury_v2"                                               
+//  #1612  卷轴：上古黯灭                       "item_recipe_desolator_v2"                                         
+//  #1613  卷轴：伊卡洛斯之殇                 "item_recipe_greater_crit_v2"                                      
+//  #1614  卷轴：破泞之主的疏浚三叉戟    "item_recipe_fun_trident_three_phase_power"    
+//  #1615  卷轴：翡翠鞋                           "item_recipe_fun_Jade_boots"
+//  #1616  卷轴：冰霜重铠                        "item_recipe_fun_shivas_guard_v2"
+//  #1617  卷轴：宝莲玄珠                        "item_recipe_fun_lotus_orb_v2"
+//  #1618  卷轴：万世金盘                        "item_recipe_fun_aeon_disk_v2"
+//  #1619  卷轴：锢魂法器                        "item_recipe_fun_spirit_vessel"
+//  #1620  卷轴：德尊烟斗                        "item_recipe_fun_pipe_v2"
+//  #1621  卷轴：强袭战甲                        "item_recipe_fun_assault_armor_v2"
+
+"DOTAAbilities"
+{      
+                //===========================================
+                //卷轴：AI的阿哈利姆神杖
+                //===========================================
+	"item_recipe_fun_Aghanims_Scepter_AI" 
+	{
+		"BaseClass"	                "item_datadriven"
+		"AbilityTextureName"	"item_recipe_ultimate_scepter_tease2"
+		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"Model"			"models/props_gameplay/recipe.vmdl"
+		"ID"	                                "1600"
+		"ItemQuality"	"component"
+		"ItemCost"	"3800"
+		"ItemRecipe"	"1"
+		"ItemResult"	"item_fun_Aghanims_Scepter_AI"
+		"ItemRequirements"
+		{
+			"01"	"item_heart"
+		}
+	}
+
+                //===========================================
+                //卷轴：阿哈利姆的长袍
+                //===========================================
+	"item_recipe_fun_Aghanims_Robe"
+	{
+		"BaseClass"	                "item_datadriven"
+		"AbilityTextureName"	"item_recipe_crimson_robe"
+		"Model"			"models/props_gameplay/recipe.vmdl"
+		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ID"	"1601"
+		"ItemCost"	                "2300"
+		"ItemDroppable"	                "1"
+		"ItemSellable"	                "1"
+		"ItemKillable"	                "0"
+		"ItemShareability"	                "ITEM_NOT_SHAREABLE"
+		"ItemPurchasable"	                "1"
+		"ItemRecipe"	                "1"
+		"ItemResult"	                "item_fun_Aghanims_Robe"
+		"ItemStockMax"	"2"
+		"ItemStockInitial"	"2"
+		"ItemRequirements"
+		{
+			"01"	"item_fun_aeon_disk_v2;item_pers;item_cloak"
+		}
+	}
+
+                //===========================================
+                //卷轴：阿哈利姆的赝品
+                //===========================================
+	"item_recipe_fun_Aghanims_Fake_Scepter"
+	{
+		"BaseClass"	                "item_datadriven"
+		"AbilityTextureName"	"item_recipe_ultimate_scepter_tease"
+		"Model"			"models/props_gameplay/recipe.vmdl"
+		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ID"	"1602"
+		"ItemCost"	                "3200"
+		"ItemDroppable"	                "1"
+		"ItemSellable"	                "1"
+		"ItemKillable"	                "0"
+		"ItemShareability"	                "ITEM_NOT_SHAREABLE"
+		"ItemPurchasable"	                "1"
+		"ItemRecipe"	                "1"
+		"ItemResult"	                "item_fun_Aghanims_Fake_Scepter"
+		"ItemStockMax"	"1"
+		"ItemStockInitial"	"1"
+		"ItemRequirements"
+		{
+			"01"	"item_ultimate_orb;item_ultimate_orb;item_platemail;item_ring_of_tarrasque"
+		}
+	}
+
+                //===========================================
+                //卷轴：灵界芒果
+                //===========================================
+	"item_recipe_fun_greater_mango"
+	{
+		"BaseClass"	                "item_datadriven"
+		"AbilityTextureName"	"item_recipe_greater_mango"
+		"Model"			"models/props_gameplay/recipe.vmdl"
+		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ID"	"1603"
+		"ItemCost"	                "3800"
+		"ItemDroppable"	                "1"
+		"ItemSellable"	                "1"
+		"ItemKillable"	                "0"
+		"ItemShareability"	                "ITEM_NOT_SHAREABLE"
+		"ItemPurchasable"	                "1"
+		"ItemRecipe"	                "1"
+		"ItemResult"	                "item_fun_greater_mango"
+		"ItemStockMax"	"1"
+		"ItemStockInitial"	"0"
+		"ItemStockTime"	"99999999.0"
+		"ItemInitialStockTime"	"2490.0"
+		"ItemRequirements"
+		{
+			"01"	"item_ultimate_orb;item_tiara_of_selemene;item_enchanted_mango"
+		}
+	}
+
+                //===========================================
+                //卷轴：墨丘利的护手
+                //===========================================
+	"item_recipe_fun_Mercurys_gloves"
+	{
+		"BaseClass"	                "item_datadriven"
+		"AbilityTextureName"	"item_recipe_gloves_of_travel"
+		"Model"			"models/props_gameplay/recipe.vmdl"
+		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ID"	"1604"
+		"ItemCost"	                "2350"
+		"ItemDroppable"	                "1"
+		"ItemSellable"	                "1"
+		"ItemKillable"	                "0"
+		"ItemShareability"	                "ITEM_NOT_SHAREABLE"
+		"ItemPurchasable"	                "1"
+		"ItemRecipe"	                "1"
+		"ItemResult"	                "item_fun_Mercurys_gloves"
+		"ItemStockMax"	"1"
+		"ItemStockInitial"	"1"
+		"ItemRequirements"
+		{
+			"01"	"item_reaver;item_eagle;item_chainmail"
+		}
+	}
+
+                //===========================================
+                //卷轴：定海神针
+                //===========================================
+	"item_recipe_fun_monkey_king_bar" 
+	{
+		"BaseClass"	                "item_datadriven"
+		"AbilityTextureName"	"item_recipe_sun_wukong_bar"
+		"Model"			"models/props_gameplay/recipe.vmdl"
+		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ID"	"1605"
+		"ItemCost"	                "2300"
+		"ItemDroppable"	                "1"
+		"ItemSellable"	                "1"
+		"ItemKillable"	                "0"
+		"ItemShareability"	                "ITEM_NOT_SHAREABLE"
+		"ItemPurchasable"	                "1"
+		"ItemRecipe"	                "1"
+		"ItemResult"	                "item_fun_monkey_king_bar" 
+		"ItemStockMax"	"2"
+		"ItemStockInitial"	"2"
+		"ItemRequirements"
+		{
+			"01"	"item_monkey_king_bar;item_blitz_knuckles;item_mithril_hammer"
+		}
+	}
+
+                //===========================================
+                //卷轴：科勒的超级匕首
+                //===========================================
+	"item_recipe_fun_super_blink_dagger" 
+	{
+		"BaseClass"	                "item_datadriven"
+		"AbilityTextureName"	"item_recipe_es_arcana_blink_ult2"
+		"Model"			"models/props_gameplay/recipe.vmdl"
+		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ID"	"1606"
+		"ItemCost"	                "1150"
+		"ItemDroppable"	                "1"
+		"ItemSellable"	                "1"
+		"ItemKillable"	                "0"
+		"ItemShareability"	                "ITEM_NOT_SHAREABLE"
+		"ItemPurchasable"	                "1"
+		"ItemRecipe"	                "1"
+		"ItemResult"	                "item_fun_super_blink_dagger" 
+		"ItemStockMax"	"1"
+		"ItemStockInitial"	"1"
+		"ItemRequirements"
+		{
+			"01"	"item_demon_edge;item_cornucopia;item_blink"
+		}
+	}
+
+                //===========================================
+                //卷轴：大师之笛-力量
+                //===========================================
+	"item_recipe_fun_grandmasters_glaive_str"
+	{
+		"BaseClass"	                "item_datadriven"
+		"AbilityTextureName"	"item_recipe_grandmasters_glaive_str"
+		"Model"			"models/props_gameplay/recipe.vmdl"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ID"	"1607"
+		"ItemQuality"	"component"
+		"ItemCost"	"2400"
+		"ItemDroppable"	                "1"
+		"ItemSellable"	                "1"
+		"ItemKillable"	                "0"
+		"ItemShareability"	                "ITEM_NOT_SHAREABLE"
+		"ItemPurchasable"	                "1"
+		"ItemRecipe"	"1"
+		"ItemResult"	"item_fun_grandmasters_glaive_str"
+		"ItemStockMax"	"2"
+		"ItemStockInitial"	"2"
+		"ItemRequirements"
+		{
+			"01"	"item_blade_mail;item_radiance;item_reaver"
+		}
+	}
+
+                //===========================================
+                //卷轴：大师之笛-敏捷
+                //===========================================
+	"item_recipe_fun_grandmasters_glaive_agi"
+	{
+		"BaseClass"	                "item_datadriven"
+		"AbilityTextureName"	"item_recipe_grandmasters_glaive_agi"
+		"Model"			"models/props_gameplay/recipe.vmdl"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ID"	"1608"
+		"ItemCost"	"3075"
+		"ItemDroppable"	                "1"
+		"ItemSellable"	                "1"
+		"ItemKillable"	                "0"
+		"ItemShareability"	                "ITEM_NOT_SHAREABLE"
+		"ItemPurchasable"	                "1"
+		"ItemRecipe"	"1"
+		"ItemResult"	"item_fun_grandmasters_glaive_agi"
+		"ItemStockMax"	"2"
+		"ItemStockInitial"	"2"
+		"ItemRequirements"
+		{
+			"01"	"item_mage_slayer;item_disperser;item_eagle"
+		}
+	}
+
+                //===========================================
+                //卷轴：大师之笛-智力
+                //===========================================
+	"item_recipe_fun_grandmasters_glaive_int"
+	{
+		"BaseClass"	                "item_datadriven"
+		"AbilityTextureName"	"item_recipe_grandmasters_glaive_int"
+		"Model"			"models/props_gameplay/recipe.vmdl"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ID"	"1609"
+		"ItemQuality"	"component"
+		"ItemCost"	"2400"
+		"ItemDroppable"	                "1"
+		"ItemSellable"	                "1"
+		"ItemKillable"	                "0"
+		"ItemShareability"	                "ITEM_NOT_SHAREABLE"
+		"ItemPurchasable"	                "1"
+		"ItemRecipe"	"1"
+		"ItemResult"	"item_fun_grandmasters_glaive_int"
+		"ItemStockMax"	"2"
+		"ItemStockInitial"	"2"
+		"ItemRequirements"
+		{
+			"01"	"item_phylactery;item_sheepstick;item_mystic_staff"
+		}
+	}
+
+                //===========================================
+                //卷轴：大师之笛-融合
+                //===========================================
+                //"item_recipe_fun_grandmasters_glaive_all"     
+
+                //===========================================
+                //卷轴：上古狂战斧
+                //===========================================
+	"item_recipe_bfury_v2"
+	{
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		"BaseClass"	                "item_datadriven"
+		"AbilityTextureName"	"item_recipe_bfury_v2"
+		"Model"			"models/props_gameplay/recipe.vmdl"
+		// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"ID"	"1611"
+		// Item Info
+		// -------------------------------------------------------------------------------------------------------------
+		"ItemCost"	"1500"
+		// Recipe
+		// -------------------------------------------------------------------------------------------------------------
+		"ItemSellable"	                "1"
+		"ItemKillable"	                "1"
+		"ItemShareability"	                "ITEM_NOT_SHAREABLE"
+		"ItemPurchasable"	                "1"
+		"ItemRecipe"	"1"
+		"ItemResult"	"item_bfury_v2"
+		"ItemRequirements"
+		{
+			"01"	"item_bfury;item_bfury"
+		}
+	}
+                //===========================================
+                //卷轴：上古黯灭
+                //===========================================
+	"item_recipe_desolator_v2"
+	{
+		// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"BaseClass"	                "item_datadriven"
+		"AbilityTextureName"	"item_recipe_desolator_v2"
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		"ID"	"1612"
+		"Model"	"models/props_gameplay/recipe.vmdl"
+		// Item Info
+		// -------------------------------------------------------------------------------------------------------------
+		"ItemCost"	"1500"
+		// Recipe
+		// -------------------------------------------------------------------------------------------------------------
+		"ItemSellable"	                "1"
+		"ItemKillable"	                "1"
+		"ItemShareability"	                "ITEM_NOT_SHAREABLE"
+		"ItemPurchasable"	                "1"
+		"ItemRecipe"	"1"
+		"ItemResult"	"item_desolator_v2"
+		"ItemRequirements"
+		{
+			"01"	"item_desolator;item_desolator"
+		}
+	}
+
+                //===========================================
+                //卷轴：伊卡洛斯之殇
+                //===========================================
+	"item_recipe_greater_crit_v2"
+	{
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		"BaseClass"	                "item_datadriven"
+		"AbilityTextureName"	"item_recipe_greater_crit_v2"
+		// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"ID"	"1613"
+		"Model"	"models/props_gameplay/recipe.vmdl"
+		// Item Info
+		// -------------------------------------------------------------------------------------------------------------
+		"ItemCost"	"3000"
+		// Recipe
+		// -------------------------------------------------------------------------------------------------------------
+		"ItemSellable"	                "1"
+		"ItemKillable"	                "1"
+		"ItemShareability"	                "ITEM_NOT_SHAREABLE"
+		"ItemPurchasable"	                "1"
+		"ItemRecipe"	"1"
+		"ItemResult"	"item_greater_crit_v2"
+		"ItemRequirements"
+		{
+			"01"	"item_lesser_crit;item_lesser_crit;item_greater_crit"
+		}
+	}
+
+                //===========================================
+                //卷轴：破泞之主的疏浚三叉戟
+                //===========================================
+	"item_recipe_fun_trident_three_phase_power"
+	{
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		"BaseClass"	                "item_datadriven"
+		"AbilityTextureName"	"item_recipe_dredged_trident"
+		// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"ID"	"1614"
+		"Model"	"models/props_gameplay/recipe.vmdl"
+		// Item Info
+		// -------------------------------------------------------------------------------------------------------------
+		"ItemCost"	"8000"
+		"ItemDroppable"	"1"
+		"ItemSellable"	                "1"
+		"ItemKillable"	                "0"
+		"ItemShareability"	                "ITEM_NOT_SHAREABLE"
+		"ItemPurchasable"	                "1"
+		"ItemStockMax"	"1"
+		// "ItemStockTime"					"600"
+		"ItemStockInitial"	"1"
+		// Recipe
+		// -------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"	"1"
+		"ItemResult"	"item_fun_trident_three_phase_power"
+		"ItemRequirements"
+		{
+			"01"	"item_sange_and_yasha;item_kaya_and_sange;item_yasha_and_kaya"
+		}
+		"ItemIsNeutralDrop"	"0"
+	}
+
+                //===========================================
+                //卷轴：翡翠鞋
+                //===========================================
+	"item_recipe_fun_Jade_boots"
+	{
+		"BaseClass"	                "item_datadriven"
+		"AbilityTextureName"	"item_recipe_slippers_of_halcyon"
+		"Model"	                                "models/props_gameplay/recipe.vmdl"
+		"ID"	"1615"
+		"ItemCost"	"500"
+		"ItemSellable"	                "1"
+		"ItemKillable"	                "1"
+		"ItemShareability"	                "ITEM_NOT_SHAREABLE"
+		"ItemPurchasable"	                "1"
+		"ItemRecipe"	"1"
+		"ItemResult"	"item_fun_Jade_boots"
+		"ItemRequirements"
+		{
+			"01"	"item_tranquil_boots;item_platemail"
+		}
+	}
+
+	// =================================================================================================================
+	// 卷轴：冰霜重铠
+	// =================================================================================================================
+	"item_recipe_fun_shivas_guard_v2"
+	{
+		"BaseClass"	                "item_datadriven"
+		"AbilityTextureName"	"item_recipe_shivas_guard_v2"
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"ID"	"1616"
+		"Model"	"models/props_gameplay/recipe.vmdl"
+		// Item Info
+		// -------------------------------------------------------------------------------------------------------------
+		"ItemCost"	"3000"
+		// Recipe
+		// -------------------------------------------------------------------------------------------------------------
+		"ItemSellable"	                "1"
+		"ItemKillable"	                "1"
+		"ItemShareability"	                "ITEM_NOT_SHAREABLE"
+		"ItemPurchasable"	                "1"
+		"ItemRecipe"	"1"
+		"ItemResult"	"item_fun_shivas_guard_v2"
+		"ItemRequirements"
+		{
+			"01"	"item_shivas_guard"
+		}
+	}
+
+	// =================================================================================================================
+	// 卷轴：宝莲玄珠
+	// =================================================================================================================
+	"item_recipe_fun_lotus_orb_v2"
+	{
+		"BaseClass"	                "item_datadriven"
+		"AbilityTextureName"	"item_recipe_lotus_orb_v2"
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"ID"	"1617"
+		"Model"	"models/props_gameplay/recipe.vmdl"
+		// Item Info
+		// -------------------------------------------------------------------------------------------------------------
+		"ItemCost"	"4000"
+		// Recipe
+		// -------------------------------------------------------------------------------------------------------------
+		"ItemSellable"	                "1"
+		"ItemKillable"	                "1"
+		"ItemShareability"	                "ITEM_NOT_SHAREABLE"
+		"ItemPurchasable"	                "1"
+		"ItemRecipe"	"1"
+		"ItemResult"	"item_fun_lotus_orb_v2"
+		"ItemRequirements"
+		{
+			"01"	"item_lotus_orb"
+		}
+	}
+
+	// =================================================================================================================
+	// 卷轴：万世金盘
+	// =================================================================================================================
+	"item_recipe_fun_aeon_disk_v2"
+	{
+		"BaseClass"	                "item_datadriven"
+		"AbilityTextureName"	"item_recipe_barricade"
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"ID"	"1618"
+		"Model"	"models/props_gameplay/recipe.vmdl"
+		// Item Info
+		// -------------------------------------------------------------------------------------------------------------
+		"ItemCost"	"1500"
+		// Recipe
+		// -------------------------------------------------------------------------------------------------------------
+		"ItemRecipe"	"1"
+		"ItemResult"	"item_fun_aeon_disk_v2"
+		"ItemRequirements"
+		{
+			"01"	"item_aeon_disk;item_soul_booster"
+		}
+	}
+
+	// =================================================================================================================
+	// 卷轴：锢魂法器
+	// =================================================================================================================
+	"item_recipe_fun_spirit_vessel"
+	{
+		"BaseClass"	                "item_datadriven"
+		"AbilityTextureName"	"item_recipe_spirit_vessel_v2"
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
+		"ID"	"1619"
+		"Model"	"models/props_gameplay/recipe.vmdl"
+		// Item Info
+		// -------------------------------------------------------------------------------------------------------------
+		"ItemCost"	"4415"
+		// Recipe
+		// -------------------------------------------------------------------------------------------------------------
+		"ItemSellable"	                "1"
+		"ItemKillable"	                "0"
+		"ItemShareability"	                "ITEM_NOT_SHAREABLE"
+		"ItemPurchasable"	                "1"
+		"ItemRecipe"	"1"
+		"ItemResult"	"item_fun_spirit_vessel"
+		"ItemStockMax"	"1"
+		"ItemStockInitial"	"0"
+		"ItemStockTime"	"99999999.0"
+		"ItemInitialStockTime"	"1890.0"
+		"ItemRequirements"
+		{
+			"01"	"item_soul_ring;item_vladmir;item_spirit_vessel;item_ultimate_orb"
+		}
+	}
+
+	//=================================================================================================================
+	// 卷轴：洞察烟斗
+	//=================================================================================================================
+	"item_recipe_fun_pipe_v2"
+	{
+		// General
+		"BaseClass"	                "item_datadriven"
+		"AbilityTextureName"	"item_recipe_barricade"
+		//-------------------------------------------------------------------------------------------------------------
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"ID"	"1620"
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1200"	
+		"ItemShopTags"					""
+		
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemSellable"	                "1"
+		"ItemKillable"	                "1"
+		"ItemShareability"	                "ITEM_NOT_SHAREABLE"
+		"ItemPurchasable"	                "1"
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_fun_pipe_v2"
+		"ItemRequirements"
+		{
+			"01"						"item_pipe;item_ultimate_orb"
+		}
+	}
+
+	//=================================================================================================================
+	// 卷轴：强袭盔甲
+	//=================================================================================================================
+	"item_recipe_fun_assault_armor_v2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"Model"							"models/props_gameplay/recipe.vmdl"
+		"BaseClass"	                "item_datadriven"
+		"AbilityTextureName"	"item_recipe_barricade"
+		// Item Info
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemCost"						"1600"	
+		"ItemShopTags"					""
+		"ID"	"1621"	
+		// Recipe
+		//-------------------------------------------------------------------------------------------------------------
+		"ItemSellable"	                "1"
+		"ItemKillable"	                "1"
+		"ItemShareability"	                "ITEM_NOT_SHAREABLE"
+		"ItemPurchasable"	                "1"
+		"ItemRecipe"					"1"
+		"ItemResult"					"item_fun_assault_armor_v2"
+		"ItemRequirements"
+		{
+			"01"						"item_assault;item_platemail"
+		}
+	}
+}

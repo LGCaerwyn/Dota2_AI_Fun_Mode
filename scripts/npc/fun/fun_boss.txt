@@ -1,0 +1,1211 @@
+//=====================================
+//这里存放最后的BOSS——獸的技能     预留ID 80101——80150
+//部分技能用到了年兽三人组、英雄原版技能，此处不列
+
+//  #80101       獸的特殊攻击                            "Fun_Primal_Beast_Boss_Attack"
+//  #80102       獸的特殊防御                            "Fun_Primal_Beast_Boss_Defense"
+//  #80103       獸的地震分裂波（迷宫）            "fun_aghsfort_primal_beast_tectonic_shift_boss"
+//  #80104       獸的超级捶（迷宫）                  "fun_aghsfort_primal_beast_boss_pummel_boss"     
+//  #80105       獸的时间结界                            "fun_chronosphere_boss"
+//  #80106       獸的两级反转                            "fun_reverse_polarity_boss"
+//  #80107       獸的毁灭                                   "fun_ravage_boss"          
+//  #80108       獸的热血竞技场                         "fun_arena_of_blood_boss"
+//  #80109       獸的神秘之耀                            "fun_mystic_flare_boss"
+//  #80110       獸的裂地沟壑                            "fun_earth_splitter_boss"
+//  #80111       獸的暗影冲刺                            "fun_charge_of_darkness_boss"  //免疫位移状态下失效
+//  #80112       獸的正常版本捶                         "fun_pulverize_boss"
+//  #80113       獸的毁天灭地（大圣）               "fun_huitianmiedi_boss"
+//  #80114       獸的时间结界（新版）               "fun_chronosphere_boss_v2"
+
+//=====================================
+"DOTAAbilities"
+{ 
+	// =================================================================================================================
+	// AI：獸的特殊攻击，具有重击、分裂、破坏、禁疗、清兵、控制技能施放的效果
+	// =================================================================================================================
+	"Fun_Primal_Beast_Boss_Attack"
+	{
+		"BaseClass"	                "ability_datadriven"
+		"AbilityTextureName"	"primal_beast_trample"
+		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+                                "AbilityUnitDamageType"	"DAMAGE_TYPE_PURE"
+		"SpellImmunityType"	                "SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"	"SPELL_DISPELLABLE_NO"
+		"MaxLevel"	                "1"
+		"ID"	                                "80101"
+		"precache"
+		{
+			"particle"	                "particles/econ/items/sven/sven_ti7_sword/sven_ti7_sword_spell_great_cleave_gods_strength_2.vpcf"
+			"particle"	                "particles/generic_gameplay/generic_stunned.vpcf"
+			"particle"	                "particles/items3_fx/silver_edge.vpcf"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_faceless_void.vsndevts"
+		}
+		"Modifiers"
+		{
+			"modifier_Fun_Primal_Beast_Boss_Attack"
+			{
+				"Passive"	                 "1"
+				"IsHidden"	 "1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/Fun_Boss/Fun_Primal_Beast_Boss_Attack.lua"
+						"Function"	"Fun_Primal_Beast_Boss_Attack_OnCreated"
+					}
+				}
+                                                                //攻击命中后施放各类技能和攻击特效
+				"OnAttackLanded"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/Fun_Boss/Fun_Primal_Beast_Boss_Attack.lua"
+						"Function"	"Fun_Primal_Beast_Boss_Attack_OnAttackLanded"
+                                                                                                "Damage"	                "%attack_damage"
+					}
+				}
+                                                                //周期性施放各类技能
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/Fun_Boss/Fun_Primal_Beast_Boss_Attack.lua"
+						"Function"	"Fun_Primal_Beast_Boss_Attack_AutoSpell"
+					}
+				}
+				"ThinkInterval"	"5"
+				"Properties"
+				{ 
+					"MODIFIER_PROPERTY_PROVIDES_FOW_POSITION"     	"1"
+					"MODIFIER_PROPERTY_VISUAL_Z_DELTA"     	                "0"
+				}
+				"States"
+				{
+					"MODIFIER_STATE_CANNOT_MISS"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_FLYING"	                "MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+                                                //攻击造成的眩晕DEBUFF
+			"modifier_Fun_Primal_Beast_Boss_Attack_Stun"
+			{
+				"IsDebuff"	                       "1"
+                                                                "IsPurgable"                    "0"
+                                                                "TextureName"	       "faceless_void_time_lock"
+				"States"
+				{
+					"MODIFIER_STATE_STUNNED"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_FROZEN"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+				"StatusEffectPriority"	       "1"
+				"StatusEffectName"	       "particles/status_fx/status_effect_faceless_chronosphere.vpcf"
+				"EffectName"	       "particles/generic_gameplay/generic_stunned.vpcf"
+				"EffectAttachType"	       "follow_overhead"
+			}
+                                                //攻击造成的破坏+禁疗DEBUFF
+			"modifier_Fun_Primal_Beast_Boss_Attack_Debuff"
+			{
+				"IsDebuff"	                       "1"
+                                                                "TextureName"	       "item_silver_edge"
+                                                                "IsPurgable"                    "0"
+				"States"
+				{
+					"MODIFIER_STATE_PASSIVES_DISABLED"	                "MODIFIER_STATE_VALUE_ENABLED"
+				}
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_DISABLE_HEALING"	"1"
+				}
+				"EffectName"	       "particles/items3_fx/silver_edge.vpcf"
+				"EffectAttachType"	       "follow_origin"
+			}
+		}
+		"AbilityValues"
+		{
+			"great_cleave_end_radius"	
+			{
+				"value"			 "900"
+				"affected_by_aoe_increase"	"1"
+			}
+                                                "great_cleave_distance"	"1300"
+			"great_cleave_damage"	"300"
+                                                
+                                                "debuff_duration"                     "3"
+                                                "stun_duration"                         "0.3"
+                                                "stun_chance"                           "33"
+                                                "stun_damage"                          "210"
+
+                                                "radius"                                     "30000"   //真视宝石反隐范围
+		}
+	}   
+	// =================================================================================================================
+	// AI：獸的特殊防御，具有属性、免控、减伤、驱散特定状态的效果
+	// =================================================================================================================  
+	"Fun_Primal_Beast_Boss_Defense"
+	{
+		"BaseClass"	                "ability_datadriven"
+		"AbilityTextureName"	"primal_beast_trample"
+		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellDispellableType"	"SPELL_DISPELLABLE_NO"
+		"MaxLevel"	                "1"
+		"ID"	                                "80102"
+		"precache"
+		{}
+		"Modifiers"
+		{
+			"modifier_Fun_Primal_Beast_Boss_Defense"
+			{
+				"Passive"	                 "1"
+				"IsHidden"	 "0"
+				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/Fun_Boss/Fun_Primal_Beast_Boss_Defense.lua"
+						"Function"	"Fun_Primal_Beast_Boss_Defense_OnCreated"
+					}
+				}
+				"OnDeath"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/Fun_Boss/Fun_Primal_Beast_Boss_Defense.lua"
+						"Function"	"Fun_Primal_Beast_Boss_Defense_OnDeath"
+					}
+				}
+                                                                //驱散敌军的魅影无形与诡计之雾隐身
+				"OnTakeDamage"
+				{
+					"RemoveModifier"
+					{
+						"Target"	                "ATTACKER"
+						"ModifierName"	"modifier_phantom_assassin_blur_active"
+					}
+					"RemoveModifier"
+					{
+						"Target"	                "ATTACKER"
+						"ModifierName"	"modifier_smoke_of_deceit"
+					}
+				}
+				"Properties"
+				{ 
+					"MODIFIER_PROPERTY_PROVIDES_FOW_POSITION"     	"1"
+					"MODIFIER_PROPERTY_VISUAL_Z_DELTA"     	                "0"
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"	                "70"
+					//"MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"	"100"   //直接更改自定义技能的数值
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"400"
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"50"
+				}
+				"States"
+				{//MODIFIER_STATE_VALUE_DISABLED指令失效，无法禁用状态来免疫控制
+					"MODIFIER_STATE_DEBUFF_IMMUNE"      "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_FLYING"                      "MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}   
+		}
+		"AbilityValues"
+		{
+                                	"max_damage1"     "1000"     //高于50%生命受到的最大伤害，仅作为显示，修改无效
+                                	"max_damage2"     "500"      //低于50%生命受到的最大伤害，仅作为显示，修改无效
+                                }
+	}
+	// =================================================================================================================
+	// 夜魇：獸的地震分裂波
+	// =================================================================================================================
+	"fun_aghsfort_primal_beast_tectonic_shift_boss"
+	{
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		"BaseClass"	                "aghsfort_primal_beast_tectonic_shift"
+		"AbilityTextureName"	"primal_beast_uproar_max"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitDamageType"	"DAMAGE_TYPE_PURE"
+		"SpellImmunityType"	"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"	"SPELL_DISPELLABLE_NO"
+		"MaxLevel"	"1"
+		"AbilityCastPoint"	"2.4"
+		"AbilityCastAnimation"	"ACT_DOTA_OVERRIDE_ABILITY_3"
+		// Time
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"	"60"
+		// Cost
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"	"0"
+		// Casting
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"	"10000"
+		"AbilityChannelTime"	"12.3"
+		"ID"	"80103"
+		// Special
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"  //此技能已过期，不改格式了
+		{
+			"01"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"projectile_distance"	"2350"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"projectiles_per_interval"	"6"
+			}
+			"03"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"projectile_width"	"50"
+			}
+			"04"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"damage"	"5000"
+			}
+			"05"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"projectile_speed"	"500"
+			}
+			"06"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"angle_offset"	"15"
+			}
+			"07"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"splinter_angle"	"30"
+			}
+			"08"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"initial_interval"	"1.5"
+			}
+			"09"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"min_interval"	"0.8"
+			}
+			"10"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"projectile_speed_increment"	"50"
+			}
+			"11"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"projectiles_per_interval_increment"	"1"
+			}
+			"12"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"interval_reduction"	"0.085"
+			}
+			"13"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"arm_distance_forward"	"200"
+			}
+			"14"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"arm_distance_side"	"295"
+			}
+			"15"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"initial_spread_angle"	"220"
+			}
+			"16"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"splash_radius"	"265"
+			}
+			"17"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"max_split_amount"	"2"
+			}
+			"18"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"max_projectiles"	"11"
+			}
+			"19"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"damage_ticks"	"4"
+			}
+		}
+		"AbilityChannelAnimation"	"ACT_DOTA_IDLE"
+		"AnimationIgnoresModelScale"	"1"
+		"IsOnCastBar"	"1"
+	}
+
+	// =================================================================================================================
+	// 夜魇：獸的超级捶
+	// =================================================================================================================
+	"fun_aghsfort_primal_beast_boss_pummel_boss"
+	{
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		"BaseClass"	                "aghsfort_primal_beast_boss_pummel"
+		"AbilityTextureName"	"primal_beast_pulverize"
+		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_CHANNELED"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetFlags"	"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"	                "SPELL_IMMUNITY_ENEMIES_YES"
+		"MaxLevel"	"3"
+		// Casting
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"	"0.25"
+		"AbilityCastAnimation"	"ACT_DOTA_CAST_ABILITY_5"
+		"AbilityCooldown"	"60"
+		// Cost
+		// -------------------------------------------------------------------------------------------------------------
+		// "125 130 135 140"
+		"AbilityManaCost"	"0"
+		// Time
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"	"400"
+		"AbilityChannelTime"	"9.01"
+		"ID"	"80104"
+
+		// Special
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"        //此技能已过期，不改格式了
+		{
+			"01"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"splash_radius"	"475"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"interval"	"0.85"
+			}
+			"03"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"ministun"	"0.35"
+			}
+			"04"
+			{
+				"var_type"	"FIELD_FLOAT"
+				// FLAIL MULTIPLIER ON ENEMY UNITS
+				"animation_rate"	"1.5"
+			}
+			"05"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"ripple_step_distance"	"555"
+			}
+			"06"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"ripple_step_distance_offset"	"185"
+			}
+			"07"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"total_ripple_circles"	"4"
+			}
+			"08"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"ripple_effect_width"	"100"
+			}
+			"09"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"ripple_damage"	"16000"
+			}
+			"10"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"ripple_slow_duration"	"0"
+			}
+			"11"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"knockback_distance"	"750"
+			}
+			"12"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"finish_knockback_duration"	"0.5"
+			}
+			"13"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"health_damage"	"0.2"
+			}
+			"14"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"ripple_duration"	"1.7"
+			}
+			"15"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"self_animation_rate"	"1"
+			}
+			"16"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"ripple_knockback_duration"	"0.1"
+			}
+		}
+		"AnimationIgnoresModelScale"	"1"
+		"IsOnCastBar"	"1"
+		"AbilityChannelAnimation"	"ACT_DOTA_CHANNEL_ABILITY_5"
+		// "90 120 150 180"
+		"AbilityDamage"	"500"
+	}
+                //========================================
+                //夜魇：獸的时间结界
+                //========================================
+	"fun_chronosphere_boss"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"80105"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"BaseClass"	                                                "faceless_void_chronosphere"
+		"AbilityTextureName"	                                "faceless_void_chronosphere"													
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityType"				"DOTA_ABILITY_TYPE_ULTIMATE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+                                "MaxLevel"                                                               "1"
+		"AbilitySound"				"Hero_FacelessVoid.Chronosphere"
+		"precache"
+		{
+			"particle"	                     "particles/status_fx/status_effect_faceless_chronosphere.vpcf"
+			"particle"	                     "particles/units/heroes/hero_faceless_void/faceless_void_chronosphere.vpcf"
+		}		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"0"
+		"AbilityCastPoint"				"0.35"
+		"AbilityCastAnimation"		                "ACT_DOTA_CAST_ABILITY_4"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"40"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"300"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportBonus"		                "50"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"radius"				
+				{
+					"value"		"1200"
+					"affected_by_aoe_increase"	"1"
+				}
+				"duration"				
+				{
+					"value"			"9"
+				}
+				"vision_radius"			
+				{
+					"value"	"1200"
+					"affected_by_aoe_increase"	"1"
+				}
+		}
+	}
+	//=================================================================================================================
+	// 夜魇：獸的两级反转
+	//=================================================================================================================
+	"fun_reverse_polarity_boss"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"80106"		
+		"BaseClass"	                                                "magnataur_reverse_polarity"
+		"AbilityTextureName"	                                "magnataur_reverse_polarity"													// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"AbilityType"				"DOTA_ABILITY_TYPE_ULTIMATE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+                                "MaxLevel"                                                               "1"
+		"AbilitySound"					"Hero_Magnataur.ReversePolarity.Cast"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.3"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+
+		//"AbilityCooldown"				"40"
+		"AbilityManaCost"				"300"
+		"AbilityCastRange"				"800"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.5"	// Applies multiple modifiers
+		"precache"
+		{
+			"particle"	                "particles/units/heroes/hero_magnataur/magnataur_reverse_polarity.vpcf"
+			"particle"	                "particles/units/heroes/hero_magnataur/magnataur_reverse_polarity_pull.vpcf"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_magnataur.vsndevts"
+		}		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"AbilityCooldown"				
+			{
+				"value"						"40"			
+			}
+			"pull_radius"					
+			{
+				"value"							"1000"
+				"affected_by_aoe_increase"		"1"			
+			}
+			"push_radius"					
+			{
+				"value"							"0"				
+				"affected_by_aoe_increase"		"1"
+			}
+			"max_knockback_distance"	
+			{
+				"value"							"0"				
+				"affected_by_aoe_increase"		"1"
+			}	
+			"knockback_height"
+			{
+				"value"							"0"
+			}
+			"polarity_damage"				
+			{
+				"value"							"2800"
+				"CalculateSpellDamageTooltip" 	"1"
+			}
+			"hero_stun_duration"
+			{
+				"value"					"4"
+			}
+			"pull_duration"		
+			{
+				"value"							"0.0"
+			}
+		}
+	}
+	//=================================================================================================================
+	// 夜魇：獸的毁灭
+	//=================================================================================================================
+	"fun_ravage_boss"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"80107"		
+		"BaseClass"	                                                "tidehunter_ravage"
+		"AbilityTextureName"	                                "tidehunter_ravage"															// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"				"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES_STRONG"
+                                "MaxLevel"                                                               "1"
+		"AbilitySound"					"Ability.Ravage"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"0"
+		"AbilityCastPoint"				"0.3"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"40"
+
+		// Damage.
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"					"2500"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"325"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"radius"			
+			{
+				"value"			 "1250"
+				"affected_by_aoe_increase"	"1"
+			}
+			"speed"				"725"
+			"duration"			
+			{
+				"value"					"3.5"
+			}
+		}
+	}
+	//=================================================================================================================
+	// 夜魇：獸的热血竞技场
+	//=================================================================================================================
+	"fun_arena_of_blood_boss"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"80108"		
+		"BaseClass"	                                                "mars_arena_of_blood"
+		"AbilityTextureName"	                                "mars_arena_of_blood"															// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+ 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+ 		"AbilitySound"					"Hero_Mars.ArenaOfBlood.Start"
+                                "MaxLevel"                                                               "1"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"600"
+		"AbilityCastPoint"				"0.2"
+ 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"20"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"200"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"duration"			"12"
+			"radius"			
+			{
+				"value"		"550"
+				"affected_by_aoe_increase"	"1"		
+			}
+			"width"				"100"
+			"spear_damage"		"2000"
+			"formation_time"	"0.1"
+			"spear_distance_from_wall"	"160"
+			"spear_attack_interval"	"1"
+			"warrior_count"		"14"
+			"first_warrior_angle"	"0.0"
+			"warrior_fade_min_dist"	"350.0"
+			"warrior_fade_max_dist"	"450.0"
+
+			"cast_around_self_and_leash"	"0"
+
+			"obscure_vision"
+			{
+				"value"		"1"
+				"special_bonus_facet_mars_arena"	"1"
+			}
+		}
+	}
+	//=================================================================================================================
+	// 夜魇：獸的神秘之耀
+	//=================================================================================================================
+	"fun_mystic_flare_boss"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"80109"		
+		"BaseClass"	                                                "skywrath_mage_mystic_flare"
+		"AbilityTextureName"	                                "skywrath_mage_mystic_flare"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+                                "MaxLevel"                                                               "1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1200"
+		"AbilityCastPoint"				"0.1"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"25.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"1200"
+			
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"radius"
+				{
+					"value"	"510"
+					"affected_by_aoe_increase"	"1"
+				}
+				"duration"				"4.0"
+				"damage"				
+				{
+					"value"			"20000"
+				}
+				"damage_interval"		"0.1"
+
+		}
+	}
+	//=================================================================================================================
+	// 夜魇：獸的裂地沟壑
+	//=================================================================================================================
+	"fun_earth_splitter_boss"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"80110"		
+		"BaseClass"	                                                "elder_titan_earth_splitter"
+		"AbilityTextureName"	                                "elder_titan_earth_splitter"															// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"MaxLevel"				"1"
+		"AbilitySound"					"Hero_ElderTitan.EarthSplitter.Cast"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"2400"
+		"AbilityCastPoint"				"0.4"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_5"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"40"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"225"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"crack_time"				"2.7182"
+				"crack_width"				
+				{
+					"value"	"315"
+					"affected_by_aoe_increase"	"1"
+				}
+				"crack_distance"			
+				{
+					"value"		"2400"
+				}
+				"slow_pct"					"90"
+				"slow_duration"				"5.0"
+				"speed"						"1100"
+				"damage_pct"				
+				{
+					"value"			"150"
+					"DamageTypeTooltip"		"DAMAGE_TYPE_NONE"
+				}
+				"vision_width"				
+				{
+					"value"		"500"
+					"affected_by_aoe_increase"	"1"
+				}
+				"vision_interval"			"0.22"
+				"vision_duration"			"4.0"
+				"vision_step"				"200"
+				"total_steps"				"12"
+		}
+	}
+	//=================================================================================================================
+	// 夜魇：獸的暗影冲刺
+	//=================================================================================================================
+	"fun_charge_of_darkness_boss"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"80111"		
+		"BaseClass"	                                                "spirit_breaker_charge_of_darkness"
+		"AbilityTextureName"	                                "spirit_breaker_charge_of_darkness_alt"													// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_ALERT_TARGET | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"MaxLevel"				"1"
+                                  
+		"AbilitySound"					"Hero_Spirit_Breaker.ChargeOfDarkness"
+
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.1"
+		"AbilityCastRange"				"0"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"11"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"120"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	".30" // applies multiple modifiers
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"movement_speed"		"375"
+			"stun_duration"			"2.4"
+			"bash_radius"			"300"
+			"vision_radius"			"400"	
+			"vision_duration"		"0.94"
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+	//=================================================================================================================
+	// 夜魇：獸的正常版本捶
+	//=================================================================================================================
+	"fun_pulverize_boss"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"80112"		
+		"BaseClass"	                                                "primal_beast_pulverize"
+		"AbilityTextureName"	                                "primal_beast_pulverize"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_CHANNELLED  | DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"
+		"AnimationIgnoresModelScale"      	"1"
+                                "MaxLevel"                                               "1"
+
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.25"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_5"
+		"AbilityChannelAnimation"	                                "ACT_DOTA_CHANNEL_ABILITY_5"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"200"
+		"AbilityCooldown"				"60"
+		
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"130"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"splash_radius"				
+			{
+				"value"		                                "1200"
+				"affected_by_aoe_increase"	                "1"	
+			}
+			"interval"					"0.75"
+			"ministun"				"0.25"
+			"cast_range"				"200"
+			"animation_rate"			"1.5"			// FLAIL MULTIPLIER ON ENEMY UNITS
+			"damage"
+			{
+				"value"						"1800"
+
+			}
+                                                "pierce_immunity"
+                                                {
+            	                                                "value"						"0"
+                                                }
+                                                "bonus_damage_per_hit"				"500"
+			"channel_time"
+			{
+				"value"					"6.9"
+			}
+		}
+	}
+
+	// =================================================================================================================
+	// 夜魇：獸的毁天灭地（大圣）
+	// =================================================================================================================  
+	"fun_huitianmiedi_boss"
+	{
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		"BaseClass"	                "ability_datadriven"
+		"AbilityTextureName"	"monkey_king/great_sages_reckoning/monkey_king_spring"
+		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitDamageType"	"DAMAGE_TYPE_PURE"
+		"SpellImmunityType"	                "SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"	"SPELL_DISPELLABLE_STRONG"
+		"MaxLevel"	                "1"
+		"ID"	                                "80113"
+		// Casting
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"	"0.3"
+		// Time
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"	"30"
+		// Cost
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"	"0"
+		// Cast Range
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"	"1800"
+
+		// Precache
+		// -------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"particle"	               "particles/units/heroes/hero_huskar/huskar_life_break.vpcf"
+			"particle"	               "particles/units/heroes/hero_huskar/huskar_life_break_cast.vpcf"
+			"particle"	               "particles/status_fx/status_effect_huskar_lifebreak.vpcf"
+
+			"particle"	               "particles/econ/items/monkey_king/arcana/fire/monkey_king_spring_cast_arcana_fire.vpcf"
+			"particle"	               "particles/econ/items/monkey_king/arcana/fire/monkey_king_spring_arcana_fire.vpcf"
+
+			"soundfile"              "soundevents/game_sounds_heroes/game_sounds_earthshaker.vsndevts"
+			"soundfile"              "soundevents/game_sounds_heroes/game_sounds_huskar.vsndevts"
+		}
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	                                "scripts/vscripts/Fun_Boss/Fun_huitianmiedi.lua"
+				"Function"	                                "LifeBreak"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_monkey_king_huitianmiedi_boss_start"
+			{
+				"IsPurgable"	        "0"
+                                                                "ThinkInterval"                 "0.03"
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	                                "scripts/vscripts/Fun_Boss/Fun_huitianmiedi.lua"
+						"Function"	                                "JumpHorizonal"
+					}
+					"RunScript"
+					{
+						"ScriptFile"	                                "scripts/vscripts/Fun_Boss/Fun_huitianmiedi.lua"
+						"Function"	                                "JumpVertical"
+					}
+				}
+				"States"
+				{
+					"MODIFIER_STATE_MAGIC_IMMUNE"	                 "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_COMMAND_RESTRICTED"	 "MODIFIER_STATE_VALUE_ENABLED"
+				}
+                                                }
+			"modifier_monkey_king_huitianmiedi_boss_fly"
+			{
+				"IsHidden"	"1"
+				"IsPurgable"	"0"
+                                                                "ThinkInterval"          "0.03"
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	                                "scripts/vscripts/Fun_Boss/Fun_huitianmiedi.lua"
+						"Function"	                                "LeapVertical"
+					}
+				}
+				"OnDeath"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	                                "scripts/vscripts/Fun_Boss/Fun_huitianmiedi.lua"
+						"Function"	                                "OnDeath"
+					}
+				}
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_MAGICAL"              "1"
+					"MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_PHYSICAL"              "1"
+					"MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_PURE"                     "1"
+				}
+			}
+			"modifier_monkey_king_huitianmiedi_boss_fly_stop"
+			{
+				"IsHidden"	"0"
+				"IsPurgable"	"0"
+				"States"
+				{
+					"MODIFIER_STATE_ATTACK_IMMUNE"	                 "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_MAGIC_IMMUNE"	                 "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_COMMAND_RESTRICTED"	 "MODIFIER_STATE_VALUE_ENABLED"
+				}
+				"StatusEffectName"	"particles/status_fx/status_effect_huskar_lifebreak.vpcf"
+				"StatusEffectPriority"	"15"
+			}
+			"modifier_monkey_king_huitianmiedi_boss_damage"             
+			{
+				"OnCreated"
+				{
+					"Damage"
+					{
+						"Target"	"TARGET"
+						"Type"	"DAMAGE_TYPE_PHYSICAL"
+						"Damage"	"%dmg_others"
+					}
+					"Knockback"
+					{
+						"Target"	                "TARGET"
+						"Center"	                "TARGET"
+						"Duration"	"3"
+						"Height"	                "1500"
+						"ShouldStun"	"1"
+						"IsFixedDistance"	"1"
+					}
+				}
+				"Duration"	"3"
+			}
+		}
+		// Special
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"charge_speed"	"1000"
+			"max_distance"	"3000"
+			"push_speed"	"2000"
+			"push_length"	"3000"
+                                                "damage_pct"           "70"
+                                                "stun_duration"         "3" 
+			"radius"	                
+			{
+				"value"		"800"
+				"affected_by_aoe_increase"	"1"	
+			}
+			"dmg_others"	"2000"
+
+		}
+	}
+                //========================================
+                //夜魇：獸的时间结界（新版）
+                //========================================
+	"fun_Chronosphere_boss_v2"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"80114"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"BaseClass"	                                                "ability_datadriven"
+		"AbilityTextureName"	                                "faceless_void_chronosphere"													
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT"
+		"AbilityType"				"DOTA_ABILITY_TYPE_ULTIMATE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+                                "MaxLevel"                                                               "1"
+		"AbilitySound"				"Hero_FacelessVoid.Chronosphere"
+		"precache"
+		{
+			"particle"	                     "particles/status_fx/status_effect_faceless_chronosphere.vpcf"
+			"particle"	                     "particles/units/heroes/hero_faceless_void/faceless_void_chronosphere.vpcf"
+		}		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"0"
+		"AbilityCastPoint"				"0.35"
+		"AbilityCastAnimation"		                "ACT_DOTA_CAST_ABILITY_4"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"40"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"300"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		//"AbilityModifierSupportBonus"		                "50"
+
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	                                "scripts/vscripts/Fun_Boss/Fun_Chronosphere_boss_v2.lua"
+				"Function"	                                "Fun_Chronosphere_boss_v2_OnSpellStart"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_Fun_Chronosphere_boss_v2_thinker"
+			{
+				"IsHidden"	"1"
+				"IsPurgable"	"0"
+				"Aura"                       "modifier_Fun_Chronosphere_boss_v2_aura"
+				"Aura_Radius"            "%radius"
+				"Aura_Teams"            "DOTA_UNIT_TARGET_TEAM_BOTH"
+				"Aura_Types"             "DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_BUILDING"
+				"Aura_Flags"              "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+			}
+			"modifier_Fun_Chronosphere_boss_v2_aura"
+			{
+				"IsHidden"	"1"
+				"IsPurgable"	"0"
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/Fun_Boss/Fun_Chronosphere_boss_v2.lua"
+						"Function"	"modifier_Fun_Chronosphere_boss_v2_aura_OnCreated"
+					}
+				}
+				"OnDestroy"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/Fun_Boss/Fun_Chronosphere_boss_v2.lua"
+						"Function"	"modifier_Fun_Chronosphere_boss_v2_aura_OnDestroy"
+					}
+				}
+			}
+		}
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"radius"				
+				{
+					"value"		"1400"
+					"affected_by_aoe_increase"	"1"
+				}
+				"duration"				
+				{
+					"value"			"9"
+				}
+				"vision_radius"			
+				{
+					"value"	"1400"
+					"affected_by_aoe_increase"	"1"
+				}
+		}
+	}
+}

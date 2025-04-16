@@ -1,0 +1,35 @@
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_chen.vsndevts"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_enigma.vsndevts"
+			"soundfile"               "soundevents/game_sounds_heroes/game_sounds_abyssal_underlord.vsndevts"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_magnataur.vsndevts"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_tidehunter.vsndevts"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_mars.vsndevts"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_skywrath_mage.vsndevts"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_elder_titan.vsndevts"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_spirit_breaker.vsndevts"
+			"soundfile"               "soundevents/game_sounds_heroes/game_sounds_earthshaker.vsndevts"
+			"soundfile"               "soundevents/game_sounds_heroes/game_sounds_huskar.vsndevts"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_juggernaut.vsndevts"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_primal_beast.vsndevts"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_spectre.vsndevts"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_abaddon.vsndevts"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_earth_spirit.vsndevts"
+                                                "soundfile"               "soundevents/game_sounds_roshan_halloween.vsndevts"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_lina.vsndevts"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_faceless_void.vsndevts"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_life_stealer.vsndevts"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_phantom_assassin.vsndevts"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_legion_commander.vsndevts"
+			"soundfile"	"soundevents/game_sounds_creeps.vsndevts"
+
+			"soundfile"	"sounds/vo/primal_beast/enigma/primal_pummel_01.vsnd"
+			"soundfile"	"sounds/vo/primal_beast/enigma/primal_pummel_02.vsnd"
+			"soundfile"	"sounds/vo/primal_beast/enigma/primal_pummel_03.vsnd"
+			"soundfile"	"sounds/pb_boss/pummel_impact.vsnd"
+			"soundfile"	"soundevents/game_sounds_primal_beast_boss.vsndevts"
+
+			//"soundfile"	"soundevents/game_sounds.vsndevts"      //TP声音不必预载入Portal.Loop_Appear等
+
+
+
+

@@ -1,0 +1,1258 @@
+//=====================================
+//这里存放肉山、年兽、人龙、地狱火的技能  预留ID 80051——80100
+
+//  #80051：年兽的眩晕                  "Fun_TimeLock"                 
+//  #80052：年兽的扫击                  "Fun_GreatCleave"                       
+//  #80053：年兽的狂暴                  "Fun_BKB"                              
+//  #80054：debuff驱散                 "DEbuff_驱散"                 
+//  #80055：恩赐解脱—年兽           "Fun_Coup_de_Grace_Nian"               
+//  #80056：恩赐解脱—人龙           "Fun_Coup_de_Grace_Dragon"           
+//  #80057：恩赐解脱—地狱火       "Fun_Fun_Coup_de_Grace_Hellfire"          
+//  #80058：年兽光环                    "Fun_Aura_Nian"            
+//  #80059：人龙光环                    "Fun_Aura_Dragon"      
+//  #80060：地狱火光环                 "Fun_Aura_Hellfire"     
+//  #80061：AI年兽的黑洞              "Fun_BlackHole"
+//  #80062：AI人龙的决斗              "Fun_Duel"
+//  #80063：AI地狱火的无敌斩        "Fun_Omni_Slash"
+//  #80064：对敌方年兽的抑制        "Fun_Suppression"
+
+//=====================================
+"DOTAAbilities"
+{      
+                //=================================
+                //年兽、人龙、地狱火的眩晕攻击
+                //=================================
+	"Fun_TimeLock" 
+	{
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		"BaseClass"	                "ability_datadriven"
+		"AbilityTextureName"	"faceless_void_time_lock"
+		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityUnitDamageType"	"DAMAGE_TYPE_PURE"
+		"SpellDispellableType"	"SPELL_DISPELLABLE_NO"
+		"SpellImmunityType"	                "SPELL_IMMUNITY_ENEMIES_NO"
+		"MaxLevel"	                "1"
+		"ID"	                                "80051"
+		// Precache
+		// -------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"particle"	                "particles/status_fx/status_effect_faceless_chronosphere.vpcf"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_faceless_void.vsndevts"
+			"particle"	                "particles/generic_gameplay/generic_stunned.vpcf"
+		}
+		"Modifiers"
+		{
+			"modifier_Fun_TimeLock"
+			{
+				"Passive"	"1"
+				"IsHidden"	"1"
+				"OnAttackLanded"
+				{
+					"Random"
+					{
+						"Chance"	"%chance_pct"
+						"PseudoRandom"	"DOTA_PSEUDO_RANDOM_FACELESS_BASH"
+						"OnSuccess"
+						{
+							"FireSound"
+							{
+								"EffectName"	"Hero_FacelessVoid.TimeLockImpact"
+								"Target"	                "TARGET"
+							}
+							"ApplyModifier"
+							{
+								"ModifierName"	"modifier_Fun_TimeLock_stun"
+								"Duration"	"%duration"
+								"Target"                    "TARGET"
+							}
+							"Damage"
+							{
+								"Target"	                  "TARGET"
+								"Type"	                  "DAMAGE_TYPE_PURE"
+								"Damage"	                  "%bonus_damage"
+							}
+						}
+					}
+				}
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_VISUAL_Z_DELTA"	                                "0"
+					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"	"%bonus_hp_regen"
+				}
+				"States"
+				{
+					"MODIFIER_STATE_FLYING"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+			"modifier_Fun_TimeLock_stun"
+			{
+				"IsDebuff" 	"1"
+				"EffectName"	"particles/generic_gameplay/generic_stunned.vpcf"
+				"EffectAttachType"	"follow_overhead"
+				"StatusEffectName"	"particles/status_fx/status_effect_faceless_chronosphere.vpcf"
+				"StatusEffectPriority"	"1"
+				"States"
+				{
+					"MODIFIER_STATE_STUNNED"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_FROZEN"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+		}
+		// Special
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"duration"   	"0.65"
+			"chance_pct"	"24"
+			"bonus_damage"	"100"
+			"bonus_hp_regen"	"300"	
+		}
+		// Stats
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportBonus"	"25"
+	}
+
+                //=================================
+                //年兽的扫击：年兽、人龙、地狱火的大范围溅射伤害
+                //=================================
+	"Fun_GreatCleave"
+	{
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		"BaseClass"	                "ability_datadriven"
+		"AbilityTextureName"	"sven/immortal/sven_great_cleave"
+		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"   	"SPELL_IMMUNITY_ENEMIES_YES"
+                                "MaxLevel"                               "1"
+		"ID"	                                "80052"
+		// Precache
+		// -------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"soundfile"	"soundevents/game_sounds_items.vsndevts"
+			"particle"	                "particles/econ/items/sven/sven_ti7_sword/sven_ti7_sword_spell_great_cleave_2.vpcf"
+		}
+		"Modifiers"
+		{
+			"modifier_great_cleave_datadriven"
+			{
+				"Passive"	                "1"
+				"IsHidden"	"1"
+				"OnAttackLanded"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/Fun_Boss/Fun_GreatCleave.lua"
+						"Function"	"Fun_GreatCleave"
+                                                                                                "Damage"	                "%attack_damage"
+					}
+				}
+			}
+		}
+		// Special
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"great_cleave_end_radius"	
+			{
+					"value"	"900"
+					"affected_by_aoe_increase"	"1"
+			}
+                                                "great_cleave_distance"	"1300"
+			"great_cleave_damage"	"220"
+		}
+	}
+
+                //=================================
+                //年兽、人龙、地狱火的被动技能免疫
+                //=================================
+	"Fun_BKB"
+	{
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		"BaseClass"	                "ability_datadriven"
+		"AbilityTextureName"	"life_stealer_rage_immortal"
+		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellDispellableType"	"SPELL_DISPELLABLE_NO"
+                                "MaxLevel"                               "1"
+                                "AbilityCooldown"                    "11"
+		"ID"	"80053"
+		"precache"
+		{
+			"particle"	                "particles/status_fx/status_effect_life_stealer_rage.vpcf"
+			"particle"	                "particles/units/heroes/hero_life_stealer/life_stealer_rage.vpcf"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_life_stealer.vsndevts"
+		}
+		"Modifiers"
+		{
+			"modifier_Fun_BKB"
+			{
+				"Passive"	                "1"
+				"IsHidden"	"1"
+                                                                "Attributes"              "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"OnDealDamage"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/Fun_Boss/Fun_BKB.lua"
+						"Function"	"rage_start"
+					}
+				}
+				"OnTakeDamage"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/Fun_Boss/Fun_BKB.lua"
+						"Function"	"rage_start"
+					}
+				}
+			}
+			"modifier_Fun_BKB_active"
+			{
+				"IsBuff"	                           "1"
+                                                                "Attributes"              "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"OnCreated"
+				{
+					"FireSound"
+					{
+						"EffectName"	"Hero_LifeStealer.Rage"
+						"Target"	                "CASTER"
+					}
+					 "AttachEffect"
+					{
+						"EffectName"                "particles/units/heroes/hero_life_stealer/life_stealer_rage.vpcf"
+						"EffectAttachType"        "start_at_customorigin"
+						"Target"                        "CASTER"
+						"ControlPointEntities"
+ 						{
+							"CASTER"                "attach_hitloc"
+							"CASTER"                "attach_hitloc"  
+							"CASTER"                "attach_hitloc"        
+						}
+					}
+				}
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"%attack_speed_bonus"
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%mvspeed_bonus"
+					"MODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE"	"%magic_resistance"
+				}
+				"States"
+				{
+                                                                                "MODIFIER_STATE_DEBUFF_IMMUNE"      "MODIFIER_STATE_VALUE_ENABLED"
+					//"MODIFIER_STATE_MAGIC_IMMUNE"	 "MODIFIER_STATE_VALUE_ENABLED"
+				}
+				"StatusEffectName"	           "particles/status_fx/status_effect_life_stealer_rage.vpcf"
+				"StatusEffectPriority"	           "16"
+			}
+			"modifier_Fun_BKB_cooldown"
+			{
+				"IsDebuff"	                "1"
+                                                                "Attributes"              "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+			}
+		}
+		// Special
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"duration"	                                "5"
+			"attack_speed_bonus"	"200"
+			"mvspeed_bonus"	                "30"
+			"magic_resistance"	                "-80"   //当前效果为全类型伤害减免  
+                                                "value"                                     "80"    //内置修饰器（天赋状态抗性）专用键值
+                                                "cooldown"                              "11"
+		}
+	}
+
+                //===================================
+                //（已移除）年兽、人龙和地狱火会定时驱散自身的特定状态
+                //===================================
+	"DEbuff_驱散"
+	{
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"omniknight_pacify"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+                                "MaxLevel"                               "1"
+		"ID"	"80054"
+		"Modifiers"
+		{
+			"modifier_DEbuff_驱散"
+			{
+				"Passive"	"1"
+				"OnIntervalThink"
+				{
+					"RemoveModifier"
+					{
+						"Target"	"CASTER"
+						"ModifierName"	"modifier_medusa_stone_gaze_stone"
+					}
+					"RemoveModifier"
+					{
+						"Target"	"CASTER"
+						"ModifierName"	"modifier_lion_voodoo"
+					}
+					"RemoveModifier"
+					{
+						"Target"	"CASTER"
+						"ModifierName"	"modifier_item_ethereal_blade_ethereal"
+					}
+				}
+				"ThinkInterval"	"2"
+				"IsHidden"	"1"
+			}
+		}
+	}
+
+                //=================================
+                //年兽的恩赐解脱，削弱移速和全属性
+                //=================================
+	"Fun_Coup_de_Grace_Nian"
+	{
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		"BaseClass"	                "ability_datadriven"
+		"AbilityTextureName"	"phantom_assassin_arcana_coup_de_grace"
+		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"                	"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"	"SPELL_DISPELLABLE_NO"
+                                "MaxLevel"                               "1"
+		"ID"	                                "80055"
+		// Precache
+		// -------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"particle"	                "particles/econ/items/phantom_assassin/phantom_assassin_arcana_elder_smith/phantom_assassin_crit_arcana_swoop.vpcf"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_phantom_assassin.vsndevts"
+		}
+		"Modifiers"
+		{
+			"modifier_Fun_Coup_de_Grace_Nian"
+			{
+				"Passive"	                "1"
+				"IsHidden"	"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"OnCreated"
+				{
+                        				"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/Fun_Boss/Fun_Coup_de_Grace.lua"
+						"Function"	"OnCreated"
+                                                                                                "modifier_crit"          "modifier_Fun_Coup_de_Grace_Nian_crit"
+					}
+				}
+				"OnAttackStart"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/Fun_Boss/boss_cast_spell.lua"
+						"Function"	"boss_cast_spell"
+					}
+					"aRunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/Fun_Boss/Fun_Coup_de_Grace.lua"
+						"Function"	"OnAttackStart"
+                                                                                                "modifier_crit"          "modifier_Fun_Coup_de_Grace_Nian_crit"
+					}
+
+				}
+				"OnAttackLanded"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/Fun_Boss/Fun_Coup_de_Grace.lua"
+						"Function"	"OnAttackLanded"
+                                                                                                "modifier_crit"          "modifier_Fun_Coup_de_Grace_Nian_crit"
+                                                                                                "modifier_dam"        "modifier_Fun_Coup_de_Grace_Nian_dam"
+                                                                                                "modifier_stack"       "modifier_Fun_Coup_de_Grace_Nian_stack"
+					}
+				}
+				"OnAttackFailed"
+				{
+                        				"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/Fun_Boss/Fun_Coup_de_Grace.lua"
+						"Function"	"OnAttackFailed"
+                                                                                                "modifier_crit"          "modifier_Fun_Coup_de_Grace_Nian_crit"
+					}
+				}
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"	                "%bonus_armor"
+					"MODIFIER_PROPERTY_PROVIDES_FOW_POSITION"	                "1"
+				}
+			}
+			"modifier_Fun_Coup_de_Grace_Nian_crit"
+			{
+				"IsHidden"	"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"OnAttackLanded"
+				{
+                                                                                //逻辑上，暴击特效应该写在此处
+				}
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE"	"%crit_bonus"
+				}
+				"States"
+				{
+					"MODIFIER_STATE_CANNOT_MISS"	 "MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+			"modifier_Fun_Coup_de_Grace_Nian_debuff"
+			{
+				"IsDebuff" 	"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"TextureName"	"slark_essence_shift"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"	                "%stats_loss"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"	                "%stats_loss"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"	                "%stats_loss"
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT"	"%mvspeed_loss"
+				}
+			}
+			"modifier_Fun_Coup_de_Grace_Nian_stack"
+			{
+				"IsHidden"	"1"
+				"IsDebuff" 	"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/Fun_Boss/Fun_Coup_de_Grace.lua"
+						"Function"	"Stack_Increase"
+                                                                                                "modifier_debuff"     "modifier_Fun_Coup_de_Grace_Nian_debuff"
+					}
+				}
+				"OnDestroy"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/Fun_Boss/Fun_Coup_de_Grace.lua"
+						"Function"	"Stack_Decrease"
+                                                                                                "modifier_debuff"     "modifier_Fun_Coup_de_Grace_Nian_debuff"
+					}
+				}
+			}
+			"modifier_Fun_Coup_de_Grace_Nian_dam"
+			{
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"IsHidden"	"1"
+				"Properties"
+				{
+					                "MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"	"%bonus_dam"
+				}
+			}
+		}
+		// Special
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"crit_chance"	               "80"
+			"crit_bonus"	               "130"
+                                                "bonus_armor"                        "35"
+                                                "bonus_dam"                          "10"
+                                                "dam_duration"                       "10"
+			"stats_loss"	               "-7"
+			"mvspeed_loss"	               "-10"
+			"stats_loss_tooltip"	               "7"
+			"mvspeed_loss_tooltip"            "10"
+			"debuff_duration"	               "60"
+		}
+	}
+
+                //=================================
+                //人龙的恩赐解脱，削弱护甲、攻击力、攻击速度
+                //=================================
+	"Fun_Coup_de_Grace_Dragon"
+	{
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		"BaseClass"	                "ability_datadriven"
+		"AbilityTextureName"	"phantom_assassin_arcana_coup_de_grace"
+		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType"	                "SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"	"SPELL_DISPELLABLE_NO"
+                                "MaxLevel"                               "1"
+		"ID"	"80056"
+		// Precache
+		// -------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"particle"	                "particles/econ/items/phantom_assassin/phantom_assassin_arcana_elder_smith/phantom_assassin_crit_arcana_swoop.vpcf"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_phantom_assassin.vsndevts"
+		}
+		"Modifiers"
+		{
+			"modifier_Fun_Coup_de_Grace_Dragon"
+			{
+				"Passive"	                "1"
+				"IsHidden"	"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"OnCreated"
+				{
+                        				"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/Fun_Boss/Fun_Coup_de_Grace.lua"
+						"Function"	"OnCreated"
+                                                                                                "modifier_crit"          "modifier_Fun_Coup_de_Grace_Dragon_crit"
+					}
+				}
+				"OnAttackStart"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/Fun_Boss/boss_cast_spell.lua"
+						"Function"	"boss_cast_spell"
+					}
+					"aRunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/Fun_Boss/Fun_Coup_de_Grace.lua"
+						"Function"	"OnAttackStart"
+                                                                                                "modifier_crit"          "modifier_Fun_Coup_de_Grace_Dragon_crit"
+					}
+
+				}
+				"OnAttackLanded"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/Fun_Boss/Fun_Coup_de_Grace.lua"
+						"Function"	"OnAttackLanded"
+                                                                                                "modifier_crit"          "modifier_Fun_Coup_de_Grace_Dragon_crit"
+                                                                                                "modifier_dam"        "modifier_Fun_Coup_de_Grace_Dragon_dam"
+                                                                                                "modifier_stack"       "modifier_Fun_Coup_de_Grace_Dragon_stack"
+					}
+				}
+				"OnAttackFailed"
+				{
+                        				"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/Fun_Boss/Fun_Coup_de_Grace.lua"
+						"Function"	"OnAttackFailed"
+                                                                                                "modifier_crit"          "modifier_Fun_Coup_de_Grace_Dragon_crit"
+					}
+				}
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"	                "%bonus_armor"
+					"MODIFIER_PROPERTY_PROVIDES_FOW_POSITION"	                "1"
+				}
+			}
+			"modifier_Fun_Coup_de_Grace_Dragon_crit"
+			{
+				"IsHidden"	"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"OnAttackLanded"
+				{
+                                                                                //逻辑上，暴击特效应该写在此处
+				}
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE"	"%crit_bonus"
+				}
+				"States"
+				{
+					"MODIFIER_STATE_CANNOT_MISS"	 "MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+			"modifier_Fun_Coup_de_Grace_Dragon_debuff"
+			{
+				"IsDebuff" 	"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"TextureName"	"slark_essence_shift"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"	                "%armor_loss"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"%attack_speed_loss"
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"	"%attack_damage_loss"
+				}
+			}
+			"modifier_Fun_Coup_de_Grace_Dragon_stack"
+			{
+				"IsHidden"	"1"
+				"IsDebuff" 	"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/Fun_Boss/Fun_Coup_de_Grace.lua"
+						"Function"	"Stack_Increase"
+                                                                                                "modifier_debuff"     "modifier_Fun_Coup_de_Grace_Dragon_debuff"
+					}
+				}
+				"OnDestroy"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/Fun_Boss/Fun_Coup_de_Grace.lua"
+						"Function"	"Stack_Decrease"
+                                                                                                "modifier_debuff"     "modifier_Fun_Coup_de_Grace_Dragon_debuff"
+					}
+				}
+			}
+			"modifier_Fun_Coup_de_Grace_Dragon_dam"
+			{
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"IsHidden"	"1"
+				"Properties"
+				{
+					                "MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"	"%bonus_dam"
+				}
+			}
+		}
+		// Special
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"crit_chance"	               "80"
+			"crit_bonus"	               "130"
+                                                "bonus_armor"                        "35"
+			"debuff_duration"	               "60"
+                                                "bonus_dam"                          "10"
+                                                "dam_duration"                       "10"
+			"armor_loss"	               "-2"
+			"attack_damage_loss"              "-15"
+			"attack_speed_loss"	               "-20"
+			"armor_loss_tooltip"	               "-2"
+			"attack_damage_loss_tooltip"   "-15"
+			"attack_speed_loss_tooltip"      "-20"
+		}
+	}
+
+                //=================================
+                //地狱火的恩赐解脱，削弱最大魔法值、魔法抗性、技能增强
+                //=================================
+	"Fun_Coup_de_Grace_Hellfire"
+	{
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		"BaseClass"	                "ability_datadriven"
+		"AbilityTextureName"	"phantom_assassin_arcana_coup_de_grace"
+		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"SpellImmunityType" 	"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"	"SPELL_DISPELLABLE_NO"
+                                "MaxLevel"                               "1"
+		"ID"	                                "80057"
+		// Precache
+		// -------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"particle"	                "particles/econ/items/phantom_assassin/phantom_assassin_arcana_elder_smith/phantom_assassin_crit_arcana_swoop.vpcf"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_phantom_assassin.vsndevts"
+		}
+		"Modifiers"
+		{
+			"modifier_Fun_Coup_de_Grace_Hellfire"
+			{
+				"Passive"	                "1"
+				"IsHidden"	"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"OnCreated"
+				{
+                        				"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/Fun_Boss/Fun_Coup_de_Grace.lua"
+						"Function"	"OnCreated"
+                                                                                                "modifier_crit"          "modifier_Fun_Coup_de_Grace_Hellfire_crit"
+					}
+				}
+				"OnAttackStart"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/Fun_Boss/boss_cast_spell.lua"
+						"Function"	"boss_cast_spell"
+					}
+					"aRunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/Fun_Boss/Fun_Coup_de_Grace.lua"
+						"Function"	"OnAttackStart"
+                                                                                                "modifier_crit"          "modifier_Fun_Coup_de_Grace_Hellfire_crit"
+					}
+
+				}
+				"OnAttackLanded"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/Fun_Boss/Fun_Coup_de_Grace.lua"
+						"Function"	"OnAttackLanded"
+                                                                                                "modifier_crit"          "modifier_Fun_Coup_de_Grace_Hellfire_crit"
+                                                                                                "modifier_dam"        "modifier_Fun_Coup_de_Grace_Hellfire_dam"
+                                                                                                "modifier_stack"       "modifier_Fun_Coup_de_Grace_Hellfire_stack"
+					}
+				}
+				"OnAttackFailed"
+				{
+                        				"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/Fun_Boss/Fun_Coup_de_Grace.lua"
+						"Function"	"OnAttackFailed"
+                                                                                                "modifier_crit"          "modifier_Fun_Coup_de_Grace_Hellfire_crit"
+					}
+				}
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"	                "%bonus_armor"
+					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"%bonus_magic_resistance"
+					"MODIFIER_PROPERTY_PROVIDES_FOW_POSITION"	                "1"
+				}
+			}
+			"modifier_Fun_Coup_de_Grace_Hellfire_crit"
+			{
+				"IsHidden"	"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"OnAttackLanded"
+				{
+                                                                                //逻辑上，暴击特效应该写在此处
+				}
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE"	"%crit_bonus"
+				}
+				"States"
+				{
+					"MODIFIER_STATE_CANNOT_MISS"	 "MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+			"modifier_Fun_Coup_de_Grace_Hellfire_debuff"
+			{
+				"IsDebuff" 	"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"TextureName"	"slark_essence_shift"
+				"Properties"
+				{
+					//"MODIFIER_PROPERTY_MANA_BONUS"	                                "%mana_loss"
+					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"%magic_resistance_loss"
+					"MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"	"%spell_amp_loss"
+				}
+			}
+			"modifier_Fun_Coup_de_Grace_Hellfire_stack"
+			{
+				"IsHidden"	"1"
+				"IsDebuff" 	"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/Fun_Boss/Fun_Coup_de_Grace.lua"
+						"Function"	"Stack_Increase"
+                                                                                                "modifier_debuff"     "modifier_Fun_Coup_de_Grace_Hellfire_debuff"
+					}
+				}
+				"OnDestroy"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/Fun_Boss/Fun_Coup_de_Grace.lua"
+						"Function"	"Stack_Decrease"
+                                                                                                "modifier_debuff"     "modifier_Fun_Coup_de_Grace_Hellfire_debuff"
+					}
+				}
+			}
+			"modifier_Fun_Coup_de_Grace_Hellfire_dam"
+			{
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"IsHidden"	"1"
+				"Properties"
+				{
+					                "MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"	"%bonus_dam"
+				}
+			}
+                                }
+		// Special
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"crit_bonus"	               "130"
+			"crit_chance"	               "80"
+                                                "bonus_armor"                        "300"
+                                                "bonus_magic_resistance"       "-100"
+                                                "bonus_magic_resistance_tooltip"       "-100"
+			"debuff_duration"	               "60"
+                                                "bonus_dam"                          "10"
+                                                "dam_duration"                       "10"
+			"mana_loss"                             "80"
+			"magic_resistance_loss"            "-7"
+			"spell_amp_loss"                       "-7"
+			"mana_loss_tooltip"                             "80"
+			"magic_resistance_loss_tooltip"            "7"
+			"spell_amp_loss_tooltip"                       "7"
+		}
+	}
+
+                //=================================
+                //年兽光环，提供额外攻击力
+                //=================================
+	"Fun_Aura_Nian"
+	{
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"modifier_cny_beast_aegis"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ID"	"80058"
+		// Precache
+		// -------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"particle"	"particles/units/heroes/hero_luna/luna_ambient_lunar_blessing.vpcf"
+		}
+		"Modifiers"
+		{
+			"modifier_Fun_Aura_Nian"
+			{
+				"Passive"	"1"
+				"IsHidden"	"1"
+				"Aura"	                 "modifier_Fun_Aura_Nian_damage"
+				"Aura_Radius"	"%radius"
+				"Aura_Teams"	"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+				"Aura_Types"	"DOTA_UNIT_TARGET_HERO"
+				"Properties"	{}
+				"Aura_ApplyToCaster"	"1"
+			}
+			"modifier_Fun_Aura_Nian_damage"
+			{
+				"IsDebuff"	"0"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE"	"%bonus_damage"
+				}
+			}
+		}
+		// Special
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"radius"	
+			{
+					"value"	"900"
+					"affected_by_aoe_increase"	"1"
+			}
+			"bonus_damage"	"30"
+		}
+	}
+
+                //=================================
+                //人龙光环，提供额外移速和攻速
+                //=================================
+	"Fun_Aura_Dragon"
+	{
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"modifier_cny2015_support_aura"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ID"	"80059"
+		// Precache
+		// -------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"particle"	"particles/units/heroes/hero_luna/luna_ambient_lunar_blessing.vpcf"
+		}
+		"Modifiers"
+		{
+			"modifier_Fun_Aura_Dragon"
+			{
+				"Passive"	"1"
+				"IsHidden"	"1"
+				"Aura"	                "modifier_Fun_Aura_Dragon_move"
+				"Aura_Radius"	"%radius"
+				"Aura_Teams"	"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+				"Aura_Types"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_ALL | DOTA_UNIT_TARGET_BUILDING"
+				"Properties"	{}
+				"Aura_ApplyToCaster"	"1"
+			}
+			"modifier_Fun_Aura_Dragon_move"
+			{
+				"IsDebuff"	"0"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%bonus_move"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"%bouns_attack_speed"
+				}
+			}
+		}
+		// Special
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"radius"	
+			{
+					"value"	"900"
+					"affected_by_aoe_increase"	"1"
+			}
+			"bonus_move"	"50"
+			"bouns_attack_speed"	"120"
+		}
+	}
+
+                //=================================
+                //地狱火光环，提供额外生命回复和护甲
+                //=================================
+	"Fun_Aura_Hellfire"
+	{
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"warlock_hellborn_upheaval"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"ID"	"80060"
+		// Precache
+		// -------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"particle"	"particles/units/heroes/hero_luna/luna_ambient_lunar_blessing.vpcf"
+		}
+		"Modifiers"
+		{
+			"modifier_Fun_Aura_Hellfire"
+			{
+				"Passive"	"1"
+				"IsHidden"	"1"
+				"Aura"	                "modifier_Fun_Aura_Hellfire_regen"
+				"Aura_Radius"	"%radius"
+				"Aura_Teams"	"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+				"Aura_Types"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_ALL | DOTA_UNIT_TARGET_BUILDING"
+				"Properties"	{}
+				"Aura_ApplyToCaster"	"1"
+			}
+			"modifier_Fun_Aura_Hellfire_regen"
+			{
+				"IsDebuff"	"0"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE"	"%bonus_regen"
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"	                "%bonus_armor"
+				}
+			}
+		}
+		// Special
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"radius"
+			{
+					"value"	"900"
+					"affected_by_aoe_increase"	"1"
+			}
+			"bonus_regen"	"2.0"
+			"bonus_armor"	"15"
+		}
+	}
+
+                //========================================
+                //AI年兽的黑洞
+                //========================================
+	"Fun_BlackHole"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"80061"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"BaseClass"	                                                "enigma_black_hole"
+		"AbilityTextureName"	                                "enigma_black_hole"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_CHANNELLED"
+		"AbilityType"				"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PURE"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+                                "MaxLevel"                                                               "1"
+		"HasScepterUpgrade"			"1"
+		"precache"
+		{
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_enigma.vsndevts"
+		}		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"275"
+		"AbilityCastPoint"				"0.3 0.3 0.3"
+		"AbilityChannelTime"			"4.0"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+		"AbilityChannelAnimation"		"ACT_DOTA_CHANNEL_ABILITY_4"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"40"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"500"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"damage"			
+			{
+				"value"		"600"
+			}
+
+			"radius"			
+			{	
+				"value"			"420"
+					"affected_by_aoe_increase"	"1"
+			}
+			"pull_speed"			"30"
+			"tick_rate"				"0.1 0.1 0.1"
+			"duration"				"4.0 4.0 4.0"
+			"vision_radius"			
+			{
+				"value"		"800"
+				"affected_by_aoe_increase"	"1"
+			}
+			"pull_rotate_speed"		"0.25"
+			"animation_rate"		"0.2"
+			"scepter_pct_damage"
+			{
+				"value"					"5"
+			}
+			"scepter_radius"	
+			{
+				"value"					"1800"
+				"affected_by_aoe_increase"	"1"
+			}
+			"scepter_drag_speed"			
+			{
+				"value"					"300"
+			}
+			"scepter_pull_rotate_speed"	
+			{
+				"value"					"0.1"
+			}
+		}
+	}
+
+                //========================================
+                //AI人龙的决斗
+                //========================================
+	"Fun_Duel"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"80062"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"BaseClass"	                                                "legion_commander_duel"
+		"AbilityTextureName"	                                "legion_commander_duel_alt1"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO"
+		"AbilityType"				"DOTA_ABILITY_TYPE_ULTIMATE"
+		"AbilityUnitTargetFlags"		"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+		"AbilitySound"				"Hero_LegionCommander.Duel"
+                                "MaxLevel"                                                               "1"
+		"precache"
+		{
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_legion_commander.vsndevts"
+		}
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"250"
+		"AbilityCastPoint"				"0.3"
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"75"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"3.0"	// Value much higher than cost.
+
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"duration"				
+			{
+				"value"				"7"		
+			}
+			"AbilityCastRange"		
+			{
+				"value"			"300"
+			}		
+			"reward_damage"			
+			{
+				"value"			"50"
+			}
+			"assist_reward_damage"
+			{
+				"value"			"50"			
+			}
+			"debuff_immunity"
+			{
+				"value"				"1"
+			}
+			"damage_reduction_pct"			
+			{
+				"value"				"0"
+			}
+			"AbilityCooldown"	
+			{
+				"value"					"40"
+			}
+
+		}
+	}
+
+                //========================================
+                //AI地狱火的无敌斩
+                //========================================
+	"Fun_Omni_Slash"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"80063"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"BaseClass"	                                                "juggernaut_omni_slash"
+		"AbilityTextureName"	                                "juggernaut/bladekeeper/juggernaut_omni_slash"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"		                "DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_PHYSICAL"	
+		"SpellDispellableType"			"SPELL_DISPELLABLE_NO"
+                                "MaxLevel"                                                                "1"		
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+
+		"AbilityCastPoint"				"0.3 0.3 0.3"
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_4"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"40"
+	
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"350"
+
+		// Stats
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityModifierSupportValue"	"0.0"	// damage only
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"attack_rate_multiplier"	                                "1.7"
+			"bonus_damage"				"90"
+			"bonus_attack_speed"			"200"
+			"duration"
+			{
+				"value"					"3.5"
+			}
+			"omni_slash_radius"			
+			{
+				"affected_by_aoe_increase"	"1"
+				"value"		"900"
+			}
+			"AbilityCastRange"				
+			{
+				"value"					"350"
+			}
+			"dispel"
+			{
+				"value"		"1"
+			}
+		}
+	}
+
+                //========================================
+                //AI方年兽和獸：抑制，靠近自己的人类年兽单位将停止行动
+                //========================================
+	"Fun_Suppression"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					 "80064"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"BaseClass"	                                                 "ability_datadriven"
+		"AbilityTextureName"	                                 "enchantress_untouchable"
+		"AbilityBehavior"				 "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA"
+		"AbilityUnitTargetTeam"			 "DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"SpellImmunityType"		                                 "SPELL_IMMUNITY_ENEMIES_YES"
+                                "MaxLevel"                                                                "1"
+		"AOERadius"	                                                 "%radius"
+		"precache"
+		{
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_earth_spirit.vsndevts"
+			//"soundfile"	"soundevents/game_sounds.vsndevts"      //TP声音不必预载入Portal.Loop_Appear等
+			"particle"	                "particles/econ/events/fall_2021/teleport_start_fall_2021_lvl3.vpcf"
+			"particle"	                "particles/econ/events/fall_2021/teleport_end_fall_2021_lvl3.vpcf"
+			"particle"	                "particles/status_fx/status_effect_earth_spirit_petrify.vpcf"
+		}
+		"Modifiers"
+		{
+			"modifier_Fun_Suppression"
+			{
+				"IsHidden"	"1"
+				"Passive"	                "1"
+				"Aura"	                "modifier_Fun_Nian_Blocker_Aura_Suppression"
+				"Aura_Radius"	"%radius"
+				"Aura_Teams"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+				"Aura_Types"	"DOTA_UNIT_TARGET_HERO"
+				"Aura_Flags"	"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+                                                                "Aura_ApplyToCaster"	"0"
+			}
+			"modifier_Fun_Nian_Blocker_Aura_Suppression"
+			{
+				"Passive"	                "0"
+				"IsDebuff"	                "1"
+				"IsHidden"	"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+                                                                "OnCreated"
+                                                                {
+			                                "RunScript"
+			                                {
+				                                "ScriptFile"	"scripts/vscripts/Fun_BaseGameMode/Fun_Nian_Blocker.lua"
+				                                "Function"	"Fun_Nian_Blocker_Aura_Gohome"
+			                                }
+                                                                }
+                                                                "OnDestroy"
+                                                                {
+			                                "RunScript"
+			                                {
+				                                "ScriptFile"	"scripts/vscripts/Fun_BaseGameMode/Fun_Nian_Blocker.lua"
+				                                "Function"	"Fun_Nian_Blocker_Aura_Remove"
+			                                }
+                                                                }
+			}
+			"modifier_Fun_Nian_Blocker_Aura_Stop_2"
+			{
+				"Passive"	                "0"
+				"IsDebuff"	                "1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"States"
+				{
+					"MODIFIER_STATE_COMMAND_RESTRICTED"	         "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_ATTACK_IMMUNE"	                         "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_UNSELECTABLE"	                         "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_FROZEN"	                                         "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_DISARMED"	                                         "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_ROOTED"	                                         "MODIFIER_STATE_VALUE_ENABLED"
+				}
+				"StatusEffectName"	           "particles/status_fx/status_effect_earth_spirit_petrify.vpcf"
+				"StatusEffectPriority"	           "17"
+			}
+		}
+		// Special
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+                                                "radius"	       
+			{
+				"value"			 "1600"
+				"affected_by_aoe_increase"	"1"
+			}
+		}
+	}
+}

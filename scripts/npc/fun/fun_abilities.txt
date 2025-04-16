@@ -1,0 +1,4894 @@
+//=====================================
+//这里存放每个英雄需要阿哈利姆之书升级的技能（或者自制取代原版的技能）  预留ID 80151——80300
+
+//  #80151       斧王：精通的反击螺旋             "axe_jingtongdefanji"
+//  #80152       狙击手：快速装填                    "sniper_miaozhun"    重命名为 "special_bonus_unique_sniper_miaozhun"
+//  #80153       瘟疫法师：精通的竭心光环       "necrolyte_heartstopper_aura_fun" 重命名为 "special_bonus_unique_necrolyte_heartstopper_aura_fun"
+//  #80154       敌法师：精通的法术反制          "antimage_mana_defend"
+//  #80155       马格纳斯：精通的颠勺             "magnataur_dianshao"
+//  #80156       末日使者：精通的阎刃             "doom_bringer_yanren"
+//  #80157       幻影刺客：永恒的恩赐解脱       "永恒的恩赐解脱"
+//  #80158       齐天大圣：毁天灭地                "monkey_king_huitianmiedi"
+//  #80159       半人马战行者：战争践踏          "centaur_zhanzhengjianta"
+//  #80160       远古冰魄：寒霜诅咒                "ancient_apparition_hanshuangzuzhou"
+//  #80161       昆卡：搁浅之地                       "kunkka_ghostship_fun"
+//  #80162       酒仙：火焰呼吸                       "huoyanhuxi"（废弃）
+//  #80163       拉比克：大魔导师                    "damodaoshi"（已被异步同位取代）
+//  #80164       宙斯：天神下凡                       "tianshenxiafan"
+//  #80165       小小：崎岖外表                       "tiny_qiquwaibiao"
+//  #80166       灰烬之灵：烈焰灼烧                 "ember_huoyanpohuai"
+//  #80167       风行者：分散火力                    "windrunner_fensanhuoli"
+//  #80168       主宰：剑圣                              "juggernaut_jiansheng"
+//  #80169       寒冬飞龙：钻石化                     "winter_wyvern_zuanshihua"
+//  #80170       谜团：闪耀黑洞                        "heidong"
+//  #80171       莉娜：重破斩                           "lina_laguna_blade_fun"  重命名为 "special_bonus_unique_lina_laguna_blade_fun"
+//  #80172       食人魔法师：聚宝功                 "ogre_magi_jubaogong"
+//  #80173       莱恩：恶魔巫师                        "lion_emowushi"
+//  #80174       恐怖利刃：背叛者的饥渴           "terrorblade_beipanzhe"
+//  #80175       獸：超究武神霸锤                     "aghsfort_primal_beast_boss_pummel_fun"
+//  #80176       军团指挥官：群体决斗               "legion_commander_all_duel"
+//  #80177       卓尔游侠：银影天仇                  "drow_ranger_marksmanship_fun"
+//  #80178       沉默术士：忏悔之言                  "silencer_last_word_fun"
+//  #80179       冥魂大帝：永生大帝                  "skeleton_king_reincarnation_fun"
+//  #80180       修补匠：镭射风暴                     "tinker_death_spin"
+//  #80181       斯温：风暴之拳（重置版）        "sven_storm_bolt_fun"
+//  #80182       虚无之灵：炁（qi，四声）体源流  "void_spirit_wuyingzhan"//"void_spirit_wudizhan"
+//  #80183       玛尔斯：超级竞技场1/3（内圈）   "mars_arena_of_blood_fun_1"
+//  #80184       玛尔斯：超级竞技场2/3（外圈）   "mars_arena_of_blood_fun_2"
+//  #80185       玛尔斯：超级竞技场3/3（主技能）"mars_arena_of_blood_fun_3"
+//  #80186       影魔：毁灭三连                         "nevermore_shadowraze_fun"
+//  #80187       拉比克：异步同位                      "rubick_asynchronous_coincide"
+//  #80188       变体精灵：波浪打击                   "morphling_tidal_wave_fun"
+//  #80189       恐怖利刃：恶魔变形                   "terrorblade_Metamorphosis_fun"
+//  #80190       艾欧：仁爱之友                         "wisp_overcharge_fun"
+//  #80191       美杜莎：法力吮吸                      "medusa_absorb_mana"
+//  #80192       上古巨神：六芒裂地沟壑            "elder_titan_earth_splitter_hexagram"
+//  #80193       天穹守望者：神符铸就                "arc_warden_rune_forge"
+//  #80194       钢背兽：反击针刺                      "bristleback_back"
+//  #80195       祈求者：祈艺大师                      "invoker_again"
+//  #80196       幻影刺客：模拟命石                   "phantom_assassin_coup_de_grace_fun"
+//====================================
+"DOTAAbilities"
+{
+                //=================================
+                //斧王：精通的反击螺旋
+                //=================================
+	"axe_jingtongdefanji"
+	{
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		"BaseClass"	                "ability_datadriven"
+		"AbilityTextureName"	"axe_counter_helix_unleashed"
+		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"	                "SPELL_IMMUNITY_ENEMIES_NO" 
+                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+		"MaxLevel"	"1"
+		"HasScepterUpgrade"	"1"
+                                "IsBreakable"					"1"
+		// Time
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"	"0.3"
+		"AOERadius"	"%radius"
+		"ID"	"80151"
+		// Precache
+		// -------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"particle"	                "particles/units/heroes/hero_axe/axe_attack_blur_counterhelix.vpcf"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_axe.vsndevts"
+		}
+		"Modifiers"
+		{
+			"modifier_counter_helix_datadriven"
+			{
+				"Passive"	                "1"
+				"IsHidden"	"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"OnAttacked"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_axe/counter_helix.lua"
+						"Function"	"CounterHelix"
+					}
+				}
+			}
+			"modifier_counter_helix_rotate_datadriven"
+			{
+				"IsHidden"	"1"
+				"ThinkInterval"	"0.03"
+				"EffectName"	"particles/units/heroes/hero_axe/axe_attack_blur_counterhelix.vpcf"
+				"EffectAttachType"	"follow_origin"
+				"OnIntervalThink"
+				{
+					"Rotate"
+					{
+						"Target"	"CASTER"
+						"PitchYawRoll"	"0 72 0"
+					}
+				}
+			}
+			"modifier_counter_helix_buff_datadriven"
+			{
+				"IsHidden"	"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE | MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"	"%armor"
+					"MODIFIER_PROPERTY_HEALTH_BONUS"	                "%hp"
+				}
+			}
+		}
+		// Special
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+                                                "damage"                 "240"
+			"radius"	               
+			{
+				"value"			"275"
+				"affected_by_aoe_increase"	"1"
+			}
+			"trigger_chance"	"35"
+                                                "trigger_radius"	"1600"
+			"armor"                    "1.5"
+			"hp"	                "35"	
+			"duration" 	"20"
+		}
+	}
+
+                 //=================================
+                //狙击手：快速装填
+                //=================================
+	"special_bonus_unique_sniper_miaozhun"//"sniper_miaozhun"
+	{
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		"BaseClass"	                "ability_datadriven"
+		"AbilityTextureName"	"sniper_assassinate_muh_keen_gun"
+		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"SpellDispellableType"	"SPELL_DISPELLABLE_YES"
+                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+		"AbilityCastPoint"	"1.5"
+		"AbilityCastAnimation"	"ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCooldown"	"45"
+		"AbilityManaCost"	"50"
+		"AbilityCastRange"	"0" 
+		"ID"	"80152"
+		"MaxLevel"	"1"
+		"precache"
+		{
+			"particle"	                   "particles/units/heroes/hero_tinker/tinker_laser.vpcf"
+		}
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				"Target"	"CASTER"
+				"ModifierName"	"modifier_瞄准_2"
+			}
+
+			"RunScript"
+			{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_sniper/miaozhun.lua"
+						"Function"	"AI_StackCount"
+						
+			}
+		}
+		// Data driven
+		// -------------------------------------------------------------------------------------------------------------
+		"Modifiers"
+		{
+			"modifier_take_aim_datadriven"
+			{
+				"Passive"	                "1"
+				"IsPurgable"	"0"
+				"IsHidden"	"1"
+				"IsBuff"	                "1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"OnAttackLanded"
+				{
+					"ApplyModifier"
+					{
+						"Target"	                "CASTER"
+						"ModifierName"	"modifier_瞄准"
+					}
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_sniper/miaozhun.lua"
+						"Function"	"IncreaseStackCount"
+						"modifier_counter_name"	"modifier_瞄准层数"
+					}
+				}
+				"OnAbilityExecuted"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_sniper/miaozhun.lua"
+						"Function"	"Once_sniper_assassinate"
+					}
+				}
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_ATTACK_RANGE_BONUS"	"%bonus_attack_range"
+				}
+			}
+			"modifier_瞄准"
+			{
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"Duration"	"%时间"
+				"IsHidden"	"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"	"%敏捷"
+				}
+				"OnDestroy"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_sniper/miaozhun.lua"
+						"Function"	"DecreaseStackCount"
+						"modifier_counter_name"	"modifier_瞄准层数"
+					}
+				}
+			}
+			"modifier_瞄准_2"
+			{
+				"IsBuff"	                "1"
+				"IsPurgable"	"1"
+				"IsHidden"	"0"
+				"Duration"	"%主动时间"
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_sniper/miaozhun.lua"
+						"Function"	"miaozhun_activity_OnCreated"
+					}
+				}
+				"OnDestroy"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_sniper/miaozhun.lua"
+						"Function"	"miaozhun_activity_OnDestroy"
+					}
+				}
+				"States"
+				{
+					"MODIFIER_STATE_CANNOT_MISS"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_PASSIVES_DISABLED"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_BASE_ATTACK_TIME_CONSTANT"	"%基础攻击间隔"
+					"MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE"	"%攻击力"
+					"MODIFIER_PROPERTY_ATTACK_RANGE_BONUS"	"%bonus_attack_range_use"
+				}
+				"Orb"
+				{
+					"ProjectileName"	"particles/units/heroes/hero_tinker/tinker_laser.vpcf"
+					"Priority"	"DOTA_ORB_PRIORITY_ITEM"
+					"CastAttack"	"0"
+				}
+				"aaaOrb"
+				{
+					"ProjectiletName"	"particles/units/heroes/hero_tinker/tinker_laser.vpcf"
+					"Priority"	"DOTA_ORB_PRIORITY_ITEM"
+					"CastAttack"	"0"
+				}
+			}
+			"modifier_瞄准层数"
+			{
+				"IsDebuff"	"0"
+				"IsBuff"	"1"
+			}
+			"modifier_瞄准_负面"
+			{
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%负面移动速度"
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"	"%减少护甲"
+				}
+				"Duration"	"%负面时间"
+				"IsDebuff"	"1"
+			}
+			"modifier_sniper_miaozhun"
+			{
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE"	"50"
+					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	"450"
+					"MODIFIER_PROPERTY_ATTACK_RANGE_BONUS"	"720"
+				}
+				"OnDealDamage"
+				{
+					"Lifesteal"
+					{
+						"Target"	"CASTER"
+						"LifestealPercent"	"30"
+					}
+				}
+				"IsBuff"	"1"
+				"IsHidden"	"1"
+			}
+		}
+		// Special
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"bonus_attack_range"	"180"
+                                                "敏捷"	                                "1"
+			"时间"	                                "12"	
+			"基础攻击间隔"	                "0.35"
+			"bonus_attack_range_use"	"520"
+			"攻击力"	                                "-40"
+			"主动时间"	                                "15"
+			"负面时间"	                                "3.0"	
+			"负面护甲"	                                "28"
+			"负面移动速度"	                "-90"
+			"移动速度"	                                "90"
+			"减少护甲"	                                "-28"
+			"攻击力降低"	                "40"	
+			"暗杀范围"                                "550"
+			"暗杀伤害"                                "800"
+		}
+	}
+
+                //=================================
+                //瘟疫法师：精通的竭心光环
+                //=================================
+	"special_bonus_unique_necrolyte_heartstopper_aura_fun"
+	{
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"necrolyte/apostle_of_decay_icons/necrolyte_heartstopper_aura"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_AURA"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitDamageType"	"DAMAGE_TYPE_PURE"
+		"SpellImmunityType"	"SPELL_IMMUNITY_ENEMIES_YES"
+                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+		"MaxLevel"	"1"
+                                "IsBreakable"		"1"
+		// Casting
+		// -------------------------------------------------------------------------------------------------------------
+		"AOERadius"	"%aura_radius"
+		"ID"	"80153"
+		"precache"
+		{
+			"particle"	"particles/econ/items/techies/techies_ti9/techies_ti9_spleen_ambient.vpcf"
+		}
+		"Modifiers"
+		{
+			"modifier_heartstopper_aura_datadriven"
+			{
+				"Passive"	                "1"
+				"IsHidden"	"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT"
+				"Aura"	                "modifier_heartstopper_debuff_datadriven"
+				"Aura_Radius"	"%aura_radius"
+				"Aura_Teams"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+				"Aura_Types"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+				"Aura_Flags"	"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_necrolyte/heartstopper_aura.lua"
+						"Function"	"HeartstopperAura_Set"
+					}
+				}
+			}
+			"modifier_heartstopper_debuff_datadriven"
+			{
+				"IsDebuff"	                "1"
+				"IsHidden"	"0"
+				"ThinkInterval"	"%aura_hp_lose_interval"
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_necrolyte/heartstopper_aura.lua"
+						"Function"	"HeartstopperAura_OnIntervalThink"
+					}
+				}
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_necrolyte/heartstopper_aura.lua"
+						"Function"	"HeartstopperAura_OnIntervalThink"
+					}
+				}
+			}
+			"modifier_启迪：竭心光环"
+			{
+				"EffectName"	"particles/econ/items/techies/techies_ti9/techies_ti9_spleen_ambient.vpcf"
+				"EffectAttachType"	"follow_origin"
+				"IsHidden"	"1"
+				"Passive"	"1"
+			}
+		}
+		"AbilityValues"
+		{
+			"aura_radius"	
+			{
+				"value"			"1000"
+				"affected_by_aoe_increase"	"1"
+			}
+			"aura_hp_lose"	"2.5"
+			"aura_hp_lose_ancient"	"100" //定值伤害
+			"aura_hp_lose_interval"	"0.2"	
+		}
+	}
+
+                 //=================================
+                //敌法师：精通的法术反制
+                //=================================
+	"antimage_mana_defend"
+	{
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"antimage/immortal/antimage_blink"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO"
+                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+		"MaxLevel"	"1"
+                                "IsBreakable"		"1"
+		//"AbilityCooldown"	"8.5"
+		"HasScepterUpgrade"	"1"
+		"HasShardUpgrade"	                "1"
+		"ID"	"80154"
+		"precache"
+		{
+			"particle"	"particles/econ/items/techies/techies_ti9/techies_ti9_spleen_ambient.vpcf"
+		}
+		"Modifiers"
+		{
+			"modifier_启迪：法术反制"
+			{
+				"Passive"	                                "1"
+				"IsHidden"	                "1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"OnAttacked"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_antimage/ant_fashufangzhi.lua"
+						"Function"	"fashufangzhi"
+					}
+				}
+				"OnAbilityExecuted"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_antimage/ant_fashufangzhi.lua"
+						"Function"	"fashufangzhi_OnAbilityExecuted"
+					}
+				}
+				"EffectName"	"particles/econ/items/techies/techies_ti9/techies_ti9_spleen_ambient.vpcf"
+				"EffectAttachType"	"follow_origin"
+			}
+		}
+		"AbilityValues"
+		{
+                                                "duration"            "1.8"
+			"cooldown"          "10"
+                                                "bonus_dmg_base"      "0"
+                                                "bonus_dmg_mana"     "0.02"
+		}
+	}
+
+                //=================================
+                //马格纳斯：精通的颠勺
+                //=================================
+	"magnataur_dianshao"
+	{
+		"BaseClass"	                "ability_datadriven"
+		"AbilityTextureName"	"magnataur/forgemaster_icons/magnataur_reverse_polarity"
+		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitDamageType"	"DAMAGE_TYPE_PHYSICAL"
+		"SpellImmunityType"	                "SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"	"SPELL_DISPELLABLE_NO"
+                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+		"MaxLevel"	"1"
+                                "IsBreakable"		"1"
+		"AbilityCooldown"	"14"
+		"ID"	"80155"
+		"precache"
+		{
+			"particle"	"particles/econ/items/techies/techies_ti9/techies_ti9_spleen_ambient.vpcf"
+			"particle"	"particles/units/heroes/hero_magnataur/magnataur_horn_toss_land.vpcf"
+			"particle"	                "particles/items3_fx/silver_edge.vpcf"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_magnataur.vsndevts"
+		}
+		"Modifiers"
+		{
+			"modifier_精通的颠勺"
+			{
+				"Passive"	                "1"
+				"IsHidden"	"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"OnAttackStart"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_magnataur/magnataur_dianshao.lua"
+						"Function"	"dianshao_OnAttackStart"
+					}
+				}
+				"OnAttack"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_magnataur/magnataur_dianshao.lua"
+						"Function"	"dianshao_OnAttack"
+					}
+				}
+				"Properties"
+				{
+				                "MODIFIER_PROPERTY_ATTACK_RANGE_BONUS"      "%attack_range"
+				}
+				"EffectName"	"particles/econ/items/techies/techies_ti9/techies_ti9_spleen_ambient.vpcf"
+				"EffectAttachType"	"follow_origin"
+			}
+			"modifier_dianshao"
+			{
+				"OnCreated"
+				{
+					"Damage"
+					{
+						"Target"
+						{
+							"Center"	"TARGET"
+							"Teams"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+							"Types"	"DOTA_UNIT_TARGET_HERO"
+							"Flags"	"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+						}
+						"Type"	"DAMAGE_TYPE_PHYSICAL"
+						"MaxHealthPercentBasedDamage"	"1"
+                                                                                                "Damage"	            "%damage_pct"
+					}
+					"Knockback"
+					{
+						"Target"
+						{
+							"Center"	"TARGET"
+							"Teams"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+							"Types"	"DOTA_UNIT_TARGET_HERO"
+							"Flags"	"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+						}
+						"Center"	"CASTER"
+						"Duration"	"%knockback_duration"
+						"Distance"	"-400"
+						"Height"	"300"
+						"ShouldStun"	"1"
+                                                                                                "IsFixedDistance"      "0"
+					}
+					"DelayedAction"
+					{
+						"Action"
+						{
+							"FireEffect"
+							{
+							                "Target"
+							                {
+							                	"Center"	"TARGET"
+							                	"Teams"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+							                	"Types"	"DOTA_UNIT_TARGET_HERO"
+							                	"Flags"	"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+							                }
+								"ControlPoints"	{}
+								"ControlPointEntities"	{}
+								"EffectName"	"particles/units/heroes/hero_magnataur/magnataur_horn_toss_land.vpcf"
+								"EffectAttachType"	"follow_origin"
+							}
+							"FireSound"
+							{
+							                "Target"
+							                {
+							                	"Center"	"TARGET"
+							                	"Teams"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+							                	"Types"	"DOTA_UNIT_TARGET_HERO"
+							                	"Flags"	"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+							                }
+								"EffectName"	"Hero_Magnataur.HornToss.Damage"
+							}
+						}
+						"Delay"	"%knockback_duration"
+					}
+				}
+				"Duration"	"0.7"
+				"IsHidden"	"1"
+			}
+			"modifier_dianshao_cannot_miss"
+			{
+                                                                "IsHidden"	"1"
+                                                                "Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"	
+				"States"
+				{
+					"MODIFIER_STATE_CANNOT_MISS"              "MODIFIER_STATE_VALUE_ENABLED"
+				}				
+			}
+			"modifier_dianshao_debuff"
+			{
+                                                                "IsDebuff" 	"1"
+                                                                "Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"	
+				"States"
+				{
+					"MODIFIER_STATE_STUNNED"                              "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_PASSIVES_DISABLED"              "MODIFIER_STATE_VALUE_ENABLED"
+				}
+				"Properties"
+				{
+				                "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"            "%armor_reduction_per_lvl"
+				}	
+                                                                "OverrideAnimation"     "ACT_DOTA_DISABLED"
+				"EffectName"	"particles/items3_fx/silver_edge.vpcf"
+				"EffectAttachType"	"follow_origin"			
+			}
+		}
+		"AbilityValues"
+		{
+			"damage_pct"	                "20"
+			"attack_range"	                "150"
+			"knockback_duration"	"0.6"
+                                                "debuff_multiple"                     "0.8"
+			"armor_reduction_per_lvl"         "-1.2"	
+		}
+	}
+                //=================================
+                //末日使者：精通的阎刃
+                //=================================
+	"doom_bringer_yanren"
+	{
+		"BaseClass"	                "ability_datadriven"
+		"AbilityTextureName"	"doom_bringer/doom_2021_immortal_ability_icon/doom_2021_immortal_infernal_blade"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitDamageType"	"DAMAGE_TYPE_PURE"
+		"SpellImmunityType"	                "SPELL_IMMUNITY_ENEMIES_YES"
+                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+		"MaxLevel"	                "1"
+                                "IsBreakable"		"1"
+		"AbilityCooldown"	                "7"
+                                "HasShardUpgrade"                  "1"
+		"ID"	"80156"
+		"precache"
+		{
+			"particle"	"particles/econ/items/faceless_void/faceless_void_weapon_bfury/faceless_void_weapon_bfury_cleave_b.vpcf"
+			"particle"	"particles/units/heroes/hero_doom_bringer/doom_loadout.vpcf"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_doombringer.vsndevt"
+		}
+		"Modifiers"
+		{
+			"modifier_启迪：阎刃"
+			{
+				"Passive"	                "1"
+				"IsHidden"	"1"
+				"IsBuff"	                "1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"OnAttackStart"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_doom_bringer/hero_doom_bringer_yanren.lua"
+						"Function"	"YanRen_OnAttackStart"
+					}
+				}
+				"OnAttackLanded"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_doom_bringer/hero_doom_bringer_yanren.lua"
+						"Function"	"YanRen_OnAttackLanded"
+                                                                                                "Damage"	                "%attack_damage"
+					}
+				}
+			}
+			"modifier_yanren_cannot_miss"
+			{
+                                                                "IsHidden"	"1"
+                                                                "Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"	
+				"States"
+				{
+					"MODIFIER_STATE_CANNOT_MISS"              "MODIFIER_STATE_VALUE_ENABLED"
+				}				
+			}
+		}
+		"AbilityValues"
+		{
+			"damage_pct"	"9"
+			"cleave_dmg"	"150"
+			"cleave_distance"	"800"
+			"cleave_radius"	
+			{
+				"value"			"380"
+				"affected_by_aoe_increase"	"1"
+			}
+		}
+	}
+
+                //=================================
+                //幻影刺客：永恒的恩赐解脱
+                //=================================
+	"永恒的恩赐解脱"
+	{
+		"BaseClass"	                "ability_datadriven"
+		"AbilityTextureName"	"phantom_assassin_arcana_coup_de_grace"
+		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitDamageType"	"DAMAGE_TYPE_PHYSICAL"
+		"SpellImmunityType"	                "SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"	"SPELL_DISPELLABLE_YES"
+                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+		"MaxLevel"	"1"
+                                "IsBreakable"		"1"
+		"HasScepterUpgrade"	"1"
+		"ID"	"80157"
+                                "AbilityCooldown"         "25"
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/fun_heroes/hero_phantom_assassin/phantom_assassin_coup_de_grace.lua"
+				"Function"	"fun_coup_de_grace_OnSpellStart"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_永恒的恩赐解脱"
+			{
+				"Passive"	                                "1"
+				"IsHidden"	                "1"
+				"IsBuff"	                                "1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_phantom_assassin/phantom_assassin_coup_de_grace.lua"
+						"Function"	"fun_coup_de_grace_OnCreated"
+					}
+				}
+				"OnDestroy"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_phantom_assassin/phantom_assassin_coup_de_grace.lua"
+						"Function"	"fun_coup_de_grace_OnDestroy"
+					}
+				}
+				"OnAttackLanded"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_phantom_assassin/phantom_assassin_coup_de_grace.lua"
+						"Function"	"fun_coup_de_grace_OnAttackLanded"
+					}
+				}
+				"OnStateChanged"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_phantom_assassin/phantom_assassin_coup_de_grace.lua"
+						"Function"	"fun_coup_de_grace_OnStateChanged"
+					}
+				}
+				"OnHeroKilled"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_phantom_assassin/phantom_assassin_coup_de_grace.lua"
+						"Function"	"fun_coup_de_grace_OnHeroKilled"
+					}
+				}
+			}
+			"modifier_永恒的恩赐解脱_debuff"
+			{
+				"IsDebuff" 	"1"
+                                                                "IsPurgable"             "1"
+                                                                "Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"	"%armor"
+				}
+
+			}
+			"modifier_永恒的恩赐解脱_crit"
+			{
+                                                                "IsHidden"	"1"
+				"IsBuff"	                "1"
+                                                                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE"	"%crit_damage"
+				}
+			}
+		}
+		"AbilityValues"
+		{
+			"crit_damage"	"130"
+			"armor"	                "-8"
+			"armor_duration"	"7"
+                                                "active_duration"      "10"
+		}
+	}
+
+                //=================================
+                //齐天大圣：毁天灭地
+                //=================================
+	"monkey_king_huitianmiedi"
+	{
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		"BaseClass"	                "ability_datadriven"
+		"AbilityTextureName"	"earthshaker/deep_magma/deep_magma_default/deep_magma_default_aftershock"
+		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitDamageType"	"DAMAGE_TYPE_PHYSICAL"
+		"AbilityUnitTargetFlags"	"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"SpellImmunityType"	                "SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"	"SPELL_DISPELLABLE_YES_STRONG"
+                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+		"MaxLevel"	                "1"
+		"HasScepterUpgrade"	"1"
+		"ID"	                                "80158"
+
+		// Casting
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"	                "0.3"
+
+		// Time
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"	"45"
+		// Cost
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"	"0"
+		// Cast Range
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"	"850"
+
+		// Precache
+		// -------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"particle"	             "particles/units/heroes/hero_huskar/huskar_life_break_cast.vpcf"
+			"particle"	             "particles/units/heroes/hero_huskar/huskar_life_break.vpcf"
+			"particle"	             "particles/status_fx/status_effect_huskar_lifebreak.vpcf"
+
+			"particle"	             "particles/econ/items/monkey_king/arcana/fire/monkey_king_spring_cast_arcana_fire.vpcf"
+			"particle"	             "particles/econ/items/monkey_king/arcana/fire/monkey_king_spring_arcana_fire.vpcf"
+			"particle"	             "particles/generic_gameplay/generic_stunned.vpcf"
+
+			"particle"	             "particles/units/heroes/hero_warlock/warlock_rain_of_chaos_start.vpcf"
+                                                "particle"	             "particles/units/heroes/hero_warlock/warlock_rain_of_chaos.vpcf"
+
+                                                "particle"	             "particles/econ/items/earthshaker/earthshaker_arcana/earthshaker_arcana_echoslam_start_v2.vpcf"
+
+			"soundfile"            "soundevents/game_sounds_heroes/game_sounds_huskar.vsndevts"
+			"soundfile"            "soundevents/game_sounds_heroes/game_sounds_earthshaker.vsndevts"
+		}
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/fun_heroes/hero_monkey_king/monkey_king_huitianmiedi.lua"
+				"Function"	"LifeBreak"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_monkey_king_huitianmiedi_start"
+			{
+				"IsPurgable"	        "0"
+                                                                "ThinkInterval"                 "0.03"
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_monkey_king/monkey_king_huitianmiedi.lua"
+						"Function"	"JumpHorizonal"
+					}
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_monkey_king/monkey_king_huitianmiedi.lua"
+						"Function"	"JumpVertical"
+					}
+				}
+				"States"
+				{
+					"MODIFIER_STATE_MAGIC_IMMUNE"	                 "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_COMMAND_RESTRICTED"	 "MODIFIER_STATE_VALUE_ENABLED"
+				}
+                                                }
+			"modifier_monkey_king_huitianmiedi_fly"
+			{
+				"IsHidden"	"1"
+				"IsPurgable"	"0"
+                                                                "ThinkInterval"          "0.03"
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_monkey_king/monkey_king_huitianmiedi.lua"
+						"Function"	 "LeapVertical"
+					}
+				}
+				"OnDeath"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	                                "scripts/vscripts/Fun_Boss/Fun_huitianmiedi.lua"
+						"Function"	                                "OnDeath"
+					}
+				}
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_MAGICAL"              "1"
+					"MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_PHYSICAL"              "1"
+					"MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_PURE"                     "1"
+				}
+			}
+			"modifier_monkey_king_huitianmiedi_fly_stop"
+			{
+				"IsHidden"	"0"
+				"IsPurgable"	"0"
+				"States"
+				{
+					"MODIFIER_STATE_ATTACK_IMMUNE"	                 "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_MAGIC_IMMUNE"	                 "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_COMMAND_RESTRICTED"	 "MODIFIER_STATE_VALUE_ENABLED"
+				}
+				"StatusEffectName"	"particles/status_fx/status_effect_huskar_lifebreak.vpcf"
+				"StatusEffectPriority"	"15"
+			}
+			"modifier_monkey_king_huitianmiedi_damage"             
+			{
+				"OnCreated"
+				{
+					"Damage"
+					{
+						"Target"	"TARGET"
+						"Type"	"DAMAGE_TYPE_PHYSICAL"
+						"Damage"	"%dmg_others"
+					}
+					"Knockback"
+					{
+						"Target"	                "TARGET"
+						"Center"	                "TARGET"
+						"Duration"	"3"
+						"Height"	                "1500"
+						"ShouldStun"	"1"
+						"IsFixedDistance"	"1"
+					}
+				}
+				"Duration"	"3"
+			}
+			
+		}
+		// Special
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"charge_speed"	"1000"
+			"max_distance"	"3000"
+			"push_speed"	"2000"
+			"push_length"	"3000"
+                                                "damage_pct"           "85"
+                                                "stun_duration"         "3" 
+			"radius"	               
+			{
+				"value"			 "800"
+				"affected_by_aoe_increase"	"1"
+			}
+			"dmg_others"	"2000"
+                                                "damage_pct_scepter"           			
+			{
+				"value"		"40"
+				"RequiresScepter"		"1"
+			}
+		}
+
+	}
+
+                //=================================
+                //半人马战行者：战争践踏
+                //=================================
+	"centaur_zhanzhengjianta"
+	{
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"centaur/immortal_gold/centaur_hoof_stomp"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType" 	"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"	"SPELL_DISPELLABLE_YES_STRONG"
+                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+		"MaxLevel"	"1"
+		// Stats
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"	"0.5"
+		"AbilityCooldown"	"45"
+		"AbilityManaCost"	"300"
+		"AOERadius"	"%radius"
+		"ID"	"80159"
+		"precache"
+		{
+			"particle"	"particles/econ/items/centaur/centaur_ti6_gold/centaur_ti6_warstomp_gold.vpcf"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_centaur.vsndevts"
+			"particle"	"particles/econ/items/techies/techies_ti9/techies_ti9_spleen_ambient_butterfly.vpcf"
+			"particle"	"particles/econ/items/omniknight/omni_2021_immortal/omni_2021_immortal_buff_beams.vpcf"
+		}
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/fun_heroes/hero_centaur/centaur_zhanzhengjianta.lua"
+				"Function"	"hoof_stomp"
+                                                                "IsSecondary"	"0"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_hoof_stomp"
+			{
+				"IsDebuff"	                "1"
+				"IsHidden"	"0"
+                                                                "Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"OnDestroy"
+				{
+                                                                            	"RunScript"
+			                                {
+				                                "ScriptFile"	"scripts/vscripts/fun_heroes/hero_centaur/centaur_zhanzhengjianta.lua"
+				                                "Function"	"hoof_stomp"
+				                                "IsSecondary"	"1"
+			                                }
+				}
+				"EffectName"	"particles/econ/items/omniknight/omni_2021_immortal/omni_2021_immortal_buff_beams.vpcf"
+				"EffectAttachType"	"follow_origin"
+			}
+			"modifier_texiaorenma"
+			{
+				"EffectName"	"particles/econ/items/techies/techies_ti9/techies_ti9_spleen_ambient_butterfly.vpcf"
+				"EffectAttachType"	"follow_origin"
+				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"Passive"	"1"
+				"IsHidden"	"1"
+				"IsPurgable"	"0"
+				"AllowIllusionDuplicate"	"1"
+			}
+		}
+		// Special
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"radius"	
+			{
+				"value"			 "550"
+				"affected_by_aoe_increase"	"1"
+			}
+			"stomp_damage"	"15"
+			"mofa_damage"	"800"
+			"stomp_stun"	"2.0"	
+		}
+	}
+
+                //=================================
+                //远古冰魄：寒霜诅咒
+                //=================================
+	"ancient_apparition_hanshuangzuzhou"
+	{
+		"BaseClass"	                "ability_datadriven"
+		"AbilityTextureName"	"ancient_apparition/ti8_immortal_back/ancient_apparition_ice_vortex_immortal"
+		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"	                "SPELL_IMMUNITY_ENEMIES_YES"
+                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+		"MaxLevel"	"1"
+                                "IsBreakable"		"1"
+		"AbilityCastPoint"	"0.0"
+		"ID"	"80160"
+		"precache"
+		{
+			"particle"	"particles/units/heroes/hero_ancient_apparition/ancient_apparition_ice_blast_debuff.vpcf"
+		}
+		"Modifiers"
+		{
+			"modifier_寒霜诅咒"
+			{
+				"Passive"	                "1"
+				"IsHidden"	"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_ancient_apparition/hanshuangzuzhou.lua"
+						"Function"	"Chilling_Touch_OnCreated"
+					}
+				}
+				"OnDestroy"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_ancient_apparition/hanshuangzuzhou.lua"
+						"Function"	"Chilling_Touch_OnDestroy"
+					}
+				}
+				"OnAttackLanded"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_ancient_apparition/hanshuangzuzhou.lua"
+						"Function"	"Chilling_Touch_OnAttackLanded"
+					}
+				}
+				"OnStateChanged"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_ancient_apparition/hanshuangzuzhou.lua"
+						"Function"	"Chilling_Touch_OnStateChanged"
+					}
+				}
+
+			}
+			"modifier_寒霜诅咒_2"
+			{
+				"Passive"                   "0"
+				"IsBuff"	                "1"
+				"IsHidden"	"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_ATTACK_RANGE_BONUS"	"%攻击距离"
+				}
+			}
+		}
+		"AbilityValues"
+		{
+			"持续时间"	      "2.0"
+			"魔法伤害"	      "80"
+			"攻击距离"      "200"
+		}
+	}
+
+                //=================================
+                //昆卡：搁浅之地
+                //=================================
+	"kunkka_ghostship_fun"
+	{
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		"BaseClass"	                "ability_datadriven"
+		"AbilityTextureName"	"kunkka_ghostship_immortal"
+		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"      	"SPELL_IMMUNITY_ENEMIES_NO"
+                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+		"MaxLevel"	"1"
+                                "IsBreakable"		"1"
+		// Time
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"	"80"
+		"ID"	"80161"
+		// Data driven
+		// -------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"particle"	                 "particles/econ/items/kunkka/kunkka_immortal/kunkka_immortal_ghost_ship_marker.vpcf"
+			"particle"	                 "particles/econ/items/kunkka/kunkka_immortal/kunkka_immortal_ghost_ship.vpcf"
+			"soundfile"	 "soundevents/game_sounds_heroes/game_sounds_kunkka.vsndevts"
+		}
+		"Modifiers"
+		{
+			"modifier_kunkka_ghostship_fun"
+			{
+				"Passive"	                "1"
+				"IsHidden"	"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_kunkka/ghostship.lua"
+						"Function"	"kunkka_ghostship_fun_OnCreated"
+					}
+				}
+				"OnAbilityExecuted"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_kunkka/ghostship.lua"
+						"Function"	"kunkka_ghostship_fun_OnAbilityExecuted"
+					}
+				}
+			}
+		}
+		"OnProjectileHitUnit"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/fun_heroes/hero_kunkka/ghostship.lua"
+				"Function"	"kunkka_ghostship_fun_OnProjectileHitUnit"
+			}
+			"DeleteOnHit"	"0"
+		}
+		"OnProjectileFinish"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/fun_heroes/hero_kunkka/ghostship.lua"
+				"Function"	"kunkka_ghostship_fun_OnProjectileFinish"
+			}
+		}
+		// Special
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"max_radius"	
+			{
+				"value"			"1800"
+				"affected_by_aoe_increase"	"1"
+			}
+			"min_radius"	"150"
+			"interval"	                "0.4"  //幽灵船产生间隔
+			"max_angle_offset"	"60"  //幽灵船驶来方向最大偏转角度
+			"min_ship_count"	"18"
+			"max_ship_count"	"22"
+		}
+	}
+
+                //=================================
+                //酒仙：火焰呼吸
+                //=================================
+	"huoyanhuxi"
+	{
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"black_dragon_fireball"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_DIRECTIONAL"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetFlags"	"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"	"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"	"1"
+                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+		"MaxLevel"	"1"
+		"AbilityCastPoint"	"0.2"
+		"AbilityCastAnimation"	"ACT_DOTA_CAST_ABILITY_2"
+		// Time
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"	"4.0"
+		// Cost
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"	"90"
+		// Casting
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"	"1200"
+		"ID"	"80162"
+		// Precache
+		// -------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"particle"	"particles/units/heroes/hero_dragon_knight/dragon_knight_breathe_fire.vpcf"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_dragon_knight.vsndevts"
+			"particle"	"particles/units/heroes/hero_huskar/huskar_burning_spear_debuff.vpcf"
+		}
+		"OnSpellStart"
+		{
+			"LinearProjectile"
+			{
+				"Target"	"POINT"
+				"EffectName"	"particles/units/heroes/hero_dragon_knight/dragon_knight_breathe_fire.vpcf"
+				"MoveSpeed"	"%speed"
+				"StartRadius"	"%start_radius"
+				"StartPosition"	"attach_origin"
+				"EndRadius"	"%end_radius"
+				"FixedDistance"	"%range"
+				"TargetTeams"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+				"TargetTypes"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+				"TargetFlags"	"DOTA_UNIT_TARGET_FLAG_NONE"
+				"HasFrontalCone"	"1"
+				"ProvidesVision"	"0"
+			}
+			"FireSound"
+			{
+				"EffectName"	"Hero_DragonKnight.BreathFire"
+				"Target"	"CASTER"
+			}
+		}
+		"OnProjectileHitUnit"
+		{
+			"DeleteOnHit"	"0"
+			"ApplyModifier"
+			{
+				"ModifierName"	"modifier_breathe_fire_reduction_datadriven"
+				"Target"	"TARGET"
+				"Duration"	"%reduction_duration"
+			}
+			"Damage"
+			{
+				"Target"	"TARGET"
+				"Type"	"DAMAGE_TYPE_MAGICAL"
+				"Damage"	"%AbilityDamage"
+			}
+			"ApplyModifier"
+			{
+				"Target"	"TARGET"
+				"ModifierName"	"modifier_brewmaster_cinder_brew"
+				"Duration"	"%chixushijian"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_breathe_fire_reduction_datadriven"
+			{
+				"IsDebuff"	"1"
+				"Properties"	{}
+				"OnIntervalThink"
+				{
+					"Damage"
+					{
+						"Target"	"TARGET"
+						"Type"	"DAMAGE_TYPE_PHYSICAL"
+						"Damage"	"%damage_fire"
+					}
+				}
+				"EffectName"	"particles/units/heroes/hero_huskar/huskar_burning_spear_debuff.vpcf"
+				"EffectAttachType"	"follow_origin"
+				"IsPurgable"	"1"
+				"ThinkInterval"	"%dingshiqi"
+			}
+		}
+		// Special
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"start_radius"
+			{
+				"value"			"150"
+				"affected_by_aoe_increase"	"1"
+			}
+			"end_radius"	
+			{
+				"value"			"250"
+				"affected_by_aoe_increase"	"1"
+			}
+			"range"	"1200"
+			"speed"	"1500"	
+			"damage_fire"	"120"
+			"dingshiqi"	"0.5"
+			"reduction_duration"	"7"
+			"chixushijian"	"5"
+		}
+		// Damage.
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityDamage"	"1400"
+	}
+
+                //=================================
+                //拉比克：大魔导师
+                //=================================
+	"damodaoshi"
+	{
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"rubick_null_field_offensive"
+		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA |DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"SpellImmunityType"	                "SPELL_IMMUNITY_ALLIES_YES"
+		"SpellDispellableType"	"SPELL_DISPELLABLE_NO"
+                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+		"MaxLevel"	"1"
+                                "IsBreakable"		"1"
+		"ID"	"80163"
+                                "AOERadius"             "%radius"
+		"precache"
+		{
+			"particle"	                "particles/units/heroes/hero_rubick/rubick_nullfield_defensive_splash_embers.vpcf"
+		}
+		"Modifiers"
+		{
+			"modifier_null_field_fun"
+			{
+				"Passive"	                "1"
+				"IsHidden"	"1"
+				"IsBuff"	                "1"
+                                                                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_rubick/rubick_null_field_fun.lua"
+						"Function"	"null_field_fun"
+					}
+				}
+				"OnStateChanged"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_rubick/rubick_null_field_fun.lua"
+						"Function"	"null_field_fun"
+					}
+				}
+			}
+			"modifier_null_field_fun_aura"
+			{
+				"IsHidden"	"0"
+				"Passive"	                "1"
+				"IsBuff"	                "1"
+				"Aura"	                "modifier_null_field_fun_allies"
+				"Aura_Radius"	"%radius"
+				"Aura_Teams"	"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+				"Aura_Types"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+                                                                "Aura_ApplyToCaster"	"0"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"%magic_resistance_self"
+					"MODIFIER_PROPERTY_COOLDOWN_PERCENTAGE"	                "%cooldown_reduction_self"
+				}
+			}
+			"modifier_null_field_fun_allies"
+			{
+				"Passive"	                "0"
+				"IsHidden"	"0"
+				"IsBuff"	                "1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"%magic_resistance_allies"
+					"MODIFIER_PROPERTY_COOLDOWN_PERCENTAGE"	                "%cooldown_reduction_allies"
+				}
+			}
+			"modifier_null_field_cannot_be_stolen"
+			{
+				"Passive"	                "1"
+				"IsHidden"	"1"
+                                                                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_rubick/rubick_null_field_fun.lua"
+						"Function"	"cannot_be_stolen"
+                                                                                                "AbilityName"           "rubick_spell_steal"
+					}
+				}
+			}
+		}
+		// Special
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"radius"	
+			{
+				"value"			"1400"
+				"affected_by_aoe_increase"	"1"
+			}
+			"magic_resistance_allies"	"20"
+			"cooldown_reduction_allies"	"10"
+			"magic_resistance_self"	"40"	
+			"cooldown_reduction_self"	"20"
+		}
+	}
+
+                //=================================
+                //宙斯：天神下凡
+                //=================================
+	"tianshenxiafan"
+	{
+		"BaseClass"	                "ability_datadriven"
+		"AbilityTextureName"	"zeus/zeus_2021_immortal_back_ability_icon/zeus_2021_immortal_static_field_crimson"
+		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_AURA"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"SpellImmunityType" 	"SPELL_IMMUNITY_ENEMIES_NO"
+                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+		"MaxLevel"	"1"
+                                "IsBreakable"		"1"
+		"AOERadius"	"%radius"
+		"ID"	"80164"
+		"Modifiers"
+		{
+			"modifier_tianshenxiafan"
+			{
+				"Passive"	                "1"
+				"IsBuff"	                "1"
+                                                                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"Aura"	                "modifier_tianshenxiafan_magic_armor_reduction_1"
+				"Aura_Radius"	"%radius"
+				"Aura_Teams"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+				"Aura_Types"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+				//"Aura_Flags"	"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_zuus/zuus_static_field_fun.lua"
+						"Function"	"modifier_tianshenxiafan_OnCreated"
+					}
+				}
+				"OnDestroy"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_zuus/zuus_static_field_fun.lua"
+						"Function"	"modifier_tianshenxiafan_OnDestroy"
+					}
+				}
+				"OnStateChanged"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_zuus/zuus_static_field_fun.lua"
+						"Function"	"modifier_tianshenxiafan_OnStateChanged"
+					}
+				}
+				"OnAbilityExecuted"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_zuus/zuus_static_field_fun.lua"
+						"Function"	"zuus_static_field_fun_OnAbilityExecuted"
+					}
+				}
+			}
+			"modifier_tianshenxiafan_magic_armor_reduction_1"
+			{
+				"IsHidden"	"1"
+				"IsDebuff"	                "1"
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_zuus/zuus_static_field_fun.lua"
+						"Function"	"static_field_fun"
+					}
+				}
+				"OnDestroy"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_zuus/zuus_static_field_fun.lua"
+						"Function"	"remove"
+					}
+				}
+                                                                "ThinkInterval"  "0.03"
+			}
+			"modifier_tianshenxiafan_magic_armor_reduction_2"
+			{
+				"IsHidden"	"1"
+				"IsDebuff"	                "1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"%per_stack_reduce"
+				}
+			}
+			"modifier_tianshenxiafan_magic_armor_reduction_tooltip"
+			{
+				"IsHidden"	"0"
+				"IsDebuff"	                "1"
+			}
+			"modifier_tianshenxiafan_spell_amplification"
+			{
+				"IsHidden"	"1"
+				"IsBuff"	                "1"
+				"IsHidden"	"1"
+                                                                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"EffectName"	"particles/econ/events/fall_2021/radiance_owner_fall_2021.vpcf"
+				"EffectAttachType"	"follow_origin"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"	"%jinengzengqiang"
+				}
+			}
+		}
+		"AbilityValues"
+		{
+			"jinengzengqiang"	"18"
+			"radius"
+			{
+				"value"			"1400"
+				"affected_by_aoe_increase"	"1"
+			}
+			"min_radius"	
+			{
+				"value"			"400"
+				"affected_by_aoe_increase"	"1"
+			}
+			"max_radius"	
+			{
+				"value"			"1200"
+				"affected_by_aoe_increase"	"1"
+			}	
+			"min_radius_reduce"	"20"
+			"max_radius_reduce"	 "5"
+			"per_stack_reduce"	  "-0.1"
+		}
+	}
+
+                //=================================
+                //小小：崎岖外表
+                //=================================
+	"tiny_qiquwaibiao"
+	{
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"tiny_craggy_exterior"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitDamageType"	"DAMAGE_TYPE_PURE"
+		"SpellImmunityType" 	"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"	"SPELL_DISPELLABLE_YES_STRONG"
+                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+		"MaxLevel"	"1"
+                                "IsBreakable"		"1"
+		"ID"	"80165"
+		"precache"
+		{
+			"soundfile"	"soundevents/game_sounds_items.vsndevts"
+			"particle"	                "particles/generic_gameplay/generic_bashed.vpcf"
+		}
+		"Modifiers"
+		{
+			"modifier_tiny_qiquwaibiao"
+			{
+				"Passive"	                "1"
+				"IsHidden"	"1"
+				"IsBuff"	                "1"
+				"IsPurgable"	"0"
+                                                                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"OnAttacked"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_tiny/tiny_craggy_exterior_fun.lua"
+						"Function"	"craggy_exterior_OnAttacked"
+					}
+				}
+			}
+		}
+		"AbilityValues"
+		{
+			"chance"	"18"
+			"damage_tiny"	"300"
+			"time_dur"	"1.3"
+		}
+	}
+
+                //=================================
+                //灰烬之灵：烈焰灼烧
+                //=================================
+	"ember_huoyanpohuai"
+	{
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"ember_spirit/ti9_immortal_shoulder/ember_spirit_flame_guard_immortal"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitDamageType"	"DAMAGE_TYPE_PHYSICAL"
+		"SpellImmunityType"	                "SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"	"SPELL_DISPELLABLE_NO"
+                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+		"MaxLevel"	"1"
+                                "IsBreakable"		"1"
+		"ID"	"80166"
+		"precache"
+		{
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_faceless_void.vsndevts"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_huskar.vsndevts"
+			"particle"	                "particles/generic_gameplay/generic_break.vpcf"
+			"particle"	                "particles/econ/items/huskar/huskar_2021_immortal/huskar_2021_immortal_burning_spear_debuff_gold.vpcf"
+		}
+		"Modifiers"
+		{
+			"modifier_ember_huoyanpohuai"
+			{
+				"Passive"	"1"
+				"IsBuff"	"1"
+				"IsHidden"	"1"
+                                                                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"OnAttack"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_ember_spirit/ember_spirit_fire_break.lua"
+						"Function"	"fire_break"
+					}
+				}
+				"States"
+				{
+					"MODIFIER_STATE_CANNOT_MISS"              "MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+			"modifier_ember_huoyanpohuai_debuff"
+			{
+				"Passive"	                "0"
+                                                                "IsHidden"	"0"
+                                                                "IsDebuff"	                "1"
+				"IsPurgable"	"0"
+				"States"
+				{
+					"MODIFIER_STATE_PASSIVES_DISABLED"              "MODIFIER_STATE_VALUE_ENABLED"
+				}
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE"              "%damage_incoming"
+					"MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE"               "%damage_outgoing"
+					"MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"                       "%damage_outgoing"
+				}
+				"OnCreated"
+				{
+					"AttachEffect"
+					{
+						"Target"
+						{
+							"Center"	"TARGET"
+							"Teams"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+							"Types"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+							"Flags"	"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+						}
+						"EffectName"	"particles/generic_gameplay/generic_break.vpcf"
+						"EffectAttachType"	"follow_overhead"
+					}
+					"AttachEffect"
+					{
+						"Target"
+						{
+							"Center"	"TARGET"
+							"Teams"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+							"Types"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+							"Flags"	"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+						}
+						"EffectName"	"particles/econ/items/huskar/huskar_2021_immortal/huskar_2021_immortal_burning_spear_debuff_gold.vpcf"
+						"EffectAttachType"	"follow_origin"
+					}
+				}				
+			}
+			"modifier_ember_huoyanpohuai_cooldown"
+			{
+				"Passive"	                "0"
+                                                                "IsHidden"	"0"
+                                                                "IsDebuff"	                "1"
+				"IsPurgable"	"0"
+                                                                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+			}
+		}
+		"AbilityValues"
+		{
+			"time_break_hero"	"4.5"
+			"time_break_creep"	"7"
+			"damage_hero"	 "400"
+			"damage_creep"	"250"	
+			"damage_outgoing"	"-60"
+			"damage_incoming"	"40"
+			"cooldown"	"7"
+		}
+	}
+
+                //=================================
+                //风行者：分散火力
+                //=================================
+	"windrunner_fensanhuoli"
+	{
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"windrunner_focusfire_arcana_alt"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+ 		//"AbilityUnitDamageType"	"DAMAGE_TYPE_PURE"
+		"SpellImmunityType"		"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+		"MaxLevel"	"1"
+                                "IsBreakable"		"1"
+		"ID"	                "80167"
+		"precache"
+		{
+			"particle"	               "particles/econ/items/windrunner/windranger_arcana/windranger_arcana_javelin_tgt.vpcf"
+                                                "particle"	               "particles/units/heroes/hero_earth_spirit/espirit_magnetize_target_ripple_b.vpcf"
+		}
+		"Modifiers"
+		{
+			"modifier_fensanhuoli"
+			{
+				"Passive"	                "1"
+				"IsBuff"	                "1"
+				"IsHidden"	"1"
+                                                                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"OnAttackLanded"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_windrunner/windrunner_fensanhuoli.lua"
+						"Function"	"fensanhuoli_OnAttackLanded"
+					}
+				}
+                                                                "OnAbilityExecuted"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_windrunner/windrunner_fensanhuoli.lua"
+						"Function"	"fensanhuoli_OnAbilityExecuted"
+					}
+				}
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_windrunner/windrunner_fensanhuoli.lua"
+						"Function"	"fensanhuoli_buff"
+					}
+				}
+				"ThinkInterval"	"0.1"
+			}
+			"modifier_fensanhuoli_target_on_attacked"
+			{
+				"IsDebuff"	                "1"
+				"IsHidden"	"1"
+                                                                "Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"OnAttacked"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_windrunner/windrunner_fensanhuoli.lua"
+						"Function"	"fensanhuoli_target_OnAttacked"
+                                                                                                "Damage"                "%attack_damage"
+					}
+				}
+			}
+			"modifier_fensanhuoli_focus_damage"
+			{
+				"Passive"	                "0"
+				"IsBuff"	                "1"
+				"IsHidden"	"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"	"%focus_dmg"
+				}
+			}
+			"modifier_fensanhuoli_windrun_hp_regen"
+			{
+				"Passive"	                "0"
+				"IsBuff"	                "1"
+				"IsHidden"	"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"	"%bonus_hp_regen"
+				}
+			}
+		}
+		"AbilityValues"
+		{
+			"focus_dmg"	"150"
+			"bonus_hp_regen"	"80"
+			"dmg_radius"	
+			{
+				"value"			"425"
+				"affected_by_aoe_increase"	"1"
+			}	
+			"bonus_dmg_pct"   "45"	
+		}
+	}
+
+                //=================================
+                //主宰：剑圣
+                //=================================
+	"juggernaut_jiansheng"
+	{
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"juggernaut_blade_dance_arcana"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+		"MaxLevel"	"1"
+                                "IsBreakable"		"1"
+		"ID"	"80168"
+		"Modifiers"
+		{
+			"modifier_剑圣"
+			{
+				"Passive"	                "1"
+				"IsHidden"	"1"
+                                                                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"OnKill"
+				{
+					"RunScript"
+					{
+						"Target"	"CASTER"
+						"Modifier_name"	"modifier_juggernaut_omnislash"
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_juggernaut/jiansheng.lua"
+						"Function"	"jisha"
+					}
+				}
+				"OnAttackLanded"
+				{
+                                                                                "RunScript"
+                                                                                {
+                                                                                                "ScriptFile"	"scripts/vscripts/fun_heroes/hero_juggernaut/jiansheng.lua"
+                                                                                                "Function"	"Two_a"
+                                                                                }
+				}
+			}
+			"modifier_jiansheng_cooldown"
+			{
+				"IsHidden"	"1"
+                                                                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+			}
+		}
+		"AbilityValues"
+		{
+			"chance"	                                                "38"
+                                                "delay"                                                     "0.1"
+			"jiansheng_hero_scepter"	
+			{
+				"value"                                     "1.2"	
+				"RequiresScepter"	                "1"
+			}
+			"jiansheng_creep_scepter"
+			{
+				"value"	                                "0.3"
+				"RequiresScepter"	                "1"
+			}
+			"jiansheng_hero"	                                "0.8"
+			"jiansheng_creep"	                                "0.15"
+		}
+		"HasScepterUpgrade"	"1"
+	}
+
+                //=================================
+                //寒冬飞龙：钻石化
+                //=================================
+	"winter_wyvern_zuanshihua"
+	{
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"winter_wyvern/immortal/winter_wyvern_cold_embrace"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET  | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"SpellImmunityType"	                "SPELL_IMMUNITY_ALLIES_YES"
+		"SpellDispellableType"	"SPELL_DISPELLABLE_NO"
+                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+		"MaxLevel"	"1"
+		"AbilityCastPoint"	"0.3"
+		"AbilityCastAnimation"	"ACT_DOTA_CAST_ABILITY_3"
+		"AbilitySound"	"Hero_Winter_Wyvern.ColdEmbrace"
+		// Time
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"	"30"
+		// Cost
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"	"400"
+		// Casting
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"	"1000"
+		"ID"	"80169"
+		"precache"
+		{
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_winter_wyvern.vsndevts"
+			"particle"	                "particles/econ/items/winter_wyvern/winter_wyvern_ti7/wyvern_cold_embrace_ti7buff.vpcf"
+		}
+		// Data driven
+		// -------------------------------------------------------------------------------------------------------------
+		"OnSpellStart"
+		{
+			"FireSound"
+			{
+				"EffectName"	"Hero_Winter_Wyvern.ColdEmbrace.Cast"
+				"Target"	"CASTER"
+			}
+			"FireSound"
+			{
+				"EffectName"	"Hero_Winter_Wyvern.ColdEmbrace"
+				"Target"	"TARGET"
+			}
+			"ApplyModifier"
+			{
+				"Target"	"TARGET"
+				"ModifierName"	"zuanshihua"
+			}
+		}
+		"Modifiers"
+		{
+			"zuanshihua"
+			{
+				"Duration"	"%d_time"
+				"States"
+				{
+					"MODIFIER_STATE_MAGIC_IMMUNE"	                                         "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_ATTACK_IMMUNE"	                                         "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_UNIT_COLLISION"	                                         "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_FLYING_FOR_PATHING_PURPOSES_ONLY"           "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_DISARMED"	                                                         "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_SILENCED"	                	                         "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_MUTED"	         	                                         "MODIFIER_STATE_VALUE_ENABLED"                                                                             
+				}
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"	"%hp_regen_constant"
+					"MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE"	"%hp_regen_pct"
+					"MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_PHYSICAL"	"1"
+					"MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_MAGICAL"	"1"
+					"MODIFIER_PROPERTY_MOVESPEED_ABSOLUTE"	                "%movespeed"
+				}
+				"EffectName"	"particles/econ/items/winter_wyvern/winter_wyvern_ti7/wyvern_cold_embrace_ti7buff.vpcf"
+				"EffectAttachType"	"follow_origin"
+				"Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+			}
+		}
+		// Special
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"movespeed"	  "225"
+			"hp_regen_constant"  "70"
+			"hp_regen_pct"	  "10"
+			"d_time"	                  "7"	
+		}
+	}
+
+                //=================================
+                //谜团：闪耀黑洞
+                //=================================
+	"heidong"
+	{
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"enigma/worldchasm/enigma_black_hole_worldchasm"
+		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitDamageType"	"DAMAGE_TYPE_PURE"
+		//"AbilityUnitTargetFlags"	"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"SpellImmunityType"	                "SPELL_IMMUNITY_ENEMIES_YES"
+                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+		"MaxLevel"	"1"
+		"AbilityCastPoint"	"0.3"
+		// Time
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"	"120.0"
+		// Cost
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"	"1000"
+		// Casting
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"	                 "275"
+		"AbilityChannelTime"	"4.0"
+		"AoERadius"	                "420"
+		"ID"	"80170"
+		// Precache
+		// -------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_enigma.vsndevts"
+			"particle"	                "particles/econ/items/enigma/enigma_world_chasm/enigma_blackhole_ti5.vpcf"
+		}
+		"OnSpellStart"
+		{
+			"CreateThinker"
+			{
+				"ModifierName"	"modifier_black_hole_datadriven"
+				"Target"	"POINT"
+			}
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/fun_heroes/hero_enigma/black_hole.lua"
+				"Function"	"GiveVision"
+				"Target"	"POINT"
+			}
+		}
+		"OnChannelFinish"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/fun_heroes/hero_enigma/black_hole.lua"
+				"Function"	"ChannelEnd"
+			}
+		}
+		"OnChannelInterrupted"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/fun_heroes/hero_enigma/black_hole.lua"
+				"Function"	"ChannelEnd"
+			}
+		}
+		"OnRespawn"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/fun_heroes/hero_enigma/black_hole.lua"
+				"Function"	"ChannelEnd"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_black_hole_datadriven"
+			{
+				"Aura"	                "modifier_black_hole_debuff"
+				"Aura_Radius"	"%far_radius"
+				"Aura_Teams"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+				"Aura_Types"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_CREEP | DOTA_UNIT_TARGET_MECHANICAL"
+				"Aura_Flags"	"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+				"Duration"	"%duration"
+				"OnCreated"
+				{
+					"FireSound"
+					{
+						"EffectName"	"Hero_Enigma.Black_Hole"
+						"Target"	"CASTER"
+					}
+					"FireSound"
+					{
+						"EffectName"	"Hero_Enigma.BlackHole.Cast.Chasm"
+						"Target"	"CASTER"
+					}
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_enigma/black_hole.lua"
+						"Function"	"ParticleLocation"
+					}
+					"AttachEffect"
+					{
+						"EffectName"	"particles/econ/items/enigma/enigma_world_chasm/enigma_blackhole_ti5.vpcf"
+						"EffectAttachType"	"follow_overhead"
+						"Target"	"TARGET"
+					}
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_enigma/black_hole.lua"
+						"Function"	"MoveUnits"
+					}
+				}
+				"OnDestroy"
+				{
+					"FireSound"
+					{
+						"EffectName"	"Hero_Enigma.Black_Hole.Stop"
+						"Target"	"TARGET"
+					}
+				}
+				"ThinkInterval"	"%move_tick_rate"
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_enigma/black_hole.lua"
+						"Function"	"MoveUnits"
+					}
+				}
+			}
+			"modifier_black_hole_debuff"
+			{
+				"IsPurgable"	"0"
+				"OverrideAnimation"	"ACT_DOTA_FLAIL"
+				"ThinkInterval"	"%damage_tick_rate"
+				"OnIntervalThink"
+				{
+					"Damage"
+					{
+						"Target"
+						{
+							"Center"	"TARGET"
+							"Teams"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+							"Types"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+							"Flags"	"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+						}
+						"Type"	"DAMAGE_TYPE_PURE"
+						"Damage"	"%damage"
+					}
+				}
+				"States"
+				{
+					"MODIFIER_STATE_STUNNED"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_SILENCED"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_UNIT_COLLISION"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_OVERRIDE_ANIMATION_RATE"	"0.2"
+				}
+			}
+		}
+		// Special
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"pull_speed"	"33"
+			"far_radius"	
+			{
+				"value"			"420"
+				"affected_by_aoe_increase"	"1"
+			}	
+			"near_radius"	
+			{
+				"value"			"160"
+				"affected_by_aoe_increase"	"1"
+			}	
+			"damage"	                "500"	
+			"move_tick_rate"	"0.03"
+			"damage_tick_rate"	"1.0"
+			"duration"	                "4.0"
+			"vision_radius"	"800"
+			"immune_duration"	"5"	
+		}
+		"HasScepterUpgrade"	"1"
+                                "HasShardUpgrade"                  "1"
+	}
+
+                //=================================
+                //莉娜：重破斩
+                //=================================
+	"special_bonus_unique_lina_laguna_blade_fun"
+	{
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"lina/lina_ti6_immortal/lina_laguna_blade"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+		"SpellImmunityType"	                "SPELL_IMMUNITY_ENEMIES_NO"
+		"MaxLevel"	"1"
+                                "IsBreakable"		"1"
+		"ID"	"80171"
+		"precache"
+		{
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_lina.vsndevts"
+			"particle"	                "particles/units/heroes/hero_lina/lina_spell_laguna_blade.vpcf"
+			"particle"	                "particles/units/heroes/hero_lina/lina_spell_laguna_blade_superheated.vpcf"
+		}
+		"Modifiers"
+		{
+			"modifier_laguna_blade_fun"
+			{
+				"Passive"	                "1"
+				"IsHidden"	"1"
+                                                                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_lina/lina_laguna_blade_fun.lua"
+						"Function"	"laguna_blade_fun_OnCreated"
+					}
+				}
+				"OnDestroy"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_lina/lina_laguna_blade_fun.lua"
+						"Function"	"laguna_blade_fun_OnDestroy"
+					}
+				}
+				"OnAttack"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_lina/lina_laguna_blade_fun.lua"
+						"Function"	"laguna_blade_fun_OnAttack"
+					}
+				}
+				"OnAbilityExecuted"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_lina/lina_laguna_blade_fun.lua"
+						"Function"	"laguna_blade_fun_OnAbilityExecuted"
+					}
+				}
+				"OnStateChanged"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_lina/lina_laguna_blade_fun.lua"
+						"Function"	"laguna_blade_fun_OnStateChanged"
+					}
+				}
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_lina/lina_laguna_blade_fun.lua"
+						"Function"	"laguna_blade_fun_OnIntervalThink"
+					}
+				}
+				"ThinkInterval"	"0.03"
+			}
+			"modifier_laguna_blade_fun_attack_range"
+			{
+				"IsHidden"	"1"
+                                                                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_ATTACK_RANGE_BONUS"                    "%attack_range"
+				}
+			}
+			"modifier_laguna_blade_fun_fiery_soul_armor"
+			{
+				"IsHidden"	"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"                "%fiery_soul_armor"
+				}
+			}
+			"modifier_laguna_blade_fun_multiple"
+			{
+				"IsHidden"	"0"
+                                                                "Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_MULTIPLE"
+				"OnDestroy"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_lina/lina_laguna_blade_fun.lua"
+						"Function"	"multiple_laguna_blade"
+					}
+				}
+                                                                //"Duration"  "0.3"
+			}
+			"modifier_laguna_blade_fun_slow_burn"  //慢热命石的持续伤害
+			{
+				"IsHidden"	"0"
+                                                                "Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_MULTIPLE"
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_lina/lina_laguna_blade_fun.lua"
+						"Function"	"slow_burn_OnIntervalThink"
+					}
+				}
+				"ThinkInterval"	"1"
+                                                                //"Duration"  "3"
+                                                                "EffectName"            "particles/units/heroes/hero_lina/lina_spell_laguna_blade_superheated.vpcf"
+                                                                "EffectAttachType"    "follow_origin"
+			}
+			"modifier_laguna_blade_fun_slow_burn_amp"  //慢热命石提供技能增强
+			{
+				"IsHidden"	"0"
+                                                                "Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"	"%amp"
+				}
+			}
+		}
+		// Special
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"attack_range"	"100"
+			"chance"	                "30"
+                                                "dmg_pct"                "70"
+			"cooldown"              "2"
+			"chance_scepter"	
+			{
+				"value"	"60"				
+                                                                "RequiresScepter"	"1"
+			}				
+			"fiery_soul_armor"
+			{
+				"value"	"1.5"				
+                                                                "RequiresShard"	"1"
+			}
+			"amp"
+			{
+				"special_bonus_facet_lina_dot"	"10"				
+			}
+			"amp_max_stack"
+			{
+				"special_bonus_facet_lina_dot"	"7"				
+			}
+			"amp_duration"
+			{
+				"special_bonus_facet_lina_dot"	"10"				
+			}
+		}
+		"HasScepterUpgrade"	"1"
+		"HasShardUpgrade"	                "1"
+	}
+
+                //=================================
+                //食人魔法师：聚宝功
+                //=================================
+	"ogre_magi_jubaogong"
+	{
+		"BaseClass"	                "ability_datadriven"
+		"AbilityTextureName"	"alchemist/midas_knuckles/alchemist_goblins_greed"
+		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+		"MaxLevel"	                "1"
+                                "IsBreakable"		"1"
+		"ID"	                                "80172"
+		"Modifiers"
+		{
+			"modifier_ogre_magi_jubaogong"
+			{
+				"Passive"	                "1"
+				"IsBuff"	                "1"
+				"IsHidden"	"1"
+                                                                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"OnAbilityExecuted"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_ogre_magi/ogre_magi_jubaogong.lua"
+						"Function"	"jubaogong_OnAbilityExecuted"
+					}
+				}
+				"OnAttackLanded"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_ogre_magi/ogre_magi_jubaogong.lua"
+						"Function"	"jubaogong_OnAttackLanded"
+					}
+				}
+				"OnAttacked"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_ogre_magi/ogre_magi_jubaogong.lua"
+						"Function"	"jubaogong_OnAttacked"
+					}
+				}
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_ogre_magi/ogre_magi_jubaogong.lua"
+						"Function"	"jubaogong_OnIntervalThink"
+					}
+				}
+				"ThinkInterval"	"0.1"
+			}
+			"modifier_ogre_magi_jubaogong_spell_amplify"
+			{
+				"IsHidden"	"1"
+				"Passive"	                "1"
+                                                                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"	"%amp_per_stack"
+				}
+			}
+		}
+		"AbilityValues"
+		{
+			"gold_on_cast_spell"	                "75"     //施放技能获得的金钱
+			"gold_on_attack"	                "12"     //主动攻击<偷取>的金钱
+			"gold_on_attacked"	                "7"      //受到攻击获得的金钱
+			"gold_target_lose"	                "3"      //目标攻击时损失的金钱
+			"gold_target_lose_illusion"	"1"     //幻象目标攻击时损失的金钱
+                                                "gold_for_one_stack"                "200"   //每层技能增强buff所需要的金钱
+			"amp_per_stack"	                "1"      //每层buff提供的技能增强数值
+		}
+	}
+
+                //=================================
+                //莱恩：恶魔巫师
+                //=================================
+	"lion_emowushi"
+	{
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"lion/finger_of_death/lion_finger_of_death_immortal"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+		"MaxLevel"	"1"
+                                "IsBreakable"		"1"
+		"ID"	"80173"
+		"Modifiers"
+		{
+			"modifier_lion_emowushi"
+			{
+				"Passive"	"1"
+				"IsHidden"	"1"
+                                                                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"OnAbilityExecuted"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_lion/lion_emowushi.lua"
+						"Function"	"lion_emowushi"
+					}
+				}
+			}
+		}
+	}
+
+                //=================================
+                //恐怖利刃：背叛者的饥渴
+                //=================================
+	"terrorblade_beipanzhe"
+	{
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"terrorblade_sunder"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_BOTH"
+		"AbilityUnitTargetFlags"	"DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO | DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"SpellImmunityType"	"SPELL_IMMUNITY_ENEMIES_YES"
+		"FightRecapLevel"	"2"
+                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+		"MaxLevel"	"1"
+		"AbilityCastPoint"	"0.35"
+		// Time
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"	"40"
+		// Cost
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"	"0"
+		// Casting
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"	"1000"
+		"AOERadius"	"450"
+		"ID"	"80174"
+		"precache"
+		{
+			"particle"	"particles/units/heroes/hero_terrorblade/terrorblade_sunder.vpcf"
+			"particle"	"particles/econ/items/terrorblade/terrorblade_back_ti8/terrorblade_sunder_ti8.vpcf"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_terrorblade.vsndevts"
+		}
+		"OnSpellStart"
+		{
+			"FireSound"
+			{
+				"EffectName"	"Hero_Terrorblade.Sunder.Cast"
+				"Target"	"CASTER"
+			}
+			"FireSound"
+			{
+				"EffectName"	"Hero_Terrorblade.Sunder.Target"
+				"Target"	"POINT"
+			}
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/fun_heroes/hero_terrorblade/beipanzhe.lua"
+				"Function"	"Sunder"
+				"Target"	"POINT"
+				"Modifier_name"	"modifier_terrorblade_beipanzhe"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_terrorblade_beipanzhe"
+			{
+				"Passive"	"0"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_BASEATTACK_BONUSDAMAGE"	"1"
+				}
+				"IsBuff"	"1"
+				"States"	{}
+			}
+		}
+		// Special
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"hit_point_minimum_pct"	"20"
+		}
+	}
+
+                //=================================
+                //獸：
+                //=================================
+	"aghsfort_primal_beast_boss_pummel_fun"
+	{
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		"BaseClass"	"aghsfort_primal_beast_boss_pummel"
+		"AbilityTextureName"	"primal_beast_pulverize"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetFlags"	"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"	"SPELL_IMMUNITY_ENEMIES_YES"
+                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+		"MaxLevel"	"1"
+		// Casting
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"	"0.25"
+		"AbilityCastAnimation"	"ACT_DOTA_CAST_ABILITY_5"
+		"AbilityCooldown"	"45"
+		// Cost
+		// -------------------------------------------------------------------------------------------------------------
+		// "125 130 135 140"
+		"AbilityManaCost"	"500"
+		// Time
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"	"400"
+		"AbilityChannelTime"	"9.01"
+		"ID"	"80175"
+		"precache"
+		{
+			"soundfile"	"sounds/vo/primal_beast/enigma/primal_pummel_01.vsnd"
+			"soundfile"	"sounds/vo/primal_beast/enigma/primal_pummel_02.vsnd"
+			"soundfile"	"sounds/vo/primal_beast/enigma/primal_pummel_03.vsnd"
+			"soundfile"	"sounds/pb_boss/pummel_impact.vsnd"
+			"soundfile"	"soundevents/game_sounds_primal_beast_boss.vsndevts"
+		}
+		// Special
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial" //该技能大概已过期，不做更改了
+		{
+			"01"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"splash_radius"	"475"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"interval"	"0.85"
+			}
+			"03"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"ministun"	"0.35"
+			}
+			"04"
+			{
+				"var_type"	"FIELD_FLOAT"
+				// FLAIL MULTIPLIER ON ENEMY UNITS
+				"animation_rate"	"1.5"
+			}
+			"05"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"ripple_step_distance"	"555"
+			}
+			"06"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"ripple_step_distance_offset"	"185"
+			}
+			"07"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"total_ripple_circles"	"4"
+			}
+			"08"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"ripple_effect_width"	"100"
+			}
+			"09"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"ripple_damage"	"1800"
+			}
+			"10"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"ripple_slow_duration"	"0"
+			}
+			"11"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"knockback_distance"	"750"
+			}
+			"12"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"finish_knockback_duration"	"0.5"
+			}
+			"13"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"health_damage"	"0.12"
+			}
+			"14"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"ripple_duration"	"1.7"
+			}
+			"15"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"self_animation_rate"	"1"
+			}
+			"16"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"ripple_knockback_duration"	"0.1"
+			}
+		}
+		"AnimationIgnoresModelScale"	"1"
+		"IsOnCastBar"	"1"
+		"AbilityChannelAnimation"	"ACT_DOTA_CHANNEL_ABILITY_5"
+		// "90 120 150 180"
+		"AbilityDamage"	"500"
+	}
+
+                //=================================
+                //军团指挥官：群体决斗
+                //=================================
+	"legion_commander_all_duel"
+	{
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		"BaseClass"	                "ability_datadriven"
+		"AbilityTextureName"	"legion_commander_duel_alt1"
+		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetFlags"	"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
+		"SpellImmunityType" 	"SPELL_IMMUNITY_ENEMIES_YES"
+                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+		"MaxLevel"	"1"
+		"AbilityCastPoint"	"0.3"
+		// Time
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"	"50.0"
+		// Cost
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"	"200"
+		// Casting
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"	"300"
+		"ID"	                "80176"
+		// Precache
+		// -------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"particle"	                "particles/units/heroes/hero_legion_commander/legion_duel_ring.vpcf"
+			"particle"	                "particles/units/heroes/hero_legion_commander/legion_commander_duel_victory.vpcf"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_legion_commander.vsndevts"
+		}
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/fun_heroes/hero_legion_commander/duel.lua"
+				"Function"	"legion_commander_duel_datadriven_on_spell_start"
+                                                                "Duration"                "%duration"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_duel_datadriven"
+			{
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"IsDebuff"	                "1"
+				"IsPurgable"	"0"
+				"OnDeath"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_legion_commander/duel.lua"
+						"Function"	"modifier_duel_datadriven_on_death"
+						"Target"	                "UNIT"
+					}
+				}
+				"OnDestroy"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_legion_commander/duel.lua"
+						"Function"	"modifier_duel_datadriven_on_destroy"
+					}
+				}
+				"Properties"
+				{
+					//"MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_PHYSICAL"	"0"
+					"MODIFIER_PROPERTY_DISABLE_AUTOATTACK"	                "0"
+				}
+				"States"
+				{
+					"MODIFIER_STATE_DISARMED"	                                                "MODIFIER_STATE_VALUE_DISABLED"
+					"MODIFIER_STATE_SILENCED"	                                                "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_MUTED"	                                                "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_COMMAND_RESTRICTED"	                "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_CANNOT_BE_MOTION_CONTROLLED"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_FLYING_FOR_PATHING_PURPOSES_ONLY"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+			}
+			"modifier_duel_damage_datadriven"
+			{
+				"IsBuff"	                "1"
+                                                                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"	"1"
+				}
+
+			}
+			"modifier_legion_commander_all_duel"
+			{
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+				"IsDebuff"	                "1"
+				"IsPurgable"	"0"
+				"Properties"
+				{
+					//"MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_PHYSICAL"	"0"
+					"MODIFIER_PROPERTY_DISABLE_AUTOATTACK"	                "0"
+				}
+				"States"
+				{
+					"MODIFIER_STATE_DISARMED"	                                                "MODIFIER_STATE_VALUE_DISABLED"
+					"MODIFIER_STATE_SILENCED"	                                                "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_MUTED"	                                                "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_COMMAND_RESTRICTED"	                "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_CANNOT_BE_MOTION_CONTROLLED"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_FLYING_FOR_PATHING_PURPOSES_ONLY"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+
+			}
+		}
+		// Special
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"duration"	                "5.5"
+			"reward_damage"	"50"
+                                                "duel_radius"            
+			{
+				"value"			"800"
+				"affected_by_aoe_increase"	"1"
+			}	
+		}
+	}
+
+                //=================================
+                //卓尔游侠：银影天仇
+                //=================================
+	"drow_ranger_marksmanship_fun"
+	{
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		"BaseClass"	                "ability_datadriven"
+		"AbilityTextureName"	"drow_ranger_marksmanship_arcana_alt1"
+		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		//"AbilityUnitTargetFlags"	"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_NO_INVIS"
+		"AbilityUnitDamageType"	"DAMAGE_TYPE_PHYSICAL"
+		"SpellImmunityType" 	"SPELL_IMMUNITY_ENEMIES_YES"
+                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+		"MaxLevel"	"1"
+                                "IsBreakable"		"1"
+		"ID"	"80177"
+		"HasScepterUpgrade"	"1"
+		"precache"
+		{
+			"particle"	"particles/econ/events/fall_2021/radiance_owner_fall_2021.vpcf"
+                                                "particle"	"particles/econ/items/drow/drow_ti9_immortal/drow_ti9_marksman.vpcf"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_drowranger.vsndevts"
+		}
+		"OnProjectileHitUnit"
+		{
+			"DeleteOnHit"	"1"
+			"FireSound"
+			{
+				"EffectName"	"Hero_DrowRanger.ProjectileImpact"
+				"Target"	                "TARGET"
+			}
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/fun_heroes/hero_drow_ranger/marksmanship_fun.lua"
+				"Function"	"SplitShotDamage"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_marksmanship_fun"
+			{
+				"Passive"	"1"
+				"IsHidden"	"1"
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_drow_ranger/marksmanship_fun.lua"
+						"Function"	"isDisabled"
+					}
+				}
+				"ThinkInterval"	"0.03"  //需要持续不断地检测射手天赋是否失效，不仅仅检测破坏状态
+			}
+			"modifier_marksmanship_BUFF"
+			{
+				"Passive"	                "0"
+				"IsHidden"	"0"
+                                                                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				// 普攻附带伤害
+				"OnAttackLanded"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_drow_ranger/marksmanship_fun.lua"
+						"Function"	"marksmanship_damage"
+					}
+				}
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_ATTACK_RANGE_BONUS"	"%attack_range_bonus"  //仅作为buff栏显示用，用另一buff修正数值
+					"MODIFIER_PROPERTY_BONUS_NIGHT_VISION"	"%night_vision"
+					"MODIFIER_PROPERTY_MANA_BONUS"	                "%damage"           //仅作为buff栏显示用，用另一buff修正数值
+				}
+				"OnAttackStart"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_drow_ranger/marksmanship_fun.lua"
+						"Function"	"marksmanship_OnAttackStart"
+					}
+				}
+				// 技能特效
+				"EffectName"	"particles/econ/events/fall_2021/radiance_owner_fall_2021.vpcf"
+				"EffectAttachType"	"follow_origin"
+			}
+			"modifier_marksmanship_BUFF_fixed"    //用于BUFF栏数值修正，显示物理伤害造成的值
+			{
+				"IsHidden"	"1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MANA_BONUS"	                "%damage_fixed"
+					"MODIFIER_PROPERTY_ATTACK_RANGE_BONUS"	"%attack_range_bonus_fixed"
+				}
+			}
+		}
+		// Special
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"attack_range_bonus"	"0"        //用于BUFF栏数值修正，显示额外攻击距离
+			"attack_range_bonus_fixed"	"0"        //用于BUFF栏数值修正，显示额外攻击距离                             
+			"night_vision"	                "20"
+			"damage"	                                "10"
+			"damage_fixed"	                "-10"    //用于BUFF栏数值修正，显示物理伤害造成的值	
+			"base_stack"	                "0"
+			"max_stack_tooltip"	                "30"
+			"arrow_dmg"
+			{
+				"value"				"50"
+				"RequiresScepter"			"1"
+			}
+			"arrow_count"
+			{
+				"value"				"5"
+				"RequiresScepter"			"1"
+			}
+			"arrow_range"
+			{
+				"value"				"550"
+				"RequiresScepter"			"1"
+			}
+			"arrow_speed"                        "1200"
+                                                "value" "180"   //攻击射程
+		}
+	}
+
+                //=================================
+                //沉默术士：忏悔之言
+                //=================================
+	"silencer_last_word_fun"
+	{
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		"BaseClass"	                "ability_datadriven"
+		"AbilityTextureName"	"silencer/bts_silencer_ability/silencer_global_silence"
+		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"SpellImmunityType"  	"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"	"SPELL_DISPELLABLE_YES"
+                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+		"MaxLevel"	"1"
+                                "IsBreakable"		"1"
+		"AOERadius"	                 "%aura_radius"
+		"ID"	"80178"
+		"precache"
+		{
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_silencer.vsndevts"
+			"particle"	                "particles/units/heroes/hero_silencer/silencer_global_silence_hero.vpcf"
+			"particle"	                "particles/units/heroes/hero_silencer/silencer_last_word_disarm.vpcf"
+		}
+		"Modifiers"
+		{
+			"modifier_last_word_fun_arua"
+			{
+				"Passive"	"1"
+				"IsHidden"	"1"
+                                                                "AllowIllusionDuplicate"	"1"
+				"Aura"	                "modifier_last_word_fun_trigger"
+				"Aura_Radius"	"%aura_radius"
+				"Aura_Teams"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+				"Aura_Types"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC | DOTA_UNIT_TARGET_MECHANICAL"
+				"Aura_Flags"	"DOTA_UNIT_TARGET_FLAG_NO_INVIS"
+			}
+			"modifier_last_word_fun_trigger"
+			{
+				"Passive"	                "0"
+				"IsDebuff"	                "1"
+				"IsHidden"	"0"
+				"OnAbilityExecuted"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_silencer/last_word_fun.lua"
+						"Function"	"last_word_fun"
+                                                                                                "delay"                     "0.03"
+					}
+				}
+				"OnAbilityEndChannel"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_silencer/last_word_fun.lua"
+						"Function"	"last_word_fun"
+                                                                                                "delay"                     "0"
+					}
+				}
+			}
+			"modifier_last_word_fun_debuff"
+			{
+				"Passive"	                "0"
+				"IsDebuff"	                "1"
+				"IsHidden"	"0"
+                                                                "IsPurgable"              "1"
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_silencer/last_word_fun.lua"
+						"Function"	"last_word_fun_OnCreated"
+					}
+				}
+				"OnDestroy"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_silencer/last_word_fun.lua"
+						"Function"	"last_word_fun_OnDestroy"
+					}
+				}
+				"States"
+				{
+					"MODIFIER_STATE_SILENCED"        "MODIFIER_STATE_VALUE_ENABLED"
+				}
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"        "%debuff_slow"
+				}
+                                                                "EffectName"	"particles/generic_gameplay/generic_silenced.vpcf"
+				"EffectAttachType"	"follow_overhead"
+			}
+			"modifier_last_word_fun_cooldown"
+			{
+				"Passive"	                "0"
+				"IsDebuff"	                "1"
+				"IsHidden"	"0"
+                                                                "IsPurgable"              "0"
+			}
+		}
+		// Special
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"aura_radius"	
+			{
+				"value"			"1000"
+				"affected_by_aoe_increase"	"1"
+			}
+			"debuff_duration"	"3"
+			"debuff_slow"	"-50"
+			"cooldown"	"0"	
+		}
+	}
+
+                //=================================
+                //冥魂大帝：永生大帝
+                //=================================
+	"skeleton_king_reincarnation_fun"
+	{
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"skeleton_king/arcana/skeleton_king_bone_guard_arcana_alt"
+		// | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_AUTOCAST"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
+		"AbilityUnitTargetFlags"	"DOTA_UNIT_TARGET_FLAG_DEAD"
+		"SpellImmunityType"	"SPELL_IMMUNITY_ALLIES_YES"
+		"SpellDispellableType"	"SPELL_DISPELLABLE_YES"
+                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+		"MaxLevel"	"1"
+		"AbilityCastPoint"	"1.0"
+		"AbilityCastAnimation"	"ACT_DOTA_IDLE_RARE"
+		"AbilityManaCost"	"150"
+		"AbilityCastRange"	"750"
+		"ID"	"80179"
+		// 无法对自身施放
+		// "CastFilterRejectCaster"                             "1"
+		"precache"
+		{
+			"particle"	"particles/status_fx/status_effect_avatar.vpcf"
+			"particle"	"particles/items_fx/black_king_bar_avatar.vpcf"
+			"particle"	"particles/econ/events/ti8/hero_levelup_ti8.vpcf"
+			"particle"	"particles/econ/events/ti8/compendium_points_ti8_ambient.vpcf"
+			"particle"	"particles/econ/events/ti8/mekanism_ti8.vpcf"
+			"soundfile"	"soundevents/music/valve_dota_001/soundevents_stingers.vsndevts"
+			"soundfile"	"soundevents/game_sounds_items.vsndevts"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_chen.vsndevts"
+		}
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/fun_heroes/hero_skeleton_king/reincarnation_fun.lua"
+				"Function"	"reincarnation_fun"
+				"ParticleName"	"particles/econ/events/ti8/hero_levelup_ti8.vpcf"
+			}
+		}
+		// 复活获得超强BUFF
+		"OnOwnerSpawned"
+		{
+			"ApplyModifier"
+			{
+				"Target"	"CASTER"
+				"ModifierName"	"modifier_reincarnation_fun_BUFF"
+			}
+		}
+		"Modifiers"
+		{
+			// 复活提供的超强BUFF
+			"modifier_reincarnation_fun_BUFF"
+			{
+				"Passive"	"0"
+				"IsHidden"	"0"
+				"IsBuff"	"1"
+				"IsPurgable"	"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"Duration"	"%buff_duration"
+				"OnCreated"
+				{
+					"FireSound"
+					{
+						"Target"	"CASTER"
+						"EffectName"	"DOTA_Item.BlackKingBar.Activate"
+					}
+				}
+				"OnAttackLanded"
+				{
+					"Lifesteal"
+					{
+						"Target"	"CASTER"
+						"LifestealPercent"	"%lifesteal_pct"
+					}
+				}
+				"States"
+				{
+					"MODIFIER_STATE_MAGIC_IMMUNE"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"%magic_resistance"
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"	"%bonus_damage"
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"	"%bonus_armor"
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%bonus_move_speed"
+				}
+				// 特效
+				"EffectName"	"particles/items_fx/black_king_bar_avatar.vpcf"
+				"EffectAttachType"	"follow_origin"
+				// 模型整体镀上金色
+				"StatusEffectName"	"particles/status_fx/status_effect_avatar.vpcf"
+				"StatusEffectPriority"	"15"
+			}
+			// 为友军提供一次复活机会
+			"modifier_respawn_for_allies"
+			{
+				"Passive"	"0"
+				"IsHidden"	"0"
+				"OnCreated"
+				{
+					"ApplyModifier"
+					{
+						"Target"	"TARGET"
+						"ModifierName"	"modifier_special_bonus_reincarnation"
+						"Duration"	"%respawn_duration"//"70"
+					}
+					"FireSound"
+					{
+						"Target"	"CASTER"
+						"EffectName"	"Hero_Chen.PenitenceCast"
+					}
+					"FireSound"
+					{
+						"Target"	"TARGET"
+						"EffectName"	"Hero_Chen.PenitenceImpact"
+					}
+					// 常驻特效
+					"AttachEffect"
+					{
+						"EffectName"	"particles/econ/events/ti8/compendium_points_ti8_ambient.vpcf"
+						"EffectAttachType"	"start_at_customorigin"
+						"Target"	"TARGET"
+						"ControlPointEntities"
+						{
+							// CP0
+							"TARGET"	"attach_hitloc"
+						}
+					}
+					// 施放特效
+					"AttachEffect"
+					{
+						"EffectName"	"particles/econ/events/ti8/mekanism_ti8.vpcf"
+						"EffectAttachType"	"follow_origin"
+						"Target"	"TARGET"
+					}
+				}
+				"OnDestroy"
+				{
+					// 无法靠KV移除重生BUFF
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_skeleton_king/reincarnation_fun.lua"
+						"Function"	"remove_reincarnation"
+						"Target"	"TARGET"
+					}
+				}
+			}
+			// 此技能禁止被拉比克偷取
+			"modifier_cannot_be_stolen"
+			{
+				"Passive"	"1"
+				"IsHidden"	"1"
+                                                                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_skeleton_king/reincarnation_fun.lua"
+						"Function"	"cannot_be_stolen"
+					}
+				}
+			}
+			"modifier_skeleton_king_reincarnation_fun"
+			{
+				"IsHidden"	"0"
+				"IsBuff"	"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+			}
+		}
+		// Special
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"buff_duration"	                "3"
+			"bonus_damage"	                "200"
+			"bonus_attackspeed"	"300"
+			"bonus_armor"	                "15"	
+			"bonus_move_speed"	"50"
+			"cleave_pct"	                "120"
+			"lifesteal_pct"	                "100"
+			"magic_resistance"	                "100"
+			"scepter_cooldown"
+			{
+				"value"	                "100"
+				"RequiresScepter"	"1"
+			}
+			"respawn_duration"	                "240"
+		}
+		"HasScepterUpgrade"	"1"
+	}
+
+                //=================================
+                //修补匠：镭射风暴
+                //=================================
+	"tinker_death_spin"
+	{
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"tinker_shrink_ray"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_CHANNELLED | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetFlags"	"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"	"SPELL_IMMUNITY_ENEMIES_NO"
+		"FightRecapLevel"	"2"
+                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+		"MaxLevel"	"1"
+		"AbilityCastPoint"	"0"
+		"AbilityCastAnimation"	"ACT_DOTA_TELEPORT"
+		"AnimationPlaybackRate"	"1.5"
+		// Time
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"	"90"
+		// Cost
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"	"600"
+		// Casting
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityChannelTime"	"7"
+		"ID"	"80180"
+		// Data driven
+		// -------------------------------------------------------------------------------------------------------------
+		"precache"
+		{
+			"particle"	"particles/units/heroes/hero_crystalmaiden/maiden_freezing_field_explosion.vpcf"
+			"particle"	"particles/status_fx/status_effect_frost_lich.vpcf"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_tinker.vsndevts"
+		}
+		"OnSpellStart"
+		{
+			"ApplyModifier"
+			{
+				"Target"	"CASTER"
+				"ModifierName"	"modifier_tinker_death_spin"
+				"Duration"	"%duration"
+			}
+			"FireSound"
+			{
+				"Target"	"CASTER"
+				"EffectName"	"Hero_Tinker.RearmStart"
+			}
+		}
+		"OnChannelFinish"
+		{
+			"RemoveModifier"
+			{
+				"Target"	"CASTER"
+				"ModifierName"	"modifier_tinker_death_spin"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_tinker_death_spin"
+			{
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"Target"	"CASTER"
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_tinker/ray_storm.lua"
+						"Function"	"ray_storm"
+					}
+				}
+				"ThinkInterval"	"0.6"
+				"Properties"	{}
+				"States"
+				{
+					"MODIFIER_STATE_LOW_ATTACK_PRIORITY"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+				"IsBuff"	"1"
+				"IsHidden"	"0"
+			}
+		}
+		// Special
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"duration"	"7"
+			"sifangjiange"	"0.6"
+		}
+		"AbilityDuration"	"10"
+		// Stats
+		// -------------------------------------------------------------------------------------------------------------
+		// Primarily about the damage
+		"AbilityModifierSupportValue"	"0.35"
+	}
+
+                //=================================
+                //斯温：风暴之拳（重置版）
+                //=================================
+	"sven_storm_bolt_fun"
+	{
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"sven_storm_bolt"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"	                "SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"	"SPELL_DISPELLABLE_YES_STRONG"
+		"AbilityType"	                "DOTA_ABILITY_TYPE_BASIC"
+		"AbilityCastPoint"	                "0.2"
+		"AbilityCastAnimation"	"ACT_DOTA_CAST_ABILITY_1"
+		"AbilityCooldown"	"21 18 15 12"
+		"AbilityManaCost"	"110 115 120 125"
+		"AbilityCastRange"	"600 900 1200 1500"
+		"AOERadius"	"%bolt_aoe"
+		"ID"	"80181"
+		"precache"
+		{
+			"particle"	            "particles/units/heroes/hero_sven/sven_spell_storm_bolt_lightning.vpcf"
+			"particle"	            "particles/units/heroes/hero_sven/sven_spell_storm_bolt.vpcf"
+			"soundfile"           "soundevents/game_sounds_heroes/game_sounds_sven.vsndevts"
+		}
+		"OnSpellStart"
+		{
+			"FireSound"
+			{
+				"Target"	"CASTER"
+				"EffectName"	"Hero_Sven.StormBolt"
+			}
+			"RunScript"
+			{
+				"Target"	"CASTER"
+				"ScriptFile"	"scripts/vscripts/fun_heroes/hero_sven/storm_bolt_fun.lua"
+				"Function"	"seven"
+			}
+		}
+		"OnProjectileHitUnit"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/fun_heroes/hero_sven/storm_bolt_fun.lua"
+				"Function"	"no_flying"
+                                                                "isFinish"                   "0"
+			}
+		}
+		"OnProjectileFinish"
+		{
+			"RunScript"
+			{
+				"Target"	                "POINT"
+				"ScriptFile"	"scripts/vscripts/fun_heroes/hero_sven/storm_bolt_fun.lua"
+				"Function"	"no_flying"
+                                                                "isFinish"                  "1"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_sven_storm_bolt_fun"
+			{
+				"OnCreated"
+				{
+					"ApplyMotionController"
+					{
+						"Target"	"CASTER"
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_sven/storm_bolt_fun.lua"
+						"HorizontalControlFunction"	"flyHorizonal"
+					}
+				}
+				"States"
+				{
+					"MODIFIER_STATE_COMMAND_RESTRICTED"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_INVULNERABLE"	                "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_MAGIC_IMMUNE"	                "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_ATTACK_IMMUNE"	                "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_UNSELECTABLE"	                "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_HEALTH_BAR"	                "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_UNIT_COLLISION"	                "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_OUT_OF_GAME"	                "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_DISARMED"	                                "MODIFIER_STATE_VALUE_ENABLED"
+				}
+				"Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+			}
+		}
+		"AbilityValues"
+		{
+			"bolt_aoe"	                                  
+			{
+				"value"			"255 300 345 390"
+				"affected_by_aoe_increase"	"1"
+			}
+			"bolt_stun_duration"
+			{
+				"value"	                                "1.4 1.6 1.8 2"
+				"LinkedSpecialBonus"	"special_bonus_unique_sven_4"
+			}
+		}
+		"HasScepterUpgrade"	"1"
+		"AbilityDamage"	"130 200 280 360"
+	}
+
+                  //=================================
+                //虚无之灵：炁体源流
+                //=================================
+	"void_spirit_wuyingzhan"
+	{
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"void_spirit_omni_slash"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"	                "SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"	"SPELL_DISPELLABLE_NO"
+                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+		"MaxLevel"	"1"
+		"AbilityCastPoint"	"0.3"
+		"AbilityCastAnimation"	"ACT_DOTA_CAST_ABILITY_2"
+		"AbilityCooldown"	"80"
+		"AbilityManaCost"	"300"
+		"AbilityCastRange"	"350"
+                                "IsBreakable"		"1"
+		"HasShardUpgrade"	                "1"
+		"HasScepterUpgrade"	"1"
+		"ID"	"80182"
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/fun_heroes/hero_void_spirit/wuyingzhan.lua"
+				"Function"	"wuyingzhan"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_void_spirit_wuyingzhan_passive"
+			{
+				"Passive"	                    "1"
+				"IsHidden"	    "1"
+				"IsBuff"	                    "1"
+                                                                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_void_spirit/wuyingzhan.lua"
+						"Function"	"modifier_void_spirit_wuyingzhan_passive_OnCreated"
+					}
+				}
+				"OnAbilityExecuted"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_void_spirit/wuyingzhan.lua"
+						"Function"	"modifier_void_spirit_wuyingzhan_passive_OnAbilityExecuted"
+					}
+				}
+
+			}
+			"modifier_void_spirit_wuyingzhan"
+			{
+				"Passive"	"0"
+                                                                "Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"States"
+				{
+					"MODIFIER_STATE_COMMAND_RESTRICTED"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_INVULNERABLE"	                "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_MAGIC_IMMUNE"	                "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_ATTACK_IMMUNE"	                "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_UNSELECTABLE"	                "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_HEALTH_BAR"	                "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_UNIT_COLLISION"	                "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_OUT_OF_GAME"	                "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_DISARMED"	                                "MODIFIER_STATE_VALUE_ENABLED"
+				}
+				"StatusEffectName"	"particles/status_fx/status_effect_void_spirit_pulse_buff.vpcf"
+				"StatusEffectPriority"	    "16"
+				"IsBuff"	                    "1"
+				"IsHidden"	    "0"
+				//"Duration"	    "15"
+				"OnDestroy"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_void_spirit/wuyingzhan.lua"
+						"Function"	"modifier_void_spirit_wuyingzhan_OnDestroy"
+					}
+				}
+			}
+			"modifier_void_spirit_wuyingzhan_true_sight"
+			{
+                                                                "Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"Passive"	"0"
+				"States"
+				{
+					"MODIFIER_STATE_PROVIDES_VISION"	                "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_INVISIBLE"	                                "MODIFIER_STATE_VALUE_DISABLED"
+				}
+				"IsDebuff"	                "1"
+				"IsHidden"	"1"
+				//"Duration"	"1"
+			}
+			"modifier_void_spirit_wuyingzhan_aether_remnant_debuff"          //残阴的额外效果
+			{
+                                                                "Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+                                                                "TextureName"	"void_spirit_aether_remnant"
+				"Passive"	                "0"
+				"IsDebuff"	                "1"
+				"IsHidden"	"0"
+				"IsPurgable"	"1"
+				"States"
+				{
+					"MODIFIER_STATE_PASSIVES_DISABLED"	                "MODIFIER_STATE_VALUE_ENABLED"
+				}
+				"Properties"
+				{
+					//"MODIFIER_PROPERTY_DISABLE_HEALING"	"1"
+				}
+			}
+			"modifier_void_spirit_wuyingzhan_dissimilate_buff"          //异化的额外效果
+			{
+                                                                "Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+                                                                "TextureName"	"void_spirit_dissimilate"
+				"Passive"	                "0"
+				"IsBuff"	                "1"
+				"IsHidden"	"0"
+				"IsPurgable"	"0"
+				"StatusEffectName"	    "particles/status_fx/status_effect_void_spirit_pulse_buff.vpcf"
+				"StatusEffectPriority"	    "16"
+				"States"
+				{
+					"MODIFIER_STATE_DEBUFF_IMMUNE"	                "MODIFIER_STATE_VALUE_ENABLED"
+				}
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_PHYSICAL"	"1"
+					"MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_MAGICAL"	"1"
+					"MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_PURE"	"1"
+				}
+			}
+		}
+		"AbilityValues"
+		{
+			"base_strike"	           "3"
+                                                "per_strike_level"                 "5"   //提升一次斩击次需要的等级
+			"max_strike"	           "9"
+			"tick"	"0.4"
+                                                "dissimilate_buff_duration"
+                                                {
+                                                                "value"                    "2.4"        //设定为异化结束后的0.5秒，1.9意味着异化的持续时间为1.4秒
+                                                               "RequiresScepter"	                      "1"
+                                                }
+                                                "dissimilate_buff_duration_tooltip"
+                                                {
+                                                                "value"                    "1.0"        //设定为异化结束后的0.5秒，1.9意味着异化的持续时间为1.4秒
+                                                               "RequiresScepter"	                      "1"
+                                                }
+                                                "illusion_bonus_debuff"
+                                                {
+                                                                "value"                    "3"
+                                                               "RequiresScepter"	                      "1"
+                                                }
+		}
+	}
+
+
+                //=================================
+                //玛尔斯：超级竞技场1/3（内圈）
+                //=================================
+	"mars_arena_of_blood_fun_1"
+	{
+		"BaseClass"	"mars_arena_of_blood"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+ 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+ 		"AbilitySound"					"Hero_Mars.ArenaOfBlood.Start"
+                                "ID"	"80183"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"400"
+		"AbilityCastPoint"				"0.2"
+ 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"150 200 250"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"AbilityCooldown"				
+			{
+				"value"			"100 95 90"
+				"special_bonus_unique_mars_arena_cooldown"			"-20"
+			}
+			"duration"			"5 5 5"
+			"radius"			
+			{
+				"value"		"275"
+				"affected_by_aoe_increase"	"1"		
+			}
+
+			"width"				"100"
+			"spear_damage"		"80 160 240"
+			"formation_time"	"0.1"
+			"spear_distance_from_wall"	"160"
+			"spear_attack_interval"	"1"
+			"warrior_count"		"7"
+			"first_warrior_angle"	"0.0"
+			"warrior_fade_min_dist"	"175.0"
+			"warrior_fade_max_dist"	"225.0"
+
+			"cast_around_self_and_leash"	"0"
+
+			"obscure_vision"
+			{
+				"value"		"0"
+				"special_bonus_facet_mars_arena"	"1"
+			}
+			"arena_kill_buff_duration"				
+			{
+				"value"				"0"
+				"special_bonus_facet_mars_victory_feast"			"+20"				
+			}
+			"arena_kill_buff_damage_pct"
+						{
+				"value"				"0"
+				"special_bonus_facet_mars_victory_feast"			"+100"				
+			}
+			
+			"arena_kill_buff_heal_pct"
+			{
+				"value"				"0"
+				"special_bonus_facet_mars_victory_feast"			"+30"				
+			}
+		}
+	}
+
+                //=================================
+                //玛尔斯：超级竞技场2/3（外圈）
+                //=================================
+	"mars_arena_of_blood_fun_2"
+	{
+		"BaseClass"	"mars_arena_of_blood"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+ 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+ 		"AbilitySound"					"Hero_Mars.ArenaOfBlood.Start"
+
+		"ID"	"80184"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"400"
+		"AbilityCastPoint"				"0.2"
+ 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"150 200 250"
+		
+		// Special	
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"AbilityCooldown"				
+			{
+				"value"			"100 95 90"
+				"special_bonus_unique_mars_arena_cooldown"			"-20"
+			}
+			"duration"			"7 7 7"
+			"radius"			
+			{
+				"value"		"825"
+				"affected_by_aoe_increase"	"1"		
+			}
+
+			"width"				"100"
+			"spear_damage"		"200 350 500"
+			"formation_time"	"0.1"
+			"spear_distance_from_wall"	"160"
+			"spear_attack_interval"	"1"
+			"warrior_count"		"21"
+			"first_warrior_angle"	"0.0"
+			"warrior_fade_min_dist"	"525.0"
+			"warrior_fade_max_dist"	"675.0"
+
+			"cast_around_self_and_leash"	"0"
+
+			"obscure_vision"
+			{
+				"value"		"0"
+				"special_bonus_facet_mars_arena"	"1"
+			}
+			"arena_kill_buff_duration"				
+			{
+				"value"				"0"
+				"special_bonus_facet_mars_victory_feast"			"+20"				
+			}
+			"arena_kill_buff_damage_pct"
+						{
+				"value"				"0"
+				"special_bonus_facet_mars_victory_feast"			"+100"				
+			}
+			
+			"arena_kill_buff_heal_pct"
+			{
+				"value"				"0"
+				"special_bonus_facet_mars_victory_feast"			"+30"				
+			}
+		}
+	}
+                //=================================
+                //玛尔斯：超级竞技场3/3（主技能）
+                //=================================
+	"mars_arena_of_blood_fun_3"
+	{
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"mars/mars_fall20_immortal_ability_icon/mars_fall20_immortal_gods_rebuke"
+		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+ 		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+ 		//"AbilitySound"				"Hero_Mars.ArenaOfBlood.Start"
+		"MaxLevel"	"1"
+                                "IsBreakable"		"1"
+		"ID"	"80185"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"				"1000"
+		"AbilityCastPoint"				"0.2"
+ 		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_1"
+
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"60"
+		
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"300"
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/fun_heroes/hero_mars/mars_arena_of_blood_fun.lua"
+				"Function"	"arena_of_blood_fun_recall"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_mars_arena_of_blood_three"
+			{
+				"Passive"	"1"
+				"OnAbilityExecuted"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_mars/mars_arena_of_blood_fun.lua"
+						"Function"	"mars_arena_of_blood_fun"
+					}
+				}
+				"IsHidden"	"1"
+			}
+			// 此技能禁止被拉比克偷取
+			"modifier_arena_of_blood_cannot_be_stolen"
+			{
+				"Passive"	                "1"
+				"IsHidden"	"1"
+                                                                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_mars/mars_arena_of_blood_fun.lua"
+						"Function"	"cannot_be_stolen"
+                                                                                                "AbilityName"           "mars_arena_of_blood_fun_3"
+					}
+				}
+			}
+		}
+		"AbilityValues"
+		{
+			"small_radius"	    
+			{
+				"value"		"275"
+				"affected_by_aoe_increase"	"1"		
+			}
+			"large_radius"	    
+			{
+				"value"		"825"
+				"affected_by_aoe_increase"	"1"		
+			}
+		}
+	}
+                //=================================
+                //影魔：毁灭三连
+                //=================================
+	"nevermore_shadowraze_fun"
+	{
+		"BaseClass"	                "ability_datadriven"
+		"AbilityTextureName"	"nevermore_shadowraze3_demon"
+		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"	                "SPELL_IMMUNITY_ENEMIES_NO"
+                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+		"MaxLevel"	"1"
+		"AbilityCastPoint"	"0.55"
+		"AbilityCastAnimation"	"ACT_DOTA_RAZE_3"
+		"AbilityCooldown"	"12"
+		// Cost
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"	"300"
+		// Casting
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"	"850"
+		"ID"	                "80186"
+		"precache"
+		{
+			"particle"	"particles/econ/items/shadow_fiend/sf_fire_arcana/sf_fire_arcana_shadowraze.vpcf"
+		}
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/fun_heroes/hero_nevermore/nevermore_shadowraze_fun.lua"
+				"Function"	"shadowraze_fun"
+			}
+		}
+		"Modifiers"
+		{
+			// 提供真视效果
+			"modifier_nevermore_shadowraze_fun_true_sight"
+			{
+				"Passive"	"0"
+				"IsPurgable"	"0"
+				"IsDebuff"	"1"
+				"States"
+				{
+					"MODIFIER_STATE_PROVIDES_VISION"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_INVISIBLE"	"MODIFIER_STATE_VALUE_DISABLED"
+				}
+				"Duration"	"%vision_duration"
+			}
+			// 造成伤害
+			"modifier_nevermore_shadowraze_fun_damage"
+			{
+				"Passive"	"0"
+				"IsPurgable"	"0"
+				"IsDebuff"	"1"
+				"IsHidden"	"1"
+				// | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE | MODIFIER_ATTRIBUTE_PERMANENT"
+				// 第一次伤害
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_nevermore/nevermore_shadowraze_fun.lua"
+						"Function"	"shadowraze_fun_damage"
+					}
+				}
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_nevermore/nevermore_shadowraze_fun.lua"
+						"Function"	"shadowraze_fun_damage"
+					}
+				}
+				"ThinkInterval"	"0.55"
+				"Duration"	"1.1"
+			}
+			// 此技能禁止被拉比克偷取
+			"modifier_cannot_be_stolen"
+			{
+				"Passive"	"1"
+				"IsHidden"	"1"
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_nevermore/nevermore_shadowraze_fun.lua"
+						"Function"	"cannot_be_stolen"
+					}
+				}
+			}
+		}
+		// Special
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"vision_duration"	"3.5"
+		}
+		"AbilityCastGestureSlot"	"DEFAULT"
+	}
+                //=================================
+                //拉比克：异步同位
+                //=================================
+	"rubick_asynchronous_coincide"
+	{
+		"BaseClass"	                "ability_datadriven"
+		"AbilityTextureName"	"rubick/harlequin_icons/rubick_null_field"
+		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_BOTH"
+                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+		"MaxLevel"	                "1"
+                                "IsBreakable"		"1"
+		"ID"	"80187"
+		"precache"
+		{
+			"particle"	"particles/status_fx/status_effect_abaddon_frostmourne.vpcf"
+		}
+		"Modifiers"
+		{
+			"modifier_yibu_buff"
+			{
+				"Passive"	"0"
+				"IsHidden"	"0"
+				"IsBuff"	"1"
+				"States"
+				{
+					"MODIFIER_STATE_ATTACK_IMMUNE"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_INVULNERABLE"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_DISARMED"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_COMMAND_RESTRICTED"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_UNIT_COLLISION"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_UNSELECTABLE"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_MAGIC_IMMUNE"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_HEALTH_BAR"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_OUT_OF_GAME"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+				"Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"	"%spell_amp"
+				}
+				"StatusEffectName"	"particles/status_fx/status_effect_abaddon_frostmourne.vpcf"
+				"StatusEffectPriority"	"32"
+			}
+			"modifier_yibu"
+			{
+				"Passive"	"1"
+				"IsBuff"	"1"
+				"OnAbilityExecuted"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_rubick/yibu.lua"
+						"Function"	"yibu"
+					}
+				}
+				"AllowIllusionDuplicate"	"0"
+			}
+			"modifier_null_field_cannot_be_stolen"
+			{
+				"Passive"	                "1"
+				"IsHidden"	"1"
+                                                                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_rubick/yibu.lua"
+						"Function"	"cannot_be_stolen"
+                                                                                                "AbilityName"           "rubick_spell_steal"
+					}
+				}
+			}
+		}
+		"AbilityValues"
+		{
+			"spell_amp"	"-50"
+		}
+	}
+                //=================================
+                //变体精灵：波浪打击
+                //=================================
+	"morphling_tidal_wave_fun"
+	{
+		"BaseClass"	                "ability_datadriven"
+		"AbilityTextureName"	"morphling_hybrid"
+		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType" 	"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityType"	                "DOTA_ABILITY_TYPE_ULTIMATE"
+		"MaxLevel"	                "1"
+                                "IsBreakable"		"1"
+		"ID"	                                "80188"
+		"precache"
+		{
+			"particle"	"particles/units/heroes/hero_kunkka/kunkka_shard_tidal_wave.vpcf"
+		}
+		"OnProjectileHitUnit"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/fun_heroes/hero_morphling/morphling_tidal_wave.lua"
+				"Function"	"morphling_tidal_wave_damgage"
+			}
+			"DeleteOnHit"	"0"
+		}
+		"Modifiers"
+		{
+			"modifier_morphling_tidal_wave"
+			{
+				"Passive"	                "1"
+				"IsHidden"	"1"
+				"IsBuff"	                "1"
+				"IsPurgable"	"0"
+				"OnAbilityExecuted"
+				{
+					"RunScript"
+					{
+						"Target"	"CASTER"
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_morphling/morphling_tidal_wave.lua"
+						"Function"	"morphling_tidal_wave"
+					}
+				}
+			}
+		}
+		"AbilityValues"
+		{
+			"bouns_damage"	"800"
+		}
+		"HasScepterUpgrade"	"1"
+	}
+                //=================================
+                //恐怖利刃：恶魔变形
+                //=================================
+	"terrorblade_Metamorphosis_fun"
+	{
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"terrorblade_terror_wave"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_BOTH"
+		"AbilityUnitTargetFlags"	"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"	"SPELL_IMMUNITY_ENEMIES_YES"
+		"SpellDispellableType"	"SPELL_DISPELLABLE_NO"
+		"AbilityType"	"DOTA_ABILITY_TYPE_ULTIMATE"
+		"MaxLevel"	"1"
+		"AbilityCastAnimation"	"ACT_DOTA_CAST_ABILITY_3"
+		"AbilityCooldown"	"180"
+		"AbilityManaCost"	"600"
+		"AbilityCastRange"	"1800"
+		"AOERadius"	"600"
+		"ID"	"80189"
+		"precache"
+		{
+			"particle"	"particles/econ/items/earthshaker/earthshaker_arcana/earthshaker_arcana_echoslam_start_v2.vpcf"
+			"particle"	"particles/units/heroes/hero_warlock/warlock_rain_of_chaos.vpcf"
+			"particle"	"particles/units/heroes/hero_warlock/warlock_rain_of_chaos_start.vpcf"
+			"particle"	"particles/units/heroes/hero_gyrocopter/gyro_calldown_marker.vpcf"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_terrorblade.vsndevts"
+			"particle"	"particles/econ/items/monkey_king/arcana/fire/monkey_king_spring_arcana_fire.vpcf"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_earthshaker.vsndevts"
+		}
+		"OnSpellStart"
+		{
+			"FireSound"
+			{
+				"Target"	"CASTER"
+				"EffectName"	"Hero_Terrorblade.Sunder.Cast"
+			}
+			"FireSound"
+			{
+				"Target"	"POINT"
+				"EffectName"	"Hero_Terrorblade.Sunder.Target"
+			}
+			"RunScript"
+			{
+				"Target"	"POINT"
+				"ScriptFile"	"scripts/vscripts/fun_heroes/hero_terrorblade/terrorblade_Metamorphosis.lua"
+				"Function"	"metamorphosis_before"
+			}
+			"ApplyMotionController"
+			{
+				"Target"	"CASTER"
+				"ScriptFile"	"scripts/vscripts/fun_heroes/hero_terrorblade/terrorblade_Metamorphosis.lua"
+				"HorizontalControlFunction"	"metamorphosis_fly_Horizonal"
+				"VerticalControlFunction"	"metamorphosis_fly_Vertical"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_terrorblade_Metamorphosis_fun"
+			{
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"	"1"
+				}
+				"IsHidden"	"0"
+				"IsBuff"	"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+			}
+			"modifier_terrorblade_Metamorphosis_fun_2"
+			{
+				"Duration"	"3"
+				"OnCreated"
+				{
+					"FireEffect"
+					{
+						"Target"	"CASTER"
+						"EffectName"	"particles/econ/items/monkey_king/arcana/fire/monkey_king_spring_arcana_fire.vpcf"
+						"EffectAttachType"	"start_at_origin"
+						"EffectRadius"	"800"
+					}
+					"FireSound"
+					{
+						"Target"	"CASTER"
+						"EffectName"	"Hero_EarthShaker.EchoSlam"
+					}
+				}
+				"IsHidden"	"1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"IsBuff"	"1"
+			}
+			"modifier_terrorblade_Metamorphosis_fly"
+			{
+				"Properties"	{}
+				"States"
+				{
+					"MODIFIER_STATE_ATTACK_IMMUNE"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_MAGIC_IMMUNE"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_COMMAND_RESTRICTED"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_STUNNED"	"MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_HEALTH_BAR"	"MODIFIER_STATE_VALUE_ENABLED"
+				}
+				"IsHidden"	"1"
+				"IsBuff"	"1"
+			}
+		}
+		"AbilityValues"
+		{
+			"bonus_strength"	"1"
+			"damage"	"460"
+			"bonus_damage"	"20"
+			"bonus_strength_level"	"10"
+		}
+	}
+                //=================================
+                //艾欧：仁爱之友
+                //=================================
+	"wisp_overcharge_fun"
+	{
+		"BaseClass"	                "ability_datadriven"
+		"AbilityTextureName"	"wisp/wisp_overcharge_alt"
+		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"AbilityType"	                "DOTA_ABILITY_TYPE_ULTIMATE"
+                                "HasScepterUpgrade"	"1"
+		"MaxLevel"	                "1"
+                                "IsBreakable"		"1"
+		"ID"	                                "80190"
+		"precache"
+		{
+			//"particle"	"particles/econ/items/earthshaker/earthshaker_arcana/earthshaker_arcana_echoslam_start_v2.vpcf"
+			//"soundfile"	"soundevents/game_sounds_heroes/game_sounds_earthshaker.vsndevts"
+		}
+		"OnSpellStart"
+		{}
+		"Modifiers"
+		{
+			"modifier_wisp_overcharge_fun"
+			{
+				"Passive"	                "1"
+				"IsHidden"	"0"
+				"IsBuff"	                "1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_PERMANENT"
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_wisp/wisp_overcharge_fun.lua"
+						"Function"	"wisp_overcharge_fun_OnCreated"
+					}
+				}
+				"OnAbilityExecuted"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_wisp/wisp_overcharge_fun.lua"
+						"Function"	"wisp_overcharge_fun_OnAbilityExecuted"
+					}
+				}
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_wisp/wisp_overcharge_fun.lua"
+						"Function"	"wisp_overcharge_fun_OnIntervalThink"
+					}
+				}
+				"ThinkInterval"	"0.09"
+			}
+			"modifier_wisp_overcharge_fun_hp_regen"
+			{
+				"Passive"	                "0"
+				"IsHidden"	"1"
+				"IsBuff"	                "1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE  | MODIFIER_ATTRIBUTE_PERMANENT"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"                     "0.1"
+				}
+			}
+			"modifier_wisp_overcharge_fun_scepter_strength"
+			{
+				"Passive"	                "0"
+				"IsHidden"	"1"
+				"IsBuff"	                "1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"                     "0.1"
+				}
+			}
+			"modifier_wisp_overcharge_fun_scepter_agility"
+			{
+				"Passive"	                "0"
+				"IsHidden"	"1"
+				"IsBuff"	                "1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"                     "0.1"
+				}
+			}
+			"modifier_wisp_overcharge_fun_scepter_intellect"
+			{
+				"Passive"	                "0"
+				"IsHidden"	"1"
+				"IsBuff"	                "1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"                     "0.1"
+				}
+			}
+			"modifier_wisp_overcharge_fun_scepter_damage_target"
+			{
+				"Passive"	                "0"
+				"IsHidden"	"1"
+				"IsBuff"	                "1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE"                          "%target_damage_change_pct_scepter"
+				}
+			}
+			"modifier_wisp_overcharge_fun_scepter_damage_caster"
+			{
+				"Passive"	                "0"
+				"IsHidden"	"1"
+				"IsBuff"	                "1"
+				"Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE"                     "%caster_damage_change_pct_scepter"
+				}
+			}
+		}
+		"AbilityValues"
+		{
+			"damage_reduction_pct_toggle_off"                    "65"
+			"damage_reduction_pct_toggle_on"                    "95"
+                                                "debuff_immune"
+                                                {//暂时用不到这个
+                                                               "value"                                            "0"
+                                                               "special_bonus_scepter"	      "+1"
+                                                }
+                                                "hp_regen_pct"
+                                                {
+                                                               "value"                                            "0"
+                                                               "special_bonus_scepter"	      "+2"
+                                                               "RequiresScepter"	                      "1"
+                                                }
+                                                "hp_regen_pct_multiplier"
+                                                {
+                                                               "value"                                            "2"
+                                                               "RequiresScepter"	                      "1"
+                                                }
+                                                "bonus_stat_scepter"
+                                                {
+                                                               "value"                                            "30"
+                                                               "RequiresScepter"	                      "1"
+                                                }
+                                                "bonus_stat_scepter_primary"
+                                                {
+                                                               "value"                                            "45"
+                                                               "RequiresScepter"	                      "1"
+                                                }
+                                                "bonus_stat_scepter_universal"
+                                                {
+                                                               "value"                                            "35"
+                                                               "RequiresScepter"	                      "1"
+                                                }
+                                                "target_damage_change_pct_scepter"
+                                                {
+                                                               "value"                                            "30"
+                                                               "RequiresScepter"	                      "1"
+                                                }
+                                                "caster_damage_change_pct_scepter"
+                                                {
+                                                               "value"                                            "-50"
+                                                               "RequiresScepter"	                      "1"
+                                                }
+		}
+	}
+
+                //=================================
+                //美杜莎：法力吮吸
+                //=================================
+	"medusa_absorb_mana"
+	{
+		"BaseClass"	                "ability_datadriven"
+		"AbilityTextureName"	"medusa/blueice_abilityicons/medusa_split_shot"
+		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"SpellImmunityType" 	"SPELL_IMMUNITY_ENEMIES_NO"
+		"AbilityType"	                "DOTA_ABILITY_TYPE_ULTIMATE"
+		"MaxLevel"	"1"
+                                "IsBreakable"	"1"
+		"ID"	"80191"
+		"Modifiers"
+		{
+			"modifier_medusa_absorb_mana"
+			{
+				"Passive"	"1"
+				"IsBuff"	"1"
+				"IsHidden"	"1"
+				"OnAttackLanded"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_medusa/medusa_absorb_mana.lua"
+						"Function"	"absorb_mana"
+					}
+				}
+			}
+		}
+		"AbilityValues"
+		{
+			"absorption"	"25"
+		}
+	}
+
+                //=================================
+                //上古巨神：六芒裂地沟壑
+                //=================================
+	"elder_titan_earth_splitter_hexagram"
+	{
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		"BaseClass"	                "ability_datadriven"
+		"AbilityTextureName"	"elder_titan_earth_splitter"
+		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"	                "SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilityType"	                "DOTA_ABILITY_TYPE_ULTIMATE"
+		"SpellDispellableType"	"SPELL_DISPELLABLE_YES"
+		"MaxLevel"	"1"
+		"ID"	                "80192"
+		"AbilityCastPoint"	"0.4"
+                                "AOERadius"             "%crack_radius"
+		// Time
+		// -------------------------------------------------------------------------------------------------------------
+		
+		// Cost
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"	"500"
+		// Casting
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityCastRange"	"1000"
+
+		"precache"
+		{
+			"particle"	                "particles/econ/items/elder_titan/elder_titan_2021/elder_titan_2021_earth_splitter.vpcf"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_elder_titan.vsndevts"
+		}
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"Target"	"POINT"
+				"ScriptFile"	"scripts/vscripts/fun_heroes/hero_elder_titan/elder_titan_earth_splitter_hexagram.lua"
+				"Function"	"elder_titan_earth_splitter_hexagram"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_elder_titan_earth_splitter_hexagram"
+			{
+                                                                "IsPurgable"    "1"
+                                                                "IsDebuff"       "1"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%slow_pct"
+				}
+			}
+		}
+		// Special
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+                                                "AbilityCooldown"
+			{
+				"value"		                                "120"
+				"special_bonus_unique_elder_titan_3"	"-60"		
+			}
+			"crack_time"	"3.3"
+			"crack_radius"
+			{
+				"value"		"800"
+				"affected_by_aoe_increase"	"1"		
+			}
+			"slow_pct"	"-50"
+			"slow_duration"	"5.0"
+			"damage_pct"
+			{
+				"value"			"65"
+				"DamageTypeTooltip"		"DAMAGE_TYPE_NONE"
+			}
+			"vision_radius"
+			{
+				"value"		"800"
+				"affected_by_aoe_increase"	"1"		
+			}
+			"vision_duration"	"4.0"
+		}
+	}
+
+                //=================================
+                //天穹守望者：神符铸就
+                //=================================
+	"arc_warden_rune_forge"
+	{
+		"BaseClass"	                "ability_datadriven"
+		"AbilityTextureName"	"arc_warden_scepter"
+		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"AbilityType"	                "DOTA_ABILITY_TYPE_ULTIMATE"
+		"MaxLevel"	"1"
+                                "IsBreakable"	"1"
+		//"AbilityCooldown"	"30"
+		"ID"	"80193"
+		"precache"
+		{
+		}
+		"OnChannelSucceeded"
+		{
+			"RunScript"
+			{
+				"Target"	"POINT"
+				"ScriptFile"	"scripts/vscripts/fun_heroes/hero_arc_warden/arc_warden_rune_forge.lua"
+				"Function"	"arc_warden_rune_forge"
+			}
+			"FireSound"
+			{
+				"Target"	"CASTER"
+				"EffectName"	"DOTA_Item.Nullifier.Target"
+			}
+		}
+		"Modifiers"
+		{
+			"modifier_arc_warden_rune_forge"
+			{
+				"Passive"	"1"
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"Target"	"CASTER"
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_arc_warden/arc_warden_rune_forge.lua"
+						"Function"	"arc_warden_rune_forge"
+					}
+				}
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_arc_warden/arc_warden_rune_forge.lua"
+						"Function"	"arc_warden_rune_forge"
+					}
+				}
+				"ThinkInterval"	"0.1"
+				"IsHidden"	"1"
+				"IsPurgable"	"0"
+			}
+		}
+		"AbilityValues"
+		{
+			"time"	"30"
+                                                "cooldown" "30"
+		}
+	}
+
+                //=================================
+                //钢背兽：反击针刺
+                //=================================
+	"bristleback_back"
+	{
+		"BaseClass"	                "ability_datadriven"
+		"AbilityTextureName"	"bristleback/piston_impaler/bristleback_quill_spray"
+		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"	"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+		"AbilityType"	                "DOTA_ABILITY_TYPE_ULTIMATE"
+		"MaxLevel"	"1"
+                                "IsBreakable"	"1"
+		"AbilityCooldown"	"0.3"
+		"ID"	"80194"
+		"Modifiers"
+		{
+			"modifier_bristleback_back"
+			{
+				"Passive"	                "1"
+				"IsHidden"	"1"
+				"OnAttacked"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_bristleback/bristleback_back.lua"
+						"Function"	"bristleback_back"
+					}
+				}
+				"OnTakeDamage"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_bristleback/bristleback_back.lua"
+						"Function"	"bristleback_back_test"
+						"Damage"		"%attack_damage"
+					}
+				}
+			}
+		}
+		"AbilityValues"
+		{
+			"trigger_chance"	"33.3"
+			"side_angle"	"110"
+			"back_angle"	"70"
+		}
+	}
+                //=================================
+                //祈求者：祈艺大师
+                //=================================
+	"invoker_again"
+	{
+		"BaseClass"	                "ability_datadriven"
+		"AbilityTextureName"	"invoker_invoke"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_SKIP_FOR_KEYBINDS | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"AbilityType"	"DOTA_ABILITY_TYPE_ULTIMATE"
+		"MaxLevel"	"1"
+                                "IsBreakable"	"1"
+		"ID"	                "80195"
+		"Modifiers"
+		{
+			"modifier_invoker_again"
+			{
+				"Passive"	                "1"
+                                                                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"OnAbilityExecuted"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_invoker/invoker_again.lua"
+						"Function"	"invoker_again"
+					}
+				}
+			}
+		}
+		"AbilityValues"
+		{
+			"trigger_chance"	"33.3"
+			"side_angle"	"110"
+			"back_angle"	"70"
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Phantom Coup de Grace
+	//=================================================================================================================
+	"phantom_assassin_coup_de_grace_fun"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"	"phantom_assassin_coup_de_grace"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityType"					"DOTA_ABILITY_TYPE_ULTIMATE"
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
+		"AbilitySound"					"Hero_PhantomAssassin.CoupDeGrace"
+		"IsBreakable"					"1"
+	
+		"AbilityCastAnimation"			"ACT_DOTA_CAST_ABILITY_4"
+
+		"AbilityDraftUltShardAbility"		"phantom_assassin_fan_of_knives"
+		"ID"	                "80196"
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"crit_chance"				
+			{
+				"value"			"70 70 100"
+				"special_bonus_unique_phantom_assassin_2"	"+10"
+				"special_bonus_facet_phantom_assassin_methodical"		"=0"
+				"RequiresFacet"				"phantom_assassin_veiled_one"
+			}
+			"dagger_crit_chance"
+			{
+				"value"			"70 70 100"
+				"special_bonus_unique_phantom_assassin_2"	"+10"
+				"special_bonus_facet_phantom_assassin_methodical"		"=0"
+				"RequiresFacet"				"phantom_assassin_veiled_one"
+			}
+
+			"crit_bonus"				
+			{
+				"value"		"700 800 900"
+				"special_bonus_facet_phantom_assassin_methodical"		"+190"
+			}
+			"attacks_to_proc"
+			{
+				"special_bonus_facet_phantom_assassin_methodical"		"+6"
+				"special_bonus_unique_phantom_assassin_2"	"-1"
+				"RequiresFacet"				"phantom_assassin_methodical"
+			}
+			"attacks_to_proc_creeps"
+			{
+				"special_bonus_facet_phantom_assassin_methodical"		"+4"
+				"special_bonus_unique_phantom_assassin_2"	"-1"
+				"RequiresFacet"				"phantom_assassin_methodical"
+			}
+			"duration"				"10 15 20"
+		}
+	}
+
+	"terrorblade_the_hunger_of_the_betrayer"
+	{
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"terrorblade_demon_zeal"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"AbilityType"	"DOTA_ABILITY_TYPE_ULTIMATE"
+		"MaxLevel"	"1"
+		"Innate"						"1"
+		"ID"	"800208"
+		"Modifiers"
+		{
+			"modifier_terrorblade_the_hunger_of_the_betrayer"
+			{
+				"Passive"	"1"
+				"IsBuff"	"1"
+				"IsHidden"	"1"
+				"OnAttackLanded"
+				{
+					"RunScript"
+					{
+						"Target"	"CASTER"
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_terrorblade/terrorblade_the_hunger_of_the_betrayer.lua"
+						"Function"	"the_hunger_of_the_betrayer_onattacklanded"
+						"Damage"	"%attack_damage"
+					}
+				}
+			}
+		}
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"heal_amount"	"30"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"cooldown"	"1"
+			}
+		}
+	}
+	     //=================================
+                //天穹守望者：乱流（重置版）
+                //=================================
+	"arc_warden_flux_fun"
+	{
+		"BaseClass"	                "ability_datadriven"
+		"AbilityTextureName"	"arc_warden_flux"
+                                "ID"	                                "80197"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
+		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
+		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
+		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"			"SPELL_DISPELLABLE_YES"
+		"FightRecapLevel"				"1"
+		"AbilitySound"					"Hero_ArcWarden.Flux.Target"
+		// Casting
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCastPoint"				"0.3 0.3 0.3 0.3"
+		
+		// Time		
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityCooldown"				"16.0"
+
+		// Cost
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityManaCost"				"75"
+		
+		"precache"
+		{
+			"particle"	            "particles/units/heroes/hero_arc_warden/arc_warden_flux_cast.vpcf"
+			"soundfile"           "soundevents/game_sounds_heroes/game_sounds_arc_warden.vsndevts"
+		}
+		"OnSpellStart"
+		{
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/fun_heroes/hero_arc_warden/arc_warden_flux_fun.lua"
+				"Function"	"arc_warden_flux_fun_OnSpellStart"
+			}
+		}
+
+		"Modifiers"
+		{
+		}
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+				"duration"						
+				{
+					"value"			"6.0 6.5 7 7.5"
+					"special_bonus_unique_arc_warden_4"	"+2.0"
+				}
+				"search_radius"					"225"
+				"think_interval"				"0.5"
+				"damage_per_second"				
+				{
+					"value"		"20 40 60 80"
+					"RequiresFacet"				"arc_warden_order"
+				}
+				"move_speed_slow_pct"				
+				{
+					"value" 					"15 25 35 45"
+					"RequiresFacet"				"arc_warden_order"
+				}
+
+				"tempest_damage_per_second"				
+				{
+					"value"		"40 70 100 130"
+					"RequiresFacet"				"arc_warden_disorder"
+				}
+
+				"tempest_move_speed_slow_pct"
+				{
+					"value"						"5 10 15 20"
+					"RequiresFacet"				"arc_warden_disorder"
+				}
+				"AbilityCastRange"			
+				{
+					"value"				"500 600 700 800"
+					"special_bonus_unique_arc_warden_5"	"+200"
+				}
+				"applies_silence"
+				{
+					"value"					"0"
+					"special_bonus_unique_arc_warden_flux_silences"			"1"
+				}
+		}
+		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+	}
+
+
+
+}

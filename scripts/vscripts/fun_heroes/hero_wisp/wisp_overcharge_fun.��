@@ -1,0 +1,104 @@
+
+function wisp_overcharge_fun_OnIntervalThink(keys)
+
+    local caster = keys.caster
+    local ability = keys.ability
+
+    local hp_regen_pct = ability:GetSpecialValueFor("hp_regen_pct")/100
+    local hp_loss = caster:GetMaxHealth() - caster:GetHealth()
+    local hp_regen = hp_loss * hp_regen_pct
+    local hp_regen_stack = math.floor(hp_regen * 10)
+
+    local modifier_hp_regen = caster:FindModifierByName("modifier_wisp_overcharge_fun_hp_regen")
+
+    if caster:HasScepter() then
+        if modifier_hp_regen then
+            modifier_hp_regen:SetStackCount(hp_regen_stack)
+        else
+            modifier_hp_regen = ability:ApplyDataDrivenModifier(caster, caster, "modifier_wisp_overcharge_fun_hp_regen", nil)
+            modifier_hp_regen:SetStackCount(hp_regen_stack)
+        end
+    else
+        if modifier_hp_regen then
+            modifier_hp_regen:Destroy()
+        end
+    end
+
+end
+
+
+function wisp_overcharge_fun_DamageFilter(event, original_damage)
+    
+    local damage = event.damage
+    if event.entindex_victim_const == nil or
+	   event.entindex_attacker_const == nil 
+	then
+	    return true
+	end
+    local victim = EntIndexToHScript(event.entindex_victim_const)
+	local attacker = EntIndexToHScript(event.entindex_attacker_const)
+    local modifier_tether_haste = victim:FindModifierByName("modifier_wisp_tether_haste")  
+    if modifier_tether_haste == nil then return true end
+    local modifier_caster = modifier_tether_haste:GetCaster()
+	local fun_ability = modifier_caster:FindAbilityByName("wisp_overcharge_fun")
+    if fun_ability == nil then return true end
+    if fun_ability:GetLevel() < 1 then return true end
+    local damage_reduction_pct = 0
+    if fun_ability:GetToggleState() == true then
+        damage_reduction_pct = fun_ability:GetSpecialValueFor("damage_reduction_pct_toggle_on")/100
+    else
+        damage_reduction_pct = fun_ability:GetSpecialValueFor("damage_reduction_pct_toggle_off")/100
+    end
+    event.damage = damage * (1 - damage_reduction_pct)
+    local damage_table = {}
+    damage_table.victim = modifier_caster
+    damage_table.attacker = attacker
+    damage_table.damage = damage - event.damage
+    damage_table.damage_type = event.damagetype_const
+    damage_table.damage_flags = DOTA_DAMAGE_FLAG_BYPASSES_BLOCK
+    damage_table.ability = fun_ability
+    ApplyDamage(damage_table)
+
+    return true
+end
+
+function wisp_overcharge_fun_ModifierGainedFilter(event)
+
+    if not event.entindex_caster_const then return true end
+    if not event.entindex_parent_const then return true end
+    if not event.name_const then return true end
+    if not event.entindex_ability_const then return end
+    local caster = EntIndexToHScript(event.entindex_caster_const)
+    local npc = EntIndexToHScript(event.entindex_parent_const)
+    local ability = EntIndexToHScript(event.entindex_ability_const)
+    local modifier_name = event.name_const
+    if caster == nil then return true end
+    if npc == nil then return true end
+    local modifier_tether_haste = npc:FindModifierByName("modifier_wisp_tether_haste")  
+    if modifier_tether_haste == nil then return true end
+    local modifier_caster = modifier_tether_haste:GetCaster()
+	local fun_ability = modifier_caster:FindAbilityByName("wisp_overcharge_fun")
+    if fun_ability == nil then return true end
+    if fun_ability:GetLevel() < 1 then return true end 
+    if not modifier_caster:HasScepter() then return true end
+    if npc:GetTeam() ~= caster:GetTeam() or event.name_const == "modifier_faceless_void_chronosphere_freeze" then
+	if fun_ability:GetToggleState() == false then return end
+        local dur = event.duration
+        if dur == nil then
+            return true
+        elseif dur == -1 then
+            return true
+        else
+            local class_name = ability:GetClassname()
+            --print(class_name)
+            if class_name == "ability_datadriven" or class_name == "item_datadriven" then
+                ability:ApplyDataDrivenModifier(caster, modifier_caster, modifier_name, { duration = dur })
+            else
+                modifier_caster:AddNewModifier(caster, ability, modifier_name, { duration = dur })
+            end
+            
+            return false
+        end   
+    end
+    return true 
+end

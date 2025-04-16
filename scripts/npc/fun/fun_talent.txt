@@ -1,0 +1,425 @@
+//=====================================
+//这里存放每个英雄新写的天赋效果
+
+"DOTAAbilities"
+{      
+	//===========================================
+	// 瘟疫法师：死神镰刀2点能量
+	//===========================================
+	"special_bonus_unique_necrophos_reapers_scythe_charges"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"80301"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		//"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"ability_datadriven"
+		"MaxLevel"		"1"
+	}
+
+	//===========================================
+	// 变体精灵：变体打击伤害系数
+	//===========================================
+	"special_bonus_unique_morphling_adaptive_strike_agi_damage"
+	{
+		//变体精灵变体打击-------------------------------------------------------------------------------------------
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"80302"	// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"			                "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"				"special_bonus_base"
+	}
+	//===========================================
+	// 小小：50%状态抗性
+	//===========================================
+	"special_bonus_status_resistance_50"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"BaseClass"	"special_bonus_status_resistance_10"
+		"ID"					"80303"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"					"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"value"
+			{
+				"value"				"50"
+			}
+		}
+	}
+	//===========================================
+	// 虚空假面：时间结界持续时间
+	//===========================================
+	"special_bonus_unique_faceless_void_chronosphere_duration"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"						"80304"	// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"			                "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"				"special_bonus_base"
+	}
+	//===========================================
+	// 虚空假面：时间锁定额外概率
+	//===========================================
+	"special_bonus_unique_faceless_void_time_lock_bonus_chance"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"						"80305"	// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"			                "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"				"special_bonus_base"
+	}
+	//===========================================
+	// 虚空假面：友军可以在时间结界内行动
+	//===========================================
+	"special_bonus_unique_faceless_void_chronosphere_non_disabled"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"						"80306"	// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"			                "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"				"special_bonus_base"
+                                //具体实现机制靠修饰器过滤器实现
+  
+	}
+	//===========================================
+	// 帕格纳：衰老魔法伤害加深
+	//===========================================
+	"special_bonus_unique_pugna_decrepify_spell_damage"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"						"80307"	// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"							"special_bonus_base"
+	}
+	//===========================================
+	// 帕格纳：幽冥守卫降低技能增强
+	//===========================================
+	"special_bonus_unique_pugna_nether_ward_spell_damage_reduction"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"					"80308"	// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"			                "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"							"special_bonus_base"
+	}
+	//===========================================
+	// 帕格纳：生命汲取伤害/治疗增加
+	//===========================================
+	"special_bonus_unique_pugna_life_drain_damage"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"						"80309"	// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"							"special_bonus_base"
+	}
+	//===========================================
+	// 露娜：月光击中敌人额外攻击力
+	//===========================================
+	"special_bonus_unique_luna_lucent_beam_damage"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"						"80310"	// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"							"special_bonus_base"
+	}
+	//===========================================
+	// 发条技师：发射钩爪冷却时间降低
+	//===========================================
+	"special_bonus_unique_clockwerk_hookshot_cooldown"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"						"80311"	// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"							"special_bonus_base"
+	}
+	//===========================================
+	// 赏金猎人：暗影步破隐眩晕时间
+	//===========================================
+	"special_bonus_unique_bounty_hunter_wind_walk_stun_duration"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"						"80312"	// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"							"special_bonus_base"
+	}
+	//===========================================
+	// 赏金猎人：追踪术致命一击/投掷飞镖伤害倍数
+	//===========================================
+	"special_bonus_unique_bounty_hunter_track_crit_multiplier"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"						"80313"	// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"							"special_bonus_base"
+	}
+	//===========================================
+	//幽鬼：折射最小/最大范围
+	//===========================================
+	"special_bonus_unique_spectre_dispersion_radius"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"						"80314"	// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"							"special_bonus_base"
+	}
+	//===========================================
+	//幽鬼：复仇鬼影持续时间
+	//===========================================
+	"special_bonus_unique_spectre_haunt_illusion_duration"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"						"80315"	// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"							"special_bonus_base"
+	}
+	//===========================================
+	//天怒法师：奥法鹰隼飞行速度
+	//===========================================
+	"special_bonus_unique_skywrath_mage_arcane_bolt_speed"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"						"80316"	// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"							"special_bonus_base"
+	}
+	//===========================================
+	//天怒法师：震荡光弹减速
+	//===========================================
+	"special_bonus_unique_skywrath_mage_concussive_shot_slow"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"						"80317"	// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"							"special_bonus_base"
+	}
+	//===========================================
+	//玛西：怒拳破连技次数
+	//===========================================
+	"special_bonus_unique_marci_unleash_charges_per_flurry"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"						"80318"	// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"							"special_bonus_base"
+	}
+	//===========================================
+	//玛西：怒拳破禁止攻击时间
+	//===========================================
+	"special_bonus_unique_marci_unleash_time_between_flurries"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"						"80319"	// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"							"special_bonus_base"
+	}
+	//===========================================
+	//琼英碧灵：唤魂移速/攻速降低
+	//===========================================
+	"special_bonus_unique_muerta_the_calling_slow"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"						"80320"	// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"							"special_bonus_base"
+	}
+	//===========================================
+	//琼英碧灵：越界持续时间
+	//===========================================
+	"special_bonus_unique_muerta_pierce_the_veil_duration"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"						"80321"	// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"							"special_bonus_base"
+	}
+	"special_bonus_unique_ai"
+	{
+
+		//AI加成-------------------------------------------------------------------------------------------------------------
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"						"80322"	// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"				"DOTA_ABILITY_TYPE_ULTIMATE"//DOTA_ABILITY_TYPE_ATTRIBUTES
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
+		"BaseClass"							"special_bonus_base"//"ability_datadriven"
+		"MaxLevel"		"1"
+
+		
+
+	}
+	"special_bonus_unique_juggernaut_blade_dance_crit_mult"	
+	{
+
+		//剑圣致命一击倍率-------------------------------------------------------------------------------------------------------------
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"						"30012"	// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"							"special_bonus_base"
+
+		
+
+	}
+	"special_bonus_unique_juggernaut_bladestorm_duration"	
+	{
+
+		//剑圣剑刃风暴持续时间-------------------------------------------------------------------------------------------------------------
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"ID"						"30017"	// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"AbilityType"				"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"			"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"							"special_bonus_base"
+
+		
+
+	}
+
+
+	"special_bonus_unique_Superpower"
+	{
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"arc_warden_scepter"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"AbilityType"	"DOTA_ABILITY_TYPE_HIDDEN"
+		"ID"	"80323"
+	}
+
+	"special_bonus_unique_ringmaster_hard_shield_magic_defense_radius"
+	{
+		"BaseClass"	"special_bonus_base"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityType"	"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		// 坚盾魔御范围-------------------------------------------------------------------------------------------------------------
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"ID"	"80324"
+	}
+
+	"special_bonus_unique_ringmaster_hard_shield_magic_defense_rooted"
+	{
+		"BaseClass"	"special_bonus_base"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityType"	"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		// 坚盾魔御缠绕-------------------------------------------------------------------------------------------------------------
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"ID"	"80325"
+	}
+
+	"special_bonus_unique_you_are_strengthened_Come_on_duration"
+	{
+		"BaseClass"	"special_bonus_base"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityType"	"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		// 你被强化了加强时间-------------------------------------------------------------------------------------------------------------
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"ID"	"80326"
+	}
+
+	"special_bonus_unique_you_are_strengthened_Come_on_charges"
+	{
+		"BaseClass"	"special_bonus_base"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityType"	"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		// 你被强化了加强能量点数-------------------------------------------------------------------------------------------------------------
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"ID"	"80327"
+	}
+
+	"special_bonus_unique_ringmaster_fracture_domain_sweep_dmg"
+	{
+		"BaseClass"	"special_bonus_base"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityType"	"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		// 裂域波及分裂伤害-------------------------------------------------------------------------------------------------------------
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"ID"	"80328"
+	}
+
+	"special_bonus_unique_ringmaster_strike_swift_shadow_bonus_attack_speed"
+	{
+		"BaseClass"	"special_bonus_base"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityType"	"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		// 强击迅影攻击攻速-------------------------------------------------------------------------------------------------------------
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"ID"	"80329"
+	}
+
+	"special_bonus_unique_ringmaster_strike_swift_shadow_cooldown"
+	{
+		"BaseClass"	"special_bonus_base"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityType"	"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		// 强击迅影冷却时间-------------------------------------------------------------------------------------------------------------
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"ID"	"80330"
+	}
+
+	"special_bonus_unique_ringmaster_innate_fun_item"
+	{
+		"BaseClass"	"special_bonus_base"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityType"	"DOTA_ABILITY_TYPE_ATTRIBUTES"
+		// 先天物品-------------------------------------------------------------------------------------------------------------
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
+		"ID"	"80331"
+	}
+
+
+
+}
