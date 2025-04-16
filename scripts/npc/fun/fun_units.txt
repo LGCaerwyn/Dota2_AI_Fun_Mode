@@ -25,7 +25,7 @@
 		// Class of entity of link to.
 		"BaseClass"	"npc_dota_tower"
 		// Model.
-		"Model"	"models/props_structures/tower_good.vmdl"
+		"Model"		"models/props_structures/tower_good.vmdl"
 		// Name of sound set.
 		"SoundSet"	"Tower.Water"
 		"MinimapIcon"	"minimap_tower45"
@@ -156,7 +156,7 @@
 		// Class of entity of link to.
 		"BaseClass"	"npc_dota_tower"
 		// Model.
-		"Model"	"models/props_structures/tower_bad.vmdl"
+		"Model"		"models/props_structures/tower_bad.vmdl"
 		// Name of sound set.
 		"SoundSet"	"Tower.Water"
 		"MinimapIcon"	"minimap_tower45"
@@ -287,7 +287,8 @@
 		// Class of entity of link to.
 		"BaseClass"	"npc_dota_creep"
 		// Model.
-		"Model"	"models/creeps/nian/nian_creep.vmdl"
+		"Model"		"models/creeps/nian/nian_creep.vmdl"
+		"Skin"		"1"
 		// Name of sound set.
 		"SoundSet"	"cny_beast"
 		"ModelScale"	"1"
@@ -423,7 +424,7 @@
 		// Class of entity of link to.
 		"BaseClass"	"npc_dota_creep"
 		// Model.
-		"Model"	"models/creeps/neutral_creeps/n_creep_dragonspawn_a/n_creep_dragonspawn_a.vmdl"
+		"Model"		"models/creeps/neutral_creeps/n_creep_dragonspawn_a/n_creep_dragonspawn_a.vmdl"
 		// Name of sound set.
 		"SoundSet"	"cny_beast"
 		"ModelScale"	"1.8"
@@ -559,7 +560,7 @@
 		// Class of entity of link to.
 		"BaseClass"	"npc_dota_creep"
 		// Model.
-		"Model"	"models/courier/baby_rosh/babyroshan_ti10_dire.vmdl"
+		"Model"		"models/courier/baby_rosh/babyroshan_ti10_dire.vmdl"
 		// Name of sound set.
 		"SoundSet"	"Roshan"
 		"ModelScale"	"2.5"
@@ -574,7 +575,7 @@
 		// Ability 3.
 		"Ability3"	"roshan_bash"
 		// Ability 4.
-		"Ability4"	""
+		"Ability4"	"roshan_slam"
 		// Ability 5.
 		"Ability5"	""
 		// Ability 6 - Extra.
@@ -702,7 +703,7 @@
 		// Class of entity of link to.
 		"BaseClass"	"npc_dota_creep"
 		// Model.
-		"Model"	"models/creeps/nian/nian_creep.vmdl"
+		"Model"		"models/creeps/nian/nian_creep.vmdl"
 		// Name of sound set.
 		"SoundSet"	"cny_beast"
 		"ModelScale"	"1"
@@ -827,7 +828,7 @@
 		// Class of entity of link to.
 		"BaseClass"	"npc_dota_creep"
 		// Model.
-		"Model"	"models/creeps/roshan/roshan.vmdl"
+		"Model"		"models/creeps/roshan/roshan.vmdl"
 		// Name of sound set.
 		"SoundSet"	"Roshan"
 		"ModelScale"	"1"
@@ -842,7 +843,7 @@
 		// Ability 3.
 		"Ability3"	"Fun_Illusion_Breaker"
 		// Ability 4.
-		"Ability4"	""
+		"Ability4"	"roshan_grab_and_throw"
 		// Ability 5.
 		"Ability5"	""
 		// Ability 6 - Extra.
@@ -968,7 +969,7 @@
 		// General
 		// ----------------------------------------------------------------
 		// Model.
-		"Model"	"models/items/warlock/golem/puppet_summoner_golem/puppet_summoner_golem.vmdl"
+		"Model"		"models/items/warlock/golem/warlock_tailor_of_burning_puppet_golem/warlock_tailor_of_burning_puppet_golem.vmdl"
 		"BaseClass"	"npc_dota_creep"
 		// Name of sound set.
 		"SoundSet"	"cny_beast"
@@ -1081,7 +1082,7 @@
 		// General
 		// ----------------------------------------------------------------
 		// Model.
-		"Model"	"models/items/warlock/golem/puppet_summoner_golem/puppet_summoner_golem.vmdl"
+		"Model"		"models/items/warlock/golem/doom_of_ithogoaki/doom_of_ithogoaki.vmdl"
 		"BaseClass"	"npc_dota_creep"
 		// Name of sound set.
 		"SoundSet"	"cny_beast"
@@ -1198,7 +1199,7 @@
 		// General
 		// ----------------------------------------------------------------
 		"BaseClass"	"npc_dota_creature"
-		"Model"	"models/heroes/primal_beast/primal_beast_base.vmdl"
+		"Model"		"models/heroes/primal_beast/primal_beast_base.vmdl"
 		"IdleExpression"	"scenes/primal_beast/primal_beast_exp_idle_01.vcd"
 		"RareIdleExpression"	"scenes/primal_beast/primal_beast_exp_idle_02.vcd"
 		"SoundSet"	"Roshan"
@@ -1207,7 +1208,7 @@
 		"ModelScale"	"2.3"
 		"ConsideredHero"	"1"
 		"IsAncient"	"1"
-		"VoiceFile"	"soundevents/voscripts/game_sounds_vo_primal_beast.vsndevts"
+		"VoiceFile"	"soundevents/voscripts/game_sounds_vo_primal_beast_boss.vsndevts"
 		// Minimap
 		// ----------------------------------------------------------------
 		"MinimapIcon"	"minimap_roshancamp"
@@ -1221,12 +1222,12 @@
 		"Ability5"	    "fun_pulverize_boss"
 		"Ability6"	    "fun_huitianmiedi_boss"
 		"Ability7"      "fun_ravage_boss"
-		"Ability8"    "fun_reverse_polarity_boss"     
-		"Ability9"    "fun_arena_of_blood_boss" 
-		"Ability10"    "fun_mystic_flare_boss"
-		"Ability11"    "Fun_BlackHole"
-		"Ability12"	    "fun_earth_splitter_boss"
-		"Ability13"   "fun_chronosphere_boss_v2" //"fun_chronosphere_boss"
+		"Ability8"    	"fun_reverse_polarity_boss"     
+		"Ability9"    	"fun_arena_of_blood_boss" 
+		"Ability10"    	"fun_mystic_flare_boss"
+		"Ability11"   	"Fun_BlackHole"
+		"Ability12"		"fun_earth_splitter_boss"
+		"Ability13"   	"fun_chronosphere_boss_v2" //"fun_chronosphere_boss"
 
 		// Armor
 		// ----------------------------------------------------------------
@@ -1298,7 +1299,7 @@
 			"ArmorGain"	"800"
 			"MoveSpeedGain"	"80"
 		}
-		"GameSoundsFile"	"soundevents/game_sounds_heroes/game_sounds_primal_beast.vsndevts"
+		"GameSoundsFile"	"soundevents/game_sounds_heroes/game_sounds_primal_beast_boss.vsndevts"
 		"AttackRangeBuffer"	"200"
 		"HasAggressiveStance"	"1"
 		"AutoAttacksByDefault"	"1"
@@ -1316,7 +1317,7 @@
 		// Class of entity of link to.
 		"BaseClass"	"npc_dota_base_additive"
 		// Model.
-		"Model"	"models/development/invisiblebox.vmdl"
+		"Model"		"models/development/invisiblebox.vmdl"
 		// Name of sound set.
 		"SoundSet"	"Creep_Good_Range"
 		"Level"	"0"

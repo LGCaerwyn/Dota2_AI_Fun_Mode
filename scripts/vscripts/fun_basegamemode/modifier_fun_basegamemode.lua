@@ -33,6 +33,7 @@ require('fun_filter')
 require('Fun_BaseGameMode/unit_data_table')
 require('Fun_Items/item_fun_tome_of_aghanim')
 
+
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 --天地星的基础设定，对人类和AI赋予不同的增益
 function modifier_Fun_BaseGameMode(keys)
@@ -748,7 +749,7 @@ function modifier_Fun_BaseGameMode_neutral_items_for_AI(hero)
             for i = 6, 16 do
                local item_t = hero:GetItemInSlot(i)
                if item_t then
-                   if item_t:IsNeutralDrop() then
+                   if item_t:IsNeutralActiveDrop() then
                        hero:RemoveItem(item_t)
                    end
                end

@@ -63,10 +63,10 @@
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
 		"SpellImmunityType"	                "SPELL_IMMUNITY_ENEMIES_NO" 
-                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
 		"MaxLevel"	"1"
 		"HasScepterUpgrade"	"1"
-                                "IsBreakable"					"1"
+        "IsBreakable"					"1"
 		// Time
 		// -------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"	"0.3"
@@ -125,14 +125,14 @@
 		// -------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-                                                "damage"                 "240"
+                        "damage"                 "240"
 			"radius"	               
 			{
 				"value"			"275"
 				"affected_by_aoe_increase"	"1"
 			}
 			"trigger_chance"	"35"
-                                                "trigger_radius"	"1600"
+                        "trigger_radius"	"1600"
 			"armor"                    "1.5"
 			"hp"	                "35"	
 			"duration" 	"20"
@@ -150,7 +150,7 @@
 		"AbilityTextureName"	"sniper_assassinate_muh_keen_gun"
 		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
 		"SpellDispellableType"	"SPELL_DISPELLABLE_YES"
-                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
 		"AbilityCastPoint"	"1.5"
 		"AbilityCastAnimation"	"ACT_DOTA_CAST_ABILITY_1"
 		"AbilityCooldown"	"45"
@@ -320,20 +320,20 @@
 		"AbilityValues"
 		{
 			"bonus_attack_range"	"180"
-                                                "敏捷"	                                "1"
-			"时间"	                                "12"	
+            "敏捷"	        "1"
+			"时间"	        "12"	
 			"基础攻击间隔"	                "0.35"
 			"bonus_attack_range_use"	"520"
-			"攻击力"	                                "-40"
-			"主动时间"	                                "15"
-			"负面时间"	                                "3.0"	
-			"负面护甲"	                                "28"
+			"攻击力"	        "-40"
+			"主动时间"	        "15"
+			"负面时间"	        "3.0"	
+			"负面护甲"	        "28"
 			"负面移动速度"	                "-90"
-			"移动速度"	                                "90"
-			"减少护甲"	                                "-28"
+			"移动速度"	        "90"
+			"减少护甲"	        "-28"
 			"攻击力降低"	                "40"	
-			"暗杀范围"                                "550"
-			"暗杀伤害"                                "800"
+			"暗杀范围"        "550"
+			"暗杀伤害"        "800"
 		}
 	}
 
@@ -351,9 +351,9 @@
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_PURE"
 		"SpellImmunityType"	"SPELL_IMMUNITY_ENEMIES_YES"
-                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
 		"MaxLevel"	"1"
-                                "IsBreakable"		"1"
+        "IsBreakable"		"1"
 		// Casting
 		// -------------------------------------------------------------------------------------------------------------
 		"AOERadius"	"%aura_radius"
@@ -435,9 +435,9 @@
 		"AbilityTextureName"	"antimage/immortal/antimage_blink"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO"
-                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
 		"MaxLevel"	"1"
-                                "IsBreakable"		"1"
+        "IsBreakable"		"1"
 		//"AbilityCooldown"	"8.5"
 		"HasScepterUpgrade"	"1"
 		"HasShardUpgrade"	                "1"
@@ -450,7 +450,7 @@
 		{
 			"modifier_启迪：法术反制"
 			{
-				"Passive"	                                "1"
+				"Passive"	        "1"
 				"IsHidden"	                "1"
 				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
 				"OnAttacked"
@@ -475,10 +475,10 @@
 		}
 		"AbilityValues"
 		{
-                                                "duration"            "1.8"
+                        "duration"            "1.8"
 			"cooldown"          "10"
-                                                "bonus_dmg_base"      "0"
-                                                "bonus_dmg_mana"     "0.02"
+                        "bonus_dmg_base"      "0"
+                        "bonus_dmg_mana"     "0.02"
 		}
 	}
 
@@ -495,16 +495,16 @@
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_PHYSICAL"
 		"SpellImmunityType"	                "SPELL_IMMUNITY_ENEMIES_YES"
 		"SpellDispellableType"	"SPELL_DISPELLABLE_NO"
-                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
 		"MaxLevel"	"1"
-                                "IsBreakable"		"1"
+        "IsBreakable"		"1"
 		"AbilityCooldown"	"14"
 		"ID"	"80155"
 		"precache"
 		{
 			"particle"	"particles/econ/items/techies/techies_ti9/techies_ti9_spleen_ambient.vpcf"
 			"particle"	"particles/units/heroes/hero_magnataur/magnataur_horn_toss_land.vpcf"
-			"particle"	                "particles/items3_fx/silver_edge.vpcf"
+			"particle"	"particles/items3_fx/silver_edge.vpcf"
 			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_magnataur.vsndevts"
 		}
 		"Modifiers"
@@ -532,7 +532,7 @@
 				}
 				"Properties"
 				{
-				                "MODIFIER_PROPERTY_ATTACK_RANGE_BONUS"      "%attack_range"
+				    "MODIFIER_PROPERTY_ATTACK_RANGE_BONUS"      "%attack_range"
 				}
 				"EffectName"	"particles/econ/items/techies/techies_ti9/techies_ti9_spleen_ambient.vpcf"
 				"EffectAttachType"	"follow_origin"
@@ -552,7 +552,7 @@
 						}
 						"Type"	"DAMAGE_TYPE_PHYSICAL"
 						"MaxHealthPercentBasedDamage"	"1"
-                                                                                                "Damage"	            "%damage_pct"
+                        "Damage"	            "%damage_pct"
 					}
 					"Knockback"
 					{
@@ -568,7 +568,7 @@
 						"Distance"	"-400"
 						"Height"	"300"
 						"ShouldStun"	"1"
-                                                                                                "IsFixedDistance"      "0"
+                        "IsFixedDistance"      "0"
 					}
 					"DelayedAction"
 					{
@@ -576,13 +576,13 @@
 						{
 							"FireEffect"
 							{
-							                "Target"
-							                {
-							                	"Center"	"TARGET"
-							                	"Teams"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
-							                	"Types"	"DOTA_UNIT_TARGET_HERO"
-							                	"Flags"	"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
-							                }
+							    "Target"
+							        {
+							            "Center"	"TARGET"
+							            "Teams"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+							            "Types"	"DOTA_UNIT_TARGET_HERO"
+							            "Flags"	"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+							        }
 								"ControlPoints"	{}
 								"ControlPointEntities"	{}
 								"EffectName"	"particles/units/heroes/hero_magnataur/magnataur_horn_toss_land.vpcf"
@@ -590,13 +590,13 @@
 							}
 							"FireSound"
 							{
-							                "Target"
-							                {
-							                	"Center"	"TARGET"
-							                	"Teams"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
-							                	"Types"	"DOTA_UNIT_TARGET_HERO"
-							                	"Flags"	"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
-							                }
+							    "Target"
+							        {
+							            "Center"	"TARGET"
+							            "Teams"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
+							            "Types"	"DOTA_UNIT_TARGET_HERO"
+							            "Flags"	"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
+							        }
 								"EffectName"	"Hero_Magnataur.HornToss.Damage"
 							}
 						}
@@ -608,8 +608,8 @@
 			}
 			"modifier_dianshao_cannot_miss"
 			{
-                                                                "IsHidden"	"1"
-                                                                "Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"	
+                "IsHidden"	"1"
+                "Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"	
 				"States"
 				{
 					"MODIFIER_STATE_CANNOT_MISS"              "MODIFIER_STATE_VALUE_ENABLED"
@@ -617,8 +617,8 @@
 			}
 			"modifier_dianshao_debuff"
 			{
-                                                                "IsDebuff" 	"1"
-                                                                "Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"	
+                "IsDebuff" 	"1"
+                "Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"	
 				"States"
 				{
 					"MODIFIER_STATE_STUNNED"                              "MODIFIER_STATE_VALUE_ENABLED"
@@ -626,9 +626,9 @@
 				}
 				"Properties"
 				{
-				                "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"            "%armor_reduction_per_lvl"
+				    "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"            "%armor_reduction_per_lvl"
 				}	
-                                                                "OverrideAnimation"     "ACT_DOTA_DISABLED"
+                "OverrideAnimation"     "ACT_DOTA_DISABLED"
 				"EffectName"	"particles/items3_fx/silver_edge.vpcf"
 				"EffectAttachType"	"follow_origin"			
 			}
@@ -638,7 +638,7 @@
 			"damage_pct"	                "20"
 			"attack_range"	                "150"
 			"knockback_duration"	"0.6"
-                                                "debuff_multiple"                     "0.8"
+            "debuff_multiple"                     "0.8"
 			"armor_reduction_per_lvl"         "-1.2"	
 		}
 	}
@@ -654,11 +654,11 @@
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_PURE"
 		"SpellImmunityType"	                "SPELL_IMMUNITY_ENEMIES_YES"
-                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
 		"MaxLevel"	                "1"
-                                "IsBreakable"		"1"
+        "IsBreakable"		"1"
 		"AbilityCooldown"	                "7"
-                                "HasShardUpgrade"                  "1"
+        "HasShardUpgrade"                  "1"
 		"ID"	"80156"
 		"precache"
 		{
@@ -688,14 +688,14 @@
 					{
 						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_doom_bringer/hero_doom_bringer_yanren.lua"
 						"Function"	"YanRen_OnAttackLanded"
-                                                                                                "Damage"	                "%attack_damage"
+                        "Damage"	                "%attack_damage"
 					}
 				}
 			}
 			"modifier_yanren_cannot_miss"
 			{
-                                                                "IsHidden"	"1"
-                                                                "Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"	
+                "IsHidden"	"1"
+                "Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"	
 				"States"
 				{
 					"MODIFIER_STATE_CANNOT_MISS"              "MODIFIER_STATE_VALUE_ENABLED"
@@ -728,12 +728,12 @@
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_PHYSICAL"
 		"SpellImmunityType"	                "SPELL_IMMUNITY_ENEMIES_YES"
 		"SpellDispellableType"	"SPELL_DISPELLABLE_YES"
-                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
 		"MaxLevel"	"1"
-                                "IsBreakable"		"1"
+        "IsBreakable"		"1"
 		"HasScepterUpgrade"	"1"
 		"ID"	"80157"
-                                "AbilityCooldown"         "25"
+        "AbilityCooldown"         "25"
 		"OnSpellStart"
 		{
 			"RunScript"
@@ -746,9 +746,9 @@
 		{
 			"modifier_永恒的恩赐解脱"
 			{
-				"Passive"	                                "1"
+				"Passive"	        "1"
 				"IsHidden"	                "1"
-				"IsBuff"	                                "1"
+				"IsBuff"	        "1"
 				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
 				"OnCreated"
 				{
@@ -794,8 +794,8 @@
 			"modifier_永恒的恩赐解脱_debuff"
 			{
 				"IsDebuff" 	"1"
-                                                                "IsPurgable"             "1"
-                                                                "Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+                "IsPurgable"             "1"
+                "Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"	"%armor"
@@ -804,9 +804,9 @@
 			}
 			"modifier_永恒的恩赐解脱_crit"
 			{
-                                                                "IsHidden"	"1"
+                "IsHidden"	"1"
 				"IsBuff"	                "1"
-                                                                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_PREATTACK_CRITICALSTRIKE"	"%crit_damage"
@@ -818,7 +818,7 @@
 			"crit_damage"	"130"
 			"armor"	                "-8"
 			"armor_duration"	"7"
-                                                "active_duration"      "10"
+            "active_duration"      "10"
 		}
 	}
 
@@ -838,10 +838,10 @@
 		"AbilityUnitTargetFlags"	"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
 		"SpellImmunityType"	                "SPELL_IMMUNITY_ENEMIES_YES"
 		"SpellDispellableType"	"SPELL_DISPELLABLE_YES_STRONG"
-                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
 		"MaxLevel"	                "1"
 		"HasScepterUpgrade"	"1"
-		"ID"	                                "80158"
+		"ID"	        "80158"
 
 		// Casting
 		// -------------------------------------------------------------------------------------------------------------
@@ -870,9 +870,9 @@
 			"particle"	             "particles/generic_gameplay/generic_stunned.vpcf"
 
 			"particle"	             "particles/units/heroes/hero_warlock/warlock_rain_of_chaos_start.vpcf"
-                                                "particle"	             "particles/units/heroes/hero_warlock/warlock_rain_of_chaos.vpcf"
+            "particle"	             "particles/units/heroes/hero_warlock/warlock_rain_of_chaos.vpcf"
 
-                                                "particle"	             "particles/econ/items/earthshaker/earthshaker_arcana/earthshaker_arcana_echoslam_start_v2.vpcf"
+            "particle"	             "particles/econ/items/earthshaker/earthshaker_arcana/earthshaker_arcana_echoslam_start_v2.vpcf"
 
 			"soundfile"            "soundevents/game_sounds_heroes/game_sounds_huskar.vsndevts"
 			"soundfile"            "soundevents/game_sounds_heroes/game_sounds_earthshaker.vsndevts"
@@ -890,7 +890,7 @@
 			"modifier_monkey_king_huitianmiedi_start"
 			{
 				"IsPurgable"	        "0"
-                                                                "ThinkInterval"                 "0.03"
+                "ThinkInterval"                 "0.03"
 				"OnIntervalThink"
 				{
 					"RunScript"
@@ -909,12 +909,12 @@
 					"MODIFIER_STATE_MAGIC_IMMUNE"	                 "MODIFIER_STATE_VALUE_ENABLED"
 					"MODIFIER_STATE_COMMAND_RESTRICTED"	 "MODIFIER_STATE_VALUE_ENABLED"
 				}
-                                                }
+                        }
 			"modifier_monkey_king_huitianmiedi_fly"
 			{
 				"IsHidden"	"1"
 				"IsPurgable"	"0"
-                                                                "ThinkInterval"          "0.03"
+                "ThinkInterval"          "0.03"
 				"OnIntervalThink"
 				{
 					"RunScript"
@@ -927,8 +927,8 @@
 				{
 					"RunScript"
 					{
-						"ScriptFile"	                                "scripts/vscripts/Fun_Boss/Fun_huitianmiedi.lua"
-						"Function"	                                "OnDeath"
+						"ScriptFile"	        "scripts/vscripts/Fun_Boss/Fun_huitianmiedi.lua"
+						"Function"	        "OnDeath"
 					}
 				}
 				"Properties"
@@ -983,15 +983,15 @@
 			"max_distance"	"3000"
 			"push_speed"	"2000"
 			"push_length"	"3000"
-                                                "damage_pct"           "85"
-                                                "stun_duration"         "3" 
+                        "damage_pct"           "85"
+                        "stun_duration"         "3" 
 			"radius"	               
 			{
 				"value"			 "800"
 				"affected_by_aoe_increase"	"1"
 			}
 			"dmg_others"	"2000"
-                                                "damage_pct_scepter"           			
+                        "damage_pct_scepter"           			
 			{
 				"value"		"40"
 				"RequiresScepter"		"1"
@@ -1015,7 +1015,7 @@
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
 		"SpellImmunityType" 	"SPELL_IMMUNITY_ENEMIES_YES"
 		"SpellDispellableType"	"SPELL_DISPELLABLE_YES_STRONG"
-                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
 		"MaxLevel"	"1"
 		// Stats
 		// -------------------------------------------------------------------------------------------------------------
@@ -1037,7 +1037,7 @@
 			{
 				"ScriptFile"	"scripts/vscripts/fun_heroes/hero_centaur/centaur_zhanzhengjianta.lua"
 				"Function"	"hoof_stomp"
-                                                                "IsSecondary"	"0"
+                "IsSecondary"	"0"
 			}
 		}
 		"Modifiers"
@@ -1046,15 +1046,15 @@
 			{
 				"IsDebuff"	                "1"
 				"IsHidden"	"0"
-                                                                "Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+                "Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
 				"OnDestroy"
 				{
-                                                                            	"RunScript"
-			                                {
-				                                "ScriptFile"	"scripts/vscripts/fun_heroes/hero_centaur/centaur_zhanzhengjianta.lua"
-				                                "Function"	"hoof_stomp"
-				                                "IsSecondary"	"1"
-			                                }
+                    "RunScript"
+			        {
+				        "ScriptFile"	"scripts/vscripts/fun_heroes/hero_centaur/centaur_zhanzhengjianta.lua"
+				        "Function"	"hoof_stomp"
+				        "IsSecondary"	"1"
+			        }
 				}
 				"EffectName"	"particles/econ/items/omniknight/omni_2021_immortal/omni_2021_immortal_buff_beams.vpcf"
 				"EffectAttachType"	"follow_origin"
@@ -1097,9 +1097,9 @@
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
 		"SpellImmunityType"	                "SPELL_IMMUNITY_ENEMIES_YES"
-                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
 		"MaxLevel"	"1"
-                                "IsBreakable"		"1"
+        "IsBreakable"		"1"
 		"AbilityCastPoint"	"0.0"
 		"ID"	"80160"
 		"precache"
@@ -1179,9 +1179,9 @@
 		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
 		"SpellImmunityType"      	"SPELL_IMMUNITY_ENEMIES_NO"
-                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
 		"MaxLevel"	"1"
-                                "IsBreakable"		"1"
+        "IsBreakable"		"1"
 		// Time
 		// -------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"	"80"
@@ -1190,8 +1190,8 @@
 		// -------------------------------------------------------------------------------------------------------------
 		"precache"
 		{
-			"particle"	                 "particles/econ/items/kunkka/kunkka_immortal/kunkka_immortal_ghost_ship_marker.vpcf"
-			"particle"	                 "particles/econ/items/kunkka/kunkka_immortal/kunkka_immortal_ghost_ship.vpcf"
+			"particle"	 "particles/econ/items/kunkka/kunkka_immortal/kunkka_immortal_ghost_ship_marker.vpcf"
+			"particle"	 "particles/econ/items/kunkka/kunkka_immortal/kunkka_immortal_ghost_ship.vpcf"
 			"soundfile"	 "soundevents/game_sounds_heroes/game_sounds_kunkka.vsndevts"
 		}
 		"Modifiers"
@@ -1269,7 +1269,7 @@
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
 		"SpellImmunityType"	"SPELL_IMMUNITY_ENEMIES_NO"
 		"FightRecapLevel"	"1"
-                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
 		"MaxLevel"	"1"
 		"AbilityCastPoint"	"0.2"
 		"AbilityCastAnimation"	"ACT_DOTA_CAST_ABILITY_2"
@@ -1395,11 +1395,11 @@
 		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AURA |DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
 		"SpellImmunityType"	                "SPELL_IMMUNITY_ALLIES_YES"
 		"SpellDispellableType"	"SPELL_DISPELLABLE_NO"
-                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
 		"MaxLevel"	"1"
-                                "IsBreakable"		"1"
+        "IsBreakable"		"1"
 		"ID"	"80163"
-                                "AOERadius"             "%radius"
+        "AOERadius"             "%radius"
 		"precache"
 		{
 			"particle"	                "particles/units/heroes/hero_rubick/rubick_nullfield_defensive_splash_embers.vpcf"
@@ -1411,7 +1411,7 @@
 				"Passive"	                "1"
 				"IsHidden"	"1"
 				"IsBuff"	                "1"
-                                                                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
 				"OnCreated"
 				{
 					"RunScript"
@@ -1438,7 +1438,7 @@
 				"Aura_Radius"	"%radius"
 				"Aura_Teams"	"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 				"Aura_Types"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-                                                                "Aura_ApplyToCaster"	"0"
+                "Aura_ApplyToCaster"	"0"
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"%magic_resistance_self"
@@ -1460,14 +1460,14 @@
 			{
 				"Passive"	                "1"
 				"IsHidden"	"1"
-                                                                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
 				"OnCreated"
 				{
 					"RunScript"
 					{
 						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_rubick/rubick_null_field_fun.lua"
 						"Function"	"cannot_be_stolen"
-                                                                                                "AbilityName"           "rubick_spell_steal"
+                        "AbilityName"           "rubick_spell_steal"
 					}
 				}
 			}
@@ -1499,9 +1499,9 @@
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"SpellImmunityType" 	"SPELL_IMMUNITY_ENEMIES_NO"
-                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
 		"MaxLevel"	"1"
-                                "IsBreakable"		"1"
+        "IsBreakable"		"1"
 		"AOERadius"	"%radius"
 		"ID"	"80164"
 		"Modifiers"
@@ -1510,7 +1510,7 @@
 			{
 				"Passive"	                "1"
 				"IsBuff"	                "1"
-                                                                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
 				"Aura"	                "modifier_tianshenxiafan_magic_armor_reduction_1"
 				"Aura_Radius"	"%radius"
 				"Aura_Teams"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -1569,7 +1569,7 @@
 						"Function"	"remove"
 					}
 				}
-                                                                "ThinkInterval"  "0.03"
+                "ThinkInterval"  "0.03"
 			}
 			"modifier_tianshenxiafan_magic_armor_reduction_2"
 			{
@@ -1590,7 +1590,7 @@
 				"IsHidden"	"1"
 				"IsBuff"	                "1"
 				"IsHidden"	"1"
-                                                                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
 				"EffectName"	"particles/econ/events/fall_2021/radiance_owner_fall_2021.vpcf"
 				"EffectAttachType"	"follow_origin"
 				"Properties"
@@ -1636,9 +1636,9 @@
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_PURE"
 		"SpellImmunityType" 	"SPELL_IMMUNITY_ENEMIES_NO"
 		"SpellDispellableType"	"SPELL_DISPELLABLE_YES_STRONG"
-                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
 		"MaxLevel"	"1"
-                                "IsBreakable"		"1"
+        "IsBreakable"		"1"
 		"ID"	"80165"
 		"precache"
 		{
@@ -1653,7 +1653,7 @@
 				"IsHidden"	"1"
 				"IsBuff"	                "1"
 				"IsPurgable"	"0"
-                                                                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
 				"OnAttacked"
 				{
 					"RunScript"
@@ -1685,9 +1685,9 @@
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_PHYSICAL"
 		"SpellImmunityType"	                "SPELL_IMMUNITY_ENEMIES_YES"
 		"SpellDispellableType"	"SPELL_DISPELLABLE_NO"
-                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
 		"MaxLevel"	"1"
-                                "IsBreakable"		"1"
+        "IsBreakable"		"1"
 		"ID"	"80166"
 		"precache"
 		{
@@ -1703,7 +1703,7 @@
 				"Passive"	"1"
 				"IsBuff"	"1"
 				"IsHidden"	"1"
-                                                                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
 				"OnAttack"
 				{
 					"RunScript"
@@ -1720,8 +1720,8 @@
 			"modifier_ember_huoyanpohuai_debuff"
 			{
 				"Passive"	                "0"
-                                                                "IsHidden"	"0"
-                                                                "IsDebuff"	                "1"
+                "IsHidden"	"0"
+                "IsDebuff"	                "1"
 				"IsPurgable"	"0"
 				"States"
 				{
@@ -1764,10 +1764,10 @@
 			"modifier_ember_huoyanpohuai_cooldown"
 			{
 				"Passive"	                "0"
-                                                                "IsHidden"	"0"
-                                                                "IsDebuff"	                "1"
+                "IsHidden"	"0"
+                "IsDebuff"	                "1"
 				"IsPurgable"	"0"
-                                                                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
 			}
 		}
 		"AbilityValues"
@@ -1794,14 +1794,14 @@
 		"SpellImmunityType"		"SPELL_IMMUNITY_ENEMIES_YES"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
-                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
 		"MaxLevel"	"1"
-                                "IsBreakable"		"1"
+        "IsBreakable"		"1"
 		"ID"	                "80167"
 		"precache"
 		{
 			"particle"	               "particles/econ/items/windrunner/windranger_arcana/windranger_arcana_javelin_tgt.vpcf"
-                                                "particle"	               "particles/units/heroes/hero_earth_spirit/espirit_magnetize_target_ripple_b.vpcf"
+            "particle"	               "particles/units/heroes/hero_earth_spirit/espirit_magnetize_target_ripple_b.vpcf"
 		}
 		"Modifiers"
 		{
@@ -1810,7 +1810,7 @@
 				"Passive"	                "1"
 				"IsBuff"	                "1"
 				"IsHidden"	"1"
-                                                                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
 				"OnAttackLanded"
 				{
 					"RunScript"
@@ -1819,7 +1819,7 @@
 						"Function"	"fensanhuoli_OnAttackLanded"
 					}
 				}
-                                                                "OnAbilityExecuted"
+                "OnAbilityExecuted"
 				{
 					"RunScript"
 					{
@@ -1841,14 +1841,14 @@
 			{
 				"IsDebuff"	                "1"
 				"IsHidden"	"1"
-                                                                "Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
+                "Attributes"	"MODIFIER_ATTRIBUTE_MULTIPLE"
 				"OnAttacked"
 				{
 					"RunScript"
 					{
 						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_windrunner/windrunner_fensanhuoli.lua"
 						"Function"	"fensanhuoli_target_OnAttacked"
-                                                                                                "Damage"                "%attack_damage"
+                        "Damage"                "%attack_damage"
 					}
 				}
 			}
@@ -1894,9 +1894,9 @@
 		"BaseClass"	"ability_datadriven"
 		"AbilityTextureName"	"juggernaut_blade_dance_arcana"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
-                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
 		"MaxLevel"	"1"
-                                "IsBreakable"		"1"
+        "IsBreakable"		"1"
 		"ID"	"80168"
 		"Modifiers"
 		{
@@ -1904,7 +1904,7 @@
 			{
 				"Passive"	                "1"
 				"IsHidden"	"1"
-                                                                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
 				"OnKill"
 				{
 					"RunScript"
@@ -1917,35 +1917,35 @@
 				}
 				"OnAttackLanded"
 				{
-                                                                                "RunScript"
-                                                                                {
-                                                                                                "ScriptFile"	"scripts/vscripts/fun_heroes/hero_juggernaut/jiansheng.lua"
-                                                                                                "Function"	"Two_a"
-                                                                                }
+                    "RunScript"
+                    {
+                        "ScriptFile"	"scripts/vscripts/fun_heroes/hero_juggernaut/jiansheng.lua"
+                        "Function"	"Two_a"
+                    }
 				}
 			}
 			"modifier_jiansheng_cooldown"
 			{
 				"IsHidden"	"1"
-                                                                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
 			}
 		}
 		"AbilityValues"
 		{
-			"chance"	                                                "38"
-                                                "delay"                                                     "0.1"
+			"chance"	                        "38"
+                        "delay"                             "0.1"
 			"jiansheng_hero_scepter"	
 			{
-				"value"                                     "1.2"	
+				"value"             "1.2"	
 				"RequiresScepter"	                "1"
 			}
 			"jiansheng_creep_scepter"
 			{
-				"value"	                                "0.3"
+				"value"	        "0.3"
 				"RequiresScepter"	                "1"
 			}
-			"jiansheng_hero"	                                "0.8"
-			"jiansheng_creep"	                                "0.15"
+			"jiansheng_hero"	        "0.8"
+			"jiansheng_creep"	        "0.15"
 		}
 		"HasScepterUpgrade"	"1"
 	}
@@ -1964,7 +1964,7 @@
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
 		"SpellImmunityType"	                "SPELL_IMMUNITY_ALLIES_YES"
 		"SpellDispellableType"	"SPELL_DISPELLABLE_NO"
-                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
 		"MaxLevel"	"1"
 		"AbilityCastPoint"	"0.3"
 		"AbilityCastAnimation"	"ACT_DOTA_CAST_ABILITY_3"
@@ -1982,7 +1982,7 @@
 		"precache"
 		{
 			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_winter_wyvern.vsndevts"
-			"particle"	                "particles/econ/items/winter_wyvern/winter_wyvern_ti7/wyvern_cold_embrace_ti7buff.vpcf"
+			"particle"	"particles/econ/items/winter_wyvern/winter_wyvern_ti7/wyvern_cold_embrace_ti7buff.vpcf"
 		}
 		// Data driven
 		// -------------------------------------------------------------------------------------------------------------
@@ -2011,13 +2011,13 @@
 				"Duration"	"%d_time"
 				"States"
 				{
-					"MODIFIER_STATE_MAGIC_IMMUNE"	                                         "MODIFIER_STATE_VALUE_ENABLED"
-					"MODIFIER_STATE_ATTACK_IMMUNE"	                                         "MODIFIER_STATE_VALUE_ENABLED"
-					"MODIFIER_STATE_NO_UNIT_COLLISION"	                                         "MODIFIER_STATE_VALUE_ENABLED"
-					"MODIFIER_STATE_FLYING_FOR_PATHING_PURPOSES_ONLY"           "MODIFIER_STATE_VALUE_ENABLED"
-					"MODIFIER_STATE_DISARMED"	                                                         "MODIFIER_STATE_VALUE_ENABLED"
-					"MODIFIER_STATE_SILENCED"	                	                         "MODIFIER_STATE_VALUE_ENABLED"
-					"MODIFIER_STATE_MUTED"	         	                                         "MODIFIER_STATE_VALUE_ENABLED"                                                                             
+					"MODIFIER_STATE_MAGIC_IMMUNE"	                	 "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_ATTACK_IMMUNE"	                 	 "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_NO_UNIT_COLLISION"	                 "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_FLYING_FOR_PATHING_PURPOSES_ONLY"    "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_DISARMED"	                         "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_SILENCED"	                	     "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_MUTED"	         	                 "MODIFIER_STATE_VALUE_ENABLED"                             
 				}
 				"Properties"
 				{
@@ -2058,7 +2058,7 @@
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_PURE"
 		//"AbilityUnitTargetFlags"	"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
 		"SpellImmunityType"	                "SPELL_IMMUNITY_ENEMIES_YES"
-                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
 		"MaxLevel"	"1"
 		"AbilityCastPoint"	"0.3"
 		// Time
@@ -2230,7 +2230,7 @@
 			"immune_duration"	"5"	
 		}
 		"HasScepterUpgrade"	"1"
-                                "HasShardUpgrade"                  "1"
+        "HasShardUpgrade"                  "1"
 	}
 
                 //=================================
@@ -2243,10 +2243,10 @@
 		"BaseClass"	"ability_datadriven"
 		"AbilityTextureName"	"lina/lina_ti6_immortal/lina_laguna_blade"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
-                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
 		"SpellImmunityType"	                "SPELL_IMMUNITY_ENEMIES_NO"
 		"MaxLevel"	"1"
-                                "IsBreakable"		"1"
+        "IsBreakable"		"1"
 		"ID"	"80171"
 		"precache"
 		{
@@ -2260,7 +2260,7 @@
 			{
 				"Passive"	                "1"
 				"IsHidden"	"1"
-                                                                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
 				"OnCreated"
 				{
 					"RunScript"
@@ -2314,7 +2314,7 @@
 			"modifier_laguna_blade_fun_attack_range"
 			{
 				"IsHidden"	"1"
-                                                                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_ATTACK_RANGE_BONUS"                    "%attack_range"
@@ -2331,7 +2331,7 @@
 			"modifier_laguna_blade_fun_multiple"
 			{
 				"IsHidden"	"0"
-                                                                "Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_MULTIPLE"
+                "Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_MULTIPLE"
 				"OnDestroy"
 				{
 					"RunScript"
@@ -2340,12 +2340,12 @@
 						"Function"	"multiple_laguna_blade"
 					}
 				}
-                                                                //"Duration"  "0.3"
+                //"Duration"  "0.3"
 			}
 			"modifier_laguna_blade_fun_slow_burn"  //慢热命石的持续伤害
 			{
 				"IsHidden"	"0"
-                                                                "Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_MULTIPLE"
+                "Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_MULTIPLE"
 				"OnIntervalThink"
 				{
 					"RunScript"
@@ -2355,14 +2355,14 @@
 					}
 				}
 				"ThinkInterval"	"1"
-                                                                //"Duration"  "3"
-                                                                "EffectName"            "particles/units/heroes/hero_lina/lina_spell_laguna_blade_superheated.vpcf"
-                                                                "EffectAttachType"    "follow_origin"
+                //"Duration"  "3"
+                "EffectName"            "particles/units/heroes/hero_lina/lina_spell_laguna_blade_superheated.vpcf"
+                "EffectAttachType"    "follow_origin"
 			}
 			"modifier_laguna_blade_fun_slow_burn_amp"  //慢热命石提供技能增强
 			{
 				"IsHidden"	"0"
-                                                                "Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+                "Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"	"%amp"
@@ -2375,17 +2375,17 @@
 		{
 			"attack_range"	"100"
 			"chance"	                "30"
-                                                "dmg_pct"                "70"
+                        "dmg_pct"                "70"
 			"cooldown"              "2"
 			"chance_scepter"	
 			{
 				"value"	"60"				
-                                                                "RequiresScepter"	"1"
+                "RequiresScepter"	"1"
 			}				
 			"fiery_soul_armor"
 			{
 				"value"	"1.5"				
-                                                                "RequiresShard"	"1"
+                "RequiresShard"	"1"
 			}
 			"amp"
 			{
@@ -2412,10 +2412,10 @@
 		"BaseClass"	                "ability_datadriven"
 		"AbilityTextureName"	"alchemist/midas_knuckles/alchemist_goblins_greed"
 		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
-                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
 		"MaxLevel"	                "1"
-                                "IsBreakable"		"1"
-		"ID"	                                "80172"
+        "IsBreakable"		"1"
+		"ID"	        "80172"
 		"Modifiers"
 		{
 			"modifier_ogre_magi_jubaogong"
@@ -2423,7 +2423,7 @@
 				"Passive"	                "1"
 				"IsBuff"	                "1"
 				"IsHidden"	"1"
-                                                                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
 				"OnAbilityExecuted"
 				{
 					"RunScript"
@@ -2462,7 +2462,7 @@
 			{
 				"IsHidden"	"1"
 				"Passive"	                "1"
-                                                                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"	"%amp_per_stack"
@@ -2476,7 +2476,7 @@
 			"gold_on_attacked"	                "7"      //受到攻击获得的金钱
 			"gold_target_lose"	                "3"      //目标攻击时损失的金钱
 			"gold_target_lose_illusion"	"1"     //幻象目标攻击时损失的金钱
-                                                "gold_for_one_stack"                "200"   //每层技能增强buff所需要的金钱
+            "gold_for_one_stack"                "200"   //每层技能增强buff所需要的金钱
 			"amp_per_stack"	                "1"      //每层buff提供的技能增强数值
 		}
 	}
@@ -2489,9 +2489,9 @@
 		"BaseClass"	"ability_datadriven"
 		"AbilityTextureName"	"lion/finger_of_death/lion_finger_of_death_immortal"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
-                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
 		"MaxLevel"	"1"
-                                "IsBreakable"		"1"
+        "IsBreakable"		"1"
 		"ID"	"80173"
 		"Modifiers"
 		{
@@ -2499,7 +2499,7 @@
 			{
 				"Passive"	"1"
 				"IsHidden"	"1"
-                                                                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
 				"OnAbilityExecuted"
 				{
 					"RunScript"
@@ -2527,7 +2527,7 @@
 		"AbilityUnitTargetFlags"	"DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO | DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
 		"SpellImmunityType"	"SPELL_IMMUNITY_ENEMIES_YES"
 		"FightRecapLevel"	"2"
-                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
 		"MaxLevel"	"1"
 		"AbilityCastPoint"	"0.35"
 		// Time
@@ -2603,7 +2603,7 @@
 		"AbilityUnitTargetFlags"	"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
 		"SpellImmunityType"	"SPELL_IMMUNITY_ENEMIES_YES"
-                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
 		"MaxLevel"	"1"
 		// Casting
 		// -------------------------------------------------------------------------------------------------------------
@@ -2625,7 +2625,7 @@
 			"soundfile"	"sounds/vo/primal_beast/enigma/primal_pummel_02.vsnd"
 			"soundfile"	"sounds/vo/primal_beast/enigma/primal_pummel_03.vsnd"
 			"soundfile"	"sounds/pb_boss/pummel_impact.vsnd"
-			"soundfile"	"soundevents/game_sounds_primal_beast_boss.vsndevts"
+			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_primal_beast_boss.vsndevts"
 		}
 		// Special
 		// -------------------------------------------------------------------------------------------------------------
@@ -2734,7 +2734,7 @@
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetFlags"	"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_NOT_CREEP_HERO"
 		"SpellImmunityType" 	"SPELL_IMMUNITY_ENEMIES_YES"
-                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
 		"MaxLevel"	"1"
 		"AbilityCastPoint"	"0.3"
 		// Time
@@ -2761,7 +2761,7 @@
 			{
 				"ScriptFile"	"scripts/vscripts/fun_heroes/hero_legion_commander/duel.lua"
 				"Function"	"legion_commander_duel_datadriven_on_spell_start"
-                                                                "Duration"                "%duration"
+                "Duration"                "%duration"
 			}
 		}
 		"Modifiers"
@@ -2795,9 +2795,9 @@
 				}
 				"States"
 				{
-					"MODIFIER_STATE_DISARMED"	                                                "MODIFIER_STATE_VALUE_DISABLED"
-					"MODIFIER_STATE_SILENCED"	                                                "MODIFIER_STATE_VALUE_ENABLED"
-					"MODIFIER_STATE_MUTED"	                                                "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_DISARMED"	                        "MODIFIER_STATE_VALUE_DISABLED"
+					"MODIFIER_STATE_SILENCED"	                        "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_MUTED"	                        "MODIFIER_STATE_VALUE_ENABLED"
 					"MODIFIER_STATE_COMMAND_RESTRICTED"	                "MODIFIER_STATE_VALUE_ENABLED"
 					"MODIFIER_STATE_CANNOT_BE_MOTION_CONTROLLED"	"MODIFIER_STATE_VALUE_ENABLED"
 					"MODIFIER_STATE_FLYING_FOR_PATHING_PURPOSES_ONLY"	"MODIFIER_STATE_VALUE_ENABLED"
@@ -2806,7 +2806,7 @@
 			"modifier_duel_damage_datadriven"
 			{
 				"IsBuff"	                "1"
-                                                                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"	"1"
@@ -2825,9 +2825,9 @@
 				}
 				"States"
 				{
-					"MODIFIER_STATE_DISARMED"	                                                "MODIFIER_STATE_VALUE_DISABLED"
-					"MODIFIER_STATE_SILENCED"	                                                "MODIFIER_STATE_VALUE_ENABLED"
-					"MODIFIER_STATE_MUTED"	                                                "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_DISARMED"	                        "MODIFIER_STATE_VALUE_DISABLED"
+					"MODIFIER_STATE_SILENCED"	                        "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_MUTED"	                        "MODIFIER_STATE_VALUE_ENABLED"
 					"MODIFIER_STATE_COMMAND_RESTRICTED"	                "MODIFIER_STATE_VALUE_ENABLED"
 					"MODIFIER_STATE_CANNOT_BE_MOTION_CONTROLLED"	"MODIFIER_STATE_VALUE_ENABLED"
 					"MODIFIER_STATE_FLYING_FOR_PATHING_PURPOSES_ONLY"	"MODIFIER_STATE_VALUE_ENABLED"
@@ -2841,7 +2841,7 @@
 		{
 			"duration"	                "5.5"
 			"reward_damage"	"50"
-                                                "duel_radius"            
+            "duel_radius"            
 			{
 				"value"			"800"
 				"affected_by_aoe_increase"	"1"
@@ -2864,15 +2864,15 @@
 		//"AbilityUnitTargetFlags"	"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES | DOTA_UNIT_TARGET_FLAG_NO_INVIS"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_PHYSICAL"
 		"SpellImmunityType" 	"SPELL_IMMUNITY_ENEMIES_YES"
-                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
 		"MaxLevel"	"1"
-                                "IsBreakable"		"1"
+        "IsBreakable"		"1"
 		"ID"	"80177"
 		"HasScepterUpgrade"	"1"
 		"precache"
 		{
 			"particle"	"particles/econ/events/fall_2021/radiance_owner_fall_2021.vpcf"
-                                                "particle"	"particles/econ/items/drow/drow_ti9_immortal/drow_ti9_marksman.vpcf"
+                        "particle"	"particles/econ/items/drow/drow_ti9_immortal/drow_ti9_marksman.vpcf"
 			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_drowranger.vsndevts"
 		}
 		"OnProjectileHitUnit"
@@ -2909,7 +2909,7 @@
 			{
 				"Passive"	                "0"
 				"IsHidden"	"0"
-                                                                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
 				// 普攻附带伤害
 				"OnAttackLanded"
 				{
@@ -2954,7 +2954,7 @@
 			"attack_range_bonus"	"0"        //用于BUFF栏数值修正，显示额外攻击距离
 			"attack_range_bonus_fixed"	"0"        //用于BUFF栏数值修正，显示额外攻击距离                             
 			"night_vision"	                "20"
-			"damage"	                                "10"
+			"damage"	        "10"
 			"damage_fixed"	                "-10"    //用于BUFF栏数值修正，显示物理伤害造成的值	
 			"base_stack"	                "0"
 			"max_stack_tooltip"	                "30"
@@ -2974,7 +2974,7 @@
 				"RequiresScepter"			"1"
 			}
 			"arrow_speed"                        "1200"
-                                                "value" "180"   //攻击射程
+                        "value" "180"   //攻击射程
 		}
 	}
 
@@ -2992,9 +2992,9 @@
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"SpellImmunityType"  	"SPELL_IMMUNITY_ENEMIES_NO"
 		"SpellDispellableType"	"SPELL_DISPELLABLE_YES"
-                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
 		"MaxLevel"	"1"
-                                "IsBreakable"		"1"
+        "IsBreakable"		"1"
 		"AOERadius"	                 "%aura_radius"
 		"ID"	"80178"
 		"precache"
@@ -3009,7 +3009,7 @@
 			{
 				"Passive"	"1"
 				"IsHidden"	"1"
-                                                                "AllowIllusionDuplicate"	"1"
+                "AllowIllusionDuplicate"	"1"
 				"Aura"	                "modifier_last_word_fun_trigger"
 				"Aura_Radius"	"%aura_radius"
 				"Aura_Teams"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -3027,7 +3027,7 @@
 					{
 						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_silencer/last_word_fun.lua"
 						"Function"	"last_word_fun"
-                                                                                                "delay"                     "0.03"
+                        "delay"                     "0.03"
 					}
 				}
 				"OnAbilityEndChannel"
@@ -3036,7 +3036,7 @@
 					{
 						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_silencer/last_word_fun.lua"
 						"Function"	"last_word_fun"
-                                                                                                "delay"                     "0"
+                        "delay"                     "0"
 					}
 				}
 			}
@@ -3045,7 +3045,7 @@
 				"Passive"	                "0"
 				"IsDebuff"	                "1"
 				"IsHidden"	"0"
-                                                                "IsPurgable"              "1"
+                "IsPurgable"              "1"
 				"OnCreated"
 				{
 					"RunScript"
@@ -3070,7 +3070,7 @@
 				{
 					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"        "%debuff_slow"
 				}
-                                                                "EffectName"	"particles/generic_gameplay/generic_silenced.vpcf"
+                "EffectName"	"particles/generic_gameplay/generic_silenced.vpcf"
 				"EffectAttachType"	"follow_overhead"
 			}
 			"modifier_last_word_fun_cooldown"
@@ -3078,7 +3078,7 @@
 				"Passive"	                "0"
 				"IsDebuff"	                "1"
 				"IsHidden"	"0"
-                                                                "IsPurgable"              "0"
+                "IsPurgable"              "0"
 			}
 		}
 		// Special
@@ -3112,7 +3112,7 @@
 		"AbilityUnitTargetFlags"	"DOTA_UNIT_TARGET_FLAG_DEAD"
 		"SpellImmunityType"	"SPELL_IMMUNITY_ALLIES_YES"
 		"SpellDispellableType"	"SPELL_DISPELLABLE_YES"
-                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
 		"MaxLevel"	"1"
 		"AbilityCastPoint"	"1.0"
 		"AbilityCastAnimation"	"ACT_DOTA_IDLE_RARE"
@@ -3254,7 +3254,7 @@
 			{
 				"Passive"	"1"
 				"IsHidden"	"1"
-                                                                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
 				"OnCreated"
 				{
 					"RunScript"
@@ -3309,7 +3309,7 @@
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
 		"SpellImmunityType"	"SPELL_IMMUNITY_ENEMIES_NO"
 		"FightRecapLevel"	"2"
-                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
 		"MaxLevel"	"1"
 		"AbilityCastPoint"	"0"
 		"AbilityCastAnimation"	"ACT_DOTA_TELEPORT"
@@ -3438,7 +3438,7 @@
 			{
 				"ScriptFile"	"scripts/vscripts/fun_heroes/hero_sven/storm_bolt_fun.lua"
 				"Function"	"no_flying"
-                                                                "isFinish"                   "0"
+                "isFinish"                   "0"
 			}
 		}
 		"OnProjectileFinish"
@@ -3448,7 +3448,7 @@
 				"Target"	                "POINT"
 				"ScriptFile"	"scripts/vscripts/fun_heroes/hero_sven/storm_bolt_fun.lua"
 				"Function"	"no_flying"
-                                                                "isFinish"                  "1"
+                "isFinish"                  "1"
 			}
 		}
 		"Modifiers"
@@ -3474,21 +3474,21 @@
 					"MODIFIER_STATE_NO_HEALTH_BAR"	                "MODIFIER_STATE_VALUE_ENABLED"
 					"MODIFIER_STATE_NO_UNIT_COLLISION"	                "MODIFIER_STATE_VALUE_ENABLED"
 					"MODIFIER_STATE_OUT_OF_GAME"	                "MODIFIER_STATE_VALUE_ENABLED"
-					"MODIFIER_STATE_DISARMED"	                                "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_DISARMED"	        "MODIFIER_STATE_VALUE_ENABLED"
 				}
 				"Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
 			}
 		}
 		"AbilityValues"
 		{
-			"bolt_aoe"	                                  
+			"bolt_aoe"	          
 			{
 				"value"			"255 300 345 390"
 				"affected_by_aoe_increase"	"1"
 			}
 			"bolt_stun_duration"
 			{
-				"value"	                                "1.4 1.6 1.8 2"
+				"value"	        "1.4 1.6 1.8 2"
 				"LinkedSpecialBonus"	"special_bonus_unique_sven_4"
 			}
 		}
@@ -3509,14 +3509,14 @@
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
 		"SpellImmunityType"	                "SPELL_IMMUNITY_ENEMIES_NO"
 		"SpellDispellableType"	"SPELL_DISPELLABLE_NO"
-                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
 		"MaxLevel"	"1"
 		"AbilityCastPoint"	"0.3"
 		"AbilityCastAnimation"	"ACT_DOTA_CAST_ABILITY_2"
 		"AbilityCooldown"	"80"
 		"AbilityManaCost"	"300"
 		"AbilityCastRange"	"350"
-                                "IsBreakable"		"1"
+        "IsBreakable"		"1"
 		"HasShardUpgrade"	                "1"
 		"HasScepterUpgrade"	"1"
 		"ID"	"80182"
@@ -3535,7 +3535,7 @@
 				"Passive"	                    "1"
 				"IsHidden"	    "1"
 				"IsBuff"	                    "1"
-                                                                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
 				"OnCreated"
 				{
 					"RunScript"
@@ -3557,7 +3557,7 @@
 			"modifier_void_spirit_wuyingzhan"
 			{
 				"Passive"	"0"
-                                                                "Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+                "Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
 				"States"
 				{
 					"MODIFIER_STATE_COMMAND_RESTRICTED"	"MODIFIER_STATE_VALUE_ENABLED"
@@ -3568,7 +3568,7 @@
 					"MODIFIER_STATE_NO_HEALTH_BAR"	                "MODIFIER_STATE_VALUE_ENABLED"
 					"MODIFIER_STATE_NO_UNIT_COLLISION"	                "MODIFIER_STATE_VALUE_ENABLED"
 					"MODIFIER_STATE_OUT_OF_GAME"	                "MODIFIER_STATE_VALUE_ENABLED"
-					"MODIFIER_STATE_DISARMED"	                                "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_DISARMED"	        "MODIFIER_STATE_VALUE_ENABLED"
 				}
 				"StatusEffectName"	"particles/status_fx/status_effect_void_spirit_pulse_buff.vpcf"
 				"StatusEffectPriority"	    "16"
@@ -3586,12 +3586,12 @@
 			}
 			"modifier_void_spirit_wuyingzhan_true_sight"
 			{
-                                                                "Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+                "Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
 				"Passive"	"0"
 				"States"
 				{
 					"MODIFIER_STATE_PROVIDES_VISION"	                "MODIFIER_STATE_VALUE_ENABLED"
-					"MODIFIER_STATE_INVISIBLE"	                                "MODIFIER_STATE_VALUE_DISABLED"
+					"MODIFIER_STATE_INVISIBLE"	        "MODIFIER_STATE_VALUE_DISABLED"
 				}
 				"IsDebuff"	                "1"
 				"IsHidden"	"1"
@@ -3599,8 +3599,8 @@
 			}
 			"modifier_void_spirit_wuyingzhan_aether_remnant_debuff"          //残阴的额外效果
 			{
-                                                                "Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
-                                                                "TextureName"	"void_spirit_aether_remnant"
+                "Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+                "TextureName"	"void_spirit_aether_remnant"
 				"Passive"	                "0"
 				"IsDebuff"	                "1"
 				"IsHidden"	"0"
@@ -3616,8 +3616,8 @@
 			}
 			"modifier_void_spirit_wuyingzhan_dissimilate_buff"          //异化的额外效果
 			{
-                                                                "Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
-                                                                "TextureName"	"void_spirit_dissimilate"
+                "Attributes"	"MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+                "TextureName"	"void_spirit_dissimilate"
 				"Passive"	                "0"
 				"IsBuff"	                "1"
 				"IsHidden"	"0"
@@ -3639,24 +3639,24 @@
 		"AbilityValues"
 		{
 			"base_strike"	           "3"
-                                                "per_strike_level"                 "5"   //提升一次斩击次需要的等级
+                        "per_strike_level"                 "5"   //提升一次斩击次需要的等级
 			"max_strike"	           "9"
 			"tick"	"0.4"
-                                                "dissimilate_buff_duration"
-                                                {
-                                                                "value"                    "2.4"        //设定为异化结束后的0.5秒，1.9意味着异化的持续时间为1.4秒
-                                                               "RequiresScepter"	                      "1"
-                                                }
-                                                "dissimilate_buff_duration_tooltip"
-                                                {
-                                                                "value"                    "1.0"        //设定为异化结束后的0.5秒，1.9意味着异化的持续时间为1.4秒
-                                                               "RequiresScepter"	                      "1"
-                                                }
-                                                "illusion_bonus_debuff"
-                                                {
-                                                                "value"                    "3"
-                                                               "RequiresScepter"	                      "1"
-                                                }
+            "dissimilate_buff_duration"
+            {
+                "value"                    "2.4"        //设定为异化结束后的0.5秒，1.9意味着异化的持续时间为1.4秒
+                "RequiresScepter"	                      "1"
+            }
+            "dissimilate_buff_duration_tooltip"
+            {
+                "value"                    "1.0"        //设定为异化结束后的0.5秒，1.9意味着异化的持续时间为1.4秒
+                 "RequiresScepter"	                      "1"
+            }
+            "illusion_bonus_debuff"
+            {
+                "value"                    "3"
+                 "RequiresScepter"	                      "1"
+             }
 		}
 	}
 
@@ -3674,7 +3674,7 @@
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
  		"AbilitySound"					"Hero_Mars.ArenaOfBlood.Start"
-                                "ID"	"80183"
+        "ID"	"80183"
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"400"
@@ -3835,7 +3835,7 @@
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
  		//"AbilitySound"				"Hero_Mars.ArenaOfBlood.Start"
 		"MaxLevel"	"1"
-                                "IsBreakable"		"1"
+        "IsBreakable"		"1"
 		"ID"	"80185"
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------
@@ -3878,14 +3878,14 @@
 			{
 				"Passive"	                "1"
 				"IsHidden"	"1"
-                                                                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
 				"OnCreated"
 				{
 					"RunScript"
 					{
 						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_mars/mars_arena_of_blood_fun.lua"
 						"Function"	"cannot_be_stolen"
-                                                                                                "AbilityName"           "mars_arena_of_blood_fun_3"
+                        "AbilityName"           "mars_arena_of_blood_fun_3"
 					}
 				}
 			}
@@ -3916,7 +3916,7 @@
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
 		"SpellImmunityType"	                "SPELL_IMMUNITY_ENEMIES_NO"
-                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
 		"MaxLevel"	"1"
 		"AbilityCastPoint"	"0.55"
 		"AbilityCastAnimation"	"ACT_DOTA_RAZE_3"
@@ -4017,9 +4017,9 @@
 		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_BOTH"
-                                "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+        "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
 		"MaxLevel"	                "1"
-                                "IsBreakable"		"1"
+        "IsBreakable"		"1"
 		"ID"	"80187"
 		"precache"
 		{
@@ -4070,14 +4070,14 @@
 			{
 				"Passive"	                "1"
 				"IsHidden"	"1"
-                                                                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
 				"OnCreated"
 				{
 					"RunScript"
 					{
 						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_rubick/yibu.lua"
 						"Function"	"cannot_be_stolen"
-                                                                                                "AbilityName"           "rubick_spell_steal"
+                        "AbilityName"           "rubick_spell_steal"
 					}
 				}
 			}
@@ -4101,8 +4101,8 @@
 		"SpellImmunityType" 	"SPELL_IMMUNITY_ENEMIES_NO"
 		"AbilityType"	                "DOTA_ABILITY_TYPE_ULTIMATE"
 		"MaxLevel"	                "1"
-                                "IsBreakable"		"1"
-		"ID"	                                "80188"
+        "IsBreakable"		"1"
+		"ID"	        "80188"
 		"precache"
 		{
 			"particle"	"particles/units/heroes/hero_kunkka/kunkka_shard_tidal_wave.vpcf"
@@ -4265,10 +4265,10 @@
 		"AbilityTextureName"	"wisp/wisp_overcharge_alt"
 		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_TOGGLE | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
 		"AbilityType"	                "DOTA_ABILITY_TYPE_ULTIMATE"
-                                "HasScepterUpgrade"	"1"
+        "HasScepterUpgrade"	"1"
 		"MaxLevel"	                "1"
-                                "IsBreakable"		"1"
-		"ID"	                                "80190"
+        "IsBreakable"		"1"
+		"ID"	        "80190"
 		"precache"
 		{
 			//"particle"	"particles/econ/items/earthshaker/earthshaker_arcana/earthshaker_arcana_echoslam_start_v2.vpcf"
@@ -4381,47 +4381,47 @@
 		{
 			"damage_reduction_pct_toggle_off"                    "65"
 			"damage_reduction_pct_toggle_on"                    "95"
-                                                "debuff_immune"
-                                                {//暂时用不到这个
-                                                               "value"                                            "0"
-                                                               "special_bonus_scepter"	      "+1"
-                                                }
-                                                "hp_regen_pct"
-                                                {
-                                                               "value"                                            "0"
-                                                               "special_bonus_scepter"	      "+2"
-                                                               "RequiresScepter"	                      "1"
-                                                }
-                                                "hp_regen_pct_multiplier"
-                                                {
-                                                               "value"                                            "2"
-                                                               "RequiresScepter"	                      "1"
-                                                }
-                                                "bonus_stat_scepter"
-                                                {
-                                                               "value"                                            "30"
-                                                               "RequiresScepter"	                      "1"
-                                                }
-                                                "bonus_stat_scepter_primary"
-                                                {
-                                                               "value"                                            "45"
-                                                               "RequiresScepter"	                      "1"
-                                                }
-                                                "bonus_stat_scepter_universal"
-                                                {
-                                                               "value"                                            "35"
-                                                               "RequiresScepter"	                      "1"
-                                                }
-                                                "target_damage_change_pct_scepter"
-                                                {
-                                                               "value"                                            "30"
-                                                               "RequiresScepter"	                      "1"
-                                                }
-                                                "caster_damage_change_pct_scepter"
-                                                {
-                                                               "value"                                            "-50"
-                                                               "RequiresScepter"	                      "1"
-                                                }
+			"debuff_immune"
+			{//暂时用不到这个
+				"value"                    "0"
+				"special_bonus_scepter"	      "+1"
+			}
+			"hp_regen_pct"
+			{
+				"value"                    "0"
+				"special_bonus_scepter"	      "+2"
+				"RequiresScepter"	                      "1"
+			}
+			"hp_regen_pct_multiplier"
+			{
+				"value"                    "2"
+				"RequiresScepter"	                      "1"
+			}
+			"bonus_stat_scepter"
+			{
+				"value"                    "30"
+				"RequiresScepter"	                      "1"
+			}
+			"bonus_stat_scepter_primary"
+			{
+				"value"                    "45"
+				"RequiresScepter"	                      "1"
+			}
+			"bonus_stat_scepter_universal"
+			{
+				"value"                    "35"
+				"RequiresScepter"	                      "1"
+			}
+			"target_damage_change_pct_scepter"
+			{
+				"value"                    "30"
+				"RequiresScepter"	                      "1"
+			}
+			"caster_damage_change_pct_scepter"
+			{
+				"value"                    "-50"
+				"RequiresScepter"	                      "1"
+			}
 		}
 	}
 
@@ -4438,7 +4438,7 @@
 		"SpellImmunityType" 	"SPELL_IMMUNITY_ENEMIES_NO"
 		"AbilityType"	                "DOTA_ABILITY_TYPE_ULTIMATE"
 		"MaxLevel"	"1"
-                                "IsBreakable"	"1"
+        "IsBreakable"	"1"
 		"ID"	"80191"
 		"Modifiers"
 		{
@@ -4482,7 +4482,7 @@
 		"MaxLevel"	"1"
 		"ID"	                "80192"
 		"AbilityCastPoint"	"0.4"
-                                "AOERadius"             "%crack_radius"
+        "AOERadius"             "%crack_radius"
 		// Time
 		// -------------------------------------------------------------------------------------------------------------
 		
@@ -4511,8 +4511,8 @@
 		{
 			"modifier_elder_titan_earth_splitter_hexagram"
 			{
-                                                                "IsPurgable"    "1"
-                                                                "IsDebuff"       "1"
+                "IsPurgable"    "1"
+                "IsDebuff"       "1"
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"	"%slow_pct"
@@ -4523,9 +4523,9 @@
 		// -------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-                                                "AbilityCooldown"
+            "AbilityCooldown"
 			{
-				"value"		                                "120"
+				"value"		        "120"
 				"special_bonus_unique_elder_titan_3"	"-60"		
 			}
 			"crack_time"	"3.3"
@@ -4560,7 +4560,7 @@
 		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
 		"AbilityType"	                "DOTA_ABILITY_TYPE_ULTIMATE"
 		"MaxLevel"	"1"
-                                "IsBreakable"	"1"
+        "IsBreakable"	"1"
 		//"AbilityCooldown"	"30"
 		"ID"	"80193"
 		"precache"
@@ -4610,7 +4610,7 @@
 		"AbilityValues"
 		{
 			"time"	"30"
-                                                "cooldown" "30"
+                        "cooldown" "30"
 		}
 	}
 
@@ -4626,7 +4626,7 @@
 		"AbilityUnitTargetFlags"	"DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES"
 		"AbilityType"	                "DOTA_ABILITY_TYPE_ULTIMATE"
 		"MaxLevel"	"1"
-                                "IsBreakable"	"1"
+        "IsBreakable"	"1"
 		"AbilityCooldown"	"0.3"
 		"ID"	"80194"
 		"Modifiers"
@@ -4671,14 +4671,14 @@
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_SKIP_FOR_KEYBINDS | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
 		"AbilityType"	"DOTA_ABILITY_TYPE_ULTIMATE"
 		"MaxLevel"	"1"
-                                "IsBreakable"	"1"
+        "IsBreakable"	"1"
 		"ID"	                "80195"
 		"Modifiers"
 		{
 			"modifier_invoker_again"
 			{
 				"Passive"	                "1"
-                                                                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
 				"OnAbilityExecuted"
 				{
 					"RunScript"
@@ -4804,7 +4804,7 @@
 	{
 		"BaseClass"	                "ability_datadriven"
 		"AbilityTextureName"	"arc_warden_flux"
-                                "ID"	                                "80197"
+        "ID"	        "80197"
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET"
 		"AbilityUnitTargetTeam"			"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitTargetType"			"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -4846,49 +4846,46 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-				"duration"						
-				{
-					"value"			"6.0 6.5 7 7.5"
-					"special_bonus_unique_arc_warden_4"	"+2.0"
-				}
-				"search_radius"					"225"
-				"think_interval"				"0.5"
-				"damage_per_second"				
-				{
-					"value"		"20 40 60 80"
-					"RequiresFacet"				"arc_warden_order"
-				}
-				"move_speed_slow_pct"				
-				{
-					"value" 					"15 25 35 45"
-					"RequiresFacet"				"arc_warden_order"
-				}
+			"duration"						
+			{
+				"value"			"6.0 6.5 7 7.5"
+				"special_bonus_unique_arc_warden_4"	"+2.0"
+			}
+			"search_radius"					"225"
+			"think_interval"				"0.5"
+			"damage_per_second"				
+			{
+				"value"		"20 40 60 80"
+				"RequiresFacet"				"arc_warden_order"
+			}
+			"move_speed_slow_pct"				
+			{
+				"value" 					"15 25 35 45"
+				"RequiresFacet"				"arc_warden_order"
+			}
 
-				"tempest_damage_per_second"				
-				{
-					"value"		"40 70 100 130"
-					"RequiresFacet"				"arc_warden_disorder"
-				}
+			"tempest_damage_per_second"				
+			{
+				"value"		"40 70 100 130"
+				"RequiresFacet"				"arc_warden_disorder"
+			}
 
-				"tempest_move_speed_slow_pct"
-				{
-					"value"						"5 10 15 20"
-					"RequiresFacet"				"arc_warden_disorder"
-				}
-				"AbilityCastRange"			
-				{
-					"value"				"500 600 700 800"
-					"special_bonus_unique_arc_warden_5"	"+200"
-				}
-				"applies_silence"
-				{
-					"value"					"0"
-					"special_bonus_unique_arc_warden_flux_silences"			"1"
-				}
+			"tempest_move_speed_slow_pct"
+			{
+				"value"						"5 10 15 20"
+				"RequiresFacet"				"arc_warden_disorder"
+			}
+			"AbilityCastRange"			
+			{
+				"value"				"500 600 700 800"
+				"special_bonus_unique_arc_warden_5"	"+200"
+			}
+			"applies_silence"
+			{
+				"value"					"0"
+				"special_bonus_unique_arc_warden_flux_silences"			"1"
+			}
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
 	}
-
-
-
 }

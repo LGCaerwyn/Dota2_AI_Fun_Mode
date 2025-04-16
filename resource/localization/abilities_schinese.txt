@@ -18261,7 +18261,7 @@
                                 //============================================================
                                 //一、游戏界面设置
                                 //============================================================
-		"dota_play"	                                "开始天地星"
+		"dota_play"	                                "开始游戏"
 		"dota_play_disabled_local_mods"	"检测到天地星FUN文件。\n已禁用游玩功能。"
 
                                 //============================================================
@@ -19323,7 +19323,7 @@
 		"DOTA_Tooltip_ability_morphling_tidal_wave_fun_bonus_damage"	"海浪伤害："
 
 		"DOTA_Tooltip_ability_terrorblade_Metamorphosis_fun"	                "恶魔变形"
-		"DOTA_Tooltip_ability_terrorblade_Metamorphosis_fun_Description"	"向高出飞跃，在目标地点坠落为恶魔形态，对范围内的敌人造成460 (每级提升%bonus_damage%%%)点伤害并眩晕3秒。每击中一个英雄都能使恐怖利刃暂时提高10 (每级提升%bonus_strength_level%%)点力量，持续18秒。"
+		"DOTA_Tooltip_ability_terrorblade_Metamorphosis_fun_Description"	"向高处飞跃，在目标地点坠落为恶魔形态，对范围内的敌人造成460 (每级提升%bonus_damage%%%)点伤害并眩晕3秒。每击中一个英雄都能使恐怖利刃暂时提高10 (每级提升%bonus_strength_level%%)点力量，持续18秒。"
 		"DOTA_Tooltip_ability_terrorblade_Metamorphosis_fun_Lore"	                "感受这被囚禁了一万年的愤怒！"
 		"DOTA_Tooltip_modifier_terrorblade_Metamorphosis_fun"	                "恶魔变形"
 		"DOTA_Tooltip_modifier_terrorblade_Metamorphosis_fun_Description"	"恶魔变形获得的力量"

@@ -2,28 +2,28 @@
 //这里存放自定义物品的合成卷轴
 //合成品在Fun_Items.txt中
 
-//  #1600  卷轴：AI的阿哈利姆神杖           "item_recipe_fun_Aghanims_Scepter_AI"    
-//  #1601  卷轴：阿哈利姆的长袍              "item_recipe_fun_Aghanims_Robe"                         
-//  #1602  卷轴：阿哈利姆的赝品              "item_recipe_fun_Aghanims_Fake_Scepter"                                        
-//  #1603  卷轴：灵界芒果                       "item_recipe_fun_greater_mango"                              
-//  #1604  卷轴：墨丘利的护手                 "item_recipe_fun_Mercurys_gloves"                       
-//  #1605  卷轴：定海神针                       "item_recipe_fun_monkey_king_bar"                     
-//  #1606  卷轴：科勒的超级匕首             "item_recipe_fun_super_blink_dagger"                        
-//  #1607  卷轴：大师之笛-力量               "item_recipe_fun_grandmasters_glaive_str"               
-//  #1608  卷轴：大师之笛-敏捷               "item_recipe_fun_grandmasters_glaive_agi"             
-//  #1609  卷轴：大师之笛-智力               "item_recipe_fun_grandmasters_glaive_int"             
-//  #1610  卷轴：大师之笛-融合               "item_recipe_fun_grandmasters_glaive_all"            
-//  #1611  卷轴：上古狂战斧                    "item_recipe_bfury_v2"                                               
-//  #1612  卷轴：上古黯灭                       "item_recipe_desolator_v2"                                         
-//  #1613  卷轴：伊卡洛斯之殇                 "item_recipe_greater_crit_v2"                                      
-//  #1614  卷轴：破泞之主的疏浚三叉戟    "item_recipe_fun_trident_three_phase_power"    
-//  #1615  卷轴：翡翠鞋                           "item_recipe_fun_Jade_boots"
-//  #1616  卷轴：冰霜重铠                        "item_recipe_fun_shivas_guard_v2"
-//  #1617  卷轴：宝莲玄珠                        "item_recipe_fun_lotus_orb_v2"
-//  #1618  卷轴：万世金盘                        "item_recipe_fun_aeon_disk_v2"
-//  #1619  卷轴：锢魂法器                        "item_recipe_fun_spirit_vessel"
-//  #1620  卷轴：德尊烟斗                        "item_recipe_fun_pipe_v2"
-//  #1621  卷轴：强袭战甲                        "item_recipe_fun_assault_armor_v2"
+//  #16000  卷轴：AI的阿哈利姆神杖           "item_recipe_fun_Aghanims_Scepter_AI"    
+//  #16001  卷轴：阿哈利姆的长袍              "item_recipe_fun_Aghanims_Robe"                         
+//  #16002  卷轴：阿哈利姆的赝品              "item_recipe_fun_Aghanims_Fake_Scepter"                                        
+//  #16003  卷轴：灵界芒果                       "item_recipe_fun_greater_mango"                              
+//  #16004  卷轴：墨丘利的护手                 "item_recipe_fun_Mercurys_gloves"                       
+//  #16005  卷轴：定海神针                       "item_recipe_fun_monkey_king_bar"                     
+//  #16006  卷轴：科勒的超级匕首             "item_recipe_fun_super_blink_dagger"                        
+//  #16007  卷轴：大师之笛-力量               "item_recipe_fun_grandmasters_glaive_str"               
+//  #16008  卷轴：大师之笛-敏捷               "item_recipe_fun_grandmasters_glaive_agi"             
+//  #16009  卷轴：大师之笛-智力               "item_recipe_fun_grandmasters_glaive_int"             
+//  #16010  卷轴：大师之笛-融合               "item_recipe_fun_grandmasters_glaive_all"            
+//  #16011  卷轴：上古狂战斧                    "item_recipe_bfury_v2"                                               
+//  #16012  卷轴：上古黯灭                       "item_recipe_desolator_v2"                                         
+//  #16013  卷轴：伊卡洛斯之殇                 "item_recipe_greater_crit_v2"                                      
+//  #16014  卷轴：破泞之主的疏浚三叉戟  				"item_recipe_fun_trident_three_phase_power"    
+//  #16015  卷轴：翡翠鞋                         	"item_recipe_fun_Jade_boots"
+//  #16016  卷轴：冰霜重铠                        "item_recipe_fun_shivas_guard_v2"
+//  #16017  卷轴：宝莲玄珠                        "item_recipe_fun_lotus_orb_v2"
+//  #16018  卷轴：万世金盘                        "item_recipe_fun_aeon_disk_v2"
+//  #16019  卷轴：锢魂法器                        "item_recipe_fun_spirit_vessel"
+//  #16020  卷轴：德尊烟斗                        "item_recipe_fun_pipe_v2"
+//  #16021  卷轴：强袭战甲                        "item_recipe_fun_assault_armor_v2"
 
 "DOTAAbilities"
 {      
@@ -36,7 +36,7 @@
 		"AbilityTextureName"	"item_recipe_ultimate_scepter_tease2"
 		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"Model"			"models/props_gameplay/recipe.vmdl"
-		"ID"	                                "1600"
+		"ID"	                                "16000"
 		"ItemQuality"	"component"
 		"ItemCost"	"3800"
 		"ItemRecipe"	"1"
@@ -56,7 +56,7 @@
 		"AbilityTextureName"	"item_recipe_crimson_robe"
 		"Model"			"models/props_gameplay/recipe.vmdl"
 		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ID"	"1601"
+		"ID"	"16001"
 		"ItemCost"	                "2300"
 		"ItemDroppable"	                "1"
 		"ItemSellable"	                "1"
@@ -82,7 +82,7 @@
 		"AbilityTextureName"	"item_recipe_ultimate_scepter_tease"
 		"Model"			"models/props_gameplay/recipe.vmdl"
 		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ID"	"1602"
+		"ID"	"16002"
 		"ItemCost"	                "3200"
 		"ItemDroppable"	                "1"
 		"ItemSellable"	                "1"
@@ -108,7 +108,7 @@
 		"AbilityTextureName"	"item_recipe_greater_mango"
 		"Model"			"models/props_gameplay/recipe.vmdl"
 		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ID"	"1603"
+		"ID"	"16003"
 		"ItemCost"	                "3800"
 		"ItemDroppable"	                "1"
 		"ItemSellable"	                "1"
@@ -136,7 +136,7 @@
 		"AbilityTextureName"	"item_recipe_gloves_of_travel"
 		"Model"			"models/props_gameplay/recipe.vmdl"
 		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ID"	"1604"
+		"ID"	"16004"
 		"ItemCost"	                "2350"
 		"ItemDroppable"	                "1"
 		"ItemSellable"	                "1"
@@ -162,7 +162,7 @@
 		"AbilityTextureName"	"item_recipe_sun_wukong_bar"
 		"Model"			"models/props_gameplay/recipe.vmdl"
 		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ID"	"1605"
+		"ID"	"16005"
 		"ItemCost"	                "2300"
 		"ItemDroppable"	                "1"
 		"ItemSellable"	                "1"
@@ -188,7 +188,7 @@
 		"AbilityTextureName"	"item_recipe_es_arcana_blink_ult2"
 		"Model"			"models/props_gameplay/recipe.vmdl"
 		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ID"	"1606"
+		"ID"	"16006"
 		"ItemCost"	                "1150"
 		"ItemDroppable"	                "1"
 		"ItemSellable"	                "1"
@@ -214,7 +214,7 @@
 		"AbilityTextureName"	"item_recipe_grandmasters_glaive_str"
 		"Model"			"models/props_gameplay/recipe.vmdl"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ID"	"1607"
+		"ID"	"16007"
 		"ItemQuality"	"component"
 		"ItemCost"	"2400"
 		"ItemDroppable"	                "1"
@@ -241,7 +241,7 @@
 		"AbilityTextureName"	"item_recipe_grandmasters_glaive_agi"
 		"Model"			"models/props_gameplay/recipe.vmdl"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ID"	"1608"
+		"ID"	"16008"
 		"ItemCost"	"3075"
 		"ItemDroppable"	                "1"
 		"ItemSellable"	                "1"
@@ -267,7 +267,7 @@
 		"AbilityTextureName"	"item_recipe_grandmasters_glaive_int"
 		"Model"			"models/props_gameplay/recipe.vmdl"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ID"	"1609"
+		"ID"	"16009"
 		"ItemQuality"	"component"
 		"ItemCost"	"2400"
 		"ItemDroppable"	                "1"
@@ -301,7 +301,7 @@
 		"AbilityTextureName"	"item_recipe_bfury_v2"
 		"Model"			"models/props_gameplay/recipe.vmdl"
 		// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"ID"	"1611"
+		"ID"	"16011"
 		// Item Info
 		// -------------------------------------------------------------------------------------------------------------
 		"ItemCost"	"1500"
@@ -328,7 +328,7 @@
 		"AbilityTextureName"	"item_recipe_desolator_v2"
 		// General
 		// -------------------------------------------------------------------------------------------------------------
-		"ID"	"1612"
+		"ID"	"16012"
 		"Model"	"models/props_gameplay/recipe.vmdl"
 		// Item Info
 		// -------------------------------------------------------------------------------------------------------------
@@ -357,7 +357,7 @@
 		"BaseClass"	                "item_datadriven"
 		"AbilityTextureName"	"item_recipe_greater_crit_v2"
 		// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"ID"	"1613"
+		"ID"	"16013"
 		"Model"	"models/props_gameplay/recipe.vmdl"
 		// Item Info
 		// -------------------------------------------------------------------------------------------------------------
@@ -386,7 +386,7 @@
 		"BaseClass"	                "item_datadriven"
 		"AbilityTextureName"	"item_recipe_dredged_trident"
 		// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"ID"	"1614"
+		"ID"	"16014"
 		"Model"	"models/props_gameplay/recipe.vmdl"
 		// Item Info
 		// -------------------------------------------------------------------------------------------------------------
@@ -418,7 +418,7 @@
 		"BaseClass"	                "item_datadriven"
 		"AbilityTextureName"	"item_recipe_slippers_of_halcyon"
 		"Model"	                                "models/props_gameplay/recipe.vmdl"
-		"ID"	"1615"
+		"ID"	"16015"
 		"ItemCost"	"500"
 		"ItemSellable"	                "1"
 		"ItemKillable"	                "1"
@@ -442,7 +442,7 @@
 		// General
 		// -------------------------------------------------------------------------------------------------------------
 		// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"ID"	"1616"
+		"ID"	"16016"
 		"Model"	"models/props_gameplay/recipe.vmdl"
 		// Item Info
 		// -------------------------------------------------------------------------------------------------------------
@@ -471,7 +471,7 @@
 		// General
 		// -------------------------------------------------------------------------------------------------------------
 		// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"ID"	"1617"
+		"ID"	"16017"
 		"Model"	"models/props_gameplay/recipe.vmdl"
 		// Item Info
 		// -------------------------------------------------------------------------------------------------------------
@@ -500,7 +500,7 @@
 		// General
 		// -------------------------------------------------------------------------------------------------------------
 		// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"ID"	"1618"
+		"ID"	"16018"
 		"Model"	"models/props_gameplay/recipe.vmdl"
 		// Item Info
 		// -------------------------------------------------------------------------------------------------------------
@@ -525,7 +525,7 @@
 		// General
 		// -------------------------------------------------------------------------------------------------------------
 		// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"ID"	"1619"
+		"ID"	"16019"
 		"Model"	"models/props_gameplay/recipe.vmdl"
 		// Item Info
 		// -------------------------------------------------------------------------------------------------------------
@@ -558,7 +558,7 @@
 		"AbilityTextureName"	"item_recipe_barricade"
 		//-------------------------------------------------------------------------------------------------------------
 		"Model"							"models/props_gameplay/recipe.vmdl"
-		"ID"	"1620"
+		"ID"	"16020"
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
 		"ItemCost"						"1200"	
@@ -590,9 +590,9 @@
 		"AbilityTextureName"	"item_recipe_barricade"
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
-		"ItemCost"						"1600"	
+		"ItemCost"						"16000"	
 		"ItemShopTags"					""
-		"ID"	"1621"	
+		"ID"	"16021"	
 		// Recipe
 		//-------------------------------------------------------------------------------------------------------------
 		"ItemSellable"	                "1"
