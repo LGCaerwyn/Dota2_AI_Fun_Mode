@@ -7669,7 +7669,7 @@
 		{
 			"bonus_spell_amp"		"50"
 			"bonus_damage"			"400"
-			"bonus_damage_base"		"100"
+			"bonus_damage_base"		"100"			
 		}
 	}
 	
@@ -12849,7 +12849,7 @@
 		// Item Info
 		//-------------------------------------------------------------------------------------------------------------
 		"ItemCost"						"3000"
-		"ItemIsNeutralActiveDrop"		"0"
+		"ItemIsNeutralDrop"				"0"
 		"ItemPurchasable"				"1"
 		"ItemInitialCharges"			"3"
 		"ItemPermanent"					"0"

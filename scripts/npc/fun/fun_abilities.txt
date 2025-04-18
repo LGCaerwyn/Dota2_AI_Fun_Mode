@@ -58,26 +58,26 @@
 		// General
 		// -------------------------------------------------------------------------------------------------------------
 		"BaseClass"	                "ability_datadriven"
-		"AbilityTextureName"	"axe_counter_helix_unleashed"
-		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
-		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
-		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
-		"SpellImmunityType"	                "SPELL_IMMUNITY_ENEMIES_NO" 
-        "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+		"AbilityTextureName"		"axe/axe_mastered_counter_helix"
+		"AbilityBehavior"		"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"AbilityUnitTargetType"		"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitDamageType"		"DAMAGE_TYPE_MAGICAL"
+		"SpellImmunityType"			"SPELL_IMMUNITY_ENEMIES_NO" 
+        "AbilityType"				"ABILITY_TYPE_ULTIMATE"
 		"MaxLevel"	"1"
-		"HasScepterUpgrade"	"1"
-        "IsBreakable"					"1"
+		"HasScepterUpgrade"			"1"
+        "IsBreakable"				"1"
 		// Time
 		// -------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"	"0.3"
-		"AOERadius"	"%radius"
+		"AbilityCooldown"		"0.3"
+		"AOERadius"		"%radius"
 		"ID"	"80151"
 		// Precache
 		// -------------------------------------------------------------------------------------------------------------
 		"precache"
 		{
-			"particle"	                "particles/units/heroes/hero_axe/axe_attack_blur_counterhelix.vpcf"
-			"soundfile"	"soundevents/game_sounds_heroes/game_sounds_axe.vsndevts"
+			"particle"		"particles/units/heroes/hero_axe/axe_attack_blur_counterhelix.vpcf"
+			"soundfile"		"soundevents/game_sounds_heroes/game_sounds_axe.vsndevts"
 		}
 		"Modifiers"
 		{
@@ -125,17 +125,17 @@
 		// -------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-                        "damage"                 "240"
+			"damage" 		"240"
 			"radius"	               
 			{
-				"value"			"275"
-				"affected_by_aoe_increase"	"1"
+				"value"		"275"
+				"affected_by_aoe_increase"		"1"
 			}
-			"trigger_chance"	"35"
-                        "trigger_radius"	"1600"
-			"armor"                    "1.5"
-			"hp"	                "35"	
-			"duration" 	"20"
+			"trigger_chance"		"35"
+			"trigger_radius"		"1600"
+			"armor" 		"1.5"
+			"hp"			"35"	
+			"duration"		"20"
 		}
 	}
 
@@ -147,7 +147,7 @@
 		// General
 		// -------------------------------------------------------------------------------------------------------------
 		"BaseClass"	                "ability_datadriven"
-		"AbilityTextureName"	"sniper_assassinate_muh_keen_gun"
+		"AbilityTextureName"	"sniper/sniper_fast_reload"
 		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
 		"SpellDispellableType"	"SPELL_DISPELLABLE_YES"
         "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
@@ -320,7 +320,7 @@
 		"AbilityValues"
 		{
 			"bonus_attack_range"	"180"
-            "敏捷"	        "1"
+			"敏捷"	        "1"
 			"时间"	        "12"	
 			"基础攻击间隔"	                "0.35"
 			"bonus_attack_range_use"	"520"
@@ -432,7 +432,7 @@
 	"antimage_mana_defend"
 	{
 		"BaseClass"	"ability_datadriven"
-		"AbilityTextureName"	"antimage/immortal/antimage_blink"
+		"AbilityTextureName"	"antimage/antimage_mastered_counterspell"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO"
         "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
@@ -648,17 +648,17 @@
 	"doom_bringer_yanren"
 	{
 		"BaseClass"	                "ability_datadriven"
-		"AbilityTextureName"	"doom_bringer/doom_2021_immortal_ability_icon/doom_2021_immortal_infernal_blade"
+		"AbilityTextureName"	"doom/doom_bringer_mastered_infernal_bladee"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_PURE"
 		"SpellImmunityType"	                "SPELL_IMMUNITY_ENEMIES_YES"
-        "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
+		"AbilityType"                             "ABILITY_TYPE_ULTIMATE"
 		"MaxLevel"	                "1"
-        "IsBreakable"		"1"
+		"IsBreakable"		"1"
 		"AbilityCooldown"	                "7"
-        "HasShardUpgrade"                  "1"
+		"HasShardUpgrade"                  "1"
 		"ID"	"80156"
 		"precache"
 		{
@@ -721,7 +721,7 @@
 	"永恒的恩赐解脱"
 	{
 		"BaseClass"	                "ability_datadriven"
-		"AbilityTextureName"	"phantom_assassin_arcana_coup_de_grace"
+		"AbilityTextureName"	"phantom_assassin/phantom_assassin_fun_coup_de_grace"
 		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -830,7 +830,7 @@
 		// General
 		// -------------------------------------------------------------------------------------------------------------
 		"BaseClass"	                "ability_datadriven"
-		"AbilityTextureName"	"earthshaker/deep_magma/deep_magma_default/deep_magma_default_aftershock"
+		"AbilityTextureName"	"earthshaker/monkey_king_armageddon"
 		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -907,7 +907,7 @@
 				"States"
 				{
 					"MODIFIER_STATE_MAGIC_IMMUNE"	                 "MODIFIER_STATE_VALUE_ENABLED"
-					"MODIFIER_STATE_COMMAND_RESTRICTED"	 "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_COMMAND_RESTRICTED"				"MODIFIER_STATE_VALUE_ENABLED"
 				}
                         }
 			"modifier_monkey_king_huitianmiedi_fly"
@@ -946,7 +946,7 @@
 				{
 					"MODIFIER_STATE_ATTACK_IMMUNE"	                 "MODIFIER_STATE_VALUE_ENABLED"
 					"MODIFIER_STATE_MAGIC_IMMUNE"	                 "MODIFIER_STATE_VALUE_ENABLED"
-					"MODIFIER_STATE_COMMAND_RESTRICTED"	 "MODIFIER_STATE_VALUE_ENABLED"
+					"MODIFIER_STATE_COMMAND_RESTRICTED"				 "MODIFIER_STATE_VALUE_ENABLED"
 				}
 				"StatusEffectName"	"particles/status_fx/status_effect_huskar_lifebreak.vpcf"
 				"StatusEffectPriority"	"15"
@@ -983,15 +983,15 @@
 			"max_distance"	"3000"
 			"push_speed"	"2000"
 			"push_length"	"3000"
-                        "damage_pct"           "85"
-                        "stun_duration"         "3" 
+			"damage_pct"           "85"
+			"stun_duration"         "3" 
 			"radius"	               
 			{
 				"value"			 "800"
 				"affected_by_aoe_increase"	"1"
 			}
 			"dmg_others"	"2000"
-                        "damage_pct_scepter"           			
+			"damage_pct_scepter"           			
 			{
 				"value"		"40"
 				"RequiresScepter"		"1"
@@ -1008,7 +1008,7 @@
 		// General
 		// -------------------------------------------------------------------------------------------------------------
 		"BaseClass"	"ability_datadriven"
-		"AbilityTextureName"	"centaur/immortal_gold/centaur_hoof_stomp"
+		"AbilityTextureName"	"centaur/centaur_war_stomp"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -1091,7 +1091,7 @@
 	"ancient_apparition_hanshuangzuzhou"
 	{
 		"BaseClass"	                "ability_datadriven"
-		"AbilityTextureName"	"ancient_apparition/ti8_immortal_back/ancient_apparition_ice_vortex_immortal"
+		"AbilityTextureName"	"ancient_apparition/ancient_apparition_cold_curse"
 		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -1175,7 +1175,7 @@
 		// General
 		// -------------------------------------------------------------------------------------------------------------
 		"BaseClass"	                "ability_datadriven"
-		"AbilityTextureName"	"kunkka_ghostship_immortal"
+		"AbilityTextureName"	"kunkka/kunkka_sunken_land"
 		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
 		"SpellImmunityType"      	"SPELL_IMMUNITY_ENEMIES_NO"
@@ -1494,7 +1494,7 @@
 	"tianshenxiafan"
 	{
 		"BaseClass"	                "ability_datadriven"
-		"AbilityTextureName"	"zeus/zeus_2021_immortal_back_ability_icon/zeus_2021_immortal_static_field_crimson"
+		"AbilityTextureName"	"zeus/zeus_avatar"
 		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_AURA"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -1788,7 +1788,7 @@
 	"windrunner_fensanhuoli"
 	{
 		"BaseClass"	"ability_datadriven"
-		"AbilityTextureName"	"windrunner_focusfire_arcana_alt"
+		"AbilityTextureName"	"windrunner_whirlwind"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
  		//"AbilityUnitDamageType"	"DAMAGE_TYPE_PURE"
 		"SpellImmunityType"		"SPELL_IMMUNITY_ENEMIES_YES"
@@ -2072,6 +2072,8 @@
 		"AbilityCastRange"	                 "275"
 		"AbilityChannelTime"	"4.0"
 		"AoERadius"	                "420"
+		"AbilityCastAnimation"      "ACT_DOTA_CAST_ABILITY_4"
+		"AbilityChannelAnimation"       "ACT_DOTA_CHANNEL_ABILITY_4"
 		"ID"	"80170"
 		// Precache
 		// -------------------------------------------------------------------------------------------------------------
@@ -2487,7 +2489,7 @@
 	"lion_emowushi"
 	{
 		"BaseClass"	"ability_datadriven"
-		"AbilityTextureName"	"lion/finger_of_death/lion_finger_of_death_immortal"
+		"AbilityTextureName"	"lion/lion_demon_witcher"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
         "AbilityType"                             "ABILITY_TYPE_ULTIMATE"
 		"MaxLevel"	"1"
@@ -3502,7 +3504,7 @@
 	"void_spirit_wuyingzhan"
 	{
 		"BaseClass"	"ability_datadriven"
-		"AbilityTextureName"	"void_spirit_omni_slash"
+		"AbilityTextureName"	"void_spirit/void_spirit_omni_slash"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE | DOTA_ABILITY_BEHAVIOR_ROOT_DISABLES | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -3827,7 +3829,7 @@
 	"mars_arena_of_blood_fun_3"
 	{
 		"BaseClass"	"ability_datadriven"
-		"AbilityTextureName"	"mars/mars_fall20_immortal_ability_icon/mars_fall20_immortal_gods_rebuke"
+		"AbilityTextureName"	"mars/mars_fun_arena_of_blood"
 		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AUTOCAST | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
  		"AbilityUnitDamageType"			"DAMAGE_TYPE_MAGICAL"	
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_NO"
@@ -3910,7 +3912,7 @@
 	"nevermore_shadowraze_fun"
 	{
 		"BaseClass"	                "ability_datadriven"
-		"AbilityTextureName"	"nevermore_shadowraze3_demon"
+		"AbilityTextureName"	"nevermore/nevermore_three_shadowraze_combo"
 		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -4471,7 +4473,7 @@
 		// General
 		// -------------------------------------------------------------------------------------------------------------
 		"BaseClass"	                "ability_datadriven"
-		"AbilityTextureName"	"elder_titan_earth_splitter"
+		"AbilityTextureName"	"elder_titan/elder_titan_earth_splitter_hexagram"
 		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_POINT | DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_ENEMY"

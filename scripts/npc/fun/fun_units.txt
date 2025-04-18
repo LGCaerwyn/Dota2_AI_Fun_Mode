@@ -566,6 +566,9 @@
 		"ModelScale"	"2.5"
 		"Level"	"1"
 		"IsAncient"	"1"
+		
+		"MinimapIcon"	"minimap_roshancamp"
+		"MinimapIconSize"	"320"
 		// Abilities
 		// ----------------------------------------------------------------
 		// Ability 1.
@@ -834,6 +837,9 @@
 		"ModelScale"	"1"
 		"Level"	"1"
 		"IsAncient"	"1"
+		
+		"MinimapIcon"	"minimap_roshancamp"
+		"MinimapIconSize"	"320"
 		// Abilities
 		// ----------------------------------------------------------------
 		// Ability 1.
@@ -1226,8 +1232,8 @@
 		"Ability9"    	"fun_arena_of_blood_boss" 
 		"Ability10"    	"fun_mystic_flare_boss"
 		"Ability11"   	"Fun_BlackHole"
-		"Ability12"		"fun_earth_splitter_boss"
-		"Ability13"   	"fun_chronosphere_boss_v2" //"fun_chronosphere_boss"
+		"Ability12"	"fun_earth_splitter_boss"
+		"Ability13"   	"fun_Chronosphere_boss_v2" //"fun_chronosphere_boss"
 
 		// Armor
 		// ----------------------------------------------------------------

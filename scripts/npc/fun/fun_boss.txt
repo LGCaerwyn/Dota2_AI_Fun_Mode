@@ -1116,7 +1116,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"ID"					"80114"														// unique ID number for this ability.  Do not change this once established or it will invalidate collected stats.
 		"BaseClass"	                                                "ability_datadriven"
-		"AbilityTextureName"	                                "faceless_void_chronosphere"													
+		"AbilityTextureName"	                                "faceless_void/arcana/faceless_void_chronosphere_arcana_alt1"													
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_AOE | DOTA_ABILITY_BEHAVIOR_POINT"
 		"AbilityType"				"DOTA_ABILITY_TYPE_ULTIMATE"
 		"SpellImmunityType"				"SPELL_IMMUNITY_ENEMIES_YES"
@@ -1126,7 +1126,7 @@
 		"precache"
 		{
 			"particle"	                     "particles/status_fx/status_effect_faceless_chronosphere.vpcf"
-			"particle"	                     "particles/units/heroes/hero_faceless_void/faceless_void_chronosphere.vpcf"
+			"particle"	                     "particles/econ/items/faceless_void/faceless_void_arcana/faceless_void_arcana_chronosphere_combined.vpcf"
 		}		
 		// Casting
 		//-------------------------------------------------------------------------------------------------------------

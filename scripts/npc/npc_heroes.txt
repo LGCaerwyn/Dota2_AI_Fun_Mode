@@ -3410,10 +3410,12 @@
 		"Ability2"		"nevermore_shadowraze2"
 		"Ability3"		"nevermore_shadowraze3"
 		"Ability4"		"nevermore_frenzy"
-		"Ability5"		"nevermore_dark_lord"//"nevermore_shadowraze_fun"  //"nevermore_dark_lord"
+		"Ability5"		"nevermore_shadowraze_fun"  //"nevermore_dark_lord"
 		"Ability6"		"nevermore_requiem"
 		"Ability7"		"nevermore_necromastery"
-		//"Ability8"		"nevermore_dark_lord"
+
+		"Ability8"		"nevermore_dark_lord"
+
 		"Ability10"		"special_bonus_unique_nevermore_7"
 		"Ability11"		"special_bonus_unique_nevermore_4"
 		"Ability12"		"special_bonus_unique_nevermore_3"
@@ -5669,7 +5671,7 @@
 		"Ability1"		"sven_storm_bolt"
 		"Ability2"		"sven_great_cleave"
 		"Ability3"		"sven_warcry"
-		"Ability4"		"generic_hidden"
+		"Ability4"		"sven_storm_bolt_fun"
 		"Ability5"		"generic_hidden"
 		"Ability6"		"sven_gods_strength"
 		"Ability7"		"sven_vanquisher"
@@ -10198,6 +10200,8 @@
 		"Ability5"		"tinker_keen_teleport"
 		"Ability6"		"tinker_rearm"
 		"Ability7"		"tinker_eureka"
+		"Ability8"		"tinker_death_spin"
+
 		"Ability10"		"special_bonus_unique_tinker_march_duration"
 		"Ability11"		"special_bonus_mana_reduction_8"
 		"Ability12"		"special_bonus_unique_tinker_7"
@@ -22166,7 +22170,7 @@
 		"Ability2"		"brewmaster_cinder_brew"
 		"Ability3"		"brewmaster_drunken_brawler"
 		"Ability4"		"brewmaster_primal_companion"
-		"Ability5"		"generic_hidden"
+		"Ability5"		"huoyanhuxi"
 		"Ability6"		"brewmaster_primal_split"
 		"Ability7"		"brewmaster_belligerent"
 
@@ -25851,6 +25855,7 @@
 		"Ability4"		"medusa_cold_blooded"
 		"Ability5"		"medusa_mana_shield"
 		"Ability6"		"medusa_stone_gaze"
+		"Ability7"		"medusa_absorb_mana"
 
 		"AbilityDraftAbilities"
 		{
@@ -28458,7 +28463,7 @@
 		"Ability2"		"legion_commander_press_the_attack"
 		"Ability3"		"legion_commander_moment_of_courage"
 		"Ability4"		"legion_commander_outfight_them"
-		"Ability5"		"generic_hidden"
+		"Ability5"		"legion_commander_all_duel"
 		"Ability6"		"legion_commander_duel"
 
 		"AbilityDraftAbilities"
@@ -30517,7 +30522,7 @@
 		}
 		// Abilities
 		//-------------------------------------------------------------------------------------------------------------
-		"Ability1"		"arc_warden_flux_fun"//"arc_warden_flux"
+		"Ability1"		"arc_warden_flux"
 		"Ability2"		"arc_warden_magnetic_field"
 		"Ability3"		"arc_warden_spark_wraith"
 		"Ability4"		"arc_warden_runic_infusion"

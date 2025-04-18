@@ -18951,16 +18951,16 @@
                                 //五、阿哈利姆之书技能
                                 //============================================================
 
-		 "DOTA_Tooltip_ability_axe_jingtongdefanji"                    "精通的反击螺旋"
-      		  "DOTA_Tooltip_ability_axe_jingtongdefanji_Description"    "<font color='#1FCBF6'>需要通过阿哈利姆之书升级</font><br><br>受到%trigger_radius%范围内的敌人攻击时，斧王有几率做出螺旋反击，对附近所有敌方单位造成魔法伤害并增加自身护甲及生命值（可叠加）。"
-     		   "DOTA_Tooltip_ability_axe_jingtongdefanji_damage"                    "反击伤害："
-   		     "DOTA_Tooltip_ability_axe_jingtongdefanji_radius"                    "作用范围："
-    		    "DOTA_Tooltip_ability_axe_jingtongdefanji_trigger_chance"    "%触发几率："
-    		    "DOTA_Tooltip_ability_axe_jingtongdefanji_armor"                    "护甲加成："
-    		  "DOTA_Tooltip_ability_axe_jingtongdefanji_strength"                    "生命值加成："
-     		   "DOTA_Tooltip_ability_axe_jingtongdefanji_duration"                    "额外加成时间："
-                                //"DOTA_Tooltip_ability_axe_jingtongdefanji_trigger_radius"    "攻击触发范围："
-    		    "DOTA_Tooltip_ability_axe_jingtongdefanji_scepter_description"  "触发反击时，对范围内符合斩杀的英雄单位施放淘汰之刃。"
+		"DOTA_Tooltip_ability_axe_jingtongdefanji"                    "精通的反击螺旋"
+		"DOTA_Tooltip_ability_axe_jingtongdefanji_Description"    "<font color='#1FCBF6'>需要通过阿哈利姆之书升级</font><br><br>受到%trigger_radius%范围内的敌人攻击时，斧王有几率做出螺旋反击，对附近所有敌方单位造成魔法伤害并增加自身护甲及生命值（可叠加）。"
+		"DOTA_Tooltip_ability_axe_jingtongdefanji_damage"                    "反击伤害："
+		"DOTA_Tooltip_ability_axe_jingtongdefanji_radius"                    "作用范围："
+		"DOTA_Tooltip_ability_axe_jingtongdefanji_trigger_chance"    "%触发几率："
+		"DOTA_Tooltip_ability_axe_jingtongdefanji_armor"                    "护甲加成："
+		"DOTA_Tooltip_ability_axe_jingtongdefanji_hp"		"生命值加成："
+		"DOTA_Tooltip_ability_axe_jingtongdefanji_duration"                    "额外加成时间："
+		"DOTA_Tooltip_ability_axe_jingtongdefanji_trigger_radius"    "攻击触发范围："
+		"DOTA_Tooltip_ability_axe_jingtongdefanji_scepter_description"  "触发反击时，对范围内符合斩杀的英雄单位施放淘汰之刃。"
 
 		"DOTA_Tooltip_ability_special_bonus_unique_sniper_miaozhun"	                                "快速装填"
 		"DOTA_Tooltip_ability_special_bonus_unique_sniper_miaozhun_Description"	"<font color='#1FCBF6'>需要通过阿哈利姆之书升级</font><br><br>被动提供%bonus_attack_range%攻击距离，每次攻击获得%敏捷%点敏捷加成，持续%时间%秒。<br><br>主动开启后使狙击手的武器过载，获得更远的攻击距离和更短的基础攻击间隔，攻击具有克敌机先效果；期间无法使用暗杀，自身处于破坏状态且攻击力将降低%攻击力降低%%%，持续%主动时间%秒，效果结束后%负面时间%秒内降低护甲和移动速度。<br><br>暗杀具有%暗杀范围%的范围效果。"
