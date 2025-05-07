@@ -1,6 +1,6 @@
 
 function YanRen_OnAttackStart(keys)
-
+    if not IsServer() then return true end
     local caster = keys.caster
 	local ability = keys.ability
 	local target = keys.target
@@ -20,7 +20,7 @@ function YanRen_OnAttackStart(keys)
 end
 
 function YanRen_OnAttackLanded( keys )
-
+    if not IsServer() then return true end
 	local caster = keys.caster
 	local ability = keys.ability
 	local target = keys.target
@@ -35,8 +35,8 @@ function YanRen_OnAttackLanded( keys )
 	    return
 	end
 
-	--∑÷¡—π•ª˜
-	local cleave_dmg = ability:GetSpecialValueFor("cleave_dmg")
+	--ÂàÜË£ÇÊîªÂáª
+	local cleave_dmg = keys.Damage * ability:GetSpecialValueFor("cleave_dmg") /100
 	local cleave_distance = ability:GetSpecialValueFor("cleave_distance")
 	local cleave_radius = ability:GetSpecialValueFor("cleave_radius")
 	local effectName = "particles/econ/items/faceless_void/faceless_void_weapon_bfury/faceless_void_weapon_bfury_cleave_b.vpcf"
@@ -59,14 +59,14 @@ function YanRen_OnAttackLanded( keys )
 
 	if ability:IsCooldownReady() then
 	    
-	    damage_table.damage = damage_table.damage + target:GetLevel() * caster:GetLevel() * 2  --∂ÓÕ‚…À∫¶
+	    damage_table.damage = damage_table.damage + target:GetLevel() * caster:GetLevel() * 2  --È¢ùÂ§ñ‰º§ÂÆ≥
 		target:EmitSound("Hero_DoomBringer.LvlDeath")
 		local particleName = "particles/units/heroes/hero_doom_bringer/doom_loadout.vpcf"	
 	    local particle = ParticleManager:CreateParticle( particleName, PATTACH_ABSORIGIN, target )
 
 		if caster:HasModifier("modifier_item_aghanims_shard") then
-            target:Purge(true, false, false, false, false)  --«˝…¢
-		    target:Interrupt() --¥Ú∂œ
+            target:Purge(true, false, false, false, false)  --È©±Êï£
+		    target:Interrupt() --ÊâìÊñ≠
 	    end
 
 		ability:StartCooldown(cooldown)		

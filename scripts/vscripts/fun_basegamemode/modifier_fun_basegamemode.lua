@@ -33,7 +33,6 @@ require('fun_filter')
 require('Fun_BaseGameMode/unit_data_table')
 require('Fun_Items/item_fun_tome_of_aghanim')
 
-
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 --天地星的基础设定，对人类和AI赋予不同的增益
 function modifier_Fun_BaseGameMode(keys)
@@ -298,7 +297,7 @@ function modifier_Fun_BaseGameMode_SetDifficulty(keys)
     --GameRules:GetGameModeEntity():SetExecuteOrderFilter(Dynamic_Wrap(CHeroDemo, "ExecuteOrderFilter"), CHeroDemo)  --涉及的技能不多，由其它地方开启
     --GameRules:GetGameModeEntity():SetAbilityTuningValueFilter(Dynamic_Wrap(CHeroDemo, "AbilityTuningValueFilter"), CHeroDemo)  --涉及的技能不多，由其它地方开启
     GameRules:GetGameModeEntity():SetModifierGainedFilter(Dynamic_Wrap(CHeroDemo, "ModifierGainedFilter"), CHeroDemo) 
-   -- GameRules:GetGameModeEntity():SetHealingFilter(Dynamic_Wrap(CHeroDemo, "HealingFilter"), CHeroDemo) --来自文件fun_filter.lua
+    GameRules:GetGameModeEntity():SetHealingFilter(Dynamic_Wrap(CHeroDemo, "HealingFilter"), CHeroDemo) --来自文件fun_filter.lua
     return
 end
 
@@ -715,6 +714,8 @@ function modifier_Fun_BaseGameMode_neutral_items_for_AI(hero)
     local playerID = hero:GetPlayerID()
     if PlayerResource:IsFakeClient(playerID) then
 
+        --2025.2.19 7.38奔流不息更新后，代币系统已废除
+        --[[
         local item_tier1_token = hero:FindItemInInventory("item_tier1_token")
         local item_tier2_token = hero:FindItemInInventory("item_tier2_token")
         local item_tier3_token = hero:FindItemInInventory("item_tier3_token")
@@ -737,56 +738,58 @@ function modifier_Fun_BaseGameMode_neutral_items_for_AI(hero)
         if item_tier5_token then 
             item_tier5_token:Destroy()
         end
+        ]]
 
         --AI的BUG：会不停地捡起地上的中立物品。
         --将身上低级和多余的中立物品删除，给予最新等级的中立物品
         local time_stacks = GameRules.Fun_DataTable["blessing_bonus_stats_stack"]
         local slot_min = 6 --第一个背包的编号
         local slot_max = 16  --中立物品栏的编号，只搜索6-17号的物品栏
-        if time_stacks < 7 then
 
-            --7分钟以内，背包、储藏室、中立物品栏内所有等级的中立物品都会被摧毁
-            for i = 6, 16 do
+        if time_stacks < 5 then
+
+            --5分钟以内，背包、储藏室、中立物品栏内所有等级的中立物品都会被摧毁
+            for i = 6, 16 do     
                local item_t = hero:GetItemInSlot(i)
                if item_t then
-                   if item_t:IsNeutralActiveDrop() then
+                   if item_t:IsActiveNeutral() then
                        hero:RemoveItem(item_t)
                    end
                end
             end
 
-        elseif time_stacks >= 7 and time_stacks < 17 then
+        elseif time_stacks >= 5 and time_stacks < 15 then
 
-            --7到17分钟只能装备1级中立物品
+            --5到15分钟只能装备1级中立物品
             neutral_items_gained_for_AI(hero, 1)
 
-        elseif time_stacks >= 17 and time_stacks < 27 then
+        elseif time_stacks >= 15 and time_stacks < 25 then
 
-            --17到27分钟只能装备2级中立物品
+            --15到25分钟只能装备2级中立物品
             neutral_items_gained_for_AI(hero, 2)
 
-        elseif time_stacks >= 27 and time_stacks < 37 then
+        elseif time_stacks >= 25 and time_stacks < 35 then
 
-            --27到37分钟只能装备3级中立物品
+            --25到35分钟只能装备3级中立物品
             neutral_items_gained_for_AI(hero, 3)
 
-        elseif time_stacks >= 37 and time_stacks < 62 then
+        elseif time_stacks >= 35 and time_stacks < 60 then
 
-            --37到62分钟只能装备4级中立物品
+            --35到60分钟只能装备4级中立物品
             neutral_items_gained_for_AI(hero, 4)
 
-        elseif time_stacks >= 62 then --5级中立物品出现晚一些
+        elseif time_stacks >= 60 then 
 
-            --62分钟以后只能装备5级中立物品
+            --60分钟以后只能装备5级中立物品
             neutral_items_gained_for_AI(hero, 5)
 
         end
 
         --AI的BUG二：暂停后会购买吃树、大药等物品
         --将其删除并返还对应的金钱
-        if time_stacks >= 10 then
+        if time_stacks >= 15 then
 
-            for i = 0, 14 do --14是最后一个储藏室的编号
+             for i = 0, 14 do --14是最后一个储藏室的编号
                local item_t = hero:GetItemInSlot(i)
                if item_t then
                    local item_t_name = item_t:GetName()
@@ -795,15 +798,14 @@ function modifier_Fun_BaseGameMode_neutral_items_for_AI(hero)
                    --local item_t_time = item_t:GetPurchaseTime()
                    for _, v in pairs(item_black_list_for_AI) do
                        if v == item_t_name then
-                           if v ~= "item_fun_trident_three_phase_power" then 
-                               hero:ModifyGold(item_t_cost, false, DOTA_ModifyGold_SellItem) --三叉戟不还钱
-                           end
+
+                           hero:ModifyGold(item_t_cost, false, DOTA_ModifyGold_SellItem)
                            hero:RemoveItem(item_t)
                            break
                        end
                    end
                end
-            end           
+            end          
         end
     end
 
@@ -812,6 +814,7 @@ end
 --将AI身上的中立物品固定在某个等级，并清除其它中立物品
 function neutral_items_gained_for_AI(hero, item_lvl)
     if not IsServer() then return true end
+    --[[
     for i = 6, 16 do
         local item_t = hero:GetItemInSlot(i)
         if i == 16 and item_t == nil then
@@ -862,15 +865,47 @@ function neutral_items_gained_for_AI(hero, item_lvl)
             end
         end
     end
+    ]]
+    local active_item = hero:GetItemInSlot(DOTA_ITEM_NEUTRAL_ACTIVE_SLOT)
+    local passive_item = hero:GetItemInSlot(DOTA_ITEM_NEUTRAL_PASSIVE_SLOT)
+    local bAddItem = false
+    if active_item == nil then
+        bAddItem = true
+    else
+        if get_neutral_items_lvl(active_item) ~= item_lvl then
+            bAddItem = true
+        end
+    end
+
+    if bAddItem then
+        --中立物品
+        if active_item then active_item:Destroy() end 
+        if passive_item then passive_item:Destroy() end 
+        local string_active = { "item_tier", item_lvl }
+        local item_active_tier = table.concat(string_active)
+        local active_length = #neutral_items[item_active_tier]
+        local active_random_Index = math.random(active_length)
+        local active_ItemName = neutral_items[item_active_tier][active_random_Index]
+        hero:AddItemByName(active_ItemName)
+        --附魔
+        local string_passive = { "enhancements_tier", item_lvl }
+        local item_passive_tier = table.concat(string_passive)
+        local passive_length = #neutral_items[item_passive_tier]
+        local passive_random_Index = math.random(passive_length)
+        local passive_ItemName = neutral_items[item_passive_tier][passive_random_Index].name
+        local passive_ItemLvl = neutral_items[item_passive_tier][passive_random_Index].lvl
+        local passive_item = hero:AddItemByName(passive_ItemName)
+        passive_item:SetLevel(passive_ItemLvl)
+    end
 end
 
 --查询中立物品等级，与表neutral_items有关，和实际游戏内无关
 function get_neutral_items_lvl(Item)
-    
+
     if Item == nil then 
         return -1 
     end
-    if not Item:IsNeutralDrop() then
+    if not Item:IsActiveNeutral() then
         return 0 
     end
 
@@ -903,131 +938,112 @@ function get_neutral_items_lvl(Item)
 end
 
 
+--中立物品表
 neutral_items = {
 
     item_tier1 = {
-			--"item_keen_optic",
-			"item_trusty_shovel",
-			"item_arcane_ring",	
-			--"item_possessed_mask",
-			--"item_mysterious_hat",
-			"item_unstable_wand",
-			--"item_pogo_stick",						
-			"item_safety_bubble",
-			"item_seeds_of_serenity",
-			"item_lance_of_pursuit",
+	        "item_trusty_shovel",
 			"item_occult_bracelet",
-			"item_duelist_gloves",
-
-			--"item_ocean_heart",
-			"item_broom_handle",
-			--"item_chipped_vest",
-
-			--"item_royal_jelly",
-			"item_faded_broach",
-			--"item_ironwood_tree",
+			"item_unstable_wand",
+			"item_mana_draught",
+			"item_polliwog_charm",
 			"item_spark_of_courage",
+			"item_rippers_lash",
+			"item_orb_of_destruction",
     },
+
+    enhancements_tier1 = {
+				{ name = "item_enhancement_mystical",  lvl = 1 },
+                { name = "item_enhancement_brawny",    lvl = 1 },
+                { name = "item_enhancement_alert",     lvl = 1 },
+                { name = "item_enhancement_tough",     lvl = 1 },
+                { name = "item_enhancement_quickened", lvl = 1 },					
+    },
+
     item_tier2 = {
-			--"item_ring_of_aquila",
-			--"item_imp_claw",
-			--"item_nether_shawl",
-			"item_dragon_scale",
-			"item_whisper_of_the_dread",	
-			"item_pupils_gift",			
-			--"item_misericorde",				
-			"item_grove_bow",				 
-			"item_philosophers_stone",				
-			--"item_essence_ring",				
-			--"item_paintball",				
-			"item_bullwhip",			  
-			--"item_quicksilver_amulet",				
-			--"item_dagger_of_ristul",			
-			"item_orb_of_destruction",		
-			"item_specialists_array",			
-			"item_eye_of_the_vizier",				
-			"item_vampire_fangs",				  
-			--"item_blighted_spirit",				  
-			"item_gossamer_cape",				  
-			"item_light_collector",		
-            --"item_claddish_spyglass",
-            "item_iron_talon",			
+			"item_essence_ring",
+			"item_iron_talon",
+			"item_gossamer_cape",
+			"item_searing_signet",
+			"item_misericorde",
+			"item_pogo_stick",
     },
+
+    enhancements_tier2 = {
+        		{ name = "item_enhancement_mystical",  lvl = 2 },
+                { name = "item_enhancement_brawny",    lvl = 2 },
+                { name = "item_enhancement_alert",     lvl = 2 },
+                { name = "item_enhancement_tough",     lvl = 2 },
+                { name = "item_enhancement_quickened", lvl = 2 },	
+                { name = "item_enhancement_keen_eyed", lvl = 1 },
+                { name = "item_enhancement_vast",      lvl = 1 },
+                --{ name = "item_enhancement_greedy",    lvl = 1 },
+                { name = "item_enhancement_vampiric",  lvl = 1 },				
+    },
+
     item_tier3 = {
-			--"item_quickening_charm",			  
-			"item_defiant_shell",	
-            "item_vambrace",
-			--"item_black_powder_bag",				  
-			--"item_spider_legs",				  
-			--"item_icarus_wings",					
-			"item_paladin_sword",			  
-			"item_nemesis_curse",			  
-			"item_vindicators_axe",			  
-			"item_dandelion_amulet",			 
-			--"item_orb_of_destruction",		  
-			--"item_titan_sliver",				  
-			"item_craggy_coat",					
-			"item_enchanted_quiver",			
-			"item_elven_tunic",				  	
-			"item_cloak_of_flames",				
-			"item_ceremonial_robe",				
-			"item_psychic_headband",			
-			--"item_slime_vial",									
-			--"item_quicksilver_amulet",			
-			--"item_essence_ring",				 
-			--"item_doubloon",			
+			"item_serrated_shiv",
+			"item_nemesis_curse",
+			"item_gale_guard",
+			"item_gunpowder_gauntlets",
+			"item_whisper_of_the_dread",
+			"item_ninja_gear",		
     },
+    enhancements_tier3 = {
+        		{ name = "item_enhancement_mystical",  lvl = 3 },
+                { name = "item_enhancement_brawny",    lvl = 3 },
+                { name = "item_enhancement_alert",     lvl = 3 },
+                { name = "item_enhancement_tough",     lvl = 3 },
+                { name = "item_enhancement_quickened", lvl = 3 },	
+                { name = "item_enhancement_keen_eyed", lvl = 2 },
+                { name = "item_enhancement_vast",      lvl = 2 },
+                --{ name = "item_enhancement_greedy",    lvl = 2 },
+                { name = "item_enhancement_vampiric",  lvl = 2 },	
+    },
+
     item_tier4 = {
-			"item_timeless_relic",		
-			--"item_spell_prism",			
-			"item_ascetic_cap",				
-			"item_avianas_feather",				
-			
-			--"item_heavy_blade",				
-			--"item_flicker",					
-			"item_ninja_gear",				
-			--"item_illusionsts_cape",		
-			--"item_fortitude_ring",			 
-			--"item_the_leveller",				
-			--"item_minotaur_horn",			
-			"item_spy_gadget",				 
-			"item_trickster_cloak",			  
-			"item_stormcrafter",			  
-			--"item_penta_edged_sword",		 
-			"item_ancient_guardian",		 
-			"item_havoc_hammer",				
-			
-			--"item_princes_knife",			
-			--"item_harpoon",					
-			--"item_barricade",			  	 
-			
-			--"item_horizons_equilibrium",			 
-			"item_mind_breaker",			  
-			--"item_martyrs_plate",			  
-			"item_rattlecage",		
-            "item_ogre_seal_totem",		
+			"item_ogre_seal_totem",
+			"item_crippling_crossbow",
+			"item_magnifying_monocle",
+			"item_ceremonial_robe",
+			"item_mind_breaker",
+			"item_pyrrhic_cloak",
     },
+
+    enhancements_tier4 = {
+        		{ name = "item_enhancement_mystical",  lvl = 4 },
+                { name = "item_enhancement_brawny",    lvl = 4 },
+                { name = "item_enhancement_alert",     lvl = 4 },
+                { name = "item_enhancement_tough",     lvl = 4 },
+                { name = "item_enhancement_quickened", lvl = 4 },	
+                { name = "item_enhancement_vampiric",  lvl = 3 },	
+                { name = "item_enhancement_timeless",  lvl = 1 },
+                { name = "item_enhancement_titanic",   lvl = 1 },	
+                { name = "item_enhancement_crude",     lvl = 1 },				
+    },
+
     item_tier5 = {
-			"item_force_boots",				  
-			"item_desolator_2",				  
-			"item_seer_stone",				  
-			"item_mirror_shield",			  	  
-			"item_apex",				  
-			"item_ballista",					  
-			"item_demonicon",				  
-			--"item_fallen_sky",		  	  
-			"item_force_field",				  
-			"item_pirate_hat",				  
-			--"item_ex_machina",				  
-			"item_giants_ring",				  
-			"item_unwavering_condition",				  
-			--"item_vengeances_shadow",				  
-			"item_book_of_shadows",			  
-			--"item_manacles_of_power",		
-			--"item_bottomless_chalice",	
-			--"item_wand_of_sanctitude",		
-			"item_panic_button",			
-    }
+			"item_desolator_2",
+			"item_fallen_sky",
+			"item_demonicon",
+			"item_minotaur_horn",
+			"item_spider_legs",
+			"item_panic_button",
+			"item_unrelenting_eye",
+			"item_pirate_hat",	
+    },
+
+    enhancements_tier5 = {
+                { name = "item_enhancement_timeless",    lvl = 2 },
+                { name = "item_enhancement_titanic",     lvl = 2 },	
+                { name = "item_enhancement_crude",       lvl = 2 },	
+                { name = "item_enhancement_feverish",    lvl = 1 },	
+                { name = "item_enhancement_fleetfooted", lvl = 1 },	
+                { name = "item_enhancement_audacious",   lvl = 1 },	
+                { name = "item_enhancement_evolved",     lvl = 1 },					
+                { name = "item_enhancement_boundless",   lvl = 1 },	
+                --{ name = "item_enhancement_wise",        lvl = 1 },									
+    },
 }
 
 --10分钟后删除列表内AI拥有的物品
@@ -1047,6 +1063,7 @@ item_black_list_for_AI =
 }
 
 --正常5倍于2024.8.7新增，更换哈斯卡的先天技能
+--2025.3.14新增，灰烬之灵复活后，移除再施加献祭心效果，避免粒子特效堆叠
 function AI_Huskar_innate_ability_change(eventInfo)
     if not IsServer() then return true end
     local npc = EntIndexToHScript(eventInfo.entindex)
@@ -1065,7 +1082,7 @@ function AI_Huskar_innate_ability_change(eventInfo)
                 
                 Timers:CreateTimer({
 
-                    endTime = 0.1,
+                    endTime = FrameTime(),
                     callback = function()
                         local max_mana = npc:GetMaxMana()
                         npc:SetMana(max_mana)
@@ -1073,6 +1090,20 @@ function AI_Huskar_innate_ability_change(eventInfo)
                 })
             end
         end
+    end
+
+    --灰烬之灵复活后，移除再施加献祭心效果，避免粒子特效堆叠
+    local buff_ember_spirit_immolation = npc:FindModifierByName("modifier_ember_spirit_immolation_aura")
+    if buff_ember_spirit_immolation then
+        Timers:CreateTimer({
+            endTime = FrameTime(),
+            callback = function()
+                buff_ember_spirit_immolation:Destroy()
+                local ember_spirit_immolation = nil
+                ember_spirit_immolation = npc:FindAbilityByName("ember_spirit_immolation")
+                npc:AddNewModifier(npc, ember_spirit_immolation, "modifier_ember_spirit_immolation_aura", nil)
+            end
+        })   
     end
 
     return	

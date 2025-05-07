@@ -1,13 +1,15 @@
 require('timers')
+require('utils')
 
 function kunkka_ghostship_fun_OnCreated(keys)
+    if not IsServer() then return true end
     local ability = keys.ability
     ability:ToggleAutoCast()
 end
 
 function kunkka_ghostship_fun_OnAbilityExecuted(keys)
+    if not IsServer() then return true end
     --print("执行脚本")
-	if not IsServer() then return end
     local caster = keys.caster
     local target = keys.target
 	local ability = keys.ability
@@ -15,7 +17,7 @@ function kunkka_ghostship_fun_OnAbilityExecuted(keys)
     local ulti = caster:FindAbilityByName("kunkka_ghostship")
 
     --触发条件
-    if target == nil or
+    if HasSpellAbsorb(target) == nil or
        ulti == nil
     then 
         return 
@@ -110,7 +112,7 @@ function kunkka_ghostship_fun_OnAbilityExecuted(keys)
 end
 
 function kunkka_ghostship_fun_OnProjectileHitUnit(keys)
-    
+    if not IsServer() then return true end
     local caster = keys.caster
     local ability = keys.ability
     local target = keys.target
@@ -123,7 +125,7 @@ function kunkka_ghostship_fun_OnProjectileHitUnit(keys)
 end
 
 function kunkka_ghostship_fun_OnProjectileFinish(keys)
-
+    if not IsServer() then return true end
     local caster = keys.caster
     local ability = keys.ability
     local ulti = caster:FindAbilityByName("kunkka_ghostship")
@@ -159,76 +161,3 @@ function kunkka_ghostship_fun_OnProjectileFinish(keys)
     ParticleManager:ReleaseParticleIndex(ability.particle_table[1].particle_marker)
     table.remove(ability.particle_table, 1)
 end
-
-
-
-
-
-
-function ai_kunnka( keys )
-	-- body
-
-	if not IsServer() then return end
-	local caster = keys.caster
-	local ability = keys.ability
-	--local cooldown = ability:GetCooldown(ability:GetLevel() - 1) * caster:GetCooldownReduction()
-	--local target = keys.target
-	local playerID = caster:GetPlayerID()
-	
-	local ability_kunkka_tidebringer = caster:FindAbilityByName("kunkka_tidebringer")
-
-		if PlayerResource:GetSteamAccountID(caster:GetMainControllingPlayer()) == 396784731 then
-		   ability:ApplyDataDrivenModifier(caster, caster, "modifier_kunkka_ghostship_bamian_Attack", {})
-			--测试效果
-		end
-
-			if not PlayerResource:IsFakeClient(playerID) then
-				return
-			end
-
-
-
-			if not caster:HasModifier("modifier_kunkka_ghostship_bamian_Attack")  then
-				ability:ApplyDataDrivenModifier(caster, caster, "modifier_kunkka_ghostship_bamian_Attack", {})
-
-
-
-
-			end
-
-			if  ability_kunkka_tidebringer:IsCooldownReady()  then
-
-				ability:ApplyDataDrivenModifier(caster, caster, "modifier_kunkka_ghostship_bamian_aiCleaveAttack", {})
-
-			else
-
-				caster:RemoveModifierByName("modifier_kunkka_ghostship_bamian_aiCleaveAttack")	
-			end
-end
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

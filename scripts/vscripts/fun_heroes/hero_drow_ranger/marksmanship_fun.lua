@@ -1,7 +1,7 @@
 ------------------------------------------------------------------------------
 
 function marksmanship_damage(keys)      --攻击到达时造成伤害
-     --if not IsServer() then return end
+     if not IsServer() then return end
      local caster = keys.caster  
      local target = keys.target
 	 local ability = keys.ability
@@ -17,7 +17,6 @@ function marksmanship_damage(keys)      --攻击到达时造成伤害
      if caster:IsIllusion() then return end --幻象不造成伤害
 
      local Damage = keys.ability:GetSpecialValueFor("damage")
- 	 local playerID = caster:GetPlayerID()
 
      local damage_table = {}
 
@@ -84,11 +83,11 @@ end
 ------------------------------------------------------------------------------
 --新增破坏禁用效果
 function isDisabled(keys)
-
+    if not IsServer() then return true end
 	local ability = keys.ability
 	local caster = keys.caster
     local stackCount = caster:GetLevel()+ ability:GetSpecialValueFor("base_stack")
-	local playerID = caster:GetPlayerID()
+
 	if caster:PassivesDisabled() or not caster:HasModifier("modifier_drow_ranger_marksmanship_aura_bonus")then 
         if caster:HasModifier("modifier_marksmanship_BUFF") then
 	        caster:RemoveModifierByName("modifier_marksmanship_BUFF")
@@ -110,14 +109,7 @@ function isDisabled(keys)
 	        ability:ApplyDataDrivenModifier(caster, caster, "modifier_marksmanship_BUFF", nil)
             ability:ApplyDataDrivenModifier(caster, caster, "modifier_marksmanship_BUFF_fixed", nil)
 			ability:ApplyDataDrivenModifier(caster, caster, "modifier_special_bonus_attack_range", {}) --不叠层的话就只加这一次，需要叠层请注释掉
-
-		 if PlayerResource:IsFakeClient(playerID) then
-			ability:ApplyDataDrivenModifier(caster, caster, "modifier_special_bonus_attack_range", {}) --不叠层的话就只加这一次，需要叠层请注释掉
-
-		 end
-
-		end
-
+        end
         caster:SetModifierStackCount("modifier_marksmanship_BUFF", caster, stackCount)
         caster:SetModifierStackCount("modifier_marksmanship_BUFF_fixed", caster, stackCount)
 		
@@ -169,7 +161,7 @@ end
 ------------------------------------------------------------------------------
 --穿心裂矢伤害
 function SplitShotDamage(keys)
-	
+	if not IsServer() then return true end
 	if not IsServer() then return end
 	local caster = keys.caster
 	local target = keys.target
@@ -179,18 +171,6 @@ function SplitShotDamage(keys)
 	if not caster:IsRealHero() then
         damage = 0
 	end
-	local playerID = caster:GetPlayerID()
-	
-    if PlayerResource:IsFakeClient(playerID) then
-		damage = damage * 3	
-	end
-	
-	 
-    if  PlayerResource:GetSteamAccountID(caster:GetMainControllingPlayer()) == 396784731 then
-                                                            
-		  damage = damage * 2
-                                                            
-    end
 
 	local damage_table = {}
 	damage_table.attacker = caster
@@ -259,16 +239,19 @@ end
 
 function marksmanship_OnAttackStart(keys)
 
+    if not IsServer() then return true end
     local caster = keys.caster
 	local PlayerID = caster:GetPlayerID()
-	if not PlayerResource:IsFakeClient(PlayerID) then return end
-	if not caster:IsRealHero() then return end
 	local target = keys.target
-	if not target:IsRealHero() then return end
 	local ability = keys.ability
 	local ability_glacier = caster:FindAbilityByName("drow_ranger_glacier")
+
+	if not target:IsRealHero() then return end
+	if not PlayerResource:IsFakeClient(PlayerID) then return end
 	if ability_glacier == nil then return end
 	if ability_glacier:GetLevel() < 1 then return end
 	if not ability_glacier:IsCooldownReady() then return end
+
 	caster:CastAbilityNoTarget(ability_glacier, caster:GetMainControllingPlayer())
+
 end

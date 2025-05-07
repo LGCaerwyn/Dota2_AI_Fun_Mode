@@ -1,7 +1,7 @@
 require('timers')
 
 function lion_emowushi( keys )
-
+    if not IsServer() then return true end
     local caster = keys.caster
     if caster:PassivesDisabled() then return end
 

@@ -1,7 +1,7 @@
-
+require('timers')
 
 function jisha( keys )
-
+    if not IsServer() then return true end
     local caster = keys.caster
     local ability = keys.ability
     if caster:PassivesDisabled() then return end 
@@ -26,17 +26,27 @@ end
 
 
 function Two_a( keys )
+    if not IsServer() then return true end
     local ability = keys.ability
     local caster = keys.caster
-    if caster:PassivesDisabled() then return end
-    if ability.attacked ~= false then 
-	    ability.attacked = false 
-		return
+    local target = keys.target
+    local chance = ability:GetSpecialValueFor("chance")
+    local delay = ability:GetSpecialValueFor("delay")
+    if caster:PassivesDisabled() or caster:HasModifier("modifier_jiansheng_cooldown") then
+        return
+    end
+
+    local r = RollPseudoRandomPercentage(chance, DOTA_PSEUDO_RANDOM_CUSTOM_GAME_1, caster)
+    if r == false then return end
+    
+	if target:IsAlive() then
+        Timers:CreateTimer({
+            endTime = delay,
+            callback = function()
+                ability:ApplyDataDrivenModifier(caster, caster, "modifier_jiansheng_cooldown", { duration = delay })
+                caster:PerformAttack(target, true, true, true, false, true, false, true)
+            end
+        })    																	
 	end
 
-    local target = keys.target
-	if target:IsAlive() then
-	    caster:PerformAttack(target, true, true, true, false, true, false, true)																	
-	end
-    ability.attacked = true
 end

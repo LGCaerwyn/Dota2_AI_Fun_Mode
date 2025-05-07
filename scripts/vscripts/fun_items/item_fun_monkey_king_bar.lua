@@ -1,5 +1,6 @@
 
 function item_fun_monkey_king_bar_OnIntervalThink(keys)
+    if not IsServer() then return true end
     local caster = keys.caster
 	local ability = keys.ability
 	local modifier_attack_ranage_melee = "modifier_item_fun_monkey_king_bar_attack_range_melee"
@@ -16,7 +17,7 @@ function item_fun_monkey_king_bar_OnIntervalThink(keys)
 end
 
 function item_fun_monkey_king_bar_OnAttackLanded(keys)
-	
+	if not IsServer() then return true end
 	local caster = keys.caster
 	local target = keys.target
 	local hAbility = keys.ability

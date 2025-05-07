@@ -1,6 +1,7 @@
 
 function Chilling_Touch_OnCreated(keys)
-    print("运行")
+    --print("运行")
+	if not IsServer() then return true end
     local ability = keys.ability
 	local caster = keys.caster
 	if not caster:PassivesDisabled() then
@@ -11,6 +12,7 @@ end
 --------------------------------------------------------------------------------------------
 
 function Chilling_Touch_OnDestroy(keys)
+    if not IsServer() then return true end
 	local caster = keys.caster
     caster:RemoveModifierByName("modifier_寒霜诅咒_2")
 end
@@ -18,7 +20,7 @@ end
 --------------------------------------------------------------------------------------------
 
 function Chilling_Touch_OnAttackLanded(keys)
-
+    if not IsServer() then return true end
     local caster = keys.caster 
 	local target = keys.target
 
@@ -37,7 +39,10 @@ function Chilling_Touch_OnAttackLanded(keys)
 
 	if ulti then
 	    if ulti:GetLevel() >= 1 and target:IsHero()	then
-		    target:AddNewModifier(caster, ulti, "modifier_ice_blast", { duration = time })
+		    local debuff = target:AddNewModifier(caster, ulti, "modifier_ice_blast", {})
+			if debuff then  --加判定是因为添加后可能会使满足斩杀条件的英雄立刻阵亡
+			    debuff:SetDuration(time, true)
+			end
 		end	   
 	end
 
@@ -55,6 +60,7 @@ end
 --------------------------------------------------------------------------------------------
 
 function Chilling_Touch_OnStateChanged(keys)
+    if not IsServer() then return true end
     local ability = keys.ability
 	local caster = keys.caster
 	local modifier_attack_range = "modifier_寒霜诅咒_2"

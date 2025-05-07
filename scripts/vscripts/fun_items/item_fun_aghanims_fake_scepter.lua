@@ -1,7 +1,7 @@
 
 
 function item_fun_Aghanims_Fake_Scepter_OnSpellStart( keys )
-
+    if not IsServer() then return true end
 	local ability = keys.ability
 	local caster = keys.caster
 	local dur = ability:GetSpecialValueFor("duration")
@@ -10,6 +10,7 @@ function item_fun_Aghanims_Fake_Scepter_OnSpellStart( keys )
 end
 
 function ModelSwapStart( keys )
+    if not IsServer() then return true end
 	local caster = keys.caster
 	local model = keys.model
 	
@@ -30,6 +31,7 @@ function ModelSwapStart( keys )
 end
 
 function ModelSwapEnd( keys )
+    if not IsServer() then return true end
 	local caster = keys.caster
 
 	caster:SetModel(caster.caster_model)
@@ -38,6 +40,7 @@ function ModelSwapEnd( keys )
 end
 
 function HideWearables( event )
+    if not IsServer() then return true end
 	local hero = event.caster
 	local ability = event.ability
 
@@ -53,6 +56,7 @@ function HideWearables( event )
 end
 
 function ShowWearables( event )
+    if not IsServer() then return true end
 	local hero = event.caster
 
 	for i,v in pairs(hero.hiddenWearables) do

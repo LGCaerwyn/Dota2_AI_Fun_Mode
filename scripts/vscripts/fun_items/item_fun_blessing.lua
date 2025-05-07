@@ -1,35 +1,35 @@
 
 blessing_table = {
 	--1
-    {   modifier = "modifier_hero_blessing_fun_all attributes",                name_cn = "+8全属性"           },
+    {   modifier = "modifier_hero_blessing_fun_all attributes",                name_cn = "+8全属性"                    },
 	--2
-	{   modifier = "modifier_hero_blessing_bonus_gold",                        name_cn = "+500金钱"          },
+	{   modifier = "modifier_hero_blessing_bonus_gold",                        name_cn = "+800金钱"                    },
 	--3
-	{   modifier = "modifier_hero_blessing_bonus_respawn",                     name_cn = "-18秒复活时间"      },
+	{   modifier = "modifier_hero_blessing_bonus_resistance",                  name_cn = "+10%状态抗性"                },
 	--4
-	{   modifier = "modifier_hero_blessing_bonus_movespeed",                   name_cn = "+15移动速度"        },
+	{   modifier = "modifier_hero_blessing_bonus_movespeed",                   name_cn = "+30移动速度"                 },
 	--5
-	{   modifier = "modifier_hero_blessing_bonus_damage_percent",              name_cn = "+13%攻击力"         },
+	{   modifier = "modifier_hero_blessing_bonus_damage_percent",              name_cn = "+13%攻击力"                  },
 	--6
-	{   modifier = "modifier_hero_blessing_bonus_base_damage",                 name_cn = "+17基础攻击力"      },
+	{   modifier = "modifier_hero_blessing_bonus_base_damage",                 name_cn = "+17基础攻击力"               },
 	--7
-	{   modifier = "modifier_hero_blessing_bonus_mana_cost_percent",           name_cn = "-10%魔法消耗"       },
-	--8
-	{   modifier = "modifier_hero_blessing_bonus_spell_amplify_percent",       name_cn = "+10%技能增强"       },
+	{   modifier = "modifier_hero_blessing_bonus_mana_cost_percent",           name_cn = "-10%魔法消耗"                },
+	--8 
+	{   modifier = "modifier_hero_blessing_bonus_spell_amplify_percent",       name_cn = "+8%技能增强"                 },
 	--9
-	{   modifier = "modifier_hero_blessing_bonus_cooldown_percent",            name_cn = "+10%冷却时间减少"   },
+	{   modifier = "modifier_hero_blessing_bonus_cooldown_percent",            name_cn = "+8%冷却时间减少"             },
 	--10
-	{   modifier = "modifier_hero_blessing_bonus_incoming_spell_percent",      name_cn = "+10%魔法抗性"       },
+	{   modifier = "modifier_hero_blessing_bonus_incoming_spell_percent",      name_cn = "+9%魔法抗性"                 },
 	--11
-	{   modifier = "modifier_hero_blessing_bonus_incoming_physical_percent",   name_cn = "-10%受到的物理伤害" },
+	{   modifier = "modifier_hero_blessing_bonus_incoming_physical_percent",   name_cn = "+9%物理伤害减免"             },
 	--12
-	{   modifier = "modifier_hero_blessing_bonus_incoming_damage_percent",     name_cn = "-6%受到的所有伤害"  },
+	{   modifier = "modifier_hero_blessing_bonus_incoming_damage_percent",     name_cn = "+6%全类型伤害减免"           },
     --13
-	{   modifier = "modifier_hero_blessing_bonus_vision",                      name_cn = "+200白天视野，+400夜间视野"},
+	{   modifier = "modifier_hero_blessing_bonus_vision",                      name_cn = "夜间具有+250顺畅视野"        },
 	--14
-	{   modifier = "modifier_hero_blessing_bonus_health_regen",                name_cn = "+10生命恢复"        },
+	{   modifier = "modifier_hero_blessing_bonus_health_regen",                name_cn = "+15生命恢复"                 },
 	--15
-	{   modifier = "modifier_hero_blessing_bonus_mana_regen",                  name_cn = "+4魔法恢复"         } 
+	{   modifier = "modifier_hero_blessing_bonus_mana_regen",                  name_cn = "+5魔法恢复"                  } 
 }
 
 
@@ -104,10 +104,12 @@ function item_fun_blessing( keys )
 		    
 			--回收额外金钱
 		    local gold = ability:GetSpecialValueFor("bonus_gold")
+			--local tier1_token = target:FindItemInInventory("item_tier1_token")
 	        if target.blessing_table["buff"] == "modifier_hero_blessing_bonus_gold" and target:GetGold() >= gold then
 		        target:ModifyGold(-1 * gold, false, DOTA_ModifyGold_AbilityGold)
-			elseif target.blessing_table["buff"] == "modifier_hero_blessing_bonus_gold" and target:GetGold() < gold then
-			    GameRules:SendCustomMessage(PlayerResource:GetPlayerName(target:GetPlayerID()).. " : " .."<font color=\"#FFD700\">重置祝福失败，金钱不足。</font> ", DOTA_TEAM_BADGUYS,0)
+				--target:RemoveItem(tier1_token)
+			elseif target.blessing_table["buff"] == "modifier_hero_blessing_bonus_gold" and (target:GetGold() < gold) then
+			    GameRules:SendCustomMessage(PlayerResource:GetPlayerName(target:GetPlayerID()).. " : " .."<font color=\"#FFD700\">重置祝福失败，金钱回收失败。</font> ", DOTA_TEAM_BADGUYS,0)
 				return
 		    end
 
@@ -146,12 +148,47 @@ function item_fun_blessing( keys )
 
 end
 
+--加钱，送中立代币
+function modifier_hero_blessing_bonus_gold_OnCreated(keys)
+    if not IsServer() then return true end
+    local target = keys.target	
+	local ability = GameRules.Fun_DataTable["GameModeAbility"]
+	local gold = ability:GetSpecialValueFor("bonus_gold")
+	target:ModifyGold(gold, false, DOTA_ModifyGold_AbilityGold)
+	--target:AddItemByName("item_tier1_token")
+	SendOverheadEventMessage(target:GetPlayerOwner(), OVERHEAD_ALERT_GOLD, target, gold, target:GetPlayerOwner()) 
+end
+
+--状态抗性
+function modifier_hero_blessing_bonus_resistance_OnCreated(keys)
+    if not IsServer() then return true end
+    local target = keys.target
+    local ability = GameRules.Fun_DataTable["GameModeAbility"]
+	local caster = keys.caster
+
+	ability:ApplyDataDrivenModifier(caster, target, "modifier_special_bonus_status_resistance", {})
+end
+
+function modifier_hero_blessing_bonus_resistance_OnDestroy(keys)
+    if not IsServer() then return true end
+    local target = keys.target
+	local buff_table = target:FindAllModifiersByName("modifier_special_bonus_status_resistance")
+    for _,v in pairs(buff_table) do 
+	    if v:GetAbility() == GameRules.Fun_DataTable["GameModeAbility"] then
+		    v:Destroy()
+			return
+		end
+	end
+end
+
+
+--减蓝耗，KV失效，只能用官方修饰器代替
 function modifier_hero_blessing_bonus_mana_cost_percent_OnCreated(keys)
     if not IsServer() then return true end
     local target = keys.target
     local ability = GameRules.Fun_DataTable["GameModeAbility"]
 	local caster = keys.caster
-	
+
 	ability:ApplyDataDrivenModifier(caster, target, "modifier_special_bonus_mana_reduction", {})
 
 end
@@ -166,4 +203,24 @@ function modifier_hero_blessing_bonus_mana_cost_percent_OnDestroy(keys)
 			return
 		end
 	end
+end
+
+--夜间顺畅视野
+function modifier_hero_blessing_bonus_vision_OnIntervalThink(keys)
+    if not IsServer() then return true end
+    local target = keys.target
+	local ability = GameRules.Fun_DataTable["GameModeAbility"]
+	local caster = keys.caster
+
+	if GameRules:IsDaytime() == false and not target:HasModifier("modifier_hero_blessing_bonus_vision_fly_vision") then
+	    ability:ApplyDataDrivenModifier(caster, target, "modifier_hero_blessing_bonus_vision_fly_vision", {})
+	elseif GameRules:IsDaytime() == true and target:HasModifier("modifier_hero_blessing_bonus_vision_fly_vision") then
+	    target:RemoveModifierByName("modifier_hero_blessing_bonus_vision_fly_vision")
+	end
+end
+
+function modifier_hero_blessing_bonus_vision_OnDestroy(keys)
+    if not IsServer() then return true end
+    local target = keys.target
+	target:RemoveModifierByName("modifier_hero_blessing_bonus_vision_fly_vision")
 end

@@ -29,7 +29,7 @@
                                 "item"                       "item_fun_poison"
                                 "item"                       "item_fun_tome_of_aghanim"
 
-                                //"item"                       "item_fun_Aghanims_Scepter_AI"			
+                                //"item"                       "item_fun_Aghanims_Scepter_AI"		
 	}
 
 	"attributes"
@@ -52,7 +52,7 @@
 		"item"		"item_blade_of_alacrity"
 		"item"		"item_staff_of_wizardry"
 		"item"		"item_diadem"
-	
+
                                 //Fun自制物品
                                 "item"                       "item_fun_Mercurys_gloves"
                                 "item"                       "item_fun_Aghanims_Fake_Scepter"	
@@ -60,8 +60,7 @@
                                 "item"                       "item_fun_grandmasters_glaive_str" 
                                 "item"                       "item_fun_grandmasters_glaive_agi"
                                 "item"                       "item_fun_grandmasters_glaive_int" 
-                                "item"                       "item_fun_grandmasters_glaive_all" 
-	
+                                "item"                       "item_fun_grandmasters_glaive_all" 		
 	}
 
 	"weapons_armor"
@@ -89,7 +88,6 @@
                                 "item"                       "item_bfury_v2"
                                 "item"                       "item_desolator_v2"  
                                 "item"                       "item_greater_crit_v2"
-
 	}
 			
 	"misc"
@@ -141,7 +139,6 @@
                                 "item"                       "item_fun_greater_mango"
                                 "item"                       "item_fun_Jade_boots"
                                 "item"                       "item_fun_aeon_disk_v2"
-
 	}
 
 	// Level 2 - Blue Recipes

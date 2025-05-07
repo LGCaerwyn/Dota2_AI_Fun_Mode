@@ -1,5 +1,5 @@
+#base Fun/Fun_Units.txt
 // Dota Units File
-#base Fun/Fun_Units.txt   //Fun的自定义单位
 "DOTAUnits"
 {
 	"Version"	"1"	
@@ -4170,7 +4170,7 @@
 		"Ability1"					"backdoor_protection_in_base"			// Ability 1.
 		"Ability2"					"filler_ability"			// Ability 2.
 		"Ability3"					"creep_siege"			// Ability 3.
-		"Ability4"					"Fun_ParticleFixer"			// Ability 4.
+		"Ability4"					""			// Ability 4.
 		"Ability5"					""			// Ability 5.
 		"Ability6"					""			// Ability 6 - Extra.
 		"Ability7"					""			// Ability 7 - Extra.
@@ -4346,7 +4346,7 @@
 		"Ability1"					"backdoor_protection_in_base"			// Ability 1.
 		"Ability2"					"filler_ability"			// Ability 2.
 		"Ability3"					"creep_siege"			// Ability 3.
-		"Ability4"					"Fun_ParticleFixer"			// Ability 4.
+		"Ability4"					""			// Ability 4.
 		"Ability5"					""			// Ability 5.
 		"Ability6"					""			// Ability 6 - Extra.
 		"Ability7"					""			// Ability 7 - Extra.
@@ -5480,7 +5480,7 @@
 		
 		"Ability1"					"backdoor_protection_in_base"			// Ability 1.
 		"Ability2"					"creep_siege"			// Ability 2.
-		"Ability3"					"Fun_Borrowed_Time"			// Ability 3.
+		"Ability3"					""			// Ability 3.
 		"Ability4"					""			// Ability 4.
 		"Ability5"					""			// Ability 5.
 		"Ability6"					""			// Ability 6 - Extra.
@@ -5568,7 +5568,7 @@
 		
 		"Ability1"					"backdoor_protection_in_base"			// Ability 1.
 		"Ability2"					"creep_siege"			// Ability 2.
-		"Ability3"					"Fun_Borrowed_Time"			// Ability 3.
+		"Ability3"					""			// Ability 3.
 		"Ability4"					""			// Ability 4.
 		"Ability5"					""			// Ability 5.
 		"Ability6"					""			// Ability 6 - Extra.
@@ -6212,7 +6212,7 @@
 		//----------------------------------------------------------------
 		
 		"Ability1"					"creep_siege"			// Ability 1.
-		"Ability2"					"Fun_BaseGameMode"			// Ability 2.
+		"Ability2"					"Fun_BaseGameMode"		// Ability 2.
 		"Ability3"					"Fun_Precacher"			// Ability 3.
 		"Ability4"					""			// Ability 4.
 		"Ability5"					""			// Ability 5.
@@ -10412,8 +10412,8 @@
 		
 		// Vision
 		//----------------------------------------------------------------
-		"VisionDaytimeRange"		"1600"		// Range of vision during day light.
-		"VisionNighttimeRange"		"1600"		// Range of vision at night time.
+		"VisionDaytimeRange"		"1800"		// Range of vision during day light.
+		"VisionNighttimeRange"		"1800"		// Range of vision at night time.
 	}	
 	
 	"npc_dota_sentry_wards"
@@ -10856,8 +10856,8 @@
 
 		// Attack
 		//----------------------------------------------------------------
-		"AttackDamageMin"			"120"			// Damage range min.
-		"AttackDamageMax"			"120"			// Damage range max.
+		"AttackDamageMin"			"85"			// Damage range min.
+		"AttackDamageMax"			"85"			// Damage range max.
 	}
 
 	"npc_dota_shadow_shaman_ward_3"
@@ -10866,8 +10866,8 @@
 	
 		// Attack
 		//----------------------------------------------------------------
-		"AttackDamageMin"			"220"			// Damage range min.
-		"AttackDamageMax"			"220"			// Damage range max.
+		"AttackDamageMin"			"120"			// Damage range min.
+		"AttackDamageMax"			"120"			// Damage range max.
 	}
 
 	// Venomancer Plague Wards
@@ -12242,9 +12242,9 @@
 
 		// Bounty
 		//----------------------------------------------------------------
-		"BountyXP"					"0"		// Experience earn.
-		"BountyGoldMin"				"250"		// Gold earned min.
-		"BountyGoldMax"				"250"		// Gold earned max.
+		"BountyXP"					"0"			// Experience earn.
+		"BountyGoldMin"				"0"		// Gold earned min.
+		"BountyGoldMax"				"0"		// Gold earned max.
 
 		// Bounds
 		//----------------------------------------------------------------

@@ -1,7 +1,7 @@
  
  
 function mars_arena_of_blood_fun( keys )
-
+    if not IsServer() then return true end
 	local caster = keys.caster
     local event_ability = keys.event_ability:GetAbilityName()
 	--local casterPoint = caster:GetAbsOrigin()
@@ -10,17 +10,17 @@ function mars_arena_of_blood_fun( keys )
 	local ulti_lvl = ulti:GetLevel()
 	local ability = keys.ability
 	local cooldown = ability:GetCooldownTimeRemaining()
-	local duration = ulti:GetSpecialValueFor("duration") * 2
+	local duration = ulti:GetSpecialValueFor("duration")
 
-	if cooldown < duration and event_ability == "mars_arena_of_blood" then     --±¾¼¼ÄÜ½øÈëÀäÈ´
+	if caster:PassivesDisabled() then return end  --ç ´åçŠ¶æ€ç¦ç”¨	
+
+	if event_ability == "mars_arena_of_blood"  then		
+	    
+	    duration = duration + ability:GetCooldownTimeRemaining()
         ability:EndCooldown()
-		ability:StartCooldown(duration)
-	end		
-
-	if caster:PassivesDisabled() then return end  --ÆÆ»µ×´Ì¬½ûÓÃ
-
-	if event_ability == "mars_arena_of_blood"  then			                  
-        local tether = caster:FindAbilityByName("mars_arena_of_blood_fun_1")
+	    ability:StartCooldown(duration) --æœ¬æŠ€èƒ½è¿›å…¥å†·å´
+	    
+	    local tether = caster:FindAbilityByName("mars_arena_of_blood_fun_1")
 		tether:SetLevel(ulti_lvl)				  
         caster:SetCursorPosition(targetPoint)
         tether:OnSpellStart()
@@ -30,27 +30,21 @@ function mars_arena_of_blood_fun( keys )
 		tether_2:SetLevel(ulti_lvl)				  
         caster:SetCursorPosition(targetPoint)
         tether_2:OnSpellStart()
-        tether_2:EndCooldown()					
+        tether_2:EndCooldown()				
+		
+
 	end
 									
 end
 ---------------------------------------------------------------------------------------------------
 function arena_of_blood_fun_recall(keys)
-
+    if not IsServer() then return true end
 	local caster = keys.caster
 	local ability = keys.ability
 	local targetPoint = ability:GetCursorPosition()
 	local ulti = caster:FindAbilityByName("mars_arena_of_blood")
 	local ulti_lvl = ulti:GetLevel()
 	local tether
-
-	local cooldown = ulti:GetCooldownTimeRemaining()
-	local duration = ulti:GetSpecialValueFor("duration") * 2
-
-	if cooldown < duration then                       --ÖÕ¼«¼¼ÄÜ½øÈëÀäÈ´
-        ulti:EndCooldown()
-		ulti:StartCooldown(duration)
-	end
 
 	if ulti_lvl > 0 then 
 	    if ability:GetAutoCastState() then
@@ -60,15 +54,20 @@ function arena_of_blood_fun_recall(keys)
 		end
 		tether:SetLevel(ulti_lvl)
 		--caster:SetCursorPosition(targetPoint)
+
+	    local duration = tether:GetSpecialValueFor("duration") + ulti:GetCooldownTimeRemaining()
+		ulti:EndCooldown()
+		ulti:StartCooldown(duration) --ç»ˆææŠ€èƒ½è¿›å…¥å†·å´
 		tether:OnSpellStart()
 	end
 
 end
 -------------------------------------------------------------------------
 function cannot_be_stolen(keys)
-     --print("Õâ¸ö¼¼ÄÜ²»¿ÉÒÔ±»À­±È¿ËÍµÈ¡£¡")
+    if not IsServer() then return true end
+     --print("è¿™ä¸ªæŠ€èƒ½ä¸å¯ä»¥è¢«æ‹‰æ¯”å…‹å·å–ï¼")
      local caster = keys.caster
-     local abilityName = keys.AbilityName --×Ô¶¨Òå²ÎÊı
+     local abilityName = keys.AbilityName --è‡ªå®šä¹‰å‚æ•°
      local ability = caster:FindAbilityByName(abilityName)
      ability:SetStealable(false)
      return

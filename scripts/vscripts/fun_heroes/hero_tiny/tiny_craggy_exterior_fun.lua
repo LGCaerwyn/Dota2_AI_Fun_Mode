@@ -1,5 +1,5 @@
 ﻿function craggy_exterior_OnAttacked(keys)
-    
+    if not IsServer() then return true end
     local caster = keys.caster
     local attacker = keys.attacker
     if caster:PassivesDisabled() or 

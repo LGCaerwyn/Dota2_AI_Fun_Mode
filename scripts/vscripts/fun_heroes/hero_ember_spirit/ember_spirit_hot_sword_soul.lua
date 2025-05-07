@@ -14,9 +14,8 @@ return
 
 end
 
-if caster:HasModifier("modifier_ember_spirit_hot_sword_soul_unlocking") then
-ability:ApplyDataDrivenModifier( caster, caster, "modifier_ember_spirit_hot_sword_soul_unlocking", {duration = duration_interval})
-end
+
+
 		if caster:HasModifier("modifier_ember_spirit_hot_sword_soul_count") then
 			Count =	caster:GetModifierStackCount("modifier_ember_spirit_hot_sword_soul_count", caster)
 			if Count <= ( Unlocking_number - 2) then

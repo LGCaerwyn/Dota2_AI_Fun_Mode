@@ -4,126 +4,68 @@
 	Checks if the attack target is the same as the caster
 	If true then trigger the counter helix if its not on cooldown]]
 function CounterHelix( keys )
-	if not IsServer() then return end
+
+    if not IsServer() then return end
 	local caster = keys.caster
-	local target = keys.target
-	local ability = keys.ability
 	local attacker = keys.attacker
-	local helix_modifier = keys.helix_modifier
-	local cooldown = ability:GetCooldown(ability:GetLevel() - 1)
+	local ability = keys.ability
+	local distance = CalcDistanceBetweenEntityOBB(caster, attacker)
+	local trigger_chance = ability:GetSpecialValueFor("trigger_chance")
+	local trigger_radius = ability:GetSpecialValueFor("trigger_radius")
 
-	local chance = ability:GetSpecialValueFor("trigger_chance")
+	--不触发条件
+	if not ability:IsCooldownReady() or
+	   caster:PassivesDisabled() or
+	   distance > trigger_radius or
+	   caster:GetTeam() == attacker:GetTeam()
+	then 
+	    return 
+	end
+
+	--成功触发，造成范围伤害，A杖对符合斩杀线的敌人施放淘汰之刃
+	local r = RollPseudoRandomPercentage(trigger_chance, DOTA_PSEUDO_RANDOM_AXE_HELIX, caster)
+	if not r then return end
+    local units = {}
+	local team = caster:GetTeam()
+	local location = caster:GetAbsOrigin()
+	local radius = ability:GetSpecialValueFor("radius")
+	local teamFilter = DOTA_UNIT_TARGET_TEAM_ENEMY
+	local typeFilter = DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC
+	local flagFilter = DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES
+
+    units = FindUnitsInRadius(team, location, nil, radius, teamFilter, typeFilter, flagFilter, FIND_ANY_ORDER, false)
+	local damage_table = {}
+	damage_table.attacker = caster
+	damage_table.damage = ability:GetSpecialValueFor("damage")
+	damage_table.damage_type = DAMAGE_TYPE_ABILITY_DEFINED
+	damage_table.ability = ability
+
 	local tether = caster:FindAbilityByName("axe_culling_blade")
-	local damage = ability:GetAbilityDamage()
-	local damage_type = ability:GetAbilityDamageType()
+	local target_hp = attacker:GetHealth()
+	local killed_hp = tether:GetSpecialValueFor("damage")
 
-	local ability_axe = caster:FindAbilityByName("axe_culling_blade")
-	local level = ability_axe:GetLevel()
-	local damage_axe = ability_axe:GetLevelSpecialValueFor("damage", level - 1)
+	for _,unit in pairs(units) do 
 
-	if caster:PassivesDisabled() then return end      --脨脗脭枚脝脝卤禄露炉脨搂鹿没
-	
-	--local playerID = caster:GetPlayerID()
-	
-	if caster:HasScepter() then
-		damage_type = DAMAGE_TYPE_PURE
-	end
+	    damage_table.victim = unit
+	    ApplyDamage(damage_table)
 
-	if PlayerResource:IsFakeClient(caster:GetPlayerID())  then
-	
-		chance = 50
-
-	end
-
-
-
-	if ability:IsCooldownReady() then
-	-- If the caster has the helix modifier then do not trigger the counter helix
-	-- as its considered to be on cooldown
-	
-	local r = RollPseudoRandomPercentage(chance, DOTA_PSEUDO_RANDOM_PHANTOMASSASSIN_CRIT, caster)
-
-     	if not r  then 
-      	   return
-     	end
-
-
-
-		if target == caster and not caster:HasModifier(helix_modifier) then
-
-			ability:ApplyDataDrivenModifier(caster, caster, helix_modifier, {})
-			
-					
-			if PlayerResource:IsFakeClient(caster:GetPlayerID()) and caster:HasScepter() then
-			   ability:ApplyDataDrivenModifier(caster, caster, "modifier_counter_helix_fun_buff", {duration = 20 })
-				--x娴嬭瘯娌℃湁鏁堟灉
-			end
-			--路麓禄梅脗脻脨媒脡脣潞娄
-			local targets = FindUnitsInRadius(caster:GetTeamNumber(), caster:GetAbsOrigin(), caster, 350, 
-				DOTA_UNIT_TARGET_TEAM_ENEMY, 
-				DOTA_UNIT_TARGET_HERO + DOTA_UNIT_TARGET_BASIC , 
-				DOTA_UNIT_TARGET_FLAG_MAGIC_IMMUNE_ENEMIES , FIND_ANY_ORDER  , false)
-
-			for k,target in pairs(targets) do
-				--print(k,v)
-				damagetable = {
-				victim = target,
-				attacker = caster, 
-				damage = damage,
-				damage_type = damage_type,
-				ability  =  ability
-						  }
-				ApplyDamage(damagetable)
-				--脮露脡卤虏芒脢脭
-
-
-				if PlayerResource:IsFakeClient(caster:GetPlayerID())  then
-
-					if caster:HasScepter() and target:IsRealHero() and target:GetHealth() < damage_axe then
-						caster:SetCursorCastTarget(target)
-						tether:OnSpellStart()
-					end
-				end
-			end
-				   -- print("脰麓脨脨脡脣潞娄")
-			ability:StartCooldown(cooldown)
+		--A杖效果
+		if caster:HasScepter() and target_hp <= killed_hp and attacker:IsRealHero() then
+		    caster:SetCursorCastTarget(attacker)
+            tether:OnSpellStart()
 		end
 	end
+
+	--旋转并添加护甲力量加成
+	local duration_buff = ability:GetSpecialValueFor("duration")
+	local cooldown = ability:GetEffectiveCooldown(ability:GetLevel() - 1)	
+	local modifier_helix_rotate = "modifier_counter_helix_rotate_datadriven"
+	local modifier_helix_buff = "modifier_counter_helix_buff_datadriven"
+
+	caster:EmitSound("Hero_Axe.CounterHelix")
+	ability:ApplyDataDrivenModifier(caster, caster, modifier_helix_rotate, { duration = 0.21 })
+	ability:ApplyDataDrivenModifier(caster, caster, modifier_helix_buff, { duration = duration_buff })
+	ability:StartCooldown(cooldown)
 end
 
 
-function zhansha( every )
-	if not IsServer() then return end
-	local caster = every.caster
-	local target = every.target
-	local tether = caster:FindAbilityByName("axe_culling_blade")
-	local ability_axe = caster:FindAbilityByName("axe_culling_blade")
-	local level = ability_axe:GetLevel()
-	local damage_axe = ability_axe:GetLevelSpecialValueFor("damage", level - 1)
-
---tether:SetLevel(2)
---tether:EndCooldown()
-
-	--if caster:PassivesDisabled() then return end      --脨脗脭枚脝脝卤禄露炉脨搂鹿没拢卢脙禄脫脨赂脙脨脨麓煤脗毛脮露脡卤脨搂鹿没脪虏禄谩卤禄脝脝禄碌陆没脫脙拢卢脪貌脦陋脟掳脰脙碌脛脨脼脢脦脝梅禄谩卤禄脝脝禄碌陆没脫脙
-	
-
-
------------------------------------------------------
------------------------------------------------------
---[[
-	if PlayerResource:IsFakeClient(caster:GetPlayerID())  then
-
-		if caster:HasScepter() and target:IsRealHero() and target:GetHealth() < damage_axe  then
-			caster:SetCursorCastTarget(target)
-			tether:OnSpellStart()
-		end
-	else
-	    if caster:HasScepter() and target:IsRealHero() and target:GetHealth() < damage_axe then
-        caster:SetCursorCastTarget(target)
-        tether:OnSpellStart()
-		end
-	end
-
-	--]]
-	-- body
-end

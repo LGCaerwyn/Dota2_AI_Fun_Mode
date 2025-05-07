@@ -1,8 +1,8 @@
 
 
 function metamorphosis_before( keys)
-
-
+ 
+ if not IsServer() then return true end
 
  ability = keys.ability
 
@@ -44,17 +44,17 @@ local particle = ParticleManager:CreateParticle( particleName, PATTACH_POINT , c
 
 ability:ApplyDataDrivenModifier(caster, caster, "modifier_terrorblade_Metamorphosis_fly", {duration = 3 })		
 
-print(GetGroundPosition(caster:GetAbsOrigin(), caster))
-print("GetGroundPosition(caster:GetAbsOrigin(), caster)".."·µ»ØÒÆ¶¯µ½µØÃæµÄ¹©¸øÎ»ÖÃ¡£µÚ¶ş¸ö²ÎÊıÊÇÒ»¸öNPC£¬ÓÃÓÚ²âÁ¿Åö×²Ìå»ı")
-print(caster:GetAbsOrigin())
+--print(GetGroundPosition(caster:GetAbsOrigin(), caster))
+--print("GetGroundPosition(caster:GetAbsOrigin(), caster)".."è¿”å›ç§»åŠ¨åˆ°åœ°é¢çš„ä¾›ç»™ä½ç½®ã€‚ç¬¬äºŒä¸ªå‚æ•°æ˜¯ä¸€ä¸ªNPCï¼Œç”¨äºæµ‹é‡ç¢°æ’ä½“ç§¯")
+--print(caster:GetAbsOrigin())
 	-- body
-print("caster:GetAbsOrigin()")
+--print("caster:GetAbsOrigin()")
 
 --player = caster:GetOwnerEntity()
 
 --player:SetCameraDistanceOverride(2000)
 
-print(GameRules:GetGameModeEntity():GetCameraDistanceOverride())
+--print(GameRules:GetGameModeEntity():GetCameraDistanceOverride())
 
 
 
@@ -84,7 +84,7 @@ end
 
 function metamorphosis_fly_Vertical( keys)
 
-
+    if not IsServer() then return true end
 
 
 	if ability.forced_traveled < ability.forced_distance then   
@@ -96,12 +96,12 @@ function metamorphosis_fly_Vertical( keys)
 
 		ability.forced_traveled = ability.forced_traveled + ability.forced_speed
 
-	print("1")
+	--print("1")
 
 
 	elseif    ability.forced_traveled >= ability.forced_distance and   ability.forced_traveled < ability.forced_distance * 2  then   
 	
-	print("2")
+	--print("2")
 	
 	--	ability.leap_z = ability.leap_z - ability.forced_speed 
 		ability.leap_z = ability.leap_z - ability.forced_speed_down 
@@ -132,11 +132,11 @@ end
 function metamorphosis_fly_Horizonal( keys )
 
 
+        if not IsServer() then return true end
+		if ability.forced_traveled >= ability.forced_distance and   ability.forced_traveled < ability.forced_distance * 2 then   --åˆ°è¾¾3000é«˜åº¦ï¼Œå¼€å§‹é£è¡Œ
 
-		if ability.forced_traveled >= ability.forced_distance and   ability.forced_traveled < ability.forced_distance * 2 then   --µ½´ï3000¸ß¶È£¬¿ªÊ¼·ÉĞĞ
 
-
-	print("3")
+	--print("3")
 		--	x=(3000-y)*N^2/3000
 
 		--	X = math.sqrt (x)
@@ -144,11 +144,11 @@ function metamorphosis_fly_Horizonal( keys )
 
 		ability.Horizonal_speed = N/(0.5*30)
 
-		caster:SetAbsOrigin(caster:GetAbsOrigin() + direction * ability.Horizonal_speed)  --ÉèÖÃË®Æ½Î»ÒÆ
+		caster:SetAbsOrigin(caster:GetAbsOrigin() + direction * ability.Horizonal_speed)  --è®¾ç½®æ°´å¹³ä½ç§»
 
       elseif ability.forced_traveled >= ability.forced_distance * 2 then
 
-	print("4")
+	--print("4")
 
 		caster:InterruptMotionControllers(true)
 
@@ -167,7 +167,7 @@ function metamorphosis_fly_Horizonal( keys )
 	local vec2 = Vector(1,0,0)
 	local vect = Vector(0.3,0.5,-0.06)
 	--ParticleManager:SetParticleControl(particle1, 60, vec1)
-	--ParticleManager:SetParticleControl(particle1, 61, vec2)--µØÃæĞ§¹ûÔİÊ±Ö»ÄÜÊÇÂÌÉ«
+	--ParticleManager:SetParticleControl(particle1, 61, vec2)--åœ°é¢æ•ˆæœæš‚æ—¶åªèƒ½æ˜¯ç»¿è‰²
 	--ParticleManager:SetParticleControl(particle1, 62, vect)
 
 	local particleName2 = "particles/econ/items/earthshaker/earthshaker_arcana/earthshaker_arcana_echoslam_start_v2.vpcf"
@@ -202,7 +202,7 @@ if #units >= 1 then
 
 		cengshu = caster:GetModifierStackCount("modifier_terrorblade_Metamorphosis_fun", caster)
 
-		xiu_cengshu = #units *  (caster:GetLevel() * 0.1 * 20 + 20) + cengshu
+		xiu_cengshu = #units *  (caster:GetLevel() * 0.1 * 10 + 10) + cengshu
 
 		caster:SetModifierStackCount("modifier_terrorblade_Metamorphosis_fun", caster, xiu_cengshu)
 
@@ -221,7 +221,7 @@ for k,b in pairs(enemy_units) do
         local damage = {
                 victim = b,
                 attacker = caster,
-                damage = 600 * (caster:GetLevel() * 0.2),
+                damage = 460 * (caster:GetLevel() * 0.2),
                 damage_type = DAMAGE_TYPE_MAGICAL,
         }
         ability:ApplyDataDrivenModifier(caster, b, "modifier_stunned",{duration = 3})

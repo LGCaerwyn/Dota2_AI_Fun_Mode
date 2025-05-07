@@ -14,15 +14,25 @@ function Fun_Nian_Blocker_Aura_Gohome(keys)
        target:GetUnitName() == "npc_fun_Hellfire_Human") and
        target:GetTeam() ~= caster:GetTeam()
     then
-        ability:ApplyDataDrivenModifier(caster, target, "modifier_Fun_Nian_Blocker_Aura_Stop", nil)
-        target:EmitSound("Hero_EarthSpirit.StoneRemnant.Impact")
-        target:Hold()
-        Timers:CreateTimer({        
-		    endTime = 1,
-            callback = function()
-		        Fun_Nian_Blocker_Aura_Teleport(keys)		    			    
-			end
-		})	
+        if ability:GetAbilityName() == "Fun_Nian_Blocker" then
+
+            ability:ApplyDataDrivenModifier(caster, target, "modifier_Fun_Nian_Blocker_Aura_Stop", nil)
+            target:EmitSound("Hero_EarthSpirit.StoneRemnant.Impact")
+            target:Hold()
+            Timers:CreateTimer({        
+		        endTime = 1,
+                callback = function()
+		            Fun_Nian_Blocker_Aura_Teleport(keys)		    			    
+			    end
+		    })	
+
+        elseif ability:GetAbilityName() == "Fun_Suppression" then
+            if not target:HasModifier("modifier_Fun_Nian_Blocker_Aura_Stop") then
+                ability:ApplyDataDrivenModifier(caster, target, "modifier_Fun_Nian_Blocker_Aura_Stop_2", nil)
+                target:EmitSound("Hero_EarthSpirit.StoneRemnant.Impact")
+                target:Hold()  
+            end
+        end
     end
     return
 end
@@ -77,10 +87,14 @@ end
 
 function Fun_Nian_Blocker_Aura_Remove(keys)
     if not IsServer() then return true end
-    local modifier = keys.target:FindModifierByName("modifier_Fun_Nian_Blocker_Aura_Stop")
-    if modifier then
-        modifier:Destroy()
+    local target = keys.target
+    local ability = keys.ability
+    if ability:GetAbilityName() == "Fun_Nian_Blocker" then
+        target:RemoveModifierByName("modifier_Fun_Nian_Blocker_Aura_Stop")
+    elseif ability:GetAbilityName() == "Fun_Suppression" then
+        target:RemoveModifierByName("modifier_Fun_Nian_Blocker_Aura_Stop_2")
     end
+
     order = 
         {
             UnitIndex = keys.target:GetEntityIndex(),

@@ -2,6 +2,7 @@ require('timers')
 require('utils')
 
 function morphling_tidal_wave( keys )
+    if not IsServer() then return true end
     local caster = keys.caster
     local target = keys.target
     local ability = keys.ability
@@ -46,6 +47,7 @@ function morphling_tidal_wave( keys )
 end
 
 function morphling_tidal_wave_damgage( keys)
+    if not IsServer() then return true end
 	local caster = keys.caster
 	local target = keys.target
 	local ability = keys.ability

@@ -1,5 +1,6 @@
 
 function Sunder( event )
+    if not IsServer() then return true end
 	local ability = event.ability
 	local caster = event.caster
 	local targetPoint = event.target_points[1]

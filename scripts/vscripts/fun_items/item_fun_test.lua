@@ -1,21 +1,26 @@
-require('timers')
+
 --测试用物品，会随时添加、删除某些代码
 function item_fun_test(keys)
 
     local caster = keys.caster
     local ability = keys.ability
     local target = keys.target
-	
---	if caster:GetTeamNumber() == 2 then
-	
---	Tutorial:AddBot("npc_dota_hero_arc_warden", "bot", "unfair", false)
---	else
---	Tutorial:AddBot("npc_dota_hero_arc_warden", "bot", "unfair", true)
---	end
-	
-EmitSoundOn("legion_commander_legcom_spawn_06", caster)
+    
 
+    --local lua = target:FindAbilityByName("lina_dragon_slave_lua")
+    --print(lua:GetClassname())
 
+    --local tome = target:FindItemInInventory("item_fun_tome_of_aghanim")
+    --if tome then 
+    --    print(tome:GetItemSlot())
+    --end
+    --print(target:GetRespawnTime())
+    --print(target:GetTimeUntilRespawn())
+    
+    target:Kill(nil, nil)
+
+    --ability:ApplyDataDrivenModifier(caster, target, "modifier_test", nil)
+    --print(target:GetAverageTrueAttackDamage(nil))
     --target:ForceKill(false)
     --print(target:IsDebuffImmune()) --这个可以用
     --print(target:GetAbsOrigin())
@@ -30,36 +35,33 @@ EmitSoundOn("legion_commander_legcom_spawn_06", caster)
     
     --print(target:Script_GetMagicalArmorValue(false, nil))
     --print(Convars:GetInt("dota_ability_debug"))
+
     --local gamemode = GameRules:GetGameModeEntity()
-    --print(gamemode:GetName())
-    --print(gamemode:GetClassname())
+    --gamemode:SetFogOfWarDisabled(true)
+    --DeepPrintTable(gamemode)
+
     --local v = RotatePosition(Vector(0,0,0), QAngle(0,90,0), Vector(-50,0,0))  --点、角度、向量
     --print(v)
-	--[[
-				print(GameRules:GetCustomGameTeamMaxPlayers(2))
-				print(GameRules:GetCustomGameTeamMaxPlayers(3))
-				GameRules:SetCustomGameTeamMaxPlayers(DOTA_TEAM_GOODGUYS, 20)
-				GameRules:SetCustomGameTeamMaxPlayers(DOTA_TEAM_BADGUYS, 20)		 
-				print(caster:GetTeamNumber())
-				print(PlayerResource:GetCustomTeamAssignment(caster:GetMainControllingPlayer()))
-				GameRules:LockCustomGameSetupTeamAssignment(false)
-				Timers:CreateTimer(3,function()
-		
-				PlayerResource:SetCustomTeamAssignment(caster:GetMainControllingPlayer(),3)
-				print("执行力")
-										return nil
-											end
-					               			 )
-											 --]]
-										--	caster:ChangeTeam(3)
-			--	hero = PlayerResource:GetSelectedHeroEntity(caster:GetMainControllingPlayer())
-			--	hero:SetTeam(3)	 
-											--PlayerResource:SetTeam(3)
 
+    --target:SetMaxHealth(4000)
+    --target:SetHealth(4000)
+    --print(target:GetBaseMaxHealth())
 
+    --print(target:GetUnitName())
 
- --   target:SetBaseMaxHealth(4000)
- --   print(target:GetBaseMaxHealth())
+    --local unit = CreateUnitByName("npc_dota_badguys_tower1_top", target:GetOrigin(), false, nil, nil, caster:GetTeam())
+    --print("执行")
+
+    --local talent = target:FindAbilityByName("special_bonus_unique_spectre_desolate_radius")
+    --if talent then 
+    --    print(talent:GetLevel())
+    --    print(talent:GetMaxLevel())
+    --end
+
+    --target:AddAbility("item_fun_monkey_king_bar")
+    --print(ability:GetParent():GetName())
+    --print(ability:GetPurchaseTime())
+    --GameRules:SendCustomMessage("40分钟时：附赠<font color=\"#FF0000\">AI的阿哈利姆神杖</font> ", DOTA_TEAM_BADGUYS,0)
 end
 
 
@@ -86,4 +88,25 @@ function item_fun_change_difficulty(keys)
     GameRules.Fun_DataTable["Difficulty"] = diff_fixed
     --print("难度："..GameRules.Fun_DataTable["Difficulty"])
 
+end
+
+function item_fun_test_2(keys)
+
+    local target = keys.unit
+	if target:IsReincarnating() then return end
+	local ability = keys.ability
+	local respawn_time = 100 
+
+	Timers:CreateTimer({        
+	    endTime = 0.1,
+        callback = function()
+		    print(target:GetTimeUntilRespawn())
+	        respawn_time = target:GetTimeUntilRespawn() -50 
+			print(respawn_time)
+		    respawn_time = math.max(1, respawn_time)
+			print(respawn_time)
+            target:SetTimeUntilRespawn(respawn_time)
+			print(target:GetTimeUntilRespawn())
+		end
+    })   
 end

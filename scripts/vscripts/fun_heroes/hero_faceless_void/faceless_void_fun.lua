@@ -1,27 +1,42 @@
 
 function faceless_void_fun_ModifierGainedFilter(event, result)
-    --Ê±¼ä½á½çÄÚÔÊĞíÓÑ¾üÓ¢ĞÛĞĞ¶¯
-    if not event.entindex_caster_const then return result end
-    if not event.entindex_parent_const then return result end
-    if not event.name_const then return result end
-    local caster = EntIndexToHScript(event.entindex_caster_const)
-    local npc = EntIndexToHScript(event.entindex_parent_const)
-    local modifier_name = event.name_const
-    if caster == nil then return result end
-    if npc == nil then return result end
+    --æ—¶é—´ç»“ç•Œå†…å…è®¸å‹å†›è‹±é›„è¡ŒåŠ¨
 
-    local special_bonus = caster:FindAbilityByName("special_bonus_unique_faceless_void_chronosphere_non_disabled") 
-    if special_bonus == nil then return result end
-    if special_bonus:GetLevel() < 1 then return result end
+    local caster = nil
+    local npc = nil
+    local modifier_name = ""
+    local special_bonus = nil
+    local special_bonus_lvl = 0
+    local npc_IsControllableByAnyPlayer = false
+    local caster_team = -99999
+    local npc_team = -99999
 
-    if modifier_name == "modifier_faceless_void_chronosphere_freeze" and
-       npc:GetTeam() == caster:GetTeam() and
-       npc:IsControllableByAnyPlayer()
+    if event.entindex_caster_const and
+       event.entindex_parent_const and
+       event.name_const
     then
-       
-       return false
-    else
-        return result
-    end    
+        caster = EntIndexToHScript(event.entindex_caster_const)
+        npc = EntIndexToHScript(event.entindex_parent_const)
+        modifier_name = event.name_const
+    end
 
+    if caster and npc then
+        special_bonus = caster:FindAbilityByName("special_bonus_unique_faceless_void_chronosphere_non_disabled")
+        npc_IsControllableByAnyPlayer = npc:IsControllableByAnyPlayer()
+        caster_team = caster:GetTeam()
+        npc_team = npc:GetTeam()
+    end
+    if special_bonus then
+        special_bonus_lvl = special_bonus:GetLevel()
+    end
+
+    if special_bonus_lvl > 0 and
+       npc_IsControllableByAnyPlayer and
+       caster_team == npc_team and
+       modifier_name == "modifier_faceless_void_chronosphere_freeze"       
+    then
+        result = false
+    end   
+
+    return result
 end

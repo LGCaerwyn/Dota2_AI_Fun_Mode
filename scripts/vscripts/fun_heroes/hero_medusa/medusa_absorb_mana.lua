@@ -1,6 +1,4 @@
-
-
-
+    
 function absorb_mana(keys)
     if IsServer() then
         local attacker = keys.attacker
@@ -9,7 +7,11 @@ function absorb_mana(keys)
         local ability = keys.ability
         local manaAbsorption = ability:GetSpecialValueFor("absorption") --/ 100
         		--manaAbsorptionPercent
-        if attacker == caster and target:GetMaxMana() ~= 0 then
+        if attacker:GetTeam() ~= target and 
+           target:GetMaxMana() ~= 0 and
+           not target:IsBuilding() and
+           not caster:PassivesDisabled() 
+        then
            -- local targetMana = target:GetMana()
             --local manaAbsorbed = math.min(targetMana, target:GetMaxMana() * manaAbsorptionPercent)
            -- target:ReduceMana(manaAbsorbed)

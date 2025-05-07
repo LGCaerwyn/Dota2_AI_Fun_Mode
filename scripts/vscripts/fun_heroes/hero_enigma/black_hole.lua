@@ -1,5 +1,6 @@
 
 function MoveUnits( keys )
+    if not IsServer() then return true end
 	local caster = keys.caster
 	local target = keys.target
 	local target_location = target:GetAbsOrigin()
@@ -21,16 +22,16 @@ function MoveUnits( keys )
 
 	for i,unit in ipairs(units) do
 
-	--µÈ½ÇÂİÏß£¬¹Ì¶¨Ïò¾¶±ä»¯µÈÓÚspeedµÄÇé¿ö
+	--ç­‰è§’èºçº¿ï¼Œå›ºå®šå‘å¾„å˜åŒ–ç­‰äºspeedçš„æƒ…å†µ
 	local unit_location = unit:GetAbsOrigin()
 	local vector_distance = unit_location - target_location
 	local distance = vector_distance:Length2D()
 	local a = distance
-	--local b = math.rad(168.75)    --µÈ½ÇÂİÏßµÄ¼Ğ½Ç£¬ÓëÇ£Òı½Ç¶È11.25ÓĞ¹Ø,ÄæÊ±ÕëĞı×ªÊ±ÏòÖĞĞÄ¿¿½ü
-	--local cot_b = 1/math.tan(b)   --ÓàÇĞ
-	--local sec_b = 1/math.cos(b)  --Õı¸î
-    local rho = a - speed  --Ğı×ª¹Ì¶¨¾àÀëºóµÄÏò¾¶³¤¶È£¬ÕâÀïÏ£Íûrho±ÈaĞ¡£¬ËùÒÔsec_bÎª¸º
-	local rad = math.log(rho /a) /(-0.6127) --Ïò¾¶¶ÔÓ¦µÄ¼«½Ç,²ÎÊıÊÇ»Æ½ğÂİÏß²ÎÊıµÄÁ½±¶
+	--local b = math.rad(168.75)    --ç­‰è§’èºçº¿çš„å¤¹è§’ï¼Œä¸ç‰µå¼•è§’åº¦11.25æœ‰å…³,é€†æ—¶é’ˆæ—‹è½¬æ—¶å‘ä¸­å¿ƒé è¿‘
+	--local cot_b = 1/math.tan(b)   --ä½™åˆ‡
+	--local sec_b = 1/math.cos(b)  --æ­£å‰²
+    local rho = a - speed  --æ—‹è½¬å›ºå®šè·ç¦»åçš„å‘å¾„é•¿åº¦ï¼Œè¿™é‡Œå¸Œæœ›rhoæ¯”aå°ï¼Œæ‰€ä»¥sec_bä¸ºè´Ÿ
+	local rad = math.log(rho /a) /(-0.6127) --å‘å¾„å¯¹åº”çš„æè§’,å‚æ•°æ˜¯é»„é‡‘èºçº¿å‚æ•°çš„ä¸¤å€
 
 	local x1 = unit_location.x
 	local y1 = unit_location.y
@@ -49,19 +50,19 @@ function MoveUnits( keys )
 	end
 
 	--[[
-	--µÈ½ÇÂİÏß£¬Ğı×ª¹Ì¶¨»¡³¤µÄÇé¿ö£¬¼Ğ½Ç¹Ì¶¨Îª£º180 - 11.25 = 168.75¶È,Ã¿Ãë»¡³¤Ô¼33£¬Ã¿¸ötick»¡³¤Îª1
+	--ç­‰è§’èºçº¿ï¼Œæ—‹è½¬å›ºå®šå¼§é•¿çš„æƒ…å†µï¼Œå¤¹è§’å›ºå®šä¸ºï¼š180 - 11.25 = 168.75åº¦,æ¯ç§’å¼§é•¿çº¦33ï¼Œæ¯ä¸ªtickå¼§é•¿ä¸º1
 	local unit_location = unit:GetAbsOrigin()
 	local vector_distance = unit_location - target_location
 	local distance = vector_distance:Length2D()
 
 	local a = distance
-	local b = math.rad(168.75)    --µÈ½ÇÂİÏßµÄ¼Ğ½Ç£¬ÓëÇ£Òı½Ç¶È11.25ÓĞ¹Ø,ÄæÊ±ÕëĞı×ªÊ±ÏòÖĞĞÄ¿¿½ü
-	local cot_b = 1/math.tan(b)   --ÓàÇĞ
-	local sec_b = 1/math.cos(b)  --Õı¸î
-    local rho = speed /sec_b + a  --Ğı×ª¹Ì¶¨¾àÀëºóµÄÏò¾¶³¤¶È£¬ÕâÀïÏ£Íûrho±ÈaĞ¡£¬ËùÒÔsec_bÎª¸º
-	local rad = math.log(rho /a) /cot_b --Ïò¾¶¶ÔÓ¦µÄ¼«½Ç£¬ÕâÀïÇ°Ò»ÏîÎª¸º£¬ËùÒÔcot_bÒ²Îª¸º£¬radµÄµ¥Î»ÊÇ»¡¶È
+	local b = math.rad(168.75)    --ç­‰è§’èºçº¿çš„å¤¹è§’ï¼Œä¸ç‰µå¼•è§’åº¦11.25æœ‰å…³,é€†æ—¶é’ˆæ—‹è½¬æ—¶å‘ä¸­å¿ƒé è¿‘
+	local cot_b = 1/math.tan(b)   --ä½™åˆ‡
+	local sec_b = 1/math.cos(b)  --æ­£å‰²
+    local rho = speed /sec_b + a  --æ—‹è½¬å›ºå®šè·ç¦»åçš„å‘å¾„é•¿åº¦ï¼Œè¿™é‡Œå¸Œæœ›rhoæ¯”aå°ï¼Œæ‰€ä»¥sec_bä¸ºè´Ÿ
+	local rad = math.log(rho /a) /cot_b --å‘å¾„å¯¹åº”çš„æè§’ï¼Œè¿™é‡Œå‰ä¸€é¡¹ä¸ºè´Ÿï¼Œæ‰€ä»¥cot_bä¹Ÿä¸ºè´Ÿï¼Œradçš„å•ä½æ˜¯å¼§åº¦
 
-	--Ğı×ª½Ç¶ÈÎªrad
+	--æ—‹è½¬è§’åº¦ä¸ºrad
 	local x1 = unit_location.x
 	local y1 = unit_location.y
 	local x2 = target_location.x
@@ -75,9 +76,9 @@ function MoveUnits( keys )
 	]]--
 
 	--[[
-	    --µÈ½ÇÂİÏß£¬¹Ì¶¨Ğı×ª½Ç¶ÈµÄÇé¿ö£¬²»ĞèÒª±äÁ¿speed£¬Ã¿¸ötickĞı×ª0.52¶È
+	    --ç­‰è§’èºçº¿ï¼Œå›ºå®šæ—‹è½¬è§’åº¦çš„æƒ…å†µï¼Œä¸éœ€è¦å˜é‡speedï¼Œæ¯ä¸ªtickæ—‹è½¬0.52åº¦
 		local unit_location = unit:GetAbsOrigin()
-		--µÚÒ»²½£º½«Ä¿±êÏà¶ÔÖĞĞÄĞı×ªÖÁºÏÊÊµÄ½Ç¶È
+		--ç¬¬ä¸€æ­¥ï¼šå°†ç›®æ ‡ç›¸å¯¹ä¸­å¿ƒæ—‹è½¬è‡³åˆé€‚çš„è§’åº¦
 		local x1 = unit_location.x
 		local y1 = unit_location.y
 		local x2 = target_location.x
@@ -85,15 +86,15 @@ function MoveUnits( keys )
 		unit_location.x = (x1 - x2) * math.cos(math.rad(0.52)) - (y1 - y2) * math.sin(math.rad(0.52)) + x2                   --math.sin(math.rad(11.25))     math.cos(math.rad(11.25))
 		unit_location.y = (x1 - x2) * math.sin(math.rad(0.52)) + (y1 - y2) * math.cos(math.rad(0.52)) + y2
 		
-		--µÚ¶ş²½£¬¸ù¾İĞı×ª½Ç¶È£¬Çó³öµÈ½ÇÂİÏßÉÏÓëÖĞĞÄµÄ¾àÀë
+		--ç¬¬äºŒæ­¥ï¼Œæ ¹æ®æ—‹è½¬è§’åº¦ï¼Œæ±‚å‡ºç­‰è§’èºçº¿ä¸Šä¸ä¸­å¿ƒçš„è·ç¦»
 		local vector_distance = unit_location - target_location 
 		--local vector_distance = target_location - unit_location
 		local distance = vector_distance:Length2D()
-		--µÈ½ÇÂİÏß²ÎÊı£¬a´ú±í¼«×ø±êÖĞ¼«½Ç=0µÄ³õÊ¼Î»ÖÃ£¬bÊÇì³²¨ÄÇÆõÂİÏßµÄ²ÎÊı
-		--ÂİÏßË³Ê±ÕëĞı×ª£¨¸º½Ç£©ºó£¬»áÏòÖĞĞÄÎ»ÖÃ¿¿½ü
+		--ç­‰è§’èºçº¿å‚æ•°ï¼Œaä»£è¡¨æåæ ‡ä¸­æè§’=0çš„åˆå§‹ä½ç½®ï¼Œbæ˜¯æ–æ³¢é‚£å¥‘èºçº¿çš„å‚æ•°
+		--èºçº¿é¡ºæ—¶é’ˆæ—‹è½¬ï¼ˆè´Ÿè§’ï¼‰åï¼Œä¼šå‘ä¸­å¿ƒä½ç½®é è¿‘
 		a = distance
         b = 0.3063489
-		--¦Ñ£¬¶Á×÷rho,±íÊ¾¾àÀëÖĞĞÄµÄ³¤¶È
+		--Ïï¼Œè¯»ä½œrho,è¡¨ç¤ºè·ç¦»ä¸­å¿ƒçš„é•¿åº¦
 		rho = a * math.exp(math.rad(-0.52) * b ) 
 
 		local direction = vector_distance:Normalized()
@@ -110,6 +111,7 @@ function MoveUnits( keys )
 end
 
 function ChannelEnd(keys)
+    if not IsServer() then return true end
 	local ability = keys.ability
 	local caster = keys.caster
 	
@@ -122,6 +124,7 @@ end
 
 
 function GiveVision(keys)
+    if not IsServer() then return true end
 	caster = keys.caster
 	ability = keys.ability
 	local targetPoint = keys.target_points[1]

@@ -1,5 +1,5 @@
---ËùÓĞ¹ıÂËÆ÷ÔÚÎÄ¼ş'Fun_BaseGameMode/modifier_Fun_BaseGameMode.lua'ÖĞ×¢²á
-require('utils')  --ĞèÒªÓÃµ½ is_Human_Team()
+--æ‰€æœ‰è¿‡æ»¤å™¨åœ¨æ–‡ä»¶'Fun_BaseGameMode/modifier_Fun_BaseGameMode.lua'ä¸­æ³¨å†Œ
+require('utils')  --éœ€è¦ç”¨åˆ° is_Human_Team()
 require('Fun_Items/item_fun_greater_mango')
 require('Fun_Items/item_fun_spirit_vessel')
 --require('Fun_Items/item_fun_Aghanims_Robe')
@@ -29,24 +29,28 @@ require('Fun_BaseGameMode/modifier_Fun_BaseGameMode_Remove_Scepter_Consumed')
 --*************************************************************************
 
 function CHeroDemo:ModifyGoldFilter(event)
-    
-    --------------------------------------
-    --Fun_BaseGameMode
-    --µ÷ÕûAI»ñÈ¡µÄ½ğÇ®½±Àø
-    --------------------------------------
-    local difficulty = GameRules.Fun_DataTable["Difficulty"]
-    if not is_Human_Team(event.player_id_const) then
-        if (event.reason_const == DOTA_ModifyGold_CreepKill or event.reason_const == DOTA_ModifyGold_NeutralKill) and
-           event.reliable == 0
-        then
-            event.gold = event.gold * difficulty
-        end
-    else
-        if event.reason_const == DOTA_ModifyGold_HeroKill
 
-        then
-            event.gold = event.gold * 1
-        end       
+    if 
+       IsServer()
+    then
+        --------------------------------------
+        --Fun_BaseGameMode
+        --è°ƒæ•´AIè·å–çš„é‡‘é’±å¥–åŠ±
+        --------------------------------------
+        local difficulty = GameRules.Fun_DataTable["Difficulty"]
+        if not is_Human_Team(event.player_id_const) then
+            if (event.reason_const == DOTA_ModifyGold_CreepKill or event.reason_const == DOTA_ModifyGold_NeutralKill) and
+               event.reliable == 0
+            then
+                event.gold = event.gold * difficulty
+            end
+        else
+            if event.reason_const == DOTA_ModifyGold_HeroKill
+
+            then
+                event.gold = event.gold * 1
+            end       
+        end
     end
 
     return true
@@ -62,22 +66,25 @@ end
 
 function CHeroDemo:ModifyExperienceFilter(event)
 
-    --------------------------------------
-    --Fun_BaseGameMode
-    --µ÷ÕûAI»ñÈ¡µÄ¾­Ñé½±Àø
-    --------------------------------------
-    local difficulty = GameRules.Fun_DataTable["Difficulty"]
-    if not is_Human_Team(event.player_id_const) then
-        if event.reason_const == DOTA_ModifyXP_CreepKill then 
-            event.experience = event.experience * difficulty
-        end
+    if 
+       IsServer()
+    then
+        --------------------------------------
+        --Fun_BaseGameMode
+        --è°ƒæ•´AIè·å–çš„ç»éªŒå¥–åŠ±
+        --------------------------------------
+        local difficulty = GameRules.Fun_DataTable["Difficulty"]
+        if not is_Human_Team(event.player_id_const) then
+            if event.reason_const == DOTA_ModifyXP_CreepKill then 
+                event.experience = event.experience * difficulty
+            end
     
-    else
-        if event.reason_const == DOTA_ModifyXP_HeroKill then 
-            event.experience = event.experience * 1
-        end       
+        else
+            if event.reason_const == DOTA_ModifyXP_HeroKill then 
+                event.experience = event.experience * 1
+            end       
+        end
     end
-
     return true
 end
 
@@ -93,64 +100,64 @@ end
 
 function CHeroDemo:DamageFilter(event)
 
-    if not IsServer() then return true end
-
-    --print("index£º"..event.entindex_inflictor_const)
-    --local inflictor = EntIndexToHScript(event.entindex_inflictor_const)
-    --print("ClassName£º"..inflictor:GetClassname())
-    --print("Name£º"..inflictor:GetName())
-    --print(event.damage)
-
-    --***************************************************
-    --ÉËº¦µ÷ÕûË³Ğò£º
-    --    ¾«Í¨µÄ·¨Êõ·´ÖÆ
-    --    ÅÌåÔ´Á÷£¨ÎŞµ÷Õû£©
-    --    Áé½çÃ¢¹û  
-    --    «FµÄÌØÊâ·ÀÓù
-    --    °¢¹şÀûÄ·µÄ³¤ÅÛ£¨Ôİ²»¼ÓÈë£©
-    --***************************************************
     local result = true
-    local original_damage = event.damage
 
-    ----------------------------------------------
-    --¾«Í¨µÄ·¨Êõ·´ÖÆ£ºantimage_mana_defend
-    --ÎÄ¼ş£ºfun_heroes/hero_antimage/ant_fashufangzhi.lua
-    ----------------------------------------------
-    result = antimage_mana_defend_DamageFilter(event, original_damage) 
+    if 
+       IsServer()
+    then
 
-    ----------------------------------------------
-    --ĞéÎŞÖ®ÁéµÄÅÌåÔ´Á÷£¨¹²ÃùÂö³å¶îÍâĞ§¹û£©£ºvoid_spirit_wuyingzhan
-    --ÎÄ¼ş£ºfun_heroes/hero_void_spirit/wuyingzhan.lua
-    ----------------------------------------------
-    result = void_spirit_wuyingzhan_DamageFilter(event, original_damage) 
+        --***************************************************
+        --ä¼¤å®³è°ƒæ•´é¡ºåºï¼š
+        --    ç²¾é€šçš„æ³•æœ¯ååˆ¶
+        --    ç‚ä½“æºæµï¼ˆæ— è°ƒæ•´ï¼‰
+        --    çµç•ŒèŠ’æœ  
+        --    ç¸çš„ç‰¹æ®Šé˜²å¾¡
+        --    é˜¿å“ˆåˆ©å§†çš„é•¿è¢ï¼ˆæš‚ä¸åŠ å…¥ï¼‰
+        --***************************************************
+    
+        local original_damage = event.damage
 
-    ----------------------------------------------
-    --Áé½çÃ¢¹û£ºitem_fun_greater_mango
-    --ÎÄ¼ş£ºFun_Items/item_fun_greater_mango.lua
-    ----------------------------------------------
-    result = item_fun_greater_mango_DamageFilter(event, original_damage)
+        ----------------------------------------------
+        --ç²¾é€šçš„æ³•æœ¯ååˆ¶ï¼šantimage_mana_defend
+        --æ–‡ä»¶ï¼šfun_heroes/hero_antimage/ant_fashufangzhi.lua
+        ----------------------------------------------
+        result = antimage_mana_defend_DamageFilter(event, original_damage) 
 
-    ----------------------------------------------
-    --ÈÊ°®Ö®ÓÑ£ºwisp_overcharge_fun
-    --ÎÄ¼ş£ºfun_heroes/hero_wisp/wisp_overcharge_fun.lua
-    ----------------------------------------------
-    result = wisp_overcharge_fun_DamageFilter(event, original_damage) 
+        ----------------------------------------------
+        --è™šæ— ä¹‹çµçš„ç‚ä½“æºæµï¼ˆå…±é¸£è„‰å†²é¢å¤–æ•ˆæœï¼‰ï¼švoid_spirit_wuyingzhan
+        --æ–‡ä»¶ï¼šfun_heroes/hero_void_spirit/wuyingzhan.lua
+        ----------------------------------------------
+        result = void_spirit_wuyingzhan_DamageFilter(event, original_damage) 
 
-    ---------------------------------------------------
-    --«FµÄÌØÊâ·ÀÓù£ºFun_Primal_Beast_Boss_Defense
-    --ÎÄ¼ş£ºFun_Boss/Fun_Primal_Beast_Boss_Defense.lua
-    ---------------------------------------------------
-    result = Fun_Primal_Beast_Boss_Defense_DamageFilter(event)
+        ----------------------------------------------
+        --çµç•ŒèŠ’æœï¼šitem_fun_greater_mango
+        --æ–‡ä»¶ï¼šFun_Items/item_fun_greater_mango.lua
+        ----------------------------------------------
+        result = item_fun_greater_mango_DamageFilter(event, original_damage)
 
-    ---------------------------------------------------
-    --°¢¹şÀûÄ·µÄ³¤ÅÛ£ºitem_fun_Aghanims_Robe
-    --ÎÄ¼ş£ºFun_Items/item_fun_Aghanims_Robe.lua
-    ---------------------------------------------------
-    --result = true
+        ----------------------------------------------
+        --ä»çˆ±ä¹‹å‹ï¼šwisp_overcharge_fun
+        --æ–‡ä»¶ï¼šfun_heroes/hero_wisp/wisp_overcharge_fun.lua
+        ----------------------------------------------
+        result = wisp_overcharge_fun_DamageFilter(event, original_damage) 
+
+        ---------------------------------------------------
+        --ç¸çš„ç‰¹æ®Šé˜²å¾¡ï¼šFun_Primal_Beast_Boss_Defense
+        --æ–‡ä»¶ï¼šFun_Boss/Fun_Primal_Beast_Boss_Defense.lua
+        ---------------------------------------------------
+        result = Fun_Primal_Beast_Boss_Defense_DamageFilter(event)
+
+        ---------------------------------------------------
+        --é˜¿å“ˆåˆ©å§†çš„é•¿è¢ï¼šitem_fun_Aghanims_Robe
+        --æ–‡ä»¶ï¼šFun_Items/item_fun_Aghanims_Robe.lua
+        ---------------------------------------------------
+        --result = true 
+    end
 
     if type(result) ~= "boolean" then
         result = true
     end
+
     return result
 
 end
@@ -166,49 +173,45 @@ end
 
 function CHeroDemo:ModifierGainedFilter(event)
 
-    if not IsServer() then return true end
-
     local result = true
 
-    local parent = nil
-    local ability = nil
-    local caster = nil
+    if 
+       IsServer()
+    then
 
-    if event.entindex_parent_const then parent = EntIndexToHScript(event.entindex_parent_const) end
-    if event.entindex_ability_const then ability = EntIndexToHScript(event.entindex_ability_const) end
-    if event.entindex_caster_const then caster = EntIndexToHScript(event.entindex_caster_const) end
+        ----------------------------------------------
+        --ç¸çš„ç‰¹æ®Šé˜²å¾¡ï¼šFun_Primal_Beast_Boss_Defense
+        ----------------------------------------------
+        --result = Fun_Primal_Beast_Boss_Defense_ModifierGainedFilter(event)
 
-    ----------------------------------------------
-    --«FµÄÌØÊâ·ÀÓù£ºFun_Primal_Beast_Boss_Defense
-    ----------------------------------------------
-    --result = Fun_Primal_Beast_Boss_Defense_ModifierGainedFilter(event)
+        ----------------------------------------------
+        --è™šæ— ä¹‹çµçš„ç‚ä½“æºæµï¼ˆæ®‹é˜´é¢å¤–æ•ˆæœï¼‰ï¼švoid_spirit_wuyingzhan
+        --æ–‡ä»¶ï¼šfun_heroes/hero_void_spirit/wuyingzhan.lua
+        ----------------------------------------------
+        result = void_spirit_wuyingzhan_ModifierGainedFilter(event, result)
 
-    ----------------------------------------------
-    --ĞéÎŞÖ®ÁéµÄÅÌåÔ´Á÷£¨²ĞÒõ¶îÍâĞ§¹û£©£ºvoid_spirit_wuyingzhan
-    --ÎÄ¼ş£ºfun_heroes/hero_void_spirit/wuyingzhan.lua
-    ----------------------------------------------
-    result = void_spirit_wuyingzhan_ModifierGainedFilter(event)
+        ----------------------------------------------
+        --è‰¾æ¬§çš„ä»çˆ±ä¹‹å‹ï¼šwisp_overcharge_fun
+        --æ–‡ä»¶ï¼šfun_heroes/hero_wisp/wisp_overcharge_fun.lua
+        ----------------------------------------------
+        result = wisp_overcharge_fun_ModifierGainedFilter(event, result)
 
-    ----------------------------------------------
-    --°¬Å·µÄÈÊ°®Ö®ÓÑ£ºwisp_overcharge_fun
-    --ÎÄ¼ş£ºfun_heroes/hero_wisp/wisp_overcharge_fun.lua
-    ----------------------------------------------
-    result = wisp_overcharge_fun_ModifierGainedFilter(event)
+        ----------------------------------------------
+        --è™šç©ºå‡é¢çš„æ—¶é—´ç»“ç•Œå¤©èµ‹ï¼šspecial_bonus_unique_faceless_void_chronosphere_non_disabled
+        ----------------------------------------------
+        result = faceless_void_fun_ModifierGainedFilter(event, result)
 
-    ----------------------------------------------
-    --Ğé¿Õ¼ÙÃæµÄÊ±¼ä½á½çÌì¸³£ºspecial_bonus_unique_faceless_void_chronosphere_non_disabled
-    ----------------------------------------------
-    result = faceless_void_fun_ModifierGainedFilter(event, result)
-
-    ----------------------------------------------
-    --½«¿ËÂ¡ÌåµÄ¸£ÓÓAÕÈBUFFÌæ»»ÎªÆÕÍ¨°æ£ºFun_BaseGameMode
-    --ÎÄ¼ş£ºFun_BaseGameMode/modifier_Fun_BaseGameMode.lua
-    ----------------------------------------------
-    result = modifier_Fun_BaseGameMode_Remove_Scepter_Consumed(event, result) 
+        ----------------------------------------------
+        --å°†å…‹éš†ä½“çš„ç¦ä½‘Aæ–BUFFæ›¿æ¢ä¸ºæ™®é€šç‰ˆï¼šFun_BaseGameMode
+        --æ–‡ä»¶ï¼šFun_BaseGameMode/modifier_Fun_BaseGameMode.lua
+        ----------------------------------------------
+        result = modifier_Fun_BaseGameMode_Remove_Scepter_Consumed(event, result) 
+    end
 
     if type(result) ~= "boolean" then
         result = true
     end
+
     return result
 
 end
@@ -231,19 +234,22 @@ end
 
 function CHeroDemo:ExecuteOrderFilter(event)
 
-    if not IsServer() then return true end
-
     local result = true 
 
-    ---------------------------------------------------
-    --«FµÄÌØÊâ·ÀÓù£ºFun_Primal_Beast_Boss_Defense
-    --ÎÄ¼ş£ºFun_Boss/Fun_Primal_Beast_Boss_Defense.lua
-    ---------------------------------------------------
-    result = Fun_Primal_Beast_Boss_Defense_ExecuteOrderFilter(event)
+    if 
+       IsServer()
+    then   
+        ---------------------------------------------------
+        --ç¸çš„ç‰¹æ®Šé˜²å¾¡ï¼šFun_Primal_Beast_Boss_Defense
+        --æ–‡ä»¶ï¼šFun_Boss/Fun_Primal_Beast_Boss_Defense.lua
+        ---------------------------------------------------
+        result = Fun_Primal_Beast_Boss_Defense_ExecuteOrderFilter(event)
+    end
 
     if type(result) ~= "boolean" then
         result = true
     end
+
     return result
 
 end
@@ -258,33 +264,14 @@ end
 
 function CHeroDemo:AbilityTuningValueFilter(event)
 
-    if not IsServer() then return false end
-
-    --µôÖ¡ÑÏÖØ£¬ÔİÊ±¹Ø±Õ
-
+    --æ‰å¸§ä¸¥é‡ï¼Œæš‚æ—¶å…³é—­
+    
     local result = false 
 
-    local caster = nil
-    local ability = nil
-    local ability_name = nil
-
-    if event.entindex_caster_const then caster = EntIndexToHScript(event.entindex_caster_const) end
-    if event.eentindex_ability_const then ability = EntIndexToHScript(event.entindex_ability_const) end
-
-    if ability then
-        ability_name = ability:GetName()
-    end
-
-    if ability_name == "drow_ranger_frost_arrows" then
-
-        ---------------------------------------------------
-        --×¿¶ûÓÎÏÀµÄÒøÓ°Ìì³ğ£ºdrow_ranger_marksmanship_fun
-        --ÎÄ¼ş£ºfun_heroes/hero_drow_ranger/marksmanship_fun.lua
-        ---------------------------------------------------
-        result = drow_ranger_marksmanship_fun_AbilityTuningValueFilter(event)
-
-    else
-        result = false
+    if 
+       IsServer() 
+    then  
+       local x = 1
     end
 
     if type(result) ~= "boolean" then
@@ -304,19 +291,22 @@ end
 
 function CHeroDemo:HealingFilter(event)
 
-    if not IsServer() then return true end
+    local result = true
 
-    local result = true 
-
-    ---------------------------------------------------
-    --ïÀ»ê·¨Æ÷£ºitem_fun_spirit_vessel
-    --ÎÄ¼ş£ºFun_Items/item_fun_spirit_vessel.lua
-    ---------------------------------------------------
-    result = item_fun_spirit_vessel_debuff_HealingFilter(event)
+    if 
+       IsServer() 
+    then
+        ---------------------------------------------------
+        --é”¢é­‚æ³•å™¨ï¼šitem_fun_spirit_vessel
+        --æ–‡ä»¶ï¼šFun_Items/item_fun_spirit_vessel.lua
+        ---------------------------------------------------
+        result = item_fun_spirit_vessel_debuff_HealingFilter(event)
+    end
 
     if type(result) ~= "boolean" then
         result = true
     end
+
     return result
 
 end

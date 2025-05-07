@@ -1,0 +1,119 @@
+                //=================================
+                //卓尔游侠：银影天仇
+                //=================================
+	"drow_ranger_marksmanship_fun"
+	{
+		// General
+		// -------------------------------------------------------------------------------------------------------------
+		"BaseClass"	"ability_datadriven"
+		"AbilityTextureName"	"drow_ranger_marksmanship_arcana_alt1"
+		// | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"AbilityUnitDamageType"	"DAMAGE_TYPE_PHYSICAL"
+		"SpellImmunityType"	"SPELL_IMMUNITY_ENEMIES_YES"
+		"MaxLevel"	"1"
+		"ID"	"80177"
+		"precache"
+		{
+			"particle"	"particles/econ/events/fall_2021/radiance_owner_fall_2021.vpcf"
+		}
+		"Modifiers"
+		{
+			"modifier_marksmanship_fun"
+			{
+				"Passive"	"1"
+				"IsHidden"	"1"
+				// 获得技能或复活时，全场播放音效
+				//"OnCreated"
+				//{
+				//	"RunScript"
+				//	{
+				//		"ScriptFile"	"scripts/vscripts/fun_heroes/hero_drow_ranger/marksmanship_fun.lua"
+				//		"Function"	"FireSound"
+				//	}
+				//}
+				// 添加BUFF，实时检测K/A数据；为防止层数为负，D另做处理（因为无法获取助攻事件）
+				"OnIntervalThink"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_drow_ranger/marksmanship_fun.lua"
+						"Function"	"marksmanship"
+						"ModifierName_buff"	"modifier_marksmanship_BUFF"
+					}
+				}
+				"ThinkInterval"	"1"
+				// 死亡时丢失一定层数
+				"OnDeath"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_drow_ranger/marksmanship_fun.lua"
+						"Function"	"addDeaths"
+					}
+				}
+				// 普攻附带伤害
+				"OnAttackLanded"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/fun_heroes/hero_drow_ranger/marksmanship_fun.lua"
+						"Function"	"marksmanship_damage"
+					}
+				}
+				// 技能特效
+				"EffectName"	"particles/econ/events/fall_2021/radiance_owner_fall_2021.vpcf"
+				"EffectAttachType"	"follow_origin"
+			}
+			"modifier_marksmanship_BUFF"
+			{
+				"Passive"	"0"
+				"IsHidden"	"0"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_ATTACK_RANGE_BONUS"	"%attack_range_bonus"
+					"MODIFIER_PROPERTY_BONUS_NIGHT_VISION"	"%night_vision"
+				}
+			}
+		}
+		// Special
+		// -------------------------------------------------------------------------------------------------------------
+		"AbilitySpecial"
+		{
+			"01"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"attack_range_bonus"	"10"
+			}
+			"02"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"night_vision"	"20"
+			}
+			"03"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"damage"	"10"
+			}
+			"04"
+			{
+				"var_type"	"FIELD_FLOAT"
+				"magic_resistance"	"0"      //停止使用
+			}
+			"05"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"kill_count"	"3"      //停止使用
+			}
+			"06"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"assist_count"	"1"      //停止使用
+			}
+			"07"
+			{
+				"var_type"	"FIELD_INTEGER"
+				"death_lose"	"3"      //停止使用
+			}
+		}
+	}

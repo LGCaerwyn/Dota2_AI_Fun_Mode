@@ -6,7 +6,10 @@ function arc_warden_flux_fun_OnSpellStart(keys)
     local target = keys.target
     local dur = ability:GetSpecialValueFor("duration")
 
-    if target:TriggerSpellAbsorb(ability) then
+    if target:TriggerSpellAbsorb(ability) or 
+       target:HasAbility("arc_warden_flux_fun") or 
+       target:HasAbility("arc_warden_flux") 
+    then
         return
     end
 
@@ -16,7 +19,9 @@ function arc_warden_flux_fun_OnSpellStart(keys)
     ParticleManager:SetParticleControlEnt(particle, 2, caster, PATTACH_POINT_FOLLOW, "attach_attack2", Vector(0,0,0), false)
     caster:EmitSound("Hero_ArcWarden.Flux.Cast")
     target:EmitSound("Hero_ArcWarden.Flux.Target")
-	ParticleManager:ReleaseParticleIndex(particle)
+    ParticleManager:ReleaseParticleIndex(particle)
+
     ability:ApplyDataDrivenModifier(caster, target, "modifier_arc_warden_flux", { duration = dur })
+
 
 end

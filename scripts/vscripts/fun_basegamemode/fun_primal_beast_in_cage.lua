@@ -18,7 +18,7 @@ function Fun_Primal_Beast_in_Cage(keys)
 	    ability.hasSummoned = true
 	    local modifier_aura_ally = ability:ApplyDataDrivenModifier(caster, caster, modifier_aura_ally_name, {})
 		local modifier_aura_enemy = ability:ApplyDataDrivenModifier(caster, caster, modifier_aura_enemy_name, {})
-		
+	
 		local x = 0
 		local y = 0
 		local z = 128
@@ -111,27 +111,6 @@ function modifier_Fun_Primal_Beast_in_Cage_Aura_debuff_Created(keys)
 				target:EmitSound("Hero_Chen.TeleportIn")
 			end
 		})
-	end
-	return
-end
-
-function Fun_Primal_Beast_in_Cage_Aura_buff_OnCreated(keys)
-    if not IsServer() then return true end
-    local target = keys.target
-	local ability = keys.ability
-	local caster = keys.caster
-	ability:ApplyDataDrivenModifier(caster, target, "modifier_special_bonus_respawn_reduction", nil)
-	return
-end
-
-function Fun_Primal_Beast_in_Cage_Aura_buff_OnDeath(keys)
-    if not IsServer() then return true end
-    local target = keys.unit
-	local ability = keys.ability
-	local caster = keys.caster
-    local buff = target:FindModifierByNameAndCaster("modifier_special_bonus_respawn_reduction", caster)
-	if buff then
-	    buff:Destroy()
 	end
 	return
 end

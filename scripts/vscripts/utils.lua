@@ -2,15 +2,15 @@
 
 
 
---ÔÚFun_BaseGameMode/modifier_Fun_BaseGameMode.luaÖĞÊµÏÖ¹ı
---ÅĞ¶Ï´ËIDÊÇ·ñÊôÓÚÈËÀàÕóÓª
+--åœ¨Fun_BaseGameMode/modifier_Fun_BaseGameMode.luaä¸­å®ç°è¿‡
+--åˆ¤æ–­æ­¤IDæ˜¯å¦å±äºäººç±»é˜µè¥
 function is_Human_Team(playerID)
     if not IsServer() then return true end
     local playerTeam = PlayerResource:GetTeam(playerID)
     return __is_Human_Team(playerTeam)
 end
 
---ÅĞ¶Ï´ËÕóÓªÊÇ·ñÊÇÈËÀàÕóÓª
+--åˆ¤æ–­æ­¤é˜µè¥æ˜¯å¦æ˜¯äººç±»é˜µè¥
 function __is_Human_Team(DOTATeam_t)
     if not IsServer() then return true end
     if (DOTATeam_t == DOTA_TEAM_GOODGUYS and GameRules.Fun_DataTable["hasHumanPlayer_Radiant"] == true) or
@@ -24,7 +24,7 @@ end
 
 
 
---ÅĞ¶ÏÊÇ·ñ³ÔÁËÄ§¾§
+--åˆ¤æ–­æ˜¯å¦åƒäº†é­”æ™¶
 
 function Has_Aghanims_Shard(nTarget)
     if not IsServer() then return true end
@@ -72,21 +72,22 @@ function Once_more_no_nTarget( caster,Once_more_ability , nTarget_Position )
 end
 
 
---ÅĞ¶ÏÖ¸ÏòĞÔ¼¼ÄÜÄÜ·ñ×÷ÓÃÓÚÄ¿±ê
---Èç¹ûÄ¿±êÉíÉÏÓĞ¼¼ÄÜµÖµ²ÊôĞÔ£¬·µ»Ønil£¬·ñÔò·µ»ØÄ¿±ê
---ÁÑ»êÈËµÄÎ»Ãæ¿Õ¶´·µ»Ø½á¹ûÊÇÁÑ»êÈË
---¼¼ÄÜµÖµ²Ïà¹Ø¼¼ÄÜ£º
---    ÁÖ¿Ï·¨Çò
---    ÁÖ¿Ï·¨Çò£¨µÖµ²×ªÒÆ£©
---    Éñ¾µ¶Ü
---    ·¨Êõ·´ÖÆ£¨µĞ·¨Ê¦£©
---    ·¨ÊõµÖµ²£¨ÈâÉ½£©
---    Î»Ãæ¿Õ¶´£¨ÁÑ»êÈË£©
---    ÓÕµĞÆæÊõ£¨É­º£·ÉÏ¼£©
+--åˆ¤æ–­æŒ‡å‘æ€§æŠ€èƒ½èƒ½å¦ä½œç”¨äºç›®æ ‡
+--å¦‚æœç›®æ ‡èº«ä¸Šæœ‰æŠ€èƒ½æŠµæŒ¡å±æ€§ï¼Œè¿”å›nilï¼Œå¦åˆ™è¿”å›ç›®æ ‡
+--è£‚é­‚äººçš„ä½é¢ç©ºæ´è¿”å›ç»“æœæ˜¯è£‚é­‚äºº
+--æŠ€èƒ½æŠµæŒ¡ç›¸å…³æŠ€èƒ½ï¼š
+--    æ—è‚¯æ³•çƒ
+--    æ—è‚¯æ³•çƒï¼ˆæŠµæŒ¡è½¬ç§»ï¼‰
+--    ç¥é•œç›¾
+--    æ³•æœ¯ååˆ¶ï¼ˆæ•Œæ³•å¸ˆï¼‰
+--    æ³•æœ¯æŠµæŒ¡ï¼ˆè‚‰å±±ï¼‰
+--    ä½é¢ç©ºæ´ï¼ˆè£‚é­‚äººï¼‰
+--    è¯±æ•Œå¥‡æœ¯ï¼ˆæ£®æµ·é£éœï¼‰
+--    æ³•æœ¯æŠµæŒ¡ï¼ˆæ—§ç—›è‹¦å¥³ç‹å¤©èµ‹ï¼Œæš‚æœªåŠ å…¥åˆ¤å®šï¼‰
 
 function HasSpellAbsorb(target)
-    if not IsServer() then return true end	
-	if target == nil then return nil end
+    if not IsServer() then return nil end	
+	if target == nil or target:IsNull() then return nil end
 
 	if target:HasModifier("modifier_item_sphere_target") or
        target:HasModifier("modifier_antimage_counterspell") or
@@ -95,7 +96,7 @@ function HasSpellAbsorb(target)
 	    return nil
 	end
 
-	--´øÓĞÀäÈ´Ğ§¹ûµÄ£¬²»ÕâÑùĞ´£¬Èç¹ûÃ»ÓĞÏà¹Ø¼¼ÄÜ£¬»á±¨´í£¨luaÃ»·¨¶ÌÂ·ÅĞ¶Ï£©
+	--å¸¦æœ‰å†·å´æ•ˆæœçš„ï¼Œä¸è¿™æ ·å†™ï¼Œå¦‚æœæ²¡æœ‰ç›¸å…³æŠ€èƒ½ï¼Œä¼šæŠ¥é”™ï¼ˆluaæ²¡æ³•çŸ­è·¯åˆ¤æ–­ï¼‰
 	local item_sphere = target:FindItemInInventory("item_sphere")
 	local item_mirror_shield = target:FindItemInInventory("item_mirror_shield")
 	local ability_roshan_spell_block = target:FindAbilityByName("roshan_spell_block")	
@@ -118,7 +119,7 @@ function HasSpellAbsorb(target)
 	if target:HasModifier("modifier_spirit_breaker_planar_pocket") then
 	    local modifier_temp = target:FindModifierByName("modifier_spirit_breaker_planar_pocket")
 		local unit = modifier_temp:GetCaster()
-		return HasSpellAbsorb(unit) --ÁÑ»êÈËÈç¹ûÉíÉÏÓĞÁÖ¿ÏĞèÒªÔÙ´ÎÅĞ¶Ï
+		return HasSpellAbsorb(unit) --è£‚é­‚äººå¦‚æœèº«ä¸Šæœ‰æ—è‚¯éœ€è¦å†æ¬¡åˆ¤æ–­
 	end
 	return target
 end

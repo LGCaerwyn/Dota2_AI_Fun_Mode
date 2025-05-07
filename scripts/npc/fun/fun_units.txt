@@ -301,11 +301,12 @@
 		"Ability2"	"Fun_GreatCleave"
 		"Ability3"	"Fun_TimeLock"
 		"Ability4"	"Fun_Illusion_Breaker" 
-		"Ability5"	"Fun_Coup_de_Grace_Nian"
-		"Ability6"	"necronomicon_warrior_sight"
-		"Ability7"	"Fun_BKB"
-		"Ability8"	"Fun_Aura_Nian"
-		"Ability9"	"Fun_BlackHole"
+		"Ability5"	"Fun_Suppression"
+		"Ability6"	"Fun_Coup_de_Grace_Nian"
+		"Ability7"	"necronomicon_warrior_sight"
+		"Ability8"	"Fun_BKB"
+		"Ability9"	"Fun_Aura_Nian"
+		"Ability10"	"Fun_BlackHole"
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
@@ -358,7 +359,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"10000"
+		"StatusHealth"	"20000"//"10000"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"10"
 		// Base mana.
@@ -437,11 +438,12 @@
 		"Ability2"	"Fun_GreatCleave"
 		"Ability3"	"Fun_TimeLock"
 		"Ability4"	"Fun_Illusion_Breaker" 
-		"Ability5"	"Fun_Coup_de_Grace_Dragon"
-		"Ability6"	"necronomicon_warrior_sight"
-		"Ability7"	"Fun_BKB"
-		"Ability8"	"Fun_Aura_Dragon"
-		"Ability9"	"Fun_Duel"
+		"Ability5"	"Fun_Suppression"
+		"Ability6"	"Fun_Coup_de_Grace_Dragon"
+		"Ability7"	"necronomicon_warrior_sight"
+		"Ability8"	"Fun_BKB"
+		"Ability9"	"Fun_Aura_Dragon"
+		"Ability10"	"Fun_Duel"
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
@@ -494,7 +496,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"15000"
+		"StatusHealth"	"30000"//"15000"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"10"
 		// Base mana.
@@ -722,9 +724,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"50"
+		"ArmorPhysical"	"80"
 		// Magical protection (percentage).
-		"MagicalResistance"	"55"
+		"MagicalResistance"	"95"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_MELEE_ATTACK"
@@ -771,11 +773,11 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"15000"
+		"StatusHealth"	"80000"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
-		"StatusMana"	"5000"
+		"StatusMana"	"500"
 		// Mana regeneration rate.
 		"StatusManaRegen"	"5"
 		// Team
@@ -910,11 +912,11 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"8000"
+		"StatusHealth"	"12000"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"120"
 		// Base mana.
-		"StatusMana"	"3000"
+		"StatusMana"	"500"
 		// Mana regeneration rate.
 		"StatusManaRegen"	"10"
 		// Team
@@ -997,9 +999,9 @@
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
-		"ArmorPhysical"	"40"
+		"ArmorPhysical"	"120"
 		// Magical protection.  // this should be 33, switch it back once we implement Resistant Skin
-		"MagicalResistance"	"33"
+		"MagicalResistance"	"70"
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_MELEE_ATTACK"
@@ -1037,11 +1039,11 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"12000"
+		"StatusHealth"	"60000"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"0"
 		// Base mana.
-		"StatusMana"	"3000"
+		"StatusMana"	"500"
 		// Mana regeneration rate.
 		"StatusManaRegen"	"50"
 		// Vision
@@ -1106,12 +1108,13 @@
 		"Ability3"	"roshan_spell_block"
 		"Ability4"	"Fun_GreatCleave"
 		"Ability5"	"Fun_Illusion_Breaker" 
-		"Ability6"	"Fun_TimeLock"
-		"Ability7"	"Fun_BKB"
-		"Ability8"	"Fun_Coup_de_Grace_Hellfire"
-		"Ability9"	"Fun_Aura_Hellfire"
-		"Ability10"	"necronomicon_warrior_sight"
-		"Ability11"	"Fun_Omni_Slash"
+		"Ability6"	"Fun_Suppression"
+		"Ability7"	"Fun_TimeLock"
+		"Ability8"	"Fun_BKB"
+		"Ability9"	"Fun_Coup_de_Grace_Hellfire"
+		"Ability10"	"Fun_Aura_Hellfire"
+		"Ability11"	"necronomicon_warrior_sight"
+		"Ability12"	"Fun_Omni_Slash"
 		// Armor
 		// ----------------------------------------------------------------
 		// Physical protection.
@@ -1154,7 +1157,7 @@
 		// Status
 		// ----------------------------------------------------------------
 		// Base health.
-		"StatusHealth"	"12000"
+		"StatusHealth"	"24000"//"12000"
 		// Health regeneration rate.
 		"StatusHealthRegen"	"50"
 		// Base mana.
@@ -1228,12 +1231,14 @@
 		"Ability5"	    "fun_pulverize_boss"
 		"Ability6"	    "fun_huitianmiedi_boss"
 		"Ability7"      "fun_ravage_boss"
-		"Ability8"    	"fun_reverse_polarity_boss"     
-		"Ability9"    	"fun_arena_of_blood_boss" 
-		"Ability10"    	"fun_mystic_flare_boss"
-		"Ability11"   	"Fun_BlackHole"
-		"Ability12"	"fun_earth_splitter_boss"
-		"Ability13"   	"fun_Chronosphere_boss_v2" //"fun_chronosphere_boss"
+		"Ability8"    "fun_reverse_polarity_boss"     
+		"Ability9"    "fun_arena_of_blood_boss" 
+		"Ability10"    "fun_mystic_flare_boss"
+		"Ability11"    "Fun_BlackHole"
+		"Ability12"	    "fun_earth_splitter_boss"
+		"Ability13"    "fun_Chronosphere_boss_v2"
+		"Ability14"    "Fun_Suppression"
+
 
 		// Armor
 		// ----------------------------------------------------------------
@@ -1241,8 +1246,8 @@
 		// Attack
 		// ----------------------------------------------------------------
 		"AttackCapabilities"	"DOTA_UNIT_CAP_MELEE_ATTACK"
-		"AttackDamageMin"	                "500"
-		"AttackDamageMax"	"500"
+		"AttackDamageMin"	                "1000"
+		"AttackDamageMax"	"1000"
 		"AttackRate"	                "1.80000"
 		"AttackAnimationPoint"	"0.53"
 		"AttackAcquisitionRange"	"30000"

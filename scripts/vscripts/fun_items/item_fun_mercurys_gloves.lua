@@ -1,6 +1,6 @@
 
 function item_fun_Mercurys_gloves_cleave(keys)
-    
+    if not IsServer() then return true end
     local caster = keys.caster
     if caster:GetAttackCapability() ~= DOTA_UNIT_CAP_MELEE_ATTACK then
         return
@@ -10,7 +10,7 @@ function item_fun_Mercurys_gloves_cleave(keys)
     local distance = ability:GetSpecialValueFor("cleave_distance")
     local startRadius = 150
     local endRadius = ability:GetSpecialValueFor("cleave_radius")
-    local damage = ability:GetSpecialValueFor("cleave_dmg")
+    local damage = keys.Damage * ability:GetSpecialValueFor("cleave_dmg") /100
     local EffectName = "particles/econ/items/sven/sven_ti7_sword/sven_ti7_sword_spell_great_cleave_gods_strength_crit.vpcf"
 
     DoCleaveAttack(caster, target, ability, damage, startRadius, endRadius, distance, EffectName)

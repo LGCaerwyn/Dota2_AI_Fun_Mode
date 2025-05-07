@@ -2,6 +2,7 @@
 --大圣毁天灭地
 
 function LifeBreak( keys )
+    if not IsServer() then return true end
     -- Variables
     local ability = keys.ability
     ability.caster = keys.caster
@@ -58,6 +59,7 @@ end
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 --自动对目标发动攻击(对大圣启用，对獸停用)
 function AutoAttack(caster, target)
+        if not IsServer() then return true end
         order = 
         {
             UnitIndex = caster:GetEntityIndex(),
@@ -72,7 +74,7 @@ end
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 --向目标冲刺阶段的水平位移
 function JumpHorizonal(keys)
-
+    if not IsServer() then return true end
     local ability = keys.ability
     local caster = ability.caster
 	local target = ability.target
@@ -100,7 +102,7 @@ end
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 --向目标冲刺阶段的垂直位移
 function JumpVertical( keys )
-
+    if not IsServer() then return true end
     local ability = keys.ability
     local caster = ability.caster
 
@@ -123,7 +125,7 @@ end
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 --冲刺阶段位移结束
 function OnMotionDone(caster, target, ability)
-
+    if not IsServer() then return true end
     local modifier_start = ability.modifier_start
     local modifier_fly = ability.modifier_fly
     local modifier_fly_stop = ability.modifier_fly_stop
@@ -151,7 +153,7 @@ end
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 --飞升/落地阶段
 function LeapVertical(keys)
-
+    if not IsServer() then return true end
 	local ability = keys.ability
 	local caster = ability.caster
     local target = ability.target
@@ -185,6 +187,7 @@ end
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 --落地伤害
 function DoDamage(caster, target, hAbility)
+    if not IsServer() then return true end
     local isSuccessful = false --判断是否抱摔目标成功
     local modifier_fly = hAbility.modifier_fly
     local modifier_fly_stop = hAbility.modifier_fly_stop
@@ -208,11 +211,11 @@ function DoDamage(caster, target, hAbility)
         if caster:HasScepter() then
             damage_fixed = target:GetMaxHealth() * hAbility:GetSpecialValueFor("damage_pct_scepter") * 0.01
             damage_type_fixed = DAMAGE_TYPE_PURE
-            damage_flags_fixed = DOTA_DAMAGE_FLAG_NO_SPELL_AMPLIFICATION 
+            damage_flags_fixed = DOTA_DAMAGE_FLAG_NO_SPELL_AMPLIFICATION + DOTA_DAMAGE_FLAG_REFLECTION
         else
             damage_fixed = target:GetMaxHealth() * hAbility:GetSpecialValueFor("damage_pct") * 0.01
             damage_type_fixed = DAMAGE_TYPE_PHYSICAL
-            damage_flags_fixed = DOTA_DAMAGE_FLAG_NON_LETHAL + DOTA_DAMAGE_FLAG_NO_SPELL_AMPLIFICATION + DOTA_DAMAGE_FLAG_BYPASSES_BLOCK
+            damage_flags_fixed = DOTA_DAMAGE_FLAG_NON_LETHAL + DOTA_DAMAGE_FLAG_NO_SPELL_AMPLIFICATION + DOTA_DAMAGE_FLAG_BYPASSES_PHYSICAL_BLOCK + DOTA_DAMAGE_FLAG_REFLECTION
         end
 
         local dmg_table_target = {
@@ -281,6 +284,7 @@ end
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 function remove_particle(keys)
+    if not IsServer() then return true end
     local caster = keys.caster
     local modifier_1 = "modifier_item_ultimate_scepter"
 	local modifier_2 = "modifier_item_ultimate_scepter_consumed"
@@ -301,7 +305,7 @@ end
 -------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 function OnDeath(keys)
-
+    if not IsServer() then return true end
     local ability = keys.ability
     local target = ability.target
     local caster = ability.caster

@@ -1,5 +1,6 @@
 
 function dianshao_OnAttackStart(keys)
+    if not IsServer() then return true end
     local caster = keys.caster
 	local ability = keys.ability
 	local target = keys.target

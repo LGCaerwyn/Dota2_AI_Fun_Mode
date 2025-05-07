@@ -1,10 +1,13 @@
 
 function invoker_again( keys )
-	-- body
-local caster = keys.caster
+
+    local caster = keys.caster
+	local ability = keys.ability
+	local event_ability = keys.event_ability
+	local event_ability_name = event_ability:GetAbilityName()
+
     if caster:PassivesDisabled() then return end
 
-    local ability = keys.event_ability:GetAbilityName()
     local casterPoint = caster:GetAbsOrigin()
     local targetPoint = keys.event_ability:GetCursorPosition()
     local event_ability = keys.event_ability
@@ -16,9 +19,9 @@ local caster = keys.caster
 	local weizhixiangliang_fangxiang = weizhixiangliang:Normalized()
 	jiaodu = {45,90,135,225,270,315,360}  
 
-	local spawnDistance   = weizhixiangliang:Length2D()--300
-	local  round_circular = weizhixiangliang_fangxiang 
-	local R = spawnDistance  
+	local spawnDistance = weizhixiangliang:Length2D()--300
+	local round_circular = weizhixiangliang_fangxiang 
+	local R = spawnDistance
 
 	table_ability_invoker ={"invoker_tornado","invoker_chaos_meteor","invoker_sun_strike","invoker_emp"}  
 

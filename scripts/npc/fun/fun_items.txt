@@ -2,39 +2,39 @@
 //这里存放自制的各类物品
 //合成品的卷轴在Fun_Recipe.txt中
 
-//  #1500  测试工具                "item_fun_test" 
-//  #1501  祝福                      "item_fun_blessing" 
-//  #1502  AI的阿哈利姆神杖   "item_fun_Aghanims_Scepter_AI"                   卷轴：#16000             
-//  #1503  阿哈利姆之书         "item_fun_tome_of_aghanim"
-//  #1504  阿哈利姆的长袍      "item_fun_Aghanims_Robe"                           卷轴：#16001
-//  #1505  阿哈利姆的赝品      "item_fun_Aghanims_Fake_Scepter"               卷轴：#16002
-//  #1506  毒药                      "item_fun_poison"      
-//  #1507  力量之书                "item_fun_book_of_strength"               
-//  #1508  敏捷之书                "item_fun_book_of_agility"
-//  #1509  智力之书                "item_fun_book_of_intelligence"                               
-//  #1510  灵界芒果                "item_fun_greater_mango"                             卷轴：#16003 
-//  #1511  墨丘利的护手         "item_fun_Mercurys_gloves"                            卷轴：#16004
-//  #1512  定海神针                "item_fun_monkey_king_bar"                          卷轴：#16005
-//  #1513  科勒的超级匕首      "item_fun_super_blink_dagger"                        卷轴：#16006
-//  #1514  大师之笛-力量        "item_fun_grandmasters_glaive_str"                卷轴：#16007
-//  #1515  大师之笛-敏捷        "item_fun_grandmasters_glaive_agi"               卷轴：#16008
-//  #1516  大师之笛-智力        "item_fun_grandmasters_glaive_int"                卷轴：#16009
-//  #1517  大师之笛-全才        "item_fun_grandmasters_glaive_all"                 卷轴：#16010    （待完成）
-//  #1518  上古狂战斧            "item_bfury_v2"                                               卷轴：#16011
-//  #1519  上古黯灭               "item_desolator_v2"                                         卷轴：#16012
-//  #1520  伊卡洛斯之殇         "item_greater_crit_v2"                                      卷轴：#16013
-//  #1521  破泞之主的疏浚三叉戟   "item_fun_trident_three_phase_power"     卷轴：#16014
-//  #1522  AI难度升级工具      "item_fun_harder"
-//  #1523  AI难度降级工具      "item_fun_easier"
+//  #81500  测试工具                "item_fun_test" 
+//  #81501  祝福                      "item_fun_blessing" 
+//  #81502  AI的阿哈利姆神杖   "item_fun_Aghanims_Scepter_AI"                   卷轴：#81600             
+//  #81503  阿哈利姆之书         "item_fun_tome_of_aghanim"
+//  #81504  阿哈利姆的长袍      "item_fun_Aghanims_Robe"                           卷轴：#81601
+//  #81505  阿哈利姆的赝品      "item_fun_Aghanims_Fake_Scepter"               卷轴：#81602
+//  #81506  毒药                      "item_fun_poison"      
+//  #81507  力量之书                "item_fun_book_of_strength"               
+//  #81508  敏捷之书                "item_fun_book_of_agility"
+//  #81509  智力之书                "item_fun_book_of_intelligence"                               
+//  #81510  灵界芒果                "item_fun_greater_mango"                             卷轴：#81603 
+//  #81511  墨丘利的护手         "item_fun_Mercurys_gloves"                            卷轴：#81604
+//  #81512  定海神针                "item_fun_monkey_king_bar"                          卷轴：#81605
+//  #81513  科勒的超级匕首      "item_fun_super_blink_dagger"                        卷轴：#81606
+//  #81514  大师之笛-力量        "item_fun_grandmasters_glaive_str"                卷轴：#81607
+//  #81515  大师之笛-敏捷        "item_fun_grandmasters_glaive_agi"               卷轴：#81608
+//  #81516  大师之笛-智力        "item_fun_grandmasters_glaive_int"                卷轴：#81609
+//  #81517  大师之笛-全才        "item_fun_grandmasters_glaive_all"                 卷轴：#81610    （待完成）
+//  #81518  上古狂战斧            "item_bfury_v2"                                               卷轴：#81611
+//  #81519  上古黯灭               "item_desolator_v2"                                         卷轴：#81612
+//  #81520  伊卡洛斯之殇         "item_greater_crit_v2"                                      卷轴：#81613
+//  #81521  破泞之主的疏浚三叉戟   "item_fun_trident_three_phase_power"     卷轴：#81614
+//  #81522  AI难度升级工具      "item_fun_harder"
+//  #81523  AI难度降级工具      "item_fun_easier"
 
-//  #1524  身心转换工具          "待完成"
-//  #1525  翡翠鞋                   "item_fun_Jade_boots"                                     卷轴：#16015  
-//  #1526  冰霜重铠                "item_fun_shivas_guard_v2"                             卷轴：#16016 
-//  #1527  宝莲玄珠                "item_fun_lotus_orb_v2"                                   卷轴：#16017    
-//  #1528  万世金盘                "item_fun_aeon_disk_v2"                                  卷轴：#16018      
-//  #1529  锢魂法器                "item_fun_spirit_vessel"                                    卷轴：#16019 
-//  #1530  德尊烟斗                "item_fun_pipe_v2"                                          卷轴：#16020     
-//  #1531  强袭战甲                "item_fun_assault_armor_v2"                            卷轴：#16021    
+//  #81524  身心转换工具          "item_fun_personal"
+//  #81525  翡翠鞋                   "item_fun_Jade_boots"                                     卷轴：#81615  
+//  #81526  冰霜重铠                "item_fun_shivas_guard_v2"                             卷轴：#81616 
+//  #81527  宝莲玄珠                "item_fun_lotus_orb_v2"                                   卷轴：#81617    
+//  #81528  万世金盘                "item_fun_aeon_disk_v2"                                  卷轴：#81618      
+//  #81529  锢魂法器                "item_fun_spirit_vessel"                                    卷轴：#81619 
+//  #81530  德尊烟斗                "item_fun_pipe_v2"                                          卷轴：#81620     
+//  #81531  强袭战甲                "item_fun_assault_armor_v2"                            卷轴：#81621    
 
 "DOTAAbilities"
 {
@@ -45,7 +45,7 @@
 	{
                                 //---------------------------------------------------------------------------------------------------------------------------
 		"BaseClass"	                "item_datadriven"
-		"ID"	                                "11500"
+		//"ID"	                                "81500"
 		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_BOTH"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
@@ -81,24 +81,24 @@
 				"Passive"	                   "0"
 				"IsBuff"	                   "1"
 				"Attributes"	   "MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
-				"OnCreated"
-				{
+                                                                "OnCreated"
+                                                                {
 					"RunScript"
 					{
 						"ScriptFile"	     "scripts/vscripts/Fun_BaseGameMode/Fun_Primal_Beast_in_Cage.lua"
 						"Function"	     "Fun_Primal_Beast_in_Cage_Aura_buff_OnCreated"
 					}
-				}
-				"OnDeath"
-				{
+                                                                }
+                                                                "OnDeath"
+                                                                {
 					"RunScript"
 					{
 						"ScriptFile"	     "scripts/vscripts/Fun_BaseGameMode/Fun_Primal_Beast_in_Cage.lua"
 						"Function"	     "Fun_Primal_Beast_in_Cage_Aura_buff_OnDeath"
 					}
-				}
-			   "aaaOnDeath"
-				{
+                                                                }
+                                                               "aaaOnDeath"
+                                                                {
 					"RunScript"
 					{
 						"ScriptFile"	     "Fun_Items/item_fun_test.lua"
@@ -123,14 +123,14 @@
                 //===========================================
                 //祝福：开局使用，提供随机buff
                 //===========================================
-    "item_fun_blessing"
+                "item_fun_blessing"
 	{
 		"BaseClass"	                "item_datadriven"
 		"AbilityTextureName"	"item_default"
 		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-		"ID"	                                "11501"
+		//"ID"	                                "81501"
 		"ItemCastOnPickup"	"0"
 		"ItemCost"	"0"
 		"ItemDroppable"	"1"
@@ -144,7 +144,7 @@
 		"ItemAliases"	"zhufu"
 		"ItemRequirements"	{}
 
-        "AbilityCastPoint"                                "0.0"
+                                "AbilityCastPoint"                                "0.0"
 		"OnSpellStart"
 		{
 			"RunScript"
@@ -156,179 +156,29 @@
 		}
 		"Modifiers"
 		{
-			"amodifier_hero_blessing_fun_all attributes"
-			{
-				"TextureName"	"frostivus2018_decorate_tree"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"	"%bonus_stats"
-					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"	"%bonus_stats"
-					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"	"%bonus_stats"
-				}
-				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
-			}
-			"amodifier_hero_blessing_bonus_gold"
-			{
-				"TextureName"	"frostivus2018_decorate_tree"
-				"OnCreated"
-				{
-					"GrantXPGold"
-					{
-						"Target"	"CASTER"
-						"GoldAmount"	"500"
-						"ReliableGold"	"1"
-					}
-				}
-				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
-			}
-			"amodifier_hero_blessing_bonus_respawn"
-			{
-				"TextureName"	"frostivus2018_decorate_tree"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_RESPAWNTIME"	"%bonus_respawn"
-				}
-				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
-			}
-			"amodifier_hero_blessing_bonus_movespeed"
-			{
-				"TextureName"	"frostivus2018_decorate_tree"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_MOVESPEED_BONUS_CONSTANT"	"%bonus_movespeed"
-				}
-				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
-			}
-			"amodifier_hero_blessing_bouns_base_damage_percent"
-			{
-				"TextureName"	"frostivus2018_decorate_tree"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_BASEDAMAGEOUTGOING_PERCENTAGE"	"%bouns_base_damage_percent"
-				}
-				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
-			}
-			"amodifier_hero_blessing_bouns_damage_percent"
-			{
-				"TextureName"	"frostivus2018_decorate_tree"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_DAMAGEOUTGOING_PERCENTAGE"	"%bouns_damage_percent"
-				}
-				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
-			}
-			"amodifier_hero_blessing_bouns_mana_cost_percent"
-			{
-				"TextureName"	"frostivus2018_decorate_tree"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_MANACOST_PERCENTAGE"	"%bouns_mana_cost_percent"
-				}
-				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
-			}
-			"amodifier_hero_blessing_bouns_spell_amplify_percent"
-			{
-				"TextureName"	"frostivus2018_decorate_tree"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"	"%bouns_spell_amplify_percent"
-				}
-				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
-			}
-			"amodifier_hero_blessing_bouns_cooldown_percent"
-			{
-				"TextureName"	"frostivus2018_decorate_tree"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_COOLDOWN_PERCENTAGE"	"%bouns_cooldown_percent"
-				}
-				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
-			}
-			"amodifier_hero_blessing_bouns_incoming_spell_percent"
-			{
-				"TextureName"	"frostivus2018_decorate_tree"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	"%bouns_incoming_spell_percent"
-				}
-				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
-			}
-			"amodifier_hero_blessing_bouns_incoming_physical_percent"
-			{
-				"TextureName"	"frostivus2018_decorate_tree"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_INCOMING_PHYSICAL_DAMAGE_PERCENTAGE"	"%bouns_incoming_physical_percent"
-				}
-				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
-			}
-			"amodifier_hero_blessing_bouns_incoming_damage_percent"
-			{
-				"TextureName"	"frostivus2018_decorate_tree"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE"	"%bouns_incoming_damage_percent"
-				}
-				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
-			}
-			"amodifier_hero_blessing_bouns_day_vision"
-			{
-				"TextureName"	"frostivus2018_decorate_tree"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_BONUS_DAY_VISION"	"%bouns_day_vision"
-				}
-				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
-			}
-			"amodifier_hero_blessing_bouns_night_vision"
-			{
-				"TextureName"	"frostivus2018_decorate_tree"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_BONUS_NIGHT_VISION"	"%bouns_night_vision"
-				}
-				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
-			}
-			"amodifier_hero_blessing_bouns_health_regen"
-			{
-				"TextureName"	"frostivus2018_decorate_tree"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"	"%bouns_health_regen"
-				}
-				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
-			}
-			"amodifier_hero_blessing_bouns_mana_regen"
-			{
-				"TextureName"	"frostivus2018_decorate_tree"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"	"%bouns_mana_regen"
-				}
-				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
-			}
 		}
 		"AbilityValues"
 		{ //仅供参考，实际由basegamemode添加
-			"bonus_stats"                                       "3"        //--1
-			"bonus_gold"                                        "500"
-			"bonus_respawn"                                     "-8"
-			"bonus_movespeed"                                 	"10"
-			"bouns_base_damage_percent"                 		"10"
-			"bouns_damage_percent"	                			"5"
-			"bouns_mana_cost_percent"	                		"5"
-			"bouns_spell_amplify_percent"	          	        "5"
-			"bouns_cooldown_percent"	                		"5"
-			"bouns_incoming_spell_percent"						"7"
-			"bouns_incoming_physical_percent"					"-7"
-			"bouns_incoming_damage_percent"						"-4"
+			"bonus_stats"                                            "3"        //--1
+			"bonus_gold"                                            "500"
+			"bonus_respawn"                                      "-8"
+			"bonus_movespeed"                                 "10"
+			"bouns_base_damage_percent"                 "10"
+			"bouns_damage_percent"	                "5"
+			"bouns_mana_cost_percent"	                "5"
+			"bouns_spell_amplify_percent"	                "5"
+			"bouns_cooldown_percent"	                "5"
+			"bouns_incoming_spell_percent"	"7"
+			"bouns_incoming_physical_percent"	"-7"
+			"bouns_incoming_damage_percent"	"-4"
 			"bouns_day_vision"	                                "450"
-			"bouns_night_vision"	                            "300"
-			"bouns_health_regen"	                			"5"
-			"bouns_mana_regen"	                				"3"       //--16	
-			
-			"reset_times"                                            "2"	//原代表可重置次数，取消重置次数后，这个变量代表额外可选项，值为2代表于3选1
-			"reset_times_tooltip"                                "3"		
+			"bouns_night_vision"	                                "300"
+			"bouns_health_regen"	                "5"
+			"bouns_mana_regen"	                "3"       //--16	
+
+                                                "reset_times"                                            "2"	//原代表可重置次数，取消重置次数后，这个变量代表额外可选项，值为2代表于3选1
+                                                "reset_times_tooltip"                                "3"	
+
 		}
 	}
 
@@ -340,7 +190,7 @@
 		"BaseClass"	                "item_datadriven"
 		"AbilityTextureName"	"item_ultimate_scepter_tease2"
 		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ID"	                                "11502"
+		//"ID"	                                "81502"
 		"ItemQuality"	"artifact"
 		"ItemCost"	"9000"
 		"ItemDroppable"	"1"
@@ -356,6 +206,10 @@
 				"Passive"	                "1"
 				"IsHidden"	"1"
 				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"	                 "%strength_max"
+				}
 				"OnCreated"
 				{
 					"RunScript"
@@ -388,16 +242,23 @@
 				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
 				"Properties"
 				{
-					"MODIFIER_PROPERTY_HEALTH_BONUS"	                                 "%bonus_hp"
-					"MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE"	 "%bonus_hp_regen_pct"
-					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"	                 "%bonus_strength"
-					"MODIFIER_PROPERTY_COOLDOWN_PERCENTAGE"	                 "%bonus_cooldown"
-					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"	                 "%bonus_armor"
-					"MODIFIER_PROPERTY_BONUS_DAY_VISION"	                 "%bonus_day_vision"
-					"MODIFIER_PROPERTY_BONUS_NIGHT_VISION"	                 "%bonus_night_vision"
-					"MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"	"%amp"
-					"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"		"%bouns_mana_regen"
+					//"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"	                 "%strength_per_min"
+					"MODIFIER_PROPERTY_HEALTH_BONUS"	                                 "%hp_per_min"
+					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"	 "%hp_regen_per_min"
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"	                 "%armor_per_min"
+					"MODIFIER_PROPERTY_COOLDOWN_PERCENTAGE"	                 "%cooldown_per_min"
+					"MODIFIER_PROPERTY_BONUS_DAY_VISION"	                 "%day_vision_per_min"
+					"MODIFIER_PROPERTY_BONUS_NIGHT_VISION"	                 "%night_vision_per_min"
 				}
+				"OnIntervalThink" //同时为智力额外效果叠层
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/Fun_Items/item_fun_Aghanims_Scepter_AI.lua"
+						"Function"	"modifier_item_fun_Aghanims_Scepter_AI_OnIntervalThink_buff"
+					}
+				}
+                                                                "ThinkInterval"    "1"
 			}
 			"modifier_item_fun_Aghanims_Scepter_AI_buff_intellent"
 			{
@@ -406,34 +267,43 @@
 				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
 				"Properties"
 				{
-					"MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"	"%intellent_amp"
-					"MODIFIER_PROPERTY_COOLDOWN_PERCENTAGE"	                "%intellent_cooldown"
-				}
-			}
-			"modifier_item_Aghanim's Scepter_5"
-			{
-			"Passive"	                "0"
-			"IsHidden"	"1"
-				"Properties"
-				{
-					"MODIFIER_PROPERTY_ATTACK_RANGE_BONUS"	"300"
+					"MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"	"%intellent_amp_per_min"
+					"MODIFIER_PROPERTY_COOLDOWN_PERCENTAGE"	                "%intellent_cooldown_per_min"
 				}
 			}
 		}
 		"AbilityValues"
 		{
-			"bonus_strength"                   "80"
-			"bonus_hp"                            "2300"//"1000"
-			"bonus_hp_regen_pct"            "3"
-			"bouns_mana_regen"             "25"
-			"bonus_armor"                       "15"
-			"bonus_cooldown"                 "30"
-			"bonus_day_vision"                 "850"
-			"bonus_night_vision"               "600"
-			"amp"    		              "40"
-			"intellent_amp"                       "30"
-			"intellent_cooldown"               "30"
-			"buyback_cooldown"               "20"
+                                                "strength_per_min"             "1.5"              //每项数值需要和时间对应，比如60 = 1.5 * 40
+			"strength_max"                   "60"
+
+                                                "hp_per_min"                      "55"
+			"hp_max"                            "2200"
+
+                                                "hp_regen_per_min"             "6"
+			"hp_regen_max"                   "240"
+
+                                                "armor_per_min"                 "0.3"
+			"armor_max"                       "12"
+
+                                                "cooldown_per_min"            "0.75"
+			"cooldown_max"                  "30"
+
+                                                "day_vision_per_min"            "5"
+			"day_vision_max"                  "200"
+
+                                                "night_vision_per_min"         "10"
+			"night_vision_max"               "400"
+
+                                                "intellent_amp_per_min"      "1"
+                                                "intellent_amp_max"            "40"
+
+                                                "intellent_cooldown_per_min"         "0.3"
+                                                "intellent_cooldown_max"               "12"
+
+                                                "max_time"                           "40"
+
+                                                "buyback_cooldown"               "20"
 		}
 		"IsObsolete"	"0"
 	}
@@ -448,7 +318,7 @@
 		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_DONT_RESUME_ATTACK | DOTA_ABILITY_BEHAVIOR_IGNORE_PSEUDO_QUEUE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
 		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_FRIENDLY"
-		"ID"	                                "11503"
+		//"ID"	                                "81503"
 		"ItemQuality"	"artifact"
 		"ItemCost"	"4000"
 		"ItemShareability"	"ITEM_NOT_SHAREABLE"
@@ -486,19 +356,19 @@
 		"BaseClass"	                "item_datadriven"
 		"AbilityTextureName"	"item_crimson_robe"
 		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ID"	                                "11504"
+		//"ID"	                                "81504"
 		"ItemCost"	"15000"
 		"ItemDroppable"	"1"
 		"ItemSellable"	"0"
-        "ItemKillable"           		"0"
-		"ItemShareability"				"ITEM_PARTIALLY_SHAREABLE"
-		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES"
-		"ItemPurchasable"				"1"
-		"ItemPermanent"					"1"
-		"ItemAliases"					"robe"
-		"ItemStockMax"					"2"
-		"ItemStockInitial"				"2"
-		"ItemStockTime"					"99999999.0"
+                                "ItemKillable"           "0"
+		"ItemShareability"	"ITEM_PARTIALLY_SHAREABLE"
+		"ItemDeclarations"	"DECLARE_PURCHASES_TO_TEAMMATES"
+		"ItemPurchasable"	"1"
+		"ItemPermanent"	"1"
+		"ItemAliases"	"robe"
+		"ItemStockMax"	"2"
+		"ItemStockInitial"	"2"
+		"ItemStockTime"	"99999999.0"
 		"ItemRequirements"	{}
 		"AbilitySharedCooldown"			"item_aeon_disk"
 		"precache"
@@ -516,7 +386,7 @@
 				"Passive"	                "1"
 				"IsHidden"	"1"
 				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
-                "OnAbilityExecuted"
+                                		"OnAbilityExecuted"
 				{
 					"RunScript"
 					{
@@ -524,7 +394,7 @@
 						"Function"	"item_fun_Aghanims_Robe_OnAbilityExecuted"
 					}
 				}   
-                "OnAbilityEndChannel"
+                                		"OnAbilityEndChannel"
 				{
 					"RunScript"
 					{
@@ -538,7 +408,7 @@
 					{
 						"ScriptFile"	"scripts/vscripts/Fun_Items/item_fun_Aghanims_Robe.lua"
 						"Function"	"on_take_damage"
-                        //"Damage"                 "%attack_damage"
+                                                                                                //"Damage"                 "%attack_damage"
 					}
 				}
 				"OnIntervalThink"
@@ -549,7 +419,7 @@
 						"Function"	"IsReady"
 					}
 				}
-                "ThinkInterval"               "0.03"
+                                                                "ThinkInterval"               "0.03"
 				"OnDestroy"
 				{
 					"RunScript"
@@ -570,7 +440,7 @@
 				{
 					"MODIFIER_PROPERTY_HEALTH_BONUS"	                                      "%bonus_health"
 					"MODIFIER_PROPERTY_MANA_BONUS"	                                      "%bonus_mana"
-					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"                       "%bonus_armor"
+                                                                                "MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"                       "%bonus_armor"
 					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"	      "%bonus_health_regen"
 					"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"	                      "%bonus_mana_regen"
 					"MODIFIER_PROPERTY_MAGICAL_RESISTANCE_BONUS"	      "%bonus_magic_resistance"
@@ -578,11 +448,11 @@
 			}
 			"modifier_item_fun_Aghanims_Robe_damage_immune"
 			{
-				"Passive"	                "0"
-				"IsBuff"	                "1"
+                                                                "Passive"	                "0"
+                                                                "IsBuff"	                "1"
 				"IsHidden"	"0"
-				"IsPurgable"             "0"
-				"Attributes"              "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+                                                                "IsPurgable"             "0"
+                                                                "Attributes"              "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
 				"OnDestroy"
 				{
 					"RunScript"
@@ -599,13 +469,13 @@
 						"Function"	"Strong_Dispel"
 					}
 				}
-                "ThinkInterval"               "0.1"
+                                                                "ThinkInterval"               "0.1"
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_MAGICAL"	                                      "1"
 					"MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_PHYSICAL"	                                      "1"
-					"MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_PURE"                                                 "1"
-					"MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"                                          "%immune_mvspeed_pct"
+                                                                                "MODIFIER_PROPERTY_ABSOLUTE_NO_DAMAGE_PURE"                                                 "1"
+                                                                                "MODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE"                                          "%immune_mvspeed_pct"
 				}
 				"States"
 				{
@@ -614,18 +484,18 @@
 					"MODIFIER_STATE_DISARMED"	                               "MODIFIER_STATE_VALUE_ENABLED"
 					"MODIFIER_STATE_SILENCED"	                               "MODIFIER_STATE_VALUE_ENABLED"
 				}
-                "EffectName"	               "particles/items5_fx/minotaur_horn.vpcf"
+                                                                "EffectName"	               "particles/items5_fx/minotaur_horn.vpcf"
 				"EffectAttachType"                  "follow_origin"
 				"StatusEffectName"	               "particles/status_fx/status_effect_combo_breaker.vpcf"
                                                                 "StatusEffectPriority"	               "15" 
 			}
 			"modifier_item_fun_Aghanims_Robe_min_health"
 			{
-				"Passive"	                "1"    //取下物品自动移除
-				"IsBuff"	                "1"
+                                                                "Passive"	                "1"    //取下物品自动移除
+                                                                "IsBuff"	                "1"
 				"IsHidden"	"1"
-				"IsPurgable"             "0"
-				"Attributes"              "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_PERMANENT"
+                                                                "IsPurgable"             "0"
+                                                                "Attributes"              "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_PERMANENT"
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_MIN_HEALTH"	                                      "1"
@@ -633,11 +503,11 @@
 			}
 			"modifier_item_fun_Aghanims_Robe_rearm_cooldown"
 			{
-				"IsBuff"	                "1"
+                                                                "IsBuff"	                "1"
 				"IsHidden"	"1"
-				"IsPurgable"             "0"
-				"Attributes"              "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_PERMANENT"
-				"OnAbilityEndChannel"
+                                                                "IsPurgable"             "0"
+                                                                "Attributes"              "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_PERMANENT"
+                                		"OnAbilityEndChannel"
 				{
 					"RunScript"
 					{
@@ -653,7 +523,7 @@
 						"Function"	"item_fun_Aghanims_Robe_OnIntervalThink"
 					}
 				}
-                "ThinkInterval"               "0.1"
+                                                                "ThinkInterval"               "0.1"
 			}
 		}
 		"AbilityValues"
@@ -682,7 +552,7 @@
 		"AbilityCastPoint"	"0"
 		"AbilityCooldown"	"110.0"
 		"AbilityManaCost"	"300"
-		"ID"	                "11505"
+		//"ID"	                "81505"
 		"ItemQuality"	"artifact"
 		"ItemCost"	"12000"
 		"ItemDroppable"	"1"
@@ -800,13 +670,13 @@
 		}
 		"AbilityValues"
 		{
-            "bonus_all"	"60"
+                                                "bonus_all"	"60"
 			"armor"	                "15"
 			"spell_amp"	"15"
 			"he_regen"	"50"
-			"duration"	                "45"
-			"bonus_hp"	"2500"
-			"bonus_mana"	"1800"
+                                                "duration"	                "45"
+                                                "bonus_hp"	"2500"
+                                                "bonus_mana"	"1800"
 			"bonus_mvspeed"	"30"
 		}
 	}
@@ -826,7 +696,7 @@
 		"AbilityCastPoint"	"0.0"
 		"AbilityCooldown"	"60"
 		"AbilityCastRange"	"1600"
-		"ID"	                "11506"
+		//"ID"	                "81506"
 		"ItemCost"	"4000"
 		"ItemDroppable"	"1"
 		"ItemSellable"	"1"
@@ -844,7 +714,7 @@
 		"ItemRequirements"	{}
 		"precache"
 		{
-            "soundfile"				   "soundevents/game_sounds_heroes/game_sounds_alchemist.vsndevts"
+                                                "soundfile"	"soundevents/game_sounds_heroes/game_sounds_alchemist.vsndevts"
 			"particle"	               "particles/units/heroes/hero_alchemist/alchemist_acid_spray.vpcf"
 			"particle"	               "particles/econ/items/vengeful/vs_ti8_immortal_shoulder/vs_ti8_immortal_magic_missle.vpcf"
 		}
@@ -924,13 +794,13 @@
 		"AbilityValues"
 		{
 			"damage"	                 "50000"
-            "armor_reduction"     "-30"
+                                                "armor_reduction"     "-30"
 			"radius"                    
 			{
 				"value"		 "1200"
 				"affected_by_aoe_increase"	"1"	
 			}
-            "duration"                 "20"
+                                                "duration"                 "20"
 		}
 	}
 
@@ -945,7 +815,7 @@
 		// Stats
 		// -------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"	"0.0"
-		"ID"	                "11507"
+		//"ID"	                "81507"
 		"ItemQuality"	"consumable"
 		"Model"	                "models/gameplay/attrib_tome_str.vmdl"
 		// Item Info
@@ -982,7 +852,7 @@
 		// Stats
 		// -------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"	"0.0"
-		"ID"	                "11508"
+		//"ID"	                "81508"
 		"ItemQuality"	"consumable"
 		"Model"	"models/gameplay/attrib_tome_agi.vmdl"
 		// Item Info
@@ -1019,7 +889,7 @@
 		// Stats
 		// -------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"	"0.0"
-		"ID"	                "11509"
+		//"ID"	                "81509"
 		"ItemQuality"	"consumable"
 		"Model"	                "models/gameplay/attrib_tome_int.vmdl"
 		// Item Info
@@ -1055,7 +925,7 @@
 		"AbilityCastPoint"	"0"
 		"AbilityCooldown"	"110"
 		"AbilityManaCost"	"500"
-		"ID"	                "11510"
+		//"ID"	                "81510"
 		"ItemQuality"	"artifact"
 		"ItemCastOnPickup"	"0"
 		"ItemCost"	"7965"
@@ -1091,15 +961,15 @@
 			{
 				"Passive"	         "1"
 				"IsHidden"         "1"
-                "Attributes"       "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_PERMANENT"
+                                                                "Attributes"       "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_PERMANENT"
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"	                "%bonus_all"
 					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"	                "%bonus_all"
 					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"	                "%bonus_all"
 					"MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"	"%spell_amp"
-					"MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE"            "%hp_regen_pct"
-					"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"                 "%mp_regen"
+                                                                                "MODIFIER_PROPERTY_HEALTH_REGEN_PERCENTAGE"            "%hp_regen_pct"
+                                                                                "MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"                 "%mp_regen"
 				}
 				"OnCreated"
 				{
@@ -1123,26 +993,26 @@
 				"IsBuff"	      "1"
 				"IsPurgable"   "0"
 				"Passive"	      "0"
-                "Attributes"    "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+                                                                "Attributes"    "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_INCOMING_DAMAGE_PERCENTAGE"	"%incoming_dmg_pct"
 				}
-                "EffectName"	               "particles/econ/items/silencer/silencer_ti6/silencer_last_word_status_ti6_2.vpcf"
+                                                                "EffectName"	               "particles/econ/items/silencer/silencer_ti6/silencer_last_word_status_ti6_2.vpcf"
 				"EffectAttachType"                  "follow_origin"
 			}
 		}
 		"AbilityValues"
 		{
-            "bonus_all"                            "20"
+                                                "bonus_all"                            "20"
 			"spell_amp"                           "10"//"35"
-            "hp_regen_pct"                      "1"
-            "mp_regen"                           "12"
+                                                "hp_regen_pct"                      "1"
+                                                "mp_regen"                           "12"
 			"resistance_ignore"                "50"
 			"incoming_dmg_pct"             "200"
-            "duration_active"                   "25"
+                                                "duration_active"                   "25"
                                
-            //诡计之雾键值
+                                                //诡计之雾键值
 			"visibility_radius"	             "625"
 			"bonus_movement_speed"     "25"
 		}
@@ -1156,7 +1026,7 @@
 		"BaseClass"	                "item_datadriven"
 		"AbilityTextureName"	"item_gloves_of_travel"
 		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ID"	                                 "11511"
+		//"ID"	                                 "81511"
 		"ItemQuality"	"artifact"
 		"ItemCost"	"8500"
 		"ItemDroppable"	"1"
@@ -1184,7 +1054,7 @@
 				"IsHidden"	"1"
 				"Passive"	                "1"
 				"AllowIllusionDuplicate"	"1"
-                "Attributes"              "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_PERMANENT"
+                                                                "Attributes"              "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_PERMANENT"
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"	                "%bonus_str"
@@ -1198,7 +1068,7 @@
 					{
 						"ScriptFile"	"scripts/vscripts/Fun_Items/item_fun_Mercurys_gloves.lua"
 						"Function"	"item_fun_Mercurys_gloves_cleave"
-                        "Damage"	                "%attack_damage"
+                                                                                                "Damage"	                "%attack_damage"
 					}                                     
 				}
 			}
@@ -1230,7 +1100,7 @@
 		"BaseClass"	                "item_datadriven"
 		"AbilityTextureName"	"item_sun_wukong_bar"
 		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE"
-		"ID"	                                "11512"
+		//"ID"	                                "81512"
 		"ItemQuality"	               "epic"
 		"Model"	                               "models/props_gameplay/red_box.vmdl"
 		"Effect"	                               "particles/generic_gameplay/dropped_item.vpcf"
@@ -1259,12 +1129,12 @@
 			{
 				"Passive"	                "1"
 				"IsHidden"	"1"
-                "Attributes"              "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_PERMANENT"
+                                                                "Attributes"              "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_PERMANENT"
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"	        "%bonus_damage"
 					"MODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT"	        "%bonus_attack_speed"
-                    //"MODIFIER_PROPERTY_PROCATTACK_BONUS_DAMAGE_PURE"       "%pure_attack_damage"
+                                                                                //"MODIFIER_PROPERTY_PROCATTACK_BONUS_DAMAGE_PURE"       "%pure_attack_damage"
 				}
 				"States"
 				{
@@ -1278,7 +1148,7 @@
 						"Function"	"item_fun_monkey_king_bar_OnIntervalThink"
 					}
 				}
-                "ThinkInterval"    "0.1"
+                                                                "ThinkInterval"    "0.1"
 				"OnAttackLanded"
 				{
 					"RunScript"
@@ -1292,7 +1162,7 @@
 			{
 				"Passive"	                "1"
 				"IsHidden"	"1"
-                "Attributes"              "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_PERMANENT"
+                                                                "Attributes"              "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_PERMANENT"
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_ATTACK_RANGE_BONUS"	        "%attack_range_melee"
@@ -1303,7 +1173,7 @@
 				"Passive"	                "0"
 				"IsHidden"	"1"
 				"IsDebuff" 	"1"
-                "Attributes"              "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_PERMANENT"
+                                                                "Attributes"              "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_PERMANENT"
 			}
 		}
 		// Special
@@ -1315,11 +1185,11 @@
 			"pure_attack_damage"	"60"
 			"bash_chance"	                "35"
 			"bash_stun"	                "0.3"
-            "attack_range_melee"               "150"
+                                                "attack_range_melee"               "150"
 			"AbilityCooldown"                   
-            {         
-                "value"                           "1.2"
-		    }
+                                                {         
+                                                          "value"                           "1.2"
+		                }
 		}
 	}
 
@@ -1342,7 +1212,7 @@
 		// -------------------------------------------------------------------------------------------------------------
 		"AbilityManaCost"	"200"
 		"AbilitySharedCooldown"			"blink"
-		"ID"	                "11513"
+		//"ID"	                "81513"
 		"ItemQuality"	"artifact"
 		"ItemCost"	"7000"
 		"ItemDroppable"	"1"
@@ -1385,7 +1255,7 @@
 					//"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"            "%armor"
 					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"          "%hp_regen"
 					"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"            "%mana_regen"
-                    "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"       "%bonus_dmg"
+                                                                                "MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"       "%bonus_dmg"
 				}
 			}
 			"modifier_item_fun_super_blink_dagger_active"
@@ -1407,12 +1277,12 @@
 		{
 			//"bonus_str"	"0"//"60"
 			//"armor"	                "0"//"15"
-			"bonus_dmg"           "85"
-			"hp_regen"               "20"
-			"mana_regen"           "8"
+                                                "bonus_dmg"           "85"
+                                                "hp_regen"               "20"
+                                                "mana_regen"           "8"
 			"blink_range"	"1200"
-			"mvspeed_active"     "50"
-			"duration"                "5"
+                                                "mvspeed_active"     "80"
+                                                "duration"                "5"
 			"min_blink_range"	"200"
 		}
 	}
@@ -1435,7 +1305,7 @@
 		"AbilitySharedCooldown"			"item_blade_mail"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 
-		"ID"	                                "11514"
+		//"ID"	                                "81514"
 		"ItemQuality"	"artifact"
 		"ItemCost"	"12500"
 		"ItemDroppable"	"1"
@@ -1445,8 +1315,8 @@
 		"ItemPurchasable"	"1"
 		"ItemDeclarations"	"DECLARE_PURCHASES_TO_TEAMMATES"
 		"ItemRequirements"	{}
-		"ItemStockMax"	"5"
-		"ItemStockInitial"	"5"
+		"ItemStockMax"	"2"
+		"ItemStockInitial"	"2"
 		"ItemStockTime"	"99999999.0"
 		"precache"
 		{
@@ -1469,7 +1339,7 @@
 			{
 				"Passive"	                 "1"
 				"IsHidden"	 "1"
-                "Attributes"               "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_PERMANENT"
+                                                                "Attributes"               "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_PERMANENT"
 				"Aura"                       "modifier_item_fun_grandmasters_glaive_str_radiance"
 				"Aura_Radius"            "%aura_radius"
 				"Aura_Teams"            "DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -1516,13 +1386,13 @@
 					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"	             "%armor"
 					"MODIFIER_PROPERTY_EVASION_CONSTANT"	             "%bonus_evasion"
 				}
-				"EffectName"                "particles/econ/events/fall_2022/radiance/radiance_owner_fall2022.vpcf"
-				"EffectAttachType"        "follow_origin"
+                                                                "EffectName"                "particles/econ/events/fall_2022/radiance/radiance_owner_fall2022.vpcf"
+                                                                "EffectAttachType"        "follow_origin"
 			}
-            "modifier_item_fun_grandmasters_glaive_str_radiance"
+                                                "modifier_item_fun_grandmasters_glaive_str_radiance"
 			{                                                 
 				"IsDebuff"	                 "1"
-                "TextureName"	"item_radiance"
+                                                                "TextureName"	"item_radiance"
 				"OnCreated"
 				{
 					"RunScript"
@@ -1547,7 +1417,7 @@
 						"Function"	"item_fun_grandmasters_glaive_str_radiance_OnIntervalThink"
 					}
 				}
-                "ThinkInterval"               "1.0"
+                                                                "ThinkInterval"               "1.0"
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_MISS_PERCENTAGE"	"%blind_pct"
@@ -1574,11 +1444,11 @@
 			"armor"	                "10"
 			"bonus_evasion"	"15"
                                                
-            //辉耀
+                                                //辉耀
 			"aura_damage_base"		"150"
-			"aura_damage_str"                   "1.0"
-			"aura_damage_str_illusion"        "0"    
-			"max_dmg_times"                     "5"
+                                                "aura_damage_str"                   "1.0"
+                                                "aura_damage_str_illusion"        "0"    
+                                                "max_dmg_times"                     "5"
 			"blind_pct"		"20"
 			"aura_radius"		
 			{
@@ -1597,8 +1467,8 @@
 			"damage_const" 	"180"
 			"damage_str_pct" 	"5"
 
-			"str_stack"                 "2"
-			"stack_duration"        "13"
+                                                "str_stack"                 "2"
+                                                "stack_duration"        "13"
 		}
 	}
 
@@ -1617,7 +1487,7 @@
 		"SpellImmunityType"		"SPELL_IMMUNITY_ENEMIES_YES"
 		"AbilityUnitDamageType"	"DAMAGE_TYPE_MAGICAL"
 
-        //"AOERadius"                             "%radius"
+                                //"AOERadius"                             "%radius"
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCastRange"				"750"
@@ -1628,7 +1498,7 @@
 		"AbilitySharedCooldown"			"diffusal"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 
-		"ID"	                "11515"
+		//"ID"	                "81515"
 		"ItemQuality"	"artifact"
 		"ItemCastOnPickup"	"0"
 		"ItemCost"	"14800"
@@ -1639,8 +1509,8 @@
 		"ItemPurchasable"	"1"
 		"ItemDeclarations"	"DECLARE_PURCHASES_TO_TEAMMATES"
 		"ItemAlertable"	"0"
-		"ItemStockMax"	"5"
-		"ItemStockInitial"	"5"
+		"ItemStockMax"	"2"
+		"ItemStockInitial"	"2"
 		"ItemStockTime"	"99999999.0"
 		"ItemRequirements"	{}
 		"precache"
@@ -1653,21 +1523,21 @@
 			"particle"	                "particles/econ/items/windrunner/windranger_arcana/windranger_arcana_javelin_tgt.vpcf"
 			//"soundfile"	"soundevents/game_sounds_items.vsndevts"
 		}
-		"OnSpellStart"
-		{
+                                "OnSpellStart"
+                                {
 			"RunScript"
 			{
 				"ScriptFile"	"scripts/vscripts/Fun_Items/item_fun_grandmasters_glaive_agi.lua"
 				"Function"	"item_fun_grandmasters_glaive_agi_OnSpellStart"
 			}
-        }
+                                }
 		"Modifiers"
 		{
 			"modifier_item_fun_grandmasters_glaive_agi"
 			{
-                "Passive"	     "1"
+                                                                "Passive"	     "1"
 				"IsHidden"     "1"
-                "Attributes"       "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_PERMANENT"
+                                                                "Attributes"       "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_PERMANENT"
 				"OnAttackLanded"
 				{
 					"RunScript"
@@ -1689,9 +1559,9 @@
 			}
 			"modifier_item_fun_grandmasters_glaive_agi_stack"
 			{
-                "Passive"	     "0"
+                                                                "Passive"	     "0"
 				"IsHidden"     "1"
-                "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+                                                                "Attributes"    "MODIFIER_ATTRIBUTE_MULTIPLE | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"	                "%bonus_attack_agility"
@@ -1699,10 +1569,10 @@
 			}
 			"modifier_item_fun_grandmasters_glaive_agi_butterfly_attack"
 			{
-                "Passive"	     "0"
+                                                                "Passive"	     "0"
 				"IsHidden"     "0"
 				"IsDebuff"     "1"
-                "Attributes"    "MODIFIER_ATTRIBUTE_PERMANENT"
+                                                                "Attributes"    "MODIFIER_ATTRIBUTE_PERMANENT"
 				"OnCreated"
 				{
 					"RunScript"
@@ -1728,23 +1598,23 @@
 				{
 					"MODIFIER_PROPERTY_PROVIDES_FOW_POSITION"	             "1"
 				}
-                "EffectName"          "particles/units/heroes/hero_hoodwink/hoodwink_hunters_mark.vpcf"
-                "EffectAttachType"  "follow_overhead"
+                                                                "EffectName"          "particles/units/heroes/hero_hoodwink/hoodwink_hunters_mark.vpcf"
+                                                                "EffectAttachType"  "follow_overhead"
 			}
 			"modifier_item_fun_grandmasters_glaive_agi_butterfly_attack_cooldown"
 			{
-                "Passive"	     "0"
+                                                                "Passive"	     "0"
 				"IsHidden"     "0"
 				"IsBuff"          "1"
-                "Attributes"    "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_PERMANENT"
+                                                                "Attributes"    "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_PERMANENT"
 			}
 			"modifier_item_fun_grandmasters_glaive_agi_mage_slayer_debuff"
 			{
-                "Passive"	        "0"
+                                                                "Passive"	        "0"
 				"IsHidden"        "0"
 				"IsPurgable"     "0"
 				"IsDebuff"        "1"
-                "TextureName"	"item_mage_slayer"
+                                                                "TextureName"	"item_mage_slayer"
 				"OnCreated"
 				{
 					"RunScript"
@@ -1769,13 +1639,13 @@
 						"Function"	"track_mage_slayer_debuff"
 					}
 				}
-                "ThinkInterval"            "0.1"
-                "EffectName"         "particles/items3_fx/mage_slayer_debuff.vpcf"
-                "EffectAttachType"  "follow_overhead"
+                                                                "ThinkInterval"            "0.1"
+                                                                "EffectName"          "particles/items3_fx/mage_slayer_debuff.vpcf"
+                                                                "EffectAttachType"  "follow_overhead"
 			}
 			"modifier_item_fun_grandmasters_glaive_agi_mage_slayer_debuff_reduction"
 			{
-                "Passive"	        "0"
+                                                                "Passive"	        "0"
 				"IsHidden"        "1"
 				"IsPurgable"     "0"
 				"IsDebuff"        "1"
@@ -1792,7 +1662,7 @@
 						"Damage"	"%dps"
 					}
 				}
-                "ThinkInterval"            "1"
+                                                                "ThinkInterval"            "1"
 			}
 		}
 		"AbilityValues"
@@ -1801,31 +1671,31 @@
 			"bonus_intellect"	               "25"
 			"bonus_damage"	               "0"
 			"bonus_attack_speed"              "45"
-            "bonus_evasion"	                "0"
+                                                "bonus_evasion"	                "0"
 			"bonus_magic_resistance"	"25"
 			"bonus_mana_regen"	"4"
 
-			"bonus_attack_agility"	                "2"                                        
+        			"bonus_attack_agility"	                "2"                                        
 			"bonus_agility_duration"	                "15"
 
 			"bonus_attack_cooldown"	                "7"
-			"bonus_attack_cooldown_creep"	"2"
-            "search_radius"                                         
+			"bonus_attack_cooldown_creep"	"2.5"
+                                                "search_radius"                                         
 			{
 				"value"		                "2500"
 				"affected_by_aoe_increase"	"1"	
 			}                                                                
  
 			"mana_burn_const"	                                "60"
-			"mana_burn_pct"	                                "1"
-			"pure_dmg_pct"                                       "5"
-			"bonus_dmg_multiple"                              "0"
+                                                "mana_burn_pct"	                                "2"
+                                                "pure_dmg_pct"                                       "5"
+                                                "bonus_dmg_multiple"                              "0"
 			"illusion_mana_burn_coefficient"	"30"
 
-			"mage_slayer_dur"                             "6"
-			"mage_slayer_amp_reduction"           "40"
-			"per_stack_reduce"                            "-0.1"
-			"dps"                                                 "80"
+                                                "mage_slayer_dur"                             "6"
+                                                "mage_slayer_amp_reduction"           "40"
+                                                "per_stack_reduce"                            "-0.1"
+                                                "dps"                                                 "80"
 			"radius"				
 			{
 				"value"			"350"
@@ -1834,11 +1704,12 @@
 
 			"slow_duration"	                         "5.0"
 			"phase_movement_speed"	         "100"
-            "movement_speed_buff_rate"	         "5"
+                                                "movement_speed_buff_rate"	         "5"
 			"purge_rate"		         "5"
 		}
 	}
-     //===========================================
+
+                //===========================================
                 //大师之笛-智力：羊刀+灵匣+攻击附带额外伤害+降低魔抗+专属效果
                 //===========================================
 	"item_fun_grandmasters_glaive_int"
@@ -1859,7 +1730,7 @@
 		"AbilitySharedCooldown"			"item_sheepstick"
 		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
 
-		"ID"	                "11516"
+		//"ID"	                "81516"
 		"ItemQuality"	"artifact"
 		"ItemCost"	"12800"
 		"ItemDroppable"	"1"
@@ -1872,23 +1743,23 @@
 		"ItemStockInitial"	"2"
 		"ItemStockTime"	"99999999.0"
 		"ItemRequirements"	{}
-			"precache"
+                                "precache"
+                                {
+                                                 "particle"                        "particles/econ/items/faceless_void/faceless_void_arcana/faceless_void_arcana_time_lock_bash_hit.vpcf"
+                                                 "particle"                        "particles/items_fx/phylactery.vpcf"
+                                                 "particle"                        "particles/items_fx/ethereal_blade.vpcf"
+                                                 "particle"                        "particles/items4_fx/nullifier_proj.vpcf"
+                                }
+                                "OnSpellStart"
+                                {
+			"RunScript"
 			{
-				"particle"                        "particles/econ/items/faceless_void/faceless_void_arcana/faceless_void_arcana_time_lock_bash_hit.vpcf"
-				"particle"                        "particles/items_fx/phylactery.vpcf"
-				"particle"                        "particles/items_fx/ethereal_blade.vpcf"
-				"particle"                        "particles/items4_fx/nullifier_proj.vpcf"
+				"ScriptFile"	"scripts/vscripts/Fun_Items/item_fun_grandmasters_glaive_int.lua"
+				"Function"	"item_fun_grandmasters_glaive_int_OnSpellStart"
 			}
-			"OnSpellStart"
-			{
-				"RunScript"
-				{
-					"ScriptFile"	"scripts/vscripts/Fun_Items/item_fun_grandmasters_glaive_int.lua"
-					"Function"	"item_fun_grandmasters_glaive_int_OnSpellStart"
-				}
-			}
-			"aOnProjectileHitUnit" //虚灵刀和否决启用此处
-			{
+                                }
+                                "aOnProjectileHitUnit" //虚灵刀和否决启用此处
+                                {
 			"RunScript"
 			{
 				"ScriptFile"	"scripts/vscripts/Fun_Items/item_fun_grandmasters_glaive_int.lua"
@@ -1901,7 +1772,7 @@
 			{
 				"Passive"	                "1"
 				"IsHidden"	"1"
-                "Attributes"       "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_PERMANENT"
+                                                                "Attributes"       "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_PERMANENT"
 				"Aura"	                "modifier_item_fun_grandmasters_glaive_int_enemy_aura"
 				"Aura_Radius"	"%aoe_radius"
 				"Aura_Teams"	"DOTA_UNIT_TARGET_TEAM_ENEMY"
@@ -1986,13 +1857,13 @@
 				"IsHidden"         "0"
 				"IsBuff"             "1"
 				"Passive"	         "0"
-                "Attributes"       "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_PERMANENT"
+                                                                "Attributes"       "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_PERMANENT"
 			}
 			"modifier_item_fun_grandmasters_glaive_int_cannot_miss"
 			{
 				"IsHidden"         "1"
 				"Passive"	         "0"
-                "Attributes"       "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_PERMANENT"
+                                                                "Attributes"       "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_PERMANENT"
 				"States"
 				{
 					"MODIFIER_STATE_CANNOT_MISS"	      "MODIFIER_STATE_VALUE_ENABLED"
@@ -2002,7 +1873,7 @@
 			{
 				"IsHidden"         "1"
 				"Passive"	         "1"
-                "Attributes"       "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_PERMANENT"
+                                                                "Attributes"       "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_PERMANENT"
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_SPELL_AMPLIFY_PERCENTAGE"	"%per_int_amp"
@@ -2035,16 +1906,16 @@
 			"bonus_mana_regen"    "15"
 			"cast_range_bonus"	    "0"
 
-			//妖术效果
-			"sheep_duration"		"3.2"
+                                                //妖术效果
+                                                "sheep_duration"		"3.2"
 			"sheep_movement_speed"	"140"
-            // "sheep_cast_range_tooltip"        "1200"  //仅显示用，等于物品施法距离800+额外施法距离400
+                                               // "sheep_cast_range_tooltip"        "1200"  //仅显示用，等于物品施法距离800+额外施法距离400
                                     
 			"impact_dmg_const"	    "350"
 			"impact_dmg_int"	    "2.5"
-			"impact_slow"              "-50"
-			"impact_slow_time"      "1.5"
-			"impact_cooldown"      "6"
+                                                "impact_slow"              "-50"
+                                                "impact_slow_time"      "1.5"
+                                                "impact_cooldown"      "6"
 
 			"aoe_radius"	    
 			{
@@ -2053,14 +1924,14 @@
 			}
 			"aoe_damage_pct_max"	    "11"	
 			"aoe_damage_pct_min"	    "5"
-			"aoe_cooldown"           "1"
-			"aoe_nerf"                          "-15"
-			"aoe_mana_regen"             "-15"
-			"aoe_mana_regen_pct"       "-1.5"
+                                                "aoe_cooldown"           "1"
+                                                "aoe_nerf"                          "-15"
+                                                "aoe_mana_regen"             "-15"
+                                                "aoe_mana_regen_pct"       "-1.5"
 
-			"per_int_amp"               "0.1"
+                                                "per_int_amp"               "0.1"
 
-			//虚灵之刃主动，已停用  
+                                                //虚灵之刃主动，已停用  
 			"blast_movement_slow"	"-80"
 			"duration"			"4.0"
 			"blast_agility_multiplier"	"2.5"
@@ -2069,7 +1940,7 @@
 			"ethereal_damage_bonus"	"-60"
 			//"projectile_speed"	                "1875"
 
-            //否决主动，停用
+                                                 //否决主动，停用
 			"mute_duration"		"6.0"
 			"projectile_speed"		"1100"
 		}
@@ -2078,15 +1949,26 @@
                 //===========================================
                 //大师之笛-全才：
                 //===========================================
-    "item_fun_grandmasters_glaive_all"
+                "item_fun_grandmasters_glaive_all"
 	{
 		"BaseClass"	                "item_datadriven"
 		"AbilityTextureName"	"item_grandmasters_glaive_all"
-		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_UNIT_TARGET |  DOTA_ABILITY_BEHAVIOR_IMMEDIATE"
+		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_BOTH"
+		"AbilityUnitTargetType"	"DOTA_UNIT_TARGET_HERO | DOTA_UNIT_TARGET_BASIC"
+		"AbilityUnitTargetFlags"	"DOTA_UNIT_TARGET_FLAG_INVULNERABLE"
+		"SpellImmunityType"		"SPELL_IMMUNITY_ENEMIES_NO"
+		"SpellDispellableType"	"SPELL_DISPELLABLE_YES"
 
-		"ItemDeclarations"				"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"ItemDeclarations"		"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
+		"AbilityCastRange"		"1000"
+		"AbilityCastPoint"		"0.0"
+		"AbilityCooldown"		"13.0"
+		"AbilityManaCost"	                "100"
 
-		"ID"	                "11517"
+		"AbilitySharedCooldown"			"item_nullifier"
+
+		//"ID"	                "81517"
 		"ItemQuality"	"artifact"
 		"ItemCost"	"1"
 		"ItemDroppable"	"1"
@@ -2099,15 +1981,69 @@
 		"ItemStockInitial"	"2"
 		"ItemStockTime"	"99999999.0"
 		"ItemRequirements"	{}
-		"precache"
-		{
-			"particle"                        "particles/econ/items/faceless_void/faceless_void_arcana/faceless_void_arcana_time_lock_bash_hit.vpcf"
-		}
+                                "precache"
+                                {
+                                                 //"particle"                        "particles/econ/items/faceless_void/faceless_void_arcana/faceless_void_arcana_time_lock_bash_hit.vpcf"
+                                }
+                                "OnSpellStart"
+                                {
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/Fun_Items/item_fun_grandmasters_glaive_all.lua"
+				"Function"	"item_fun_grandmasters_glaive_all_OnSpellStart"
+			}
+                                }
+                                "OnProjectileHitUnit"
+                                {
+			"RunScript"
+			{
+				"ScriptFile"	"scripts/vscripts/Fun_Items/item_fun_grandmasters_glaive_all.lua"
+				"Function"	"item_fun_grandmasters_glaive_all_OnProjectileHitUnit"
+			}
+                                }
 		"Modifiers"
 		{
+			"modifier_item_fun_grandmasters_glaive_int"
+			{
+				"Passive"	                "1"
+				"IsHidden"	"1"
+                                                                "Attributes"              "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_PERMANENT"
+				"aOnCreated"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/Fun_Items/item_fun_grandmasters_glaive_int.lua"
+						"Function"	"item_fun_grandmasters_glaive_int_OnCreated"
+					}
+				}
+
+				"Properties"
+				{
+					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"	            "%bonus_str"
+					"MODIFIER_PROPERTY_STATS_AGILITY_BONUS"	            "%bonus_agi"
+					"MODIFIER_PROPERTY_STATS_INTELLECT_BONUS"	            "%bonus_int"
+					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"        "%bonus_damage"
+					"MODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS"	            "%bonus_armor"
+					"MODIFIER_PROPERTY_HEALTH_BONUS"	                            "%bonus_hp"
+					"MODIFIER_PROPERTY_MANA_BONUS"	                            "%bonus_mana"
+					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"           "%bonus_hp_regen"
+				}
+			}
 		}
 		"AbilityValues"
 		{
+			"bonus_str"	    "30"
+			"bonus_agi"	    "30"
+			"bonus_int"	    "30"
+			"bonus_damage"	    "130"
+			"bonus_armor"	    "15"
+			"bonus_hp"	    "350"
+			"bonus_mana"	    "350"
+			"bonus_hp_regen"         "25"
+
+                                                 //否决主动
+			"mute_duration"		"6.0"
+			"projectile_speed"		"1800"
 		}
 	}
                 //===========================================
@@ -2126,7 +2062,7 @@
 		"AbilityCastRange"	"350"
 		// General
 		// -------------------------------------------------------------------------------------------------------------
-		"ID"	"11518"
+		//"ID"	"81518"
 		"ItemQuality"	"epic"
 		// Item Info
 		// -------------------------------------------------------------------------------------------------------------
@@ -2147,12 +2083,12 @@
 			"cleave_starting_width"
 			{
 				"value"	                                "150"
-                "affected_by_aoe_increase"	"1"
+                                                                "affected_by_aoe_increase"	"1"
 			}
 			"cleave_ending_width"
 			{
 				"value"	"360"
-                "affected_by_aoe_increase"	"1"
+                                                                "affected_by_aoe_increase"	"1"
 			}
 			"cleave_distance"
 			{
@@ -2177,7 +2113,7 @@
 		"SpellDispellableType"	"SPELL_DISPELLABLE_YES"
 		// General
 		// -------------------------------------------------------------------------------------------------------------
-		"ID"	"11519"
+		//"ID"	"81519"
 		"ItemQuality"	"artifact"
 		// Item Info
 		// -------------------------------------------------------------------------------------------------------------
@@ -2211,7 +2147,7 @@
 		"AbilityTextureName"	"item_greater_crit_v2"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"ID"	"11520"
+		//"ID"	"81520"
 		"ItemQuality"	"epic"
 		// Item Info
 		// -------------------------------------------------------------------------------------------------------------
@@ -2241,7 +2177,7 @@
 		"AbilityTextureName"	"item_dredged_trident"
 		"AbilityBehavior"	"DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"ID"	                "11521"
+		//"ID"	                "81521"
 		"ItemQuality"	"artifact"
 		"Model"	"models/props_gameplay/neutral_box.vmdl"
 		// Item Info
@@ -2279,7 +2215,7 @@
 	{
                                 //---------------------------------------------------------------------------------------------------------------------------
 		"BaseClass"	                "item_datadriven"
-		"ID"	                                "11522"
+		//"ID"	                                "81522"
 		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
 		"AbilityTextureName"	"gem_harder" 
 		"ItemCastOnPickup"	                "0"
@@ -2297,8 +2233,8 @@
 		"ItemStockTime"				"1"			  
 		"ItemStockInitial"				"1"
 		"ItemStockMax"				"1"
-		"AbilityCastPoint"                                "0.0"
-		"AbilityCooldown"                               "0.5"
+                                "AbilityCastPoint"                                "0.0"
+                                "AbilityCooldown"                               "0.5"
 		"OnSpellStart"
 		{
 			"RunScript"
@@ -2312,9 +2248,9 @@
 		{}
 		"AbilityValues"
 		{
-			"difficulty_changed"                "0.5"
-			"difficulty_limited"                   "8"
-		}
+                                	"difficulty_changed"                "0.5"
+                                                "difficulty_limited"                   "8"
+                                }
 	}
                 //===========================================
                 //难度降级工具
@@ -2323,7 +2259,7 @@
 	{
                                 //---------------------------------------------------------------------------------------------------------------------------
 		"BaseClass"	                "item_datadriven"
-		"ID"	                                "11523"
+		//"ID"	                                "81523"
 		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_BACKSWING"
 		"AbilityTextureName"	"gem_easier"
  
@@ -2342,8 +2278,8 @@
 		"ItemStockTime"				"1"			  
 		"ItemStockInitial"				"1"
 		"ItemStockMax"				"1"
-		"AbilityCastPoint"                                "0.0"
-		"AbilityCooldown"                               "0.5"
+                                "AbilityCastPoint"                                "0.0"
+                                "AbilityCooldown"                               "0.5"
 
 		"OnSpellStart"
 		{
@@ -2358,9 +2294,9 @@
 		{}
 		"AbilityValues"
 		{
-			"difficulty_changed"        "-0.5"
-			"difficulty_limited"           "0.5"
-        }
+                                	"difficulty_changed"        "-0.5"
+                                                "difficulty_limited"           "0.5"
+                                }
 	}
                 //===========================================
                 //身心转换工具
@@ -2382,7 +2318,7 @@
 		"AbilityCooldown"	"7.0"
 		"AbilityManaCost"	"0"
 		// unique ID number for this item.  Do not change this once established or it will invalidate collected stats.
-		"ID"	"11525"
+		//"ID"	"81525"
 		"ItemQuality"	"rare"
 		// Item Info
 		// -------------------------------------------------------------------------------------------------------------
@@ -2431,7 +2367,7 @@
 		"AbilityCastRange"	"1200"
 		// General
 		// -------------------------------------------------------------------------------------------------------------
-		"ID"	"11526"
+		//"ID"	"81526"
 		"ItemQuality"	"epic"
 		"ItemCost"	"7825"
 		"ItemDeclarations"	"DECLARE_PURCHASES_TO_TEAMMATES | DECLARE_PURCHASES_IN_SPEECH | DECLARE_PURCHASES_TO_SPECTATORS"
@@ -2485,7 +2421,7 @@
 		"AbilityCastRange"	"900"
 		// General
 		// -------------------------------------------------------------------------------------------------------------
-		"ID"	"11527"
+		//"ID"	"81527"
 		"ItemQuality"	"epic"
 		// Item Info
 		// -------------------------------------------------------------------------------------------------------------
@@ -2519,7 +2455,7 @@
 
 		// General
 		// -------------------------------------------------------------------------------------------------------------
-		"ID"	"11528"
+		//"ID"	"81528"
 
 		// Stats		
 		//-------------------------------------------------------------------------------------------------------------
@@ -2561,11 +2497,11 @@
 		"AbilityUnitTargetTeam"	"DOTA_UNIT_TARGET_TEAM_BOTH"
 		"SpellImmunityType"	                "SPELL_IMMUNITY_ENEMIES_YES"
 		"AbilityCastPoint"	"0.0"
-		"AbilityCooldown"	"30"
+		"AbilityCooldown"	"15"
 		"AbilityManaCost"	"350"
 		"AbilityCastRange"	"900"
 		"AbilitySharedCooldown"			"urn"
-		"ID"	                "11529"
+		//"ID"	                "81529"
 		"ItemCost"	"13000"
 		"ItemDroppable"	"1"
 		"ItemSellable"	"0"
@@ -2580,10 +2516,11 @@
 		"ItemStockTime"	"99999999.0"
 		"ItemInitialStockTime"	"1890.0"
 		"ItemRequirements"	{}
+
 		"precache"
 		{
-            "soundfile"			"soundevents/game_sounds_heroes/game_sounds_alchemist.vsndevts"
-			"particle"	        "particles/econ/items/vengeful/vs_ti8_immortal_shoulder/vs_ti8_immortal_magic_missle.vpcf"
+                                                //"soundfile"               "soundevents/game_sounds_heroes/game_sounds_alchemist.vsndevts"
+			"particle"	               "particles/items4_fx/spirit_vessel_heal.vpcf"
 		}
 		"OnSpellStart"
 		{
@@ -2599,7 +2536,7 @@
 			{
 				"Passive"	                "1"
 				"IsHidden"	"1"
-                "Attributes"              "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_PERMANENT"
+                                                                "Attributes"              "MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE | MODIFIER_ATTRIBUTE_PERMANENT"
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_STATS_STRENGTH_BONUS"	            "%bonus_str"
@@ -2626,10 +2563,18 @@
 					}
 				}
 			}
-			"modifier_item_fun_spirit_vessel_debuff_0"
+			"modifier_item_fun_spirit_vessel_debuff_0"   //造成伤害和破坏
 			{
 				"IsDebuff"  	"1"
-                "IsPurgable"             "1"
+                                                                "IsPurgable"             "1"
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/Fun_Items/item_fun_spirit_vessel.lua"
+						"Function"	"item_fun_spirit_vessel_debuff_OnCreated"
+					}
+				}
 				"OnIntervalThink"
 				{
 					"RunScript"
@@ -2638,42 +2583,56 @@
 						"Function"	"item_fun_spirit_vessel_debuff_OnIntervalThink"
 					}
 				}
-                "ThinkInterval"   "1"
+				"OnDestroy"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/Fun_Items/item_fun_spirit_vessel.lua"
+						"Function"	"item_fun_spirit_vessel_debuff_OnDestroy"
+					}
+				}
+                                                                "ThinkInterval"   "1"
 				"States"
 				{
 					"MODIFIER_STATE_PASSIVES_DISABLED"	                         "MODIFIER_STATE_VALUE_ENABLED"
 				}
-                "EffectName"	"particles/generic_gameplay/generic_break.vpcf"
+                                                                "EffectName"	"particles/generic_gameplay/generic_break.vpcf"
 				"EffectAttachType"	"follow_overhead"
 			}
-			"modifier_item_fun_spirit_vessel_debuff_1"
+			"modifier_item_fun_spirit_vessel_debuff_1"      //叠层数降低生命恢复
 			{
-				"IsDebuff"  	"1"
-                "IsPurgable"             "1"
+				"IsDebuff"  	"0"     //不计入负面状态，避免剧毒先天的额外伤害
+                                                                "IsPurgable"             "0"
+				"IsHidden"	"1"
+				"OnCreated"
+				{
+					"RunScript"
+					{
+						"ScriptFile"	"scripts/vscripts/Fun_Items/item_fun_spirit_vessel.lua"
+						"Function"	"item_fun_spirit_vessel_debuff_1_OnCreated"
+					}
+				}
 				"OnIntervalThink"
 				{
 					"RunScript"
 					{
 						"ScriptFile"	"scripts/vscripts/Fun_Items/item_fun_spirit_vessel.lua"
-						"Function"	"item_fun_spirit_vessel_debuff_OnIntervalThink"
+						"Function"	"item_fun_spirit_vessel_debuff_1_OnIntervalThink"
 					}
 				}
-                "ThinkInterval"   "1"
-				"States"
-				{
-					"MODIFIER_STATE_PASSIVES_DISABLED"	                         "MODIFIER_STATE_VALUE_ENABLED"
-				}
+                                                                "ThinkInterval"   "0.1"
 				"Properties"
 				{
-					"MODIFIER_PROPERTY_DISABLE_HEALING"	            "1"
+					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"	            "-0.01"
+
 				}
-                "EffectName"	"particles/generic_gameplay/generic_break.vpcf"
-				"EffectAttachType"	"follow_overhead"
+                                                                "EffectName"	"particles/items4_fx/spirit_vessel_damage.vpcf"
+				"EffectAttachType"	"follow_origin"
 			}
 			"modifier_item_fun_spirit_vessel_buff"
 			{
 				"IsBuff"  	                "1"
-                "IsPurgable"             "1"
+                                                                "IsPurgable"             "1"
 				"OnAttacked"
 				{
 					"RunScript"
@@ -2692,14 +2651,17 @@
 				}
 				"Properties"
 				{
+					"MODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT"           "%soul_heal_amount"
 					"MODIFIER_PROPERTY_MANA_REGEN_CONSTANT"	            "%soul_mp_gain_amount"
 				}
-                "ThinkInterval"   "1"
+                                                                "ThinkInterval"          "1"
+                                                                "EffectName"	"particles/items4_fx/spirit_vessel_heal.vpcf"
+				"EffectAttachType"	"follow_origin"
 			}
 		}
 		"AbilityValues"
 		{
-            "bonus_str"                      "25"
+                                                "bonus_str"                      "25"
 			"bonus_agi"                     "18"
 			"bonus_int"                      "18"
 			"bonus_hp"                      "425"
@@ -2709,7 +2671,7 @@
 			"soul_heal_amount"		"150"
 			"soul_damage_amount"	"80"
 			"duration"			"8.0"
-			"hp_regen_reduction_enemy"	"75"
+			"hp_regen_reduction_enemy"	"85"
 			"enemy_hp_drain"		"6"
 
 			"armor_aura"		"5.0"
@@ -2722,7 +2684,7 @@
 			"soul_mp_gain_amount"	"90"
 			"soul_mp_loss_amount"	"60"     
 			"enemy_mp_drain"		"5"
-            "hp_cost_pct"                            "15"                                           
+                                                "hp_cost_pct"                            "15"                                           
 		}
 	}
 
@@ -2733,10 +2695,10 @@
 	{
 		// General
 		"BaseClass"	                "item_pipe"
-        "AbilityTextureName"	"item_pipe_v2"
+                                "AbilityTextureName"	"item_pipe_v2"
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_NO_TARGET"
-		"ID"	"11530"
+		//"ID"	"81530"
 		// Stats		
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"60.0"
@@ -2788,7 +2750,7 @@
 		"AbilityBehavior"	                "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 		"SpellImmunityType"	                "SPELL_IMMUNITY_ENEMIES_YES"
 		"AbilityCastRange"	                "1200"
-		"ID"	                                "11531"
+		//"ID"	                                "81531"
 		"ItemQuality"	                "epic"
 		"Model"	                                "models/props_gameplay/red_box.vmdl"
 		"Effect"	                                "particles/generic_gameplay/dropped_item.vpcf"

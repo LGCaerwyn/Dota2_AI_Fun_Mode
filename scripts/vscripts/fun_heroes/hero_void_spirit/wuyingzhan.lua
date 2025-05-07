@@ -215,50 +215,81 @@ function modifier_void_spirit_wuyingzhan_OnDestroy(keys)
 end
 
 --残阴附带额外效果
-function void_spirit_wuyingzhan_ModifierGainedFilter(event)
-    if not IsServer() then return true end
+function void_spirit_wuyingzhan_ModifierGainedFilter(event, result)
 
-    if not event.entindex_caster_const then return result end
-    if not event.entindex_parent_const then return result end
-    if not event.name_const then return result end
-	if not event.duration then return result end
-    local caster = EntIndexToHScript(event.entindex_caster_const)
-    local npc = EntIndexToHScript(event.entindex_parent_const)
-    local modifier_name = event.name_const
-    if caster == nil then return result end
-    if npc == nil then return result end
+    local caster = nil
+	local npc = nil
+	local modifier_name = ""
+	local special_bonus = nil
+	local special_bonus_lvl = 0
+	local is_caster_has_scepter = false
+	local is_caster_PassivesDisabled = true
 
-    local special_bonus = caster:FindAbilityByName("void_spirit_wuyingzhan") 
-    if special_bonus == nil then return result end
-    if special_bonus:GetLevel() < 1 then return result end
-	if not caster:HasScepter() or caster:PassivesDisabled() then return result end
+    if event.entindex_caster_const and
+	   event.entindex_parent_const and
+	   event.name_const and
+	   event.duration
+	then
+	    caster = EntIndexToHScript(event.entindex_caster_const)
+		npc = EntIndexToHScript(event.entindex_parent_const)
+		modifier_name = event.name_const
+    end
 
-    if modifier_name == "modifier_void_spirit_aether_remnant_pull" then
+	if caster and npc then
+	    special_bonus = caster:FindAbilityByName("void_spirit_wuyingzhan")
+		is_caster_has_scepter = caster:HasScepter()
+		is_caster_PassivesDisabled = caster:PassivesDisabled()
+	end
+	if special_bonus then
+	    special_bonus_lvl = special_bonus:GetLevel()
+	end
+
+	if is_caster_has_scepter and
+       not is_caster_PassivesDisabled and
+	   special_bonus_lvl > 0 and
+	   modifier_name == "modifier_void_spirit_aether_remnant_pull"
+	then
 	    special_bonus:ApplyDataDrivenModifier(caster, npc, "modifier_void_spirit_wuyingzhan_aether_remnant_debuff", { duration = event.duration })
-    end   
+	end  
 
 	return result
 end
 
 --共鸣脉冲附带额外效果
 function void_spirit_wuyingzhan_DamageFilter(event, original_damage) 
-    if not IsServer() then return true end
-    if event.entindex_victim_const == nil or
-	   event.entindex_attacker_const == nil or
-	   event.entindex_inflictor_const == nil
-	then
-	    return true
-	end
-    local victim = EntIndexToHScript(event.entindex_victim_const)
-	local attacker = EntIndexToHScript(event.entindex_attacker_const)
-	local inflictor = EntIndexToHScript(event.entindex_inflictor_const)
-	local fun_ability = attacker:FindAbilityByName("void_spirit_wuyingzhan")
-	if fun_ability == nil then return true end
 
-	if inflictor:GetName() == "void_spirit_resonant_pulse" and
-       fun_ability:GetLevel() >= 1 and
-	   attacker:HasScepter() and
-	   not attacker:PassivesDisabled()
+    local victim = nil
+	local attacker = nil
+	local inflictor = nil
+	local fun_ability = nil
+	local inflictor_name = ""
+	local fun_ability_lvl = 0
+	local is_attacker_has_scepter = false
+	local is_attacker_PassivesDisabled = true
+
+
+    if event.entindex_victim_const and
+	   event.entindex_attacker_const and
+	   event.entindex_inflictor_const 
+	then
+        victim = EntIndexToHScript(event.entindex_victim_const)
+	    attacker = EntIndexToHScript(event.entindex_attacker_const)
+	    inflictor = EntIndexToHScript(event.entindex_inflictor_const)	  
+	end
+
+	if attacker then 
+	    fun_ability = attacker:FindAbilityByName("void_spirit_wuyingzhan") 
+		is_attacker_has_scepter = attacker:HasScepter()
+		is_attacker_PassivesDisabled = attacker:PassivesDisabled()
+    end
+	if inflictor then inflictor_name = inflictor:GetName() end
+	if fun_ability then fun_ability_lvl = fun_ability:GetLevel() end
+
+
+	if inflictor_name == "void_spirit_resonant_pulse" and
+       fun_ability_lvl >= 1 and
+	   is_attacker_has_scepter and
+	   not is_attacker_PassivesDisabled
 	then
 	    --local buff_no_cleave = attacker:AddNewModifier(attacker, fun_ability, "modifier_void_spirit_astral_step_caster", nil)  --抑制分裂效果的修饰器，选择这个会让攻击继承太虚之径的暴击天赋
 		local buff_no_cleave = attacker:AddNewModifier(attacker, fun_ability, "modifier_tidehunter_anchor_smash_caster", nil)	
@@ -266,7 +297,6 @@ function void_spirit_wuyingzhan_DamageFilter(event, original_damage)
 		if buff_no_cleave then
 		    buff_no_cleave:Destroy()
 		end
-		return true
 	end
 	return true
 end

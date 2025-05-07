@@ -7,14 +7,13 @@ function ringmaster_innate( keys )
 	    local ability = keys.ability
 		local event_ability = keys.event_ability
 		local IsItemApplies = ability:GetSpecialValueFor("item_applies")
---		print(1)
+
 		if not caster:PassivesDisabled() and
 		   not event_ability:IsToggle() and
 		   (
 			  (not event_ability:IsItem() and event_ability:ProcsMagicStick()) --非物品，且充能魔棒
 		      or  
 		      (event_ability:IsItem() and IsItemApplies == 1) --物品，且学习了天赋
-		      or (not event_ability:IsItem() and event_ability:GetClassname() == "ability_datadriven")
 		   )
 		then
 		    --技能键值
@@ -35,11 +34,10 @@ function ringmaster_innate( keys )
 			local debuff = caster:FindModifierByName("modifier_ringmaster_innate_fun_debuff_tooltip")
 			local debuff_stack = 0
 			if debuff then debuff_stack = debuff:GetStackCount() end
---			print(2)	
+
 			--伤害
---			print(damage_const)
 			if damage_const > 0 then
---			    print(3)
+			    
 			    --不对迷雾中单位、隐身单位、睡眠单位造成伤害
 				target_flags = DOTA_UNIT_TARGET_FLAG_NO_INVIS + DOTA_UNIT_TARGET_FLAG_FOW_VISIBLE+ DOTA_UNIT_TARGET_FLAG_NOT_NIGHTMARED 
 

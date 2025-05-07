@@ -3,7 +3,7 @@ buff_reborn = nil                 --特殊的重生单独记录实体，避免�
 is_undying_talent_refresh = false --特殊重生会与尸王重生天赋同时触发，需要刷新后者
 
 function on_take_damage(keys)
-
+    if not IsServer() then return true end
     local ability = keys.ability
 	local attacker = keys.attacker
 	local caster = keys.caster
@@ -34,7 +34,7 @@ function on_take_damage(keys)
 end
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 function IsReady(keys)
-	
+	if not IsServer() then return true end
     local ability = keys.ability
 	local caster = keys.caster
 
@@ -78,6 +78,7 @@ function IsReady(keys)
 end
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 function remove_reincarnation()
+    if not IsServer() then return true end
     --卸下装备时移除重生
 	if buff_reborn ~= nil then
         buff_reborn:Destroy()
@@ -86,6 +87,7 @@ function remove_reincarnation()
 end
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 function Damage_Immune(keys)
+    if not IsServer() then return true end
     --触发免伤效果
     local caster = keys.caster
 	local ability = keys.ability
@@ -96,7 +98,10 @@ function Damage_Immune(keys)
 
     Strong_Dispel(keys)
 	caster:SetHealth(min_health)
-	ability:ApplyDataDrivenModifier(caster, caster, "modifier_item_fun_Aghanims_Robe_damage_immune", { duration = dur })			
+	ability:ApplyDataDrivenModifier(caster, caster, "modifier_item_fun_Aghanims_Robe_damage_immune", { duration = dur })
+	if caster:HasAbility("tinker_rearm") then
+	    ability:ApplyDataDrivenModifier(caster, caster, "modifier_item_fun_Aghanims_Robe_rearm_cooldown", { duration = cooldown }) --新增，不可被再装填刷新
+	end
 	ability:StartCooldown(cooldown)
 		
 	caster:EmitSound("DOTA_Item.MagicLamp.Cast")
@@ -108,6 +113,7 @@ function Damage_Immune(keys)
 end
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 function on_respawn(keys)
+    if not IsServer() then return true end
     --特殊复活后触发半血+免伤
     if is_triggered_when_respawn == true then
 	    Damage_Immune(keys)
@@ -117,12 +123,14 @@ function on_respawn(keys)
 end
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 function Strong_Dispel(keys)
+    if not IsServer() then return true end
     --最后一位参数代表强驱散
 	local caster = keys.caster
 	caster:Purge( false, true, false, true, true)  
 end
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 function buff_end(keys) 
+    if not IsServer() then return true end
     --免伤结束时的特效
     local caster = keys.caster
 	local particle = ParticleManager:CreateParticle("particles/items4_fx/combo_breaker_buff_end.vpcf", PATTACH_ABSORIGIN_FOLLOW , caster)
@@ -130,7 +138,7 @@ function buff_end(keys)
 end
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 function IsTrigger(keys)
-    
+    if not IsServer() then return true end
     local isTrigger = false
 	local caster = keys.caster
 
@@ -168,7 +176,7 @@ function IsTrigger(keys)
 end
 -------------------------------------------------------------------------------------------------------------------------------------------------------
 function ShouldHaveMinHealth(keys)
-    
+    if not IsServer() then return false end
     local shouldHaveMinHealth = false 
 	local ability = keys.ability
 	local caster = keys.caster
@@ -219,3 +227,35 @@ end
 		            ②提供的特殊重生与尸王25级天赋是同类型的，在移除时要筛选正确，否则会将尸王天赋一并移除（永生大帝可以帮尸王找回失去的天赋）
 					③重生会使尸王的天赋重生一并进入冷却，要在复活后刷新其技能
 ]]--
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------
+--新增，不可被再装填刷新
+--此时再装填已经刷新完技能（施法成功的情况下）
+function item_fun_Aghanims_Robe_OnAbilityEndChannel(keys)
+    if not IsServer() then return true end
+    local event_ability = keys.event_ability
+	local ability = keys.ability
+	local caster = keys.caster 
+	local cooldown_remaining = 0
+	local modifier_cooldown = caster:FindModifierByName("modifier_item_fun_Aghanims_Robe_rearm_cooldown")
+
+	if modifier_cooldown then
+	    cooldown_remaining = modifier_cooldown:GetRemainingTime() 
+	end
+
+	if event_ability:GetName() == "tinker_rearm" then
+        if ability:IsCooldownReady() and cooldown_remaining > 0 then
+		    ability:StartCooldown(cooldown_remaining)
+	    end
+	end
+end
+
+function item_fun_Aghanims_Robe_OnIntervalThink(keys)
+    if not IsServer() then return true end
+	local ability = keys.ability
+	local caster = keys.caster
+	local modifier_cooldown = caster:FindModifierByName("modifier_item_fun_Aghanims_Robe_rearm_cooldown")
+	if ability:IsCooldownReady() and modifier_cooldown then
+	    modifier_cooldown:Destroy()
+	end
+end

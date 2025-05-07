@@ -68,7 +68,7 @@ function item_fun_grandmasters_glaive_agi_OnAttackLanded(keys)
 	    	ApplyDamage(damage_table)
         end
 
-		--蝴蝶效应/全地图随机攻击
+		--蝴蝶效应
 		local modifier_bonus_attack_cooldown = "modifier_item_fun_grandmasters_glaive_agi_butterfly_attack_cooldown"
 		local modifier_bonus_attack = "modifier_item_fun_grandmasters_glaive_agi_butterfly_attack"
 		local target_location = target:GetAbsOrigin()
@@ -112,21 +112,9 @@ function item_fun_grandmasters_glaive_agi_OnAttackLanded(keys)
 			then
 			    local particleName = "particles/econ/items/windrunner/windranger_arcana/windranger_arcana_javelin_tgt.vpcf"
 	            ParticleManager:CreateParticle(particleName, PATTACH_ABSORIGIN_FOLLOW, ability.butter_fly_target)
-				caster:PerformAttack(ability.butter_fly_target, true, true, true, true, false, false, true)
+				caster:PerformAttack(ability.butter_fly_target, true, false, true, true, false, false, true)
 			end
 
-			--[[
-		    for i,debuff in ipairs(The_Butterfly_Effect) do    
-
-	            if debuff[1] == caster and debuff[2]~= target and target:IsAlive() then
-				    local particleName = "particles/econ/items/windrunner/windranger_arcana/windranger_arcana_javelin_tgt.vpcf"
-	                ParticleManager:CreateParticle(particleName, PATTACH_ABSORIGIN_FOLLOW, debuff[2])
-				    caster:PerformAttack(debuff[2], true, true, true, true, false, false, true)
-					--print("执行锁定攻击")
-		            break
-		        end
-			end
-			]]
 	    end
 
 	end

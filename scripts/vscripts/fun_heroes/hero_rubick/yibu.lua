@@ -151,7 +151,7 @@ table_rubick = {
 "treant_natures_grasp","treant_leech_seed","treant_living_armor",
 "ogre_magi_fireblast","ogre_magi_ignite","ogre_magi_bloodlust",
 "undying_decay","undying_soul_rip","undying_tombstone",
-"rubick_fade_bolt","rubick_arcane_supremacy",  --"rubick_telekinesis",
+"rubick_telekinesis","rubick_fade_bolt","rubick_arcane_supremacy",
 "disruptor_thunder_strike","disruptor_glimpse","disruptor_kinetic_field",
 "nyx_assassin_impale","nyx_assassin_mana_burn","nyx_assassin_spiked_carapace",
 "naga_siren_mirror_image","naga_siren_ensnare","naga_siren_rip_tide",
@@ -218,7 +218,6 @@ table_rubick = {
 
 "blademaster_windwalk","blademaster_mirror_image_naga","necrolyte_reapers_scythe_fun",
 "elder_titan_earth_splitter_hexagram","huoyanhuxi","juggernaut_omni_slash_fun",
-"ember_spirit_sword_soul",
 }
 
 

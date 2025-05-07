@@ -1,10 +1,10 @@
-#base Fun/Fun_BaseGameMode.txt    //   #80000——#80020，预留至#80050
-#base Fun/Fun_NianShou.txt             //   #80051——#80060，预留至#80100
-#base Fun/Fun_Boss.txt                     //   #80101——#80105，预留至#80150
-#base Fun/Fun_Abilities.txt               //   #80151——#80195，预留至#80300
-#base Fun/Fun_Talent.txt                  //   #80301
-#base Fun/Fun_Personal.txt              //   #80701——               预留至#81000
-#base Fun/Fun_Precacher.txt            //   #80020
+#base Fun/Fun_BaseGameMode.TXT      //    #80000——80050
+#base Fun/Fun_Precacher.TXT                //    #80020
+#base Fun/Fun_NianShou.txt                  //    #80051——80100
+#base Fun/Fun_Boss.txt                          //    #80101——80150
+#base Fun/Fun_Abilities.txt                     //    #80151——80300
+#base Fun/Fun_Talent.txt                       //    #80301——
+#base Fun/Fun_Personal.txt                   //    #80701——
 "DOTAAbilities"
 {
 	"Version"		"1"
@@ -134,7 +134,7 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN"
 		"MaxLevel"						"7"
-		"RequiredLevel"					"6"
+		"RequiredLevel"					"2"
 		
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
@@ -205,7 +205,7 @@
 	//=================================================================================================================
 	// Ability: Ability Capture
 	//=================================================================================================================
-	"ability_pluck_famango"
+	"ability_pluck_lotus"
 	{
 		// General
 		//-------------------------------------------------------------------------------------------------------------
@@ -226,7 +226,10 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-			"famango_rate"				"1"
+			"lotus_rate"				"1"
+			"channel_time_reduction_threshold_mins"		"5"
+			"channel_time_after_threshold"				"0.5"
+
 		}
 	}
 		
@@ -354,21 +357,21 @@
 
 		// Time		
 		//-------------------------------------------------------------------------------------------------------------
-		"AbilityCooldown"				"120"
+		"AbilityCooldown"				"240"
 
 		// Special
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-				"hp_heal"				"200"
-				"mp_heal"				"110"
+				"hp_heal"				"90"
+				"mp_heal"				"50"
 				"hp_heal_growth"		"0"
 				"mp_heal_growth"		"0"
-				"hp_heal_pct"				"4"
-				"mp_heal_pct"				"4"
-				"duration"				"6"
-				"radius"				"700"
-				"initial_cooldown"		"120"
+				"hp_heal_pct"				"2"
+				"mp_heal_pct"				"2"
+				"duration"				"5"
+				"radius"				"500"
+				"initial_cooldown"		"240"
 				"base_xp"				"50"
 				"bonus_xp"				"50"
 		}
@@ -425,7 +428,7 @@
 
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_2"
-	}
+	}		
 	//=================================================================================================================
 	// Ability: Necronomicon Warrior's Last Will
 	//=================================================================================================================

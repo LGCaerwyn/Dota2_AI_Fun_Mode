@@ -1,57 +1,70 @@
-require('Fun_BaseGameMode/modifier_Fun_BaseGameMode')
+require('utils')
 
---Ìí¼ÓĞŞÊÎÆ÷
+--æ·»åŠ ä¿®é¥°å™¨
 function modifier_item_fun_Aghanims_Scepter_AI_OnCreated(keys)
-
+    if not IsServer() then return true end
 	local ability = keys.ability
 	local caster = keys.caster
 	local c_team = caster:GetTeam()
 
-	--__is_Human_Team(t_Team)À´×ÔÎÄ¼şmodifier_Fun_BaseGameMode.lua
-	--ÌØÊâ¼¼ÄÜÌá¹©¼Ó³É
-	
-	if  caster:IsRangedAttacker() then
+	--__is_Human_Team(t_Team)æ¥è‡ªæ–‡ä»¶utils.lua
+	if __is_Human_Team(c_team) then return end
 
-			ability:ApplyDataDrivenModifier(caster, caster, "modifier_item_Aghanim's Scepter_5" , {})
-	end 	
-	
-	--if __is_Human_Team(c_team) then return end
-	if not PlayerResource:IsFakeClient(caster:GetPlayerID())  then return end
---	caster:AddAbility("special_bonus_unique_ai")
---	caster:FindAbilityByName("special_bonus_unique_ai"):SetLevel(1)
 	ability:ApplyDataDrivenModifier(caster, caster, "modifier_item_fun_Aghanims_Scepter_AI_buff", {})
-	--	if  caster:IsRangedAttacker() then
-
-	--		ability:ApplyDataDrivenModifier(caster, caster, "modifier_item_Aghanim's Scepter_5" , {})
-	--end 
-	
 	if caster:GetPrimaryAttribute() == 2 then
 	    ability:ApplyDataDrivenModifier(caster, caster, "modifier_item_fun_Aghanims_Scepter_AI_buff_intellent", {})
-	end		
-
-
-	
+	end				
 end
 
 ---------------------------------------------------------------------------------------------------------------------------------
---ÒÆ³ıĞŞÊÎÆ÷
+--ç§»é™¤ä¿®é¥°å™¨
 function modifier_item_fun_Aghanims_Scepter_AI_OnDestroy(keys)
-
+    if not IsServer() then return true end
     local caster = keys.caster
 	caster:RemoveModifierByNameAndCaster("modifier_item_fun_Aghanims_Scepter_AI_buff", caster)
 	caster:RemoveModifierByNameAndCaster("modifier_item_fun_Aghanims_Scepter_AI_buff_intellent", caster)
 end
 
 ---------------------------------------------------------------------------------------------------------------------------------
---ÎŞÏŞÂò»î
+--æ— é™ä¹°æ´»
 function modifier_item_fun_Aghanims_Scepter_AI_OnDeath(keys)
-
+    if not IsServer() then return true end
 	local caster = keys.caster
+	local ability = keys.ability
 	local c_team = caster:GetTeam()  
-	
-	--__is_Human_Team(t_Team)À´×ÔÎÄ¼şmodifier_Fun_BaseGameMode.lua
-	if __is_Human_Team(c_team) then return end	
+	local buyback_cooldown = ability:GetSpecialValueFor("buyback_cooldown")
 
-	caster:SetBuybackCooldownTime(0)
+	--__is_Human_Team(t_Team)æ¥è‡ªæ–‡ä»¶utils.lua
+	if __is_Human_Team(c_team) then return end	
+	if caster:GetBuybackCooldownTime() > buyback_cooldown then
+	    caster:SetBuybackCooldownTime(buyback_cooldown)
+    end
+end
+
+function modifier_item_fun_Aghanims_Scepter_AI_OnIntervalThink_buff(keys)
+    --if not IsServer() then return true end  --ä¼¼ä¹ä¼šæœ‰æ˜¾ç¤ºbugï¼Œå å±‚åå±æ€§ä¸å¢åŠ 
+	local caster = keys.caster
+	local ability = keys.ability
+	local max_time = 0 
+	local time1 = ability:GetSpecialValueFor("max_time") 
+	local time2 = GameRules.Fun_DataTable["blessing_bonus_stats_stack"]
+    local buff = caster:FindModifierByName("modifier_item_fun_Aghanims_Scepter_AI_buff")
+	local buff_int = caster:FindModifierByName("modifier_item_fun_Aghanims_Scepter_AI_buff_intellent")
+
+	max_time = math.min(time1, time2)
+
+	if buff then
+	    if buff:GetStackCount() < max_time then
+	        buff:SetStackCount(max_time)
+			--buff:SendBuffRefreshToClients()
+		end
+	end
+
+	if buff_int then
+	    if buff_int:GetStackCount() < max_time then
+	        buff_int:SetStackCount(max_time)
+			--buff:SendBuffRefreshToClients()
+		end
+	end
 
 end

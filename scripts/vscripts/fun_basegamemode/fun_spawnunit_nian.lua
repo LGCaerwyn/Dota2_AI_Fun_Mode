@@ -97,8 +97,8 @@ function SpawnUnit(offset, team)
     if difficulty == nil then return end
 	if difficulty < 3 then
 		nian:SetMaxHealth(4000)
-        		renlong:SetMaxHealth(4000)
-       		hellfire:SetMaxHealth(4000)
+        renlong:SetMaxHealth(4000)
+        hellfire:SetMaxHealth(4000)
 	end
 
     return

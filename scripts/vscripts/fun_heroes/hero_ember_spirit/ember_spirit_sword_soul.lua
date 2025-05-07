@@ -50,11 +50,6 @@ function ember_spirit_sword_soul( keys )
 
     ability_SetActivated = caster:FindAbilityByName("ember_spirit_sword_soul")
     ability:SetActivated(false)  --即用即禁
-if caster:GetUnitName() == "npc_dota_hero_rubick" then
-   ability:SetActivated(true)  --即用即禁
- --   return
-end
-   -- ability:SetActivated(false)  --即用即禁
 
    
     --启用法阵特效
@@ -293,10 +288,6 @@ function ember_spirit_sword_soul_OnUpgrade(keys)
 local ability = keys.ability
 local caster = keys.caster
 
-if caster:GetUnitName() == "npc_dota_hero_rubick" then
-
-    return
-end
     ability_SetActivated = caster:FindAbilityByName("ember_spirit_sword_soul")
     ability:SetActivated(false)
 end
@@ -415,28 +406,16 @@ print("伤害："..damage)
 
 for k,target in pairs(targets) do
     --print(k,v)
-	
-	
-    local victimHealth = target:GetHealth() -- 获取受害者当前生命值
-    local victimMaxHealth = target:GetMaxHealth() -- 获取受害者最大生命值
-   -- local x = GetPhysicalArmorValue()
-  --  if (victimHealth - damage) < 0.5 * victimMaxHealth then
-    if victimHealth  < 0.5 * victimMaxHealth then 
-    per = 1.3 -- 如果受害者生命值少于50%，则将伤害增加30%
-    else  
-    per = 1
-    end
-	
-	
     damagetable = {
     victim = target,
     attacker = caster, 
     ability = ability ,
-    damage = damage * per,
+    damage = damage,
     damage_type = DAMAGE_TYPE_PHYSICAL,
-    damage_flags = DOTA_DAMAGE_FLAG_BYPASSES_BLOCK ,
+    damage_flags = DOTA_DAMAGE_FLAG_BYPASSES_PHYSICAL_BLOCK ,
             }
-    ApplyDamage(damagetable)
+
+            ApplyDamage(damagetable)
            -- 
 
                -- print("执行伤害")

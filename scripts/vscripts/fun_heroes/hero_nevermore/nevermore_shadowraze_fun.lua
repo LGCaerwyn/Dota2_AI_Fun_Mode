@@ -1,5 +1,5 @@
 ﻿function shadowraze_fun(keys)
-      
+      if not IsServer() then return true end
       target = keys.target
       caster = keys.caster
       ability = keys.ability
@@ -27,7 +27,7 @@ end
 -------------------------------------------------------------------------------------------------------------------
 
 function shadowraze_fun_damage(keys)
-
+      if not IsServer() then return true end
       target = keys.target
       caster = keys.caster
       ability = keys.ability
@@ -103,7 +103,7 @@ end
 -------------------------------------------------------------------------------------------------------------------
 
 function cannot_be_stolen(keys)
-
+     if not IsServer() then return true end
      --print("这个技能不可以被拉比克偷取！")
      local caster = keys.caster
      local ability = caster:FindAbilityByName("nevermore_shadowraze_fun")

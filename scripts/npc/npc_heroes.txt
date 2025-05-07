@@ -87,11 +87,11 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"		"0"
-		"AttributeStrengthGain"		"0"
+		"AttributeStrengthGain"		"2.0" // 原值: 0.0
 		"AttributeBaseAgility"		"0"
-		"AttributeAgilityGain"		"0"
+		"AttributeAgilityGain"		"0.0" // 原值: 0.0
 		"AttributeBaseIntelligence"		"0"
-		"AttributeIntelligenceGain"		"0"
+		"AttributeIntelligenceGain"		"0.0" // 原值: 0.0
 
 		// Bounty
 		//-------------------------------------------------------------------------------------------------------------
@@ -223,7 +223,6 @@
 		"Ability5"		"antimage_persectur"
 		"Ability6"		"antimage_mana_void"
 		"Ability7"		"antimage_mana_defend"
-
 		"AbilityDraftAbilities"
 		{
 			"Ability1"	"antimage_mana_break"
@@ -280,11 +279,11 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
 		"AttributeBaseStrength"		"21"
-		"AttributeStrengthGain"		"1.600000"
+		"AttributeStrengthGain"		"1.6" // 原值: 1.6
 		"AttributeBaseAgility"		"24"
-		"AttributeAgilityGain"		"2.8"
+		"AttributeAgilityGain"		"4.8" // 原值: 2.8
 		"AttributeBaseIntelligence"		"12"
-		"AttributeIntelligenceGain"		"1.800000"
+		"AttributeIntelligenceGain"		"1.8" // 原值: 1.8
 		"StatusHealthRegen"		"1.0"
 
 		// Movement
@@ -425,7 +424,7 @@
 				//
 				"TextureWidth"		"512"
 				"TextureHeight"		"512"
-				"MaxPolygonsLOD0"		"3000"
+				"MaxPolygonsLOD0"		"2500"
 				"MaxPolygonsLOD1"		"1250"
 				"no_import"		 "1"
 			}
@@ -573,7 +572,7 @@
 		"Ability1"		"axe_berserkers_call"
 		"Ability2"		"axe_battle_hunger"
 		"Ability3"		"axe_counter_helix"
-		"Ability4"		"axe_jingtongdefanji"//"generic_hidden"
+		"Ability4"		"axe_jingtongdefanji"       //"generic_hidden"
 		"Ability5"		"generic_hidden"
 		"Ability6"		"axe_culling_blade"
 		"Ability7"		"axe_coat_of_blood"
@@ -633,11 +632,11 @@
 		}
 		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"		"25"
-		"AttributeStrengthGain"		"2.8"
+		"AttributeStrengthGain"		"4.8" // 原值: 2.8
 		"AttributeBaseAgility"		"20"
-		"AttributeAgilityGain"		"1.7"
+		"AttributeAgilityGain"		"1.7" // 原值: 1.7
 		"AttributeBaseIntelligence"		"18"
-		"AttributeIntelligenceGain"		"1.6"
+		"AttributeIntelligenceGain"		"1.6" // 原值: 1.6
 		"StatusHealthRegen"		"2.5"
 		"MovementSpeed"		"315"
 		"MovementSpeedActivityModifiers"
@@ -962,11 +961,11 @@
 		"ProjectileSpeed"		"900"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_ALL"
 		"AttributeBaseStrength"		"23"
-		"AttributeStrengthGain"		"2.700000"
+		"AttributeStrengthGain"		"3.4" // 原值: 2.7
 		"AttributeBaseAgility"		"23"
-		"AttributeAgilityGain"		"2.700000"
+		"AttributeAgilityGain"		"3.4" // 原值: 2.7
 		"AttributeBaseIntelligence"		"23"
-		"AttributeIntelligenceGain"		"2.700000"
+		"AttributeIntelligenceGain"		"3.4" // 原值: 2.7
 		"MovementSpeed"		"305"
 		"VisionNighttimeRange"		"1200"
 		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
@@ -1002,6 +1001,7 @@
 				"TextureHeight"		"512"
 				"MaxPolygonsLOD0"		"3000"
 				"MaxPolygonsLOD1"		"1200"
+
 			}
 			"2"
 			{
@@ -1010,28 +1010,31 @@
 				"SlotText"		"#LoadoutSlot_Shoulder"
 				"TextureWidth"		"512"
 				"TextureHeight"		"512"
-				"MaxPolygonsLOD0"		"4000"
-				"MaxPolygonsLOD1"		"1600"
+				"MaxPolygonsLOD0"		"2000"
+				"MaxPolygonsLOD1"		"1200"
+
 			}
 			"3"
 			{
 				"SlotIndex"		"3"
 				"SlotName"		"arms"
 				"SlotText"		"#LoadoutSlot_Arms"
-				"TextureWidth"		"512"
+				"TextureWidth"		"256"
 				"TextureHeight"		"256"
-				"MaxPolygonsLOD0"		"2000"
-				"MaxPolygonsLOD1"		"800"
+				"MaxPolygonsLOD0"		"1500"
+				"MaxPolygonsLOD1"		"600"
+
 			}
 			"4"
 			{
 				"SlotIndex"		"4"
 				"SlotName"		"back"
 				"SlotText"		"#LoadoutSlot_Back"
-				"TextureWidth"		"512"
-				"TextureHeight"		"512"
-				"MaxPolygonsLOD0"		"2500"
-				"MaxPolygonsLOD1"		"1000"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"2000"
+				"MaxPolygonsLOD1"		"800"
+
 			}
 			"5"
 			{
@@ -1228,11 +1231,11 @@
 		"AttackRange"		"150"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
 		"AttributeBaseStrength"		"24"
-		"AttributeStrengthGain"		"2.700000"
+		"AttributeStrengthGain"		"2.7" // 原值: 2.7
 		"AttributeBaseAgility"		"24"
-		"AttributeAgilityGain"		"3.100000"
+		"AttributeAgilityGain"		"5.1" // 原值: 3.1
 		"AttributeBaseIntelligence"		"17"
-		"AttributeIntelligenceGain"		"2.0"
+		"AttributeIntelligenceGain"		"2.0" // 原值: 2.0
 		"MovementSpeed"		"285"
 		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
 		"particle_folder"		"particles/units/heroes/hero_bloodseeker"
@@ -1501,7 +1504,7 @@
 		"Ability5"		"crystal_maiden_let_it_go"//"crystal_maiden_blueheart_floe"
 		"Ability6"		"crystal_maiden_freezing_field"
 		"Ability7"		"crystal_maiden_freezing_field_stop"
-		"Ability8"			"crystal_maiden_blueheart_floe"
+		"Ability8"		"crystal_maiden_blueheart_floe"
 
 		"AbilityDraftAbilities"
 		{
@@ -1572,11 +1575,11 @@
 		"ProjectileSpeed"		"900"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"		"17"
-		"AttributeStrengthGain"		"2.200000"
+		"AttributeStrengthGain"		"2.2" // 原值: 2.2
 		"AttributeBaseAgility"		"16"
-		"AttributeAgilityGain"		"1.800000"
+		"AttributeAgilityGain"		"1.8" // 原值: 1.8
 		"AttributeBaseIntelligence"		"18"
-		"AttributeIntelligenceGain"		"3.300000"
+		"AttributeIntelligenceGain"		"5.3" // 原值: 3.3
 		"StatusManaRegen"	"0"
 		"MovementSpeed"		"280"
 		"HasAggressiveStance"		"1"
@@ -1933,7 +1936,6 @@
 		"Ability5"		"drow_ranger_trueshot"
 		"Ability6"		"drow_ranger_marksmanship"
 		"Ability7"		"drow_ranger_marksmanship_fun"
-
 		"AbilityDraftAbilities"
 		{
 			"Ability1"	"drow_ranger_frost_arrows"
@@ -1988,11 +1990,11 @@
 		"ProjectileSpeed"		"1250"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
 		"AttributeBaseStrength"		"16"
-		"AttributeStrengthGain"		"1.900000"
+		"AttributeStrengthGain"		"1.9" // 原值: 1.9
 		"AttributeBaseAgility"		"22"
-		"AttributeAgilityGain"		"2.900000"
+		"AttributeAgilityGain"		"4.9" // 原值: 2.9
 		"AttributeBaseIntelligence"		"15"
-		"AttributeIntelligenceGain"		"1.400000"
+		"AttributeIntelligenceGain"		"1.4" // 原值: 1.4
 		"StatusHealthRegen"		"0.25"
 		"VisionDaytimeRange"		"1800"
 		"MovementSpeed"		"310"
@@ -2333,11 +2335,11 @@
 		"ProjectileSpeed"		"0"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"		"22"
-		"AttributeStrengthGain"		"3.700000"
+		"AttributeStrengthGain"		"5.7" // 原值: 3.7
 		"AttributeBaseAgility"		"12"
-		"AttributeAgilityGain"		"1.400000"
+		"AttributeAgilityGain"		"1.4" // 原值: 1.4
 		"AttributeBaseIntelligence"		"18"
-		"AttributeIntelligenceGain"		"2.100000"
+		"AttributeIntelligenceGain"		"2.1" // 原值: 2.1
 		"StatusHealthRegen"		"1.0"
 		"MovementSpeed"		"315"
 		"MovementTurnRate"		"0.900000"
@@ -2589,31 +2591,13 @@
 		"HeroSelectSoundEffect"		"Hero_Juggernaut.Pick"
 		"GibType"		"default"
 		"NameAliases"	"Yurnero"
-		
-
-		"Ability1"		"blademaster_brewmaster_storm_wind_walk"
-		"Ability2" 		"blademaster_mirror_image_naga"
-		"Ability3"		"blademaster_critical_strike"
-		"Ability4"		"juggernaut_omni_slash_fun"//"generic_hidden"
+		"Ability1"		"juggernaut_blade_fury"
+		"Ability2"		"juggernaut_healing_ward"
+		"Ability3"		"juggernaut_blade_dance"
+		"Ability4"		"juggernaut_swift_slash"
 		"Ability5"		"juggernaut_duelist"
-		"Ability6"		"blademaster_bladestorm"
-		"Ability10"		"special_bonus_mp_regen_2"
-		"Ability11"		"special_bonus_attack_base_damage_30"
-		"Ability12"		"special_bonus_unique_juggernaut_blade_dance_lifesteal"
-		"Ability13"		"special_bonus_all_stats_15"//"special_bonus_gold_income_300"
-		"Ability14"		"special_bonus_unique_juggernaut_bladestorm_duration"
-		"Ability15"		"special_bonus_unique_blademaster_windwalk_damage"
-		"Ability16"		"special_bonus_unique_juggernaut_blade_dance_crit_mult"	
-		"Ability17"		"special_bonus_unique_blademaster_bladestorm_damage"
-
-		//"Ability1"		"juggernaut_blade_fury"
-		//"Ability2"		"juggernaut_healing_ward"
-		//"Ability3"		"juggernaut_blade_dance"
-		//"Ability4"		"juggernaut_swift_slash"
-		//"Ability5"		"juggernaut_duelist"
-		//"Ability6"		"juggernaut_omni_slash"
-		//"Ability7"		"juggernaut_jiansheng"
-
+		"Ability6"		"juggernaut_omni_slash"
+		"Ability7"		"juggernaut_jiansheng"
 		"AbilityDraftAbilities"
 		{
 			"Ability1"	"juggernaut_blade_fury"
@@ -2622,13 +2606,14 @@
 			"Ability4"	"juggernaut_omni_slash"
 		}
 
-		//"Ability10"		"special_bonus_unique_juggernaut_5"
-		//"Ability11"		"special_bonus_unique_juggernaut_3"
-		//"Ability12"		"special_bonus_unique_juggernaut_healing_ward_heal"
-		//"Ability13"		"special_bonus_unique_juggernaut_blade_fury_movespeed"
-		//"Ability14"		"special_bonus_unique_juggernaut_blade_dance_lifesteal"
-		//"Ability15"		"special_bonus_unique_juggernaut_blade_fury_cooldown"
-		//"Ability16"		"special_bonus_unique_juggernaut_omnislash_duration"
+		"Ability10"		"special_bonus_unique_juggernaut_5"
+		"Ability11"		"special_bonus_unique_juggernaut_3"
+		"Ability12"		"special_bonus_unique_juggernaut_healing_ward_heal"
+		"Ability13"		"special_bonus_unique_juggernaut_blade_fury_movespeed"
+		"Ability14"		"special_bonus_unique_juggernaut_2"
+		"Ability15"		"special_bonus_unique_juggernaut_blade_fury_cooldown"
+		"Ability16"		"special_bonus_unique_juggernaut_omnislash_duration"
+		"Ability17"		"special_bonus_unique_juggernaut_blade_dance_lifesteal"
 				
 		"Facets"
 		{
@@ -2672,11 +2657,11 @@
 		"ProjectileSpeed"		"0"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
 		"AttributeBaseStrength"		"20"
-		"AttributeStrengthGain"		"2.0000"
+		"AttributeStrengthGain"		"2.0" // 原值: 2.0
 		"AttributeBaseAgility"		"34"
-		"AttributeAgilityGain"		"2.800000"
+		"AttributeAgilityGain"		"4.8" // 原值: 2.8
 		"AttributeBaseIntelligence"		"14"
-		"AttributeIntelligenceGain"		"1.400000"
+		"AttributeIntelligenceGain"		"1.4" // 原值: 1.4
 		"StatusHealthRegen"		"0.5"
 		"MovementSpeed"		"300"
 		"MovementSpeedActivityModifiers"
@@ -3038,11 +3023,11 @@
 		"ProjectileSpeed"		"900"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
 		"AttributeBaseStrength"		"20"
-		"AttributeStrengthGain"		"2.2"
+		"AttributeStrengthGain"		"2.2" // 原值: 2.2
 		"AttributeBaseAgility"		"26"
-		"AttributeAgilityGain"		"3.1"
+		"AttributeAgilityGain"		"5.1" // 原值: 3.1
 		"AttributeBaseIntelligence"		"22"
-		"AttributeIntelligenceGain"		"1.9"
+		"AttributeIntelligenceGain"		"1.9" // 原值: 1.9
 		"StatusManaRegen"	"0.4"
 		"MovementSpeed"		"285"
 		"HasAggressiveStance"		"1"
@@ -3410,12 +3395,10 @@
 		"Ability2"		"nevermore_shadowraze2"
 		"Ability3"		"nevermore_shadowraze3"
 		"Ability4"		"nevermore_frenzy"
-		"Ability5"		"nevermore_shadowraze_fun"  //"nevermore_dark_lord"
+		"Ability5"		"nevermore_shadowraze_fun"
 		"Ability6"		"nevermore_requiem"
-		"Ability7"		"nevermore_necromastery"
-
-		"Ability8"		"nevermore_dark_lord"
-
+		"Ability7"		"nevermore_dark_lord"
+		"Ability8"		"nevermore_necromastery"
 		"Ability10"		"special_bonus_unique_nevermore_7"
 		"Ability11"		"special_bonus_unique_nevermore_4"
 		"Ability12"		"special_bonus_unique_nevermore_3"
@@ -3465,11 +3448,11 @@
 		"ProjectileSpeed"		"1200"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
 		"AttributeBaseStrength"		"19"
-		"AttributeStrengthGain"		"2.700000"
+		"AttributeStrengthGain"		"2.7" // 原值: 2.7
 		"AttributeBaseAgility"		"25"
-		"AttributeAgilityGain"		"3.500000"
+		"AttributeAgilityGain"		"5.5" // 原值: 3.5
 		"AttributeBaseIntelligence"		"18"
-		"AttributeIntelligenceGain"		"2.200000"
+		"AttributeIntelligenceGain"		"2.2" // 原值: 2.2
 		"StatusHealthRegen"		"0.25"
 		"StatusManaRegen"	"0.3"
 		"MovementSpeed"		"305"
@@ -3699,9 +3682,8 @@
 		"Ability5"		"morphling_morph_str"
 		"Ability6"		"morphling_replicate"
 		"Ability7"		"morphling_morph_replicate"
-		"Ability8"		"morphling_morph"
+		"Ability8"		"morphling_tidal_wave_fun"   //"generic_hidden"
 		"Ability9"		"morphling_accumulation"
-		"Ability10"		"morphling_tidal_wave_fun"
 		"Ability15"		"special_bonus_magic_resistance_15"
 		"Ability16"		"special_bonus_unique_morphling_8"
 		"Ability17"		"special_bonus_unique_morphling_1"
@@ -3766,11 +3748,11 @@
 		"ProjectileSpeed"		"1300"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
 		"AttributeBaseStrength"		"23"
-		"AttributeStrengthGain"		"3.200000"
+		"AttributeStrengthGain"		"3.2" // 原值: 3.2
 		"AttributeBaseAgility"		"24"
-		"AttributeAgilityGain"		"3.900000"
+		"AttributeAgilityGain"		"5.9" // 原值: 3.9
 		"AttributeBaseIntelligence"		"19"
-		"AttributeIntelligenceGain"		"1.800000"
+		"AttributeIntelligenceGain"		"1.8" // 原值: 1.8
 		"MovementSpeed"		"285"
 		"particle_folder"		"particles/units/heroes/hero_morphling"
 		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_morphling.vsndevts"
@@ -3984,11 +3966,11 @@
 		"AttackRange"		"225"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
 		"AttributeBaseStrength"		"21"
-		"AttributeStrengthGain"		"2.200000"
+		"AttributeStrengthGain"		"2.2" // 原值: 2.2
 		"AttributeBaseAgility"		"26"
-		"AttributeAgilityGain"		"2.8"
+		"AttributeAgilityGain"		"4.8" // 原值: 2.8
 		"AttributeBaseIntelligence"		"21"
-		"AttributeIntelligenceGain"		"1.800000"
+		"AttributeIntelligenceGain"		"1.8" // 原值: 1.8
 		"StatusHealthRegen"		"1.5"
 		"MovementSpeed"		"285"
 		"HasAggressiveStance"		"1"
@@ -4218,11 +4200,11 @@
 		"ProjectileSpeed"		"900"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"		"17"
-		"AttributeStrengthGain"		"2.400000"
+		"AttributeStrengthGain"		"2.4" // 原值: 2.4
 		"AttributeBaseAgility"		"14"
-		"AttributeAgilityGain"		"2.5"
+		"AttributeAgilityGain"		"2.5" // 原值: 2.5
 		"AttributeBaseIntelligence"		"23"
-		"AttributeIntelligenceGain"		"3.800000"
+		"AttributeIntelligenceGain"		"5.8" // 原值: 3.8
 		"StatusHealthRegen"		"0.5"
 		"StatusManaRegen"	"0.5"
 		"MovementSpeed"		"290"
@@ -4264,10 +4246,10 @@
 				"SlotIndex"		"2"
 				"SlotName"		"tail"
 				"SlotText"		"#LoadoutSlot_Tail"
-				"TextureWidth"		"512"
-				"TextureHeight"		"512"
-				"MaxPolygonsLOD0"		"4000"
-				"MaxPolygonsLOD1"		"1600"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"2000"
+				"MaxPolygonsLOD1"		"800"
 			}
 			"3"
 			{
@@ -4276,8 +4258,8 @@
 				"SlotText"		"#LoadoutSlot_Wings"
 				"TextureWidth"		"512"
 				"TextureHeight"		"512"
-				"MaxPolygonsLOD0"		"4000"
-				"MaxPolygonsLOD1"		"1600"
+				"MaxPolygonsLOD0"		"2000"
+				"MaxPolygonsLOD1"		"800"
 			}
 			"4"
 			{
@@ -4448,11 +4430,11 @@
 		"ProjectileSpeed"		"0"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"		"25"
-		"AttributeStrengthGain"		"3.0"
+		"AttributeStrengthGain"		"5.0" // 原值: 3.0
 		"AttributeBaseAgility"		"11"
-		"AttributeAgilityGain"		"1.400000"
+		"AttributeAgilityGain"		"1.4" // 原值: 1.4
 		"AttributeBaseIntelligence"		"16"
-		"AttributeIntelligenceGain"		"1.800000"
+		"AttributeIntelligenceGain"		"1.8" // 原值: 1.8
 		"StatusHealthRegen"		"2.5"
 		"MovementSpeed"		"280"
 		"MovementTurnRate"		"0.700000"
@@ -4901,11 +4883,11 @@
 		"ProjectileSpeed"		"2000"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
 		"AttributeBaseStrength"		"22"
-		"AttributeStrengthGain"		"2.800000"
+		"AttributeStrengthGain"		"2.8" // 原值: 2.8
 		"AttributeBaseAgility"		"24"
-		"AttributeAgilityGain"		"2.800000"
+		"AttributeAgilityGain"		"4.8" // 原值: 2.8
 		"AttributeBaseIntelligence"		"21"
-		"AttributeIntelligenceGain"		"2.200000"
+		"AttributeIntelligenceGain"		"2.2" // 原值: 2.2
 		"StatusHealthRegen"		"1"
 		"MovementSpeed"		"280"
 		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
@@ -5228,11 +5210,11 @@
 		"AttackRange"		"150"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_ALL"
 		"AttributeBaseStrength"		"22"
-		"AttributeStrengthGain"		"2.3"
+		"AttributeStrengthGain"		"3.0" // 原值: 2.3
 		"AttributeBaseAgility"		"19"
-		"AttributeAgilityGain"		"2.0"
+		"AttributeAgilityGain"		"2.7" // 原值: 2.0
 		"AttributeBaseIntelligence"		"17"
-		"AttributeIntelligenceGain"		"2.0"
+		"AttributeIntelligenceGain"		"2.7" // 原值: 2.0
 		"MovementSpeed"		"290"
 		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
 		"particle_folder"		"particles/units/heroes/hero_sandking"
@@ -5271,10 +5253,10 @@
 				"SlotIndex"		"1"
 				"SlotName"		"shoulder"
 				"SlotText"		"#LoadoutSlot_Shoulder"
-				"TextureWidth"		"512"
-				"TextureHeight"		"512"
-				"MaxPolygonsLOD0"		"4500"
-				"MaxPolygonsLOD1"		"1800"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"2000"
+				"MaxPolygonsLOD1"		"800"
 			}
 			"2"
 			{
@@ -5283,15 +5265,15 @@
 				"SlotText"		"#LoadoutSlot_Legs"
 				"TextureWidth"		"256"
 				"TextureHeight"		"256"
-				"MaxPolygonsLOD0"		"3000"
-				"MaxPolygonsLOD1"		"1200"
+				"MaxPolygonsLOD0"		"1500"
+				"MaxPolygonsLOD1"		"600"
 			}
 			"3"
 			{
 				"SlotIndex"		"3"
 				"SlotName"		"arms"
 				"SlotText"		"#LoadoutSlot_Arms"
-				"TextureWidth"		"512"
+				"TextureWidth"		"256"
 				"TextureHeight"		"256"
 				"MaxPolygonsLOD0"		"2500"
 				"MaxPolygonsLOD1"		"1000"
@@ -5303,8 +5285,8 @@
 				"SlotText"		"#LoadoutSlot_Back"
 				"TextureWidth"		"512"
 				"TextureHeight"		"512"
-				"MaxPolygonsLOD0"		"3500"
-				"MaxPolygonsLOD1"		"1400"
+				"MaxPolygonsLOD0"		"3000"
+				"MaxPolygonsLOD1"		"1200"
 			}
 			"5"
 			{
@@ -5511,11 +5493,11 @@
 		"ProjectileSpeed"		"1100"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"		"21"
-		"AttributeStrengthGain"		"2.000000"
+		"AttributeStrengthGain"		"2.0" // 原值: 2.0
 		"AttributeBaseAgility"		"22"
-		"AttributeAgilityGain"		"2.600000"
+		"AttributeAgilityGain"		"2.6" // 原值: 2.6
 		"AttributeBaseIntelligence"		"23"
-		"AttributeIntelligenceGain"		"3.7"
+		"AttributeIntelligenceGain"		"5.7" // 原值: 3.7
 		"StatusHealthRegen"	"0.5"
 		"MovementSpeed"		"285"
 		"MovementTurnRate"		"0.800000"
@@ -5560,18 +5542,18 @@
 				"SlotText"		"#LoadoutSlot_Armor"
 				"TextureWidth"		"512"
 				"TextureHeight"		"512"
-				"MaxPolygonsLOD0"		"7500"
-				"MaxPolygonsLOD1"		"3000"
+				"MaxPolygonsLOD0"		"3000"
+				"MaxPolygonsLOD1"		"1200"
 			}
 			"2"
 			{
 				"SlotIndex"		"3"
 				"SlotName"		"arms"
 				"SlotText"		"#LoadoutSlot_Arms"
-				"TextureWidth"		"512"
+				"TextureWidth"		"256"
 				"TextureHeight"		"256"
-				"MaxPolygonsLOD0"		"3500"
-				"MaxPolygonsLOD1"		"1400"
+				"MaxPolygonsLOD0"		"2000"
+				"MaxPolygonsLOD1"		"800"
 			}
 			"3"
 			{
@@ -5671,7 +5653,7 @@
 		"Ability1"		"sven_storm_bolt"
 		"Ability2"		"sven_great_cleave"
 		"Ability3"		"sven_warcry"
-		"Ability4"		"sven_storm_bolt_fun"
+		"Ability4"		"generic_hidden"
 		"Ability5"		"generic_hidden"
 		"Ability6"		"sven_gods_strength"
 		"Ability7"		"sven_vanquisher"
@@ -5727,11 +5709,11 @@
 		"ProjectileSpeed"		"0"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"		"23"
-		"AttributeStrengthGain"		"3.5"
+		"AttributeStrengthGain"		"5.5" // 原值: 3.5
 		"AttributeBaseAgility"		"18"
-		"AttributeAgilityGain"		"2.20000"
+		"AttributeAgilityGain"		"2.2" // 原值: 2.2
 		"AttributeBaseIntelligence"		"16"
-		"AttributeIntelligenceGain"		"1.500000"
+		"AttributeIntelligenceGain"		"1.5" // 原值: 1.5
 		"StatusHealthRegen"		"0.75"
 		"MovementSpeed"		"325"
 		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
@@ -5987,9 +5969,8 @@
 		"Ability4"		"tiny_tree_channel"
 		"Ability5"		"tiny_craggy_exterior"
 		"Ability6"		"tiny_grow"
-		"Ability7"		"tiny_toss_tree"
-		"Ability8"		"tiny_qiquwaibiao"
-
+		"Ability7"		"tiny_qiquwaibiao"
+		"Ability8"		"tiny_toss_tree"
 		"AbilityDraftAbilities"
 		{
 			"Ability1"	"tiny_avalanche"
@@ -6043,11 +6024,11 @@
 		"AttackRange"		"150"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"		"30"
-		"AttributeStrengthGain"		"4.000000"
+		"AttributeStrengthGain"		"6.0" // 原值: 4.0
 		"AttributeBaseAgility"		"0"
-		"AttributeAgilityGain"		"0.00000"
+		"AttributeAgilityGain"		"0.0" // 原值: 0.0
 		"AttributeBaseIntelligence"		"17"
-		"AttributeIntelligenceGain"		"2.200000"
+		"AttributeIntelligenceGain"		"2.2" // 原值: 2.2
 		"StatusHealthRegen"		"2"
 		"MovementSpeed"		"275"
 		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
@@ -6387,11 +6368,11 @@
 		"ProjectileSpeed"		"1500"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
 		"AttributeBaseStrength"		"20"
-		"AttributeStrengthGain"		"2.6"
+		"AttributeStrengthGain"		"2.6" // 原值: 2.6
 		"AttributeBaseAgility"		"21"
-		"AttributeAgilityGain"		"3.2"
+		"AttributeAgilityGain"		"5.2" // 原值: 3.2
 		"AttributeBaseIntelligence"		"19"
-		"AttributeIntelligenceGain"		"1.5"
+		"AttributeIntelligenceGain"		"1.5" // 原值: 1.5
 		"StatusHealthRegen"		"0.25"
 		"ArmorPhysical"		"0"
 		"MovementSpeed"		"295"
@@ -6617,9 +6598,8 @@
 		"Ability4"		"windrunner_gale_force"
 		"Ability5"		"windrunner_focusfire_cancel"
 		"Ability6"		"windrunner_focusfire"
-		"Ability7"		"windrunner_easy_breezy"
-		"Ability8"		"windrunner_fensanhuoli"
-
+		"Ability7"		"windrunner_fensanhuoli"
+		"Ability8"		"windrunner_easy_breezy"
 		"AbilityDraftAbilities"
 		{
 			"Ability1"	"windrunner_shackleshot"
@@ -6635,7 +6615,7 @@
 		"Ability14"		"special_bonus_unique_windranger_6"
 		"Ability15"		"special_bonus_unique_windranger_8"
 		"Ability16"		"special_bonus_unique_windranger_windrun_undispellable"
-		"Ability17"		"special_bonus_unique_windranger_2"
+		"Ability17"		"special_bonus_attack_range_150"                                                 //"special_bonus_unique_windranger_2"
 		"Facets"
 		{
 			"windrunner_tailwind" 
@@ -6696,11 +6676,11 @@
 		"ProjectileSpeed"		"1250"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_ALL"
 		"AttributeBaseStrength"		"18"
-		"AttributeStrengthGain"		"2.6"
+		"AttributeStrengthGain"		"3.3" // 原值: 2.6
 		"AttributeBaseAgility"		"17"
-		"AttributeAgilityGain"		"1.9"
+		"AttributeAgilityGain"		"2.6" // 原值: 1.9
 		"AttributeBaseIntelligence"		"18"
-		"AttributeIntelligenceGain"		"3.2"
+		"AttributeIntelligenceGain"		"3.9" // 原值: 3.2
 		"StatusManaRegen"	"0.25"
 		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
 		"MovementSpeed"		"290"
@@ -6953,9 +6933,8 @@
 		"Ability4"		"zuus_cloud"
 		"Ability5"		"zuus_lightning_hands"
 		"Ability6"		"zuus_thundergods_wrath"
-		"Ability7"		"zuus_static_field"	
-		"Ability8"		"tianshenxiafan"
-
+		"Ability7"		"tianshenxiafan"
+		"Ability8"		"zuus_static_field"		
 		"Ability10"		"special_bonus_mp_regen_175"
 		"Ability11"		"special_bonus_hp_200"
 		"Ability12"		"special_bonus_unique_zeus_4"
@@ -7001,11 +6980,11 @@
 		"ProjectileSpeed"		"1100"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"		"19"
-		"AttributeStrengthGain"		"2.100000"
+		"AttributeStrengthGain"		"2.1" // 原值: 2.1
 		"AttributeBaseAgility"		"11"
-		"AttributeAgilityGain"		"1.200000"
+		"AttributeAgilityGain"		"1.2" // 原值: 1.2
 		"AttributeBaseIntelligence"		"22"
-		"AttributeIntelligenceGain"		"3.300000"
+		"AttributeIntelligenceGain"		"5.3" // 原值: 3.3
 		"MovementSpeed"		"315"
 		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
 		"particle_folder"		"particles/units/heroes/hero_zuus,particles/units/heroes/hero_zeus"
@@ -7245,14 +7224,13 @@
 		"Ability1"		"kunkka_torrent"
 		"Ability2"		"kunkka_tidebringer"
 		"Ability3"		"kunkka_x_marks_the_spot"
-		"Ability4"		"kunkka_torrent_storm"//"kunkka_admirals_rum"
+		"Ability4"		"kunkka_admirals_rum"
 		"Ability5"		"kunkka_tidal_wave"
 		"Ability6"		"kunkka_ghostship"
-		"Ability7"		"kunkka_return"
-		"Ability8"		"kunkka_ghostship_fun"//"kunkka_return"
-		"Ability9"		"kunkka_admirals_rum"
+		"Ability7"		"kunkka_ghostship_fun"
+		"Ability8"		"kunkka_return"
 		"Ability10"		"special_bonus_unique_kunkka_tidebringer_slow"
-		"Ability11"		"special_bonus_unique_kunkka_6"
+		"Ability11"		"special_bonus_unique_kunkka_3"
 		"Ability12"		"special_bonus_unique_kunkka_7"
 		"Ability13"		"special_bonus_unique_kunkka_2"
 		"Ability14"		"special_bonus_unique_kunkka_torrent_cooldown"
@@ -7295,11 +7273,11 @@
 		"AttackRange"		"150"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"		"24"
-		"AttributeStrengthGain"		"3.600000"
+		"AttributeStrengthGain"		"5.6" // 原值: 3.6
 		"AttributeBaseAgility"		"14"
-		"AttributeAgilityGain"		"1.600000"
+		"AttributeAgilityGain"		"1.6" // 原值: 1.6
 		"AttributeBaseIntelligence"		"18"
-		"AttributeIntelligenceGain"		"1.800000"
+		"AttributeIntelligenceGain"		"1.8" // 原值: 1.8
 		"StatusHealthRegen"		"0.75"
 		"MovementSpeed"		"315"
 		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
@@ -7490,7 +7468,7 @@
 				"12"		"kunkka_ghostship"
 				"13"		"kunkka_x_marks_the_spot"
 				"14"		"kunkka_x_marks_the_spot"
-				"15"		"special_bonus_unique_kunkka_6"
+				"15"		"special_bonus_unique_kunkka_7"
 				"16"		"kunkka_x_marks_the_spot"
 				"17"		""
 				"18"		"kunkka_ghostship"
@@ -7574,7 +7552,6 @@
 		"Ability5"		"lina_combustion"
 		"Ability6"		"lina_laguna_blade"
 		"Ability7"		"special_bonus_unique_lina_laguna_blade_fun"
-
 		"AbilityDraftAbilities"
 		{
 			"Ability1"		"lina_dragon_slave"
@@ -7629,11 +7606,11 @@
 		"ProjectileSpeed"		"1000"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"		"20"
-		"AttributeStrengthGain"		"2.400000"
+		"AttributeStrengthGain"		"2.4" // 原值: 2.4
 		"AttributeBaseAgility"		"23"
-		"AttributeAgilityGain"		"2.400000"
+		"AttributeAgilityGain"		"2.4" // 原值: 2.4
 		"AttributeBaseIntelligence"		"30"
-		"AttributeIntelligenceGain"		"3.800000"
+		"AttributeIntelligenceGain"		"5.8" // 原值: 3.8
 		"MovementSpeed"		"290"
 		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
 		"VoiceFile"		"soundevents/voscripts/game_sounds_vo_lina.vsndevts"
@@ -7911,11 +7888,11 @@
 		"ProjectileSpeed"		"900"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"		"20"
-		"AttributeStrengthGain"		"2.10000"
+		"AttributeStrengthGain"		"2.1" // 原值: 2.1
 		"AttributeBaseAgility"		"17"
-		"AttributeAgilityGain"		"2.0"
+		"AttributeAgilityGain"		"2.0" // 原值: 2.0
 		"AttributeBaseIntelligence"		"26"
-		"AttributeIntelligenceGain"		"3.80000"
+		"AttributeIntelligenceGain"		"5.8" // 原值: 3.8
 		"MovementTurnRate"		"0.700000"
 		"StatusManaRegen"	"0.75"
 		"MovementSpeed"		"290"
@@ -8157,7 +8134,7 @@
 		"Ability2"		"lion_voodoo"
 		"Ability3"		"lion_mana_drain"
 		"Ability4"		"lion_to_hell_and_back"
-		"Ability5"		"lion_emowushi"  //"generic_hidden"
+		"Ability5"		"lion_emowushi"     //"generic_hidden"
 		"Ability6"		"lion_finger_of_death"
 
 		"AbilityDraftAbilities"
@@ -8207,11 +8184,11 @@
 		"ProjectileSpeed"		"900"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"		"18"
-		"AttributeStrengthGain"		"2.4"
+		"AttributeStrengthGain"		"2.4" // 原值: 2.4
 		"AttributeBaseIntelligence"		"19"
 		"AttributeBaseAgility"		"15"
-		"AttributeAgilityGain"		"1.7"
-		"AttributeIntelligenceGain"		"3.500000"
+		"AttributeAgilityGain"		"1.7" // 原值: 1.7
+		"AttributeIntelligenceGain"		"5.5" // 原值: 3.5
 		"MovementSpeed"		"290"
 		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
 		"VoiceFile"		"soundevents/voscripts/game_sounds_vo_lion.vsndevts"
@@ -8522,11 +8499,11 @@
 		"ProjectileSpeed"		"900"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"		"20"
-		"AttributeStrengthGain"		"2.300000"
+		"AttributeStrengthGain"		"2.3" // 原值: 2.3
 		"AttributeBaseAgility"		"16"
-		"AttributeAgilityGain"		"1.600000"
+		"AttributeAgilityGain"		"1.6" // 原值: 1.6
 		"AttributeBaseIntelligence"		"25"
-		"AttributeIntelligenceGain"		"3.500000"
+		"AttributeIntelligenceGain"		"5.5" // 原值: 3.5
 		"MovementSpeed"		"285"
 		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
 		"VoiceFile"		"soundevents/voscripts/game_sounds_vo_shadowshaman.vsndevts"
@@ -8568,8 +8545,8 @@
 				"SlotText"		"#LoadoutSlot_Belt"
 				"TextureWidth"		"512"
 				"TextureHeight"		"512"
-				"MaxPolygonsLOD0"		"3000"
-				"MaxPolygonsLOD1"		"1200"
+				"MaxPolygonsLOD0"		"2000"
+				"MaxPolygonsLOD1"		"800"
 			}
 			"3"
 			{
@@ -8824,11 +8801,11 @@
 		"MovementSpeed"		"300"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"		"21"
-		"AttributeStrengthGain"		"3.600000"
+		"AttributeStrengthGain"		"5.6" // 原值: 3.6
 		"AttributeBaseAgility"		"17"
-		"AttributeAgilityGain"		"2.100000"
+		"AttributeAgilityGain"		"2.1" // 原值: 2.1
 		"AttributeBaseIntelligence"		"15"
-		"AttributeIntelligenceGain"		"1.500000"
+		"AttributeIntelligenceGain"		"1.5" // 原值: 1.5
 		"StatusHealthRegen"		"0.5"
 		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
 		"VoiceFile"		"soundevents/voscripts/game_sounds_vo_slardar.vsndevts"
@@ -9047,7 +9024,7 @@
 
 				"KeyValueOverrides"
 				{
-					"AttributeStrengthGain"		"4.1"		// if updating this, change strength_gain_tooltip in tidehunter txt 
+					"AttributeStrengthGain"		"6.1"
 				}
 				"Abilities"
 				{
@@ -9068,11 +9045,11 @@
 		"AttackRange"		"150"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"		"27"
-		"AttributeStrengthGain"		"3.600000"
+		"AttributeStrengthGain"		"5.6" // 原值: 3.6
 		"AttributeBaseAgility"		"15"
-		"AttributeAgilityGain"		"1.500000"
+		"AttributeAgilityGain"		"1.5" // 原值: 1.5
 		"AttributeBaseIntelligence"		"20"
-		"AttributeIntelligenceGain"		"1.700000"
+		"AttributeIntelligenceGain"		"1.7" // 原值: 1.7
 		"StatusManaRegen"	"0.5"
 		"MovementSpeed"		"300"
 		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
@@ -9095,8 +9072,8 @@
 				"SlotText"		"#LoadoutSlot_Weapon"
 				"TextureWidth"		"256"
 				"TextureHeight"		"256"
-				"MaxPolygonsLOD0"		"3000"
-				"MaxPolygonsLOD1"		"1200"
+				"MaxPolygonsLOD0"		"2500"
+				"MaxPolygonsLOD1"		"1000"
 			}
 			"1"
 			{
@@ -9105,28 +9082,28 @@
 				"SlotText"		"#LoadoutSlot_OffHand_Weapon"
 				"TextureWidth"		"256"
 				"TextureHeight"		"256"
-				"MaxPolygonsLOD0"		"3000"
-				"MaxPolygonsLOD1"		"1200"
+				"MaxPolygonsLOD0"		"2500"
+				"MaxPolygonsLOD1"		"1000"
 			}
 			"2"
 			{
 				"SlotIndex"		"2"
 				"SlotName"		"belt"
 				"SlotText"		"#LoadoutSlot_Belt"
-				"TextureWidth"		"512"
-				"TextureHeight"		"512"
-				"MaxPolygonsLOD0"		"3000"
-				"MaxPolygonsLOD1"		"1200"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"1500"
+				"MaxPolygonsLOD1"		"600"
 			}
 			"3"
 			{
 				"SlotIndex"		"3"
 				"SlotName"		"arms"
 				"SlotText"		"#LoadoutSlot_Arms"
-				"TextureWidth"		"512"
+				"TextureWidth"		"256"
 				"TextureHeight"		"256"
-				"MaxPolygonsLOD0"		"2000"
-				"MaxPolygonsLOD1"		"800"
+				"MaxPolygonsLOD0"		"1500"
+				"MaxPolygonsLOD1"		"600"
 			}
 			"4"
 			{
@@ -9145,8 +9122,8 @@
 				"SlotText"		"#LoadoutSlot_Back"
 				"TextureWidth"		"512"
 				"TextureHeight"		"512"
-				"MaxPolygonsLOD0"		"3700"
-				"MaxPolygonsLOD1"		"1480"
+				"MaxPolygonsLOD0"		"3000"
+				"MaxPolygonsLOD1"		"1200"
 			}
 			"6"
 			{
@@ -9386,11 +9363,11 @@
 		"ProjectileSpeed"		"1200"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"		"20"
-		"AttributeStrengthGain"		"2.100000"
+		"AttributeStrengthGain"		"2.1" // 原值: 2.1
 		"AttributeBaseAgility"		"13"
-		"AttributeAgilityGain"		"1.400000"
+		"AttributeAgilityGain"		"1.4" // 原值: 1.4
 		"AttributeBaseIntelligence"		"22"
-		"AttributeIntelligenceGain"		"3.100000"
+		"AttributeIntelligenceGain"		"5.1" // 原值: 3.1
 		"MovementSpeed"		"300"
 		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
 		"RenderablePortrait"
@@ -9701,11 +9678,11 @@
 		"AttackRange"		"150"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
 		"AttributeBaseStrength"		"18"
-		"AttributeStrengthGain"		"2.000000"
+		"AttributeStrengthGain"		"2.0" // 原值: 2.0
 		"AttributeBaseAgility"		"30"
-		"AttributeAgilityGain"		"2.40000"
+		"AttributeAgilityGain"		"4.4" // 原值: 2.4
 		"AttributeBaseIntelligence"		"14"
-		"AttributeIntelligenceGain"		"1.300000"
+		"AttributeIntelligenceGain"		"1.3" // 原值: 1.3
 		"StatusHealthRegen"		"2.5"
 		"MovementSpeed"		"315"
 		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
@@ -9753,10 +9730,10 @@
 				"SlotIndex"		"3"
 				"SlotName"		"shoulder"
 				"SlotText"		"#LoadoutSlot_Shoulder"
-				"TextureWidth"		"512"
-				"TextureHeight"		"512"
-				"MaxPolygonsLOD0"		"4000"
-				"MaxPolygonsLOD1"		"1600"
+				"TextureWidth"		"256"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"2500"
+				"MaxPolygonsLOD1"		"1000"
 			}
 			"4"
 			{
@@ -9969,7 +9946,7 @@
 		"Ability2"		"enigma_demonic_conversion"
 		"Ability3"		"enigma_midnight_pulse"
 		"Ability4"		"enigma_gravity_well"
-		"Ability5"		"heidong"    //"generic_hidden"
+		"Ability5"		"heidong"   //"generic_hidden"
 		"Ability6"		"enigma_black_hole"
 
 		"AbilityDraftAbilities"
@@ -10033,11 +10010,11 @@
 		"ProjectileSpeed"		"900"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_ALL"
 		"AttributeBaseStrength"		"21"
-		"AttributeStrengthGain"		"2.500000"
+		"AttributeStrengthGain"		"3.2" // 原值: 2.5
 		"AttributeBaseAgility"		"14"
-		"AttributeAgilityGain"		"1.0"
+		"AttributeAgilityGain"		"1.7" // 原值: 1.0
 		"AttributeBaseIntelligence"		"19"
-		"AttributeIntelligenceGain"		"3.600000"
+		"AttributeIntelligenceGain"		"4.3" // 原值: 3.6
 		"StatusManaRegen"	"0.5"
 		"MovementSpeed"		"280"
 		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
@@ -10200,8 +10177,6 @@
 		"Ability5"		"tinker_keen_teleport"
 		"Ability6"		"tinker_rearm"
 		"Ability7"		"tinker_eureka"
-		"Ability8"		"tinker_death_spin"
-
 		"Ability10"		"special_bonus_unique_tinker_march_duration"
 		"Ability11"		"special_bonus_mana_reduction_8"
 		"Ability12"		"special_bonus_unique_tinker_7"
@@ -10247,11 +10222,11 @@
 		"ProjectileSpeed"		"900"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"		"19"
-		"AttributeStrengthGain"		"2.300000"
+		"AttributeStrengthGain"		"2.3" // 原值: 2.3
 		"AttributeBaseAgility"		"17"
-		"AttributeAgilityGain"		"1.400000"
+		"AttributeAgilityGain"		"1.4" // 原值: 1.4
 		"AttributeBaseIntelligence"		"30"
-		"AttributeIntelligenceGain"		"3.300000"
+		"AttributeIntelligenceGain"		"5.3" // 原值: 3.3
 		"MovementSpeed"		"310"
 		"StatusManaRegen"	"0.50"
 		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
@@ -10444,9 +10419,10 @@
 		"Ability2"		"sniper_headshot"
 		"Ability3"		"sniper_take_aim"
 		"Ability4"		"sniper_concussive_grenade"
-		"Ability5"		"special_bonus_unique_sniper_miaozhun" //"sniper_keen_scope"
+		"Ability5"		"special_bonus_unique_sniper_miaozhun"     //"sniper_keen_scope"
 		"Ability6"		"sniper_assassinate"
 		"Ability7"		"sniper_keen_scope"
+
 		"AbilityDraftAbilities"
 		{
 			"Ability1"	"sniper_shrapnel"
@@ -10497,11 +10473,11 @@
 		"ProjectileSpeed"		"3000"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
 		"AttributeBaseStrength"		"19"
-		"AttributeStrengthGain"		"2.0000"
+		"AttributeStrengthGain"		"2.0" // 原值: 2.0
 		"AttributeBaseAgility"		"27"
-		"AttributeAgilityGain"		"3.20000"
+		"AttributeAgilityGain"		"5.2" // 原值: 3.2
 		"AttributeBaseIntelligence"		"15"
-		"AttributeIntelligenceGain"		"2.600000"
+		"AttributeIntelligenceGain"		"2.6" // 原值: 2.6
 		"MovementSpeed"		"285"
 		"MovementTurnRate"		"0.700000"
 		"HasAggressiveStance"		"1"
@@ -10759,7 +10735,6 @@
 		"Ability5"		"necrolyte_sadist"
 		"Ability6"		"necrolyte_reapers_scythe"
 		"Ability7"		"special_bonus_unique_necrolyte_heartstopper_aura_fun"
-
 		"AbilityDraftAbilities"
 		{
 			"Ability1"	"necrolyte_death_pulse"
@@ -10805,11 +10780,11 @@
 		"ProjectileSpeed"		"1200"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"		"18"
-		"AttributeStrengthGain"		"2.300000"
+		"AttributeStrengthGain"		"2.3" // 原值: 2.3
 		"AttributeBaseAgility"		"12"
-		"AttributeAgilityGain"		"1.300000"
+		"AttributeAgilityGain"		"1.3" // 原值: 1.3
 		"AttributeBaseIntelligence"		"23"
-		"AttributeIntelligenceGain"		"2.700000"
+		"AttributeIntelligenceGain"		"4.7" // 原值: 2.7
 		"MovementSpeed"		"280"
 		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
 		"ItemSlots"
@@ -11138,11 +11113,11 @@
 		"ProjectileSpeed"		"1200"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"		"22"
-		"AttributeStrengthGain"		"2.4"
+		"AttributeStrengthGain"		"2.4" // 原值: 2.4
 		"AttributeBaseAgility"		"10"
-		"AttributeAgilityGain"		"1.000000"
+		"AttributeAgilityGain"		"1.0" // 原值: 1.0
 		"AttributeBaseIntelligence"		"25"
-		"AttributeIntelligenceGain"		"3.100000"
+		"AttributeIntelligenceGain"		"5.1" // 原值: 3.1
 		"MovementSpeed"		"300"
 		"HasAggressiveStance"		"1"
 		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
@@ -11459,11 +11434,11 @@
 		"ProjectileSpeed"		"0"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_ALL"
 		"AttributeBaseStrength"		"25"
-		"AttributeStrengthGain"		"2.9"
+		"AttributeStrengthGain"		"3.6" // 原值: 2.9
 		"AttributeBaseAgility"		"22"
-		"AttributeAgilityGain"		"1.9"
+		"AttributeAgilityGain"		"2.6" // 原值: 1.9
 		"AttributeBaseIntelligence"		"16"
-		"AttributeIntelligenceGain"		"1.9"
+		"AttributeIntelligenceGain"		"2.6" // 原值: 1.9
 		"MovementSpeed"		"305"
 		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
 		"ItemSlots"
@@ -11756,11 +11731,11 @@
 		"ProjectileSpeed"		"1500"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"		"20"
-		"AttributeStrengthGain"		"2.4"
+		"AttributeStrengthGain"		"2.4" // 原值: 2.4
 		"AttributeBaseAgility"		"22"
-		"AttributeAgilityGain"		"2.5"
+		"AttributeAgilityGain"		"2.5" // 原值: 2.5
 		"AttributeBaseIntelligence"		"25"
-		"AttributeIntelligenceGain"		"3.400000"
+		"AttributeIntelligenceGain"		"5.4" // 原值: 3.4
 		"MovementSpeed"		"290"
 		"HasAggressiveStance"		"1"
 		"particle_folder"		"particles/units/heroes/hero_queenofpain"
@@ -11982,11 +11957,11 @@
 		"ProjectileSpeed"		"900"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_ALL"
 		"AttributeBaseStrength"		"19"
-		"AttributeStrengthGain"		"2.1"
+		"AttributeStrengthGain"		"2.8" // 原值: 2.1
 		"AttributeBaseAgility"		"24"
-		"AttributeAgilityGain"		"2.8"
+		"AttributeAgilityGain"		"3.5" // 原值: 2.8
 		"AttributeBaseIntelligence"		"19"
-		"AttributeIntelligenceGain"		"1.8"
+		"AttributeIntelligenceGain"		"2.5" // 原值: 1.8
 		"MovementSpeed"		"280"
 		"particle_folder"		"particles/units/heroes/hero_venomancer"
 		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_venomancer.vsndevts"
@@ -12252,11 +12227,11 @@
 		"AttackRange"		"150"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
 		"AttributeBaseStrength"		"20"
-		"AttributeStrengthGain"		"2.600000"
+		"AttributeStrengthGain"		"2.6" // 原值: 2.6
 		"AttributeBaseAgility"		"21"
-		"AttributeAgilityGain"		"3.3"
+		"AttributeAgilityGain"		"5.3" // 原值: 3.3
 		"AttributeBaseIntelligence"		"15"
-		"AttributeIntelligenceGain"		"1.500000"
+		"AttributeIntelligenceGain"		"1.5" // 原值: 1.5
 		"StatusHealthRegen"		"1"
 		"MovementSpeed"		"300"
 		"MovementTurnRate"		"0.900000"
@@ -12435,13 +12410,13 @@
 		"Ability2"		"generic_hidden"
 		"Ability3"		"skeleton_king_mortal_strike"
 		"Ability4"		"skeleton_king_vampiric_spirit"
-		"Ability5"		"skeleton_king_reincarnation_fun" //"generic_hidden"
+		"Ability5"		"skeleton_king_reincarnation_fun"    //"generic_hidden"
 		"Ability6"		"skeleton_king_reincarnation"
 		"Ability10"		"special_bonus_unique_wraith_king_2"
 		"Ability11"		"special_bonus_unique_wraith_king_facet_1"
 		"Ability12"		"special_bonus_unique_wraith_king_11"
-		"Ability13"		"special_bonus_hp_800"//"special_bonus_hp_400"
-		"Ability14"		"special_bonus_cleave_60"//"special_bonus_cleave_35"
+		"Ability13"		"special_bonus_hp_400"
+		"Ability14"		"special_bonus_attack_speed_60"
 		"Ability15"		"special_bonus_unique_wraith_king_facet_3"
 		"Ability16"		"special_bonus_unique_wraith_king_10"
 		"Ability17"		"special_bonus_unique_wraith_king_4"
@@ -12502,11 +12477,11 @@
 		"ProjectileSpeed"		"0"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"			"22"
-		"AttributeStrengthGain"			"2.8"
+		"AttributeStrengthGain"			"4.8" // 原值: 2.8
 		"AttributeBaseAgility"			"16"
-		"AttributeAgilityGain"			"1.7"
+		"AttributeAgilityGain"			"1.7" // 原值: 1.7
 		"AttributeBaseIntelligence"		"18"
-		"AttributeIntelligenceGain"		"1.6"
+		"AttributeIntelligenceGain"		"1.6" // 原值: 1.6
 		"StatusHealthRegen"		"0.5"
 		"MovementSpeed"		"315"
 		"MovementSpeedActivityModifiers"
@@ -12869,11 +12844,11 @@
 		"ProjectileSpeed"		"1000"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_ALL"
 		"AttributeBaseStrength"		"21"
-		"AttributeStrengthGain"		"2.900000"
+		"AttributeStrengthGain"		"3.6" // 原值: 2.9
 		"AttributeBaseAgility"		"17"
-		"AttributeAgilityGain"		"2.0"
+		"AttributeAgilityGain"		"2.7" // 原值: 2.0
 		"AttributeBaseIntelligence"		"24"
-		"AttributeIntelligenceGain"		"3.000000"
+		"AttributeIntelligenceGain"		"3.7" // 原值: 3.0
 		"StatusManaRegen"	"0.5"
 		"MovementSpeed"		"290"
 		"MovementTurnRate"		"0.800000"
@@ -12907,7 +12882,7 @@
 				"SlotText"		"#LoadoutSlot_Legs"
 				"no_import"		"1"
 				"TextureWidth"		"512"
-				"TextureHeight"		"512"
+				"TextureHeight"		"256"
 				"MaxPolygonsLOD0"		"3000"
 				"MaxPolygonsLOD1"		"1200"
 			}
@@ -12944,9 +12919,9 @@
 				"SlotName"		"misc"
 				"SlotText"		"#LoadoutSlot_misc"
 				"TextureWidth"		"256"
-				"TextureHeight"		"256"
-				"MaxPolygonsLOD0"		"1000"
-				"MaxPolygonsLOD1"		"400"
+				"TextureHeight"		"128"
+				"MaxPolygonsLOD0"		"900"
+				"MaxPolygonsLOD1"		"360"
 			}
 			"6"
 			{
@@ -13135,11 +13110,9 @@
 		"Ability2"		"phantom_assassin_phantom_strike"
 		"Ability3"		"phantom_assassin_blur"
 		"Ability4"		"phantom_assassin_fan_of_knives"
-		"Ability5"		"永恒的恩赐解脱"//"phantom_assassin_immaterial"
+		"Ability5"		"永恒的恩赐解脱"
 		"Ability6"		"phantom_assassin_coup_de_grace"
 		"Ability7"		"phantom_assassin_immaterial"
-		"Ability8"		"phantom_assassin_coup_de_grace_fun"
-
 		"AbilityDraftAbilities"
 		{
 			"Ability1"	"phantom_assassin_stifling_dagger"
@@ -13199,11 +13172,11 @@
 		"AttackRange"		"150"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
 		"AttributeBaseStrength"		"19" 
-		"AttributeStrengthGain"		"2.0000"
+		"AttributeStrengthGain"		"2.0" // 原值: 2.0
 		"AttributeBaseAgility"		"21"
-		"AttributeAgilityGain"		"3.40000"
+		"AttributeAgilityGain"		"5.4" // 原值: 3.4
 		"AttributeBaseIntelligence"		"15"
-		"AttributeIntelligenceGain"		"1.700000"
+		"AttributeIntelligenceGain"		"1.7" // 原值: 1.7
 		"MovementSpeed"		"310"
 		"HasAggressiveStance"		"1"
 		"MovementTurnRate"		"0.800000"
@@ -13587,11 +13560,11 @@
 		"ProjectileSpeed"		"900"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"		"19"
-		"AttributeStrengthGain"		"2.00000"
+		"AttributeStrengthGain"		"2.0" // 原值: 2.0
 		"AttributeBaseAgility"		"21"
-		"AttributeAgilityGain"		"1.300000"
+		"AttributeAgilityGain"		"1.3" // 原值: 1.3
 		"AttributeBaseIntelligence"		"26"
-		"AttributeIntelligenceGain"		"5.20000"
+		"AttributeIntelligenceGain"		"7.2" // 原值: 5.2
 		"StatusManaRegen"	"0.5"
 		"MovementSpeed"		"330"
 		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
@@ -13838,11 +13811,11 @@
 		"ProjectileSpeed"		"1000"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
 		"AttributeBaseStrength"		"23"
-		"AttributeStrengthGain"		"2.400000"
+		"AttributeStrengthGain"		"2.4" // 原值: 2.4
 		"AttributeBaseAgility"		"23"
-		"AttributeAgilityGain"		"3.4"
+		"AttributeAgilityGain"		"5.4" // 原值: 3.4
 		"AttributeBaseIntelligence"		"20"
-		"AttributeIntelligenceGain"		"2.000000"
+		"AttributeIntelligenceGain"		"2.0" // 原值: 2.0
 		"StatusHealthRegen"		"1"
 		"MovementSpeed"		"310"
 		"MovementTurnRate"		"0.700000"
@@ -14075,11 +14048,11 @@
 		"ProjectileSpeed"		"1200"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
 		"AttributeBaseStrength"		"21"
-		"AttributeStrengthGain"		"2.400000"
+		"AttributeStrengthGain"		"2.4" // 原值: 2.4
 		"AttributeBaseAgility"		"21"
-		"AttributeAgilityGain"		"2.700000"
+		"AttributeAgilityGain"		"4.7" // 原值: 2.7
 		"AttributeBaseIntelligence"		"17"
-		"AttributeIntelligenceGain"		"2.0"
+		"AttributeIntelligenceGain"		"2.0" // 原值: 2.0
 		"MovementSpeed"		"275"
 		"MovementSpeedActivityModifiers"
 		{
@@ -14362,11 +14335,11 @@
 		"ProjectileSpeed"		"900"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
 		"AttributeBaseStrength"		"21"
-		"AttributeStrengthGain"		"2.200000"
+		"AttributeStrengthGain"		"2.2" // 原值: 2.2
 		"AttributeBaseAgility"		"24"
-		"AttributeAgilityGain"		"3.400000"
+		"AttributeAgilityGain"		"5.4" // 原值: 3.4
 		"AttributeBaseIntelligence"		"23"
-		"AttributeIntelligenceGain"		"1.90000"
+		"AttributeIntelligenceGain"		"1.9" // 原值: 1.9
 		"StatusHealthRegen"		"0.5"
 		"MovementSpeed"		"325"
 		"VisionNighttimeRange"		"800"
@@ -14691,11 +14664,11 @@
 		"ProjectileSpeed"		"900"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"		"21"
-		"AttributeStrengthGain"		"3.600000"
+		"AttributeStrengthGain"		"5.6" // 原值: 3.6
 		"AttributeBaseAgility"		"16"
-		"AttributeAgilityGain"		"2.000000"
+		"AttributeAgilityGain"		"2.0" // 原值: 2.0
 		"AttributeBaseIntelligence"		"18"
-		"AttributeIntelligenceGain"		"1.700000"
+		"AttributeIntelligenceGain"		"1.7" // 原值: 1.7
 		"MovementSpeed"		"315"
 		"HasAggressiveStance"		"1"
 		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
@@ -14856,7 +14829,7 @@
 				"SlotText"		"#LoadoutSlot_Elder_Dragon"
 				"no_import"		"1"
 				"TextureWidth"		"1024"
-				"TextureHeight"		"1024"
+				"TextureHeight"		"512"
 				"MaxPolygonsLOD0"		"16000"
 				"MaxPolygonsLOD1"		"6400"
 				"LoadoutPreviewMode"		"transformation"
@@ -15053,11 +15026,11 @@
 		"StatusManaRegen"		"0.3"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_ALL"
 		"AttributeBaseStrength"		"18"
-		"AttributeStrengthGain"		"2.3"
+		"AttributeStrengthGain"		"3.0" // 原值: 2.3
 		"AttributeBaseAgility"		"20"
-		"AttributeAgilityGain"		"1.7"
+		"AttributeAgilityGain"		"2.4" // 原值: 1.7
 		"AttributeBaseIntelligence"		"25"
-		"AttributeIntelligenceGain"		"3.7"
+		"AttributeIntelligenceGain"		"4.4" // 原值: 3.7
 		"MovementSpeed"		"305"
 		"MovementTurnRate"		"0.700000"
 		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
@@ -15209,7 +15182,7 @@
 				"12"		"dazzle_nothl_projection"
 				"13"		"dazzle_poison_touch"
 				"14"		"dazzle_poison_touch"
-				"15"		"special_bonus_unique_dazzle_2"
+				"15"		"special_bonus_attack_speed_90"
 				"16"		"dazzle_poison_touch"
 				"17"		""
 				"18"		"dazzle_nothl_projection"
@@ -15333,11 +15306,11 @@
 		"AttackRange"		"150"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"		"26"
-		"AttributeStrengthGain"		"3.2"
+		"AttributeStrengthGain"		"5.2" // 原值: 3.2
 		"AttributeBaseAgility"		"13"
-		"AttributeAgilityGain"		"2.3"
+		"AttributeAgilityGain"		"2.3" // 原值: 2.3
 		"AttributeBaseIntelligence"		"18"
-		"AttributeIntelligenceGain"		"1.7"
+		"AttributeIntelligenceGain"		"1.7" // 原值: 1.7
 		"MovementSpeed"		"310"
 		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
 		"VoiceFile"		"soundevents/voscripts/game_sounds_vo_rattletrap.vsndevts"
@@ -15562,11 +15535,11 @@
 		"ProjectileSpeed"		"900"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"		"20"
-		"AttributeStrengthGain"		"2.8"
+		"AttributeStrengthGain"		"2.8" // 原值: 2.8
 		"AttributeBaseAgility"		"17"
-		"AttributeAgilityGain"		"2.5"
+		"AttributeAgilityGain"		"2.5" // 原值: 2.5
 		"AttributeBaseIntelligence"		"22"
-		"AttributeIntelligenceGain"		"3.5"
+		"AttributeIntelligenceGain"		"5.5" // 原值: 3.5
 		"MovementSpeed"		"325"
 		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
 		"VoiceFile"		"soundevents/voscripts/game_sounds_vo_leshrac.vsndevts"
@@ -15588,8 +15561,8 @@
 				"SlotText"		"#LoadoutSlot_Misc"
 				"TextureWidth"		"256"
 				"TextureHeight"		"256"
-				"MaxPolygonsLOD0"		"1500"
-				"MaxPolygonsLOD1"		"600"
+				"MaxPolygonsLOD0"		"1000"
+				"MaxPolygonsLOD1"		"400"
 			}
 			"1"
 			{
@@ -15608,8 +15581,8 @@
 				"SlotText"		"#LoadoutSlot_Back"
 				"TextureWidth"		"512"
 				"TextureHeight"		"512"
-				"MaxPolygonsLOD0"		"4000"
-				"MaxPolygonsLOD1"		"1600"
+				"MaxPolygonsLOD0"		"2500"
+				"MaxPolygonsLOD1"		"1000"
 			}
 			"3"
 			{
@@ -15618,8 +15591,8 @@
 				"SlotText"		"#LoadoutSlot_Tail"
 				"TextureWidth"		"512"
 				"TextureHeight"		"512"
-				"MaxPolygonsLOD0"		"4000"
-				"MaxPolygonsLOD1"		"1600"
+				"MaxPolygonsLOD0"		"2500"
+				"MaxPolygonsLOD1"		"1000"
 			}
 			"4"
 			{
@@ -15782,11 +15755,11 @@
 		"ProjectileSpeed"		"1125"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_ALL"
 		"AttributeBaseStrength"		"19"
-		"AttributeStrengthGain"		"2.600000"
+		"AttributeStrengthGain"		"3.3" // 原值: 2.6
 		"AttributeBaseAgility"		"14"
-		"AttributeAgilityGain"		"3.200000"
+		"AttributeAgilityGain"		"3.9" // 原值: 3.2
 		"AttributeBaseIntelligence"		"22"
-		"AttributeIntelligenceGain"		"3.500000"
+		"AttributeIntelligenceGain"		"4.2" // 原值: 3.5
 		"MovementSpeed"		"295"
 		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
 		"VoiceFile"		"soundevents/voscripts/game_sounds_vo_furion.vsndevts"
@@ -16065,11 +16038,11 @@
 		"AttackRange"		"150"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"		"25"
-		"AttributeStrengthGain"		"2.400000"
+		"AttributeStrengthGain"		"4.4" // 原值: 2.4
 		"AttributeBaseAgility"		"15"
-		"AttributeAgilityGain"		"1.900000"
+		"AttributeAgilityGain"		"1.9" // 原值: 1.9
 		"AttributeBaseIntelligence"		"15"
-		"AttributeIntelligenceGain"		"1.8000"
+		"AttributeIntelligenceGain"		"1.8" // 原值: 1.8
 		"MovementSpeed"		"315" 
 		"MovementTurnRate"		"0.900000"
 		"HasAggressiveStance"		"1"
@@ -16246,7 +16219,7 @@
 		"Ability3"		"dark_seer_surge"
 		"Ability4"		"dark_seer_normal_punch"
 		"Ability5"		"dark_seer_aggrandize"
-		"Ability6"		"magnataur_reverse_polarity"//"dark_seer_wall_of_replica"
+		"Ability6"		"dark_seer_wall_of_replica"
 
 		"AbilityDraftAbilities"
 		{
@@ -16256,11 +16229,11 @@
 			"Ability4"	"dark_seer_wall_of_replica"
 		}
 
-		"Ability10"		"special_bonus_unique_magnus_reverse_polarity_stats"//"special_bonus_unique_dark_seer_7"
+		"Ability10"		"special_bonus_unique_dark_seer_7"
 		"Ability11"		"special_bonus_unique_dark_seer_5"
 		"Ability12"		"special_bonus_unique_dark_seer_2"
 		"Ability13"		"special_bonus_unique_dark_seer_6"
-		"Ability14"		"special_bonus_unique_magnus_5"//"special_bonus_unique_dark_seer_13"
+		"Ability14"		"special_bonus_unique_dark_seer_13"
 		"Ability15"		"special_bonus_unique_dark_seer"
 		"Ability16"		"special_bonus_unique_dark_seer_14"
 		"Ability17"		"special_bonus_unique_dark_seer_3"
@@ -16313,11 +16286,11 @@
 		"AttackRange"		"150"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"		"20"
-		"AttributeStrengthGain"		"2.600000"
+		"AttributeStrengthGain"		"2.6" // 原值: 2.6
 		"AttributeBaseAgility"		"19"
-		"AttributeAgilityGain"		"1.800000"
+		"AttributeAgilityGain"		"1.8" // 原值: 1.8
 		"AttributeBaseIntelligence"		"21"
-		"AttributeIntelligenceGain"		"2.700000"
+		"AttributeIntelligenceGain"		"4.7" // 原值: 2.7
 		"StatusHealthRegen"		"1.0"
 		"MovementSpeed"		"295"
 		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
@@ -16537,11 +16510,11 @@
 		"ProjectileSpeed"		"900"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
 		"AttributeBaseStrength"		"17"
-		"AttributeStrengthGain"		"2.0"
+		"AttributeStrengthGain"		"2.0" // 原值: 2.0
 		"AttributeBaseAgility"		"25"
-		"AttributeAgilityGain"		"2.7"
+		"AttributeAgilityGain"		"4.7" // 原值: 2.7
 		"AttributeBaseIntelligence"		"21"
-		"AttributeIntelligenceGain"		"2.2"
+		"AttributeIntelligenceGain"		"2.2" // 原值: 2.2
 		"StatusHealthRegen"		"0.25"
 		"StatusManaRegen"	"0"
 		"MovementSpeed"		"290"
@@ -16789,11 +16762,11 @@
 		"AttackRangeBuffer"			"550"		
 		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"		"22"
-		"AttributeStrengthGain"		"3.10000"
+		"AttributeStrengthGain"		"5.1" // 原值: 3.1
 		"AttributeBaseAgility"		"15"
-		"AttributeAgilityGain"		"2.0000"
+		"AttributeAgilityGain"		"2.0" // 原值: 2.0
 		"AttributeBaseIntelligence"		"16"
-		"AttributeIntelligenceGain"		"2.100000"
+		"AttributeIntelligenceGain"		"2.1" // 原值: 2.1
 		"MovementSpeed"		"310"
 		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
 		"VoiceFile"		"soundevents/voscripts/game_sounds_vo_omniknight.vsndevts"
@@ -17099,11 +17072,11 @@
 		"ProjectileSpeed"		"900"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"		"17"
-		"AttributeStrengthGain"		"2.00000"
+		"AttributeStrengthGain"		"2.0" // 原值: 2.0
 		"AttributeBaseAgility"		"19"
-		"AttributeAgilityGain"		"2.100000"
+		"AttributeAgilityGain"		"2.1" // 原值: 2.1
 		"AttributeBaseIntelligence"		"22"
-		"AttributeIntelligenceGain"		"4.0000"
+		"AttributeIntelligenceGain"		"6.0" // 原值: 4.0
 		"MovementSpeed"		"320"
 		"StatusManaRegen"	"0.5"
 		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
@@ -17338,11 +17311,11 @@
 		"ProjectileSpeed"		"1400"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"		"23"
-		"AttributeStrengthGain"		"3.3"
+		"AttributeStrengthGain"		"5.3" // 原值: 3.3
 		"AttributeBaseAgility"		"10"
-		"AttributeAgilityGain"		"1.50000"
+		"AttributeAgilityGain"		"1.5" // 原值: 1.5
 		"AttributeBaseIntelligence"		"18"
-		"AttributeIntelligenceGain"		"1.500000"
+		"AttributeIntelligenceGain"		"1.5" // 原值: 1.5
 		"StatusMana"		"0"
 		"MovementSpeed"		"295"
 		"HasAggressiveStance"		"1"
@@ -17622,11 +17595,11 @@
 		"AttackRange"		"150"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"		"23"
-		"AttributeStrengthGain"		"3.000000"
+		"AttributeStrengthGain"		"5.0" // 原值: 3.0
 		"AttributeBaseAgility"		"18"
-		"AttributeAgilityGain"		"2.20000"
+		"AttributeAgilityGain"		"2.2" // 原值: 2.2
 		"AttributeBaseIntelligence"		"15"
-		"AttributeIntelligenceGain"		"1.600000"
+		"AttributeIntelligenceGain"		"1.6" // 原值: 1.6
 		"StatusHealthRegen"		"1.5"
 		"StatusManaRegen"	"0.25"
 		"MovementSpeed"		"295"
@@ -17852,11 +17825,11 @@
 		"AttackRange"		"175"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
 		"AttributeBaseStrength"		"18"
-		"AttributeStrengthGain"		"2.9"
+		"AttributeStrengthGain"		"2.9" // 原值: 2.9
 		"AttributeBaseAgility"		"18"
-		"AttributeAgilityGain"		"3.4"
+		"AttributeAgilityGain"		"5.4" // 原值: 3.4
 		"AttributeBaseIntelligence"		"18"
-		"AttributeIntelligenceGain"		"2.0"
+		"AttributeIntelligenceGain"		"2.0" // 原值: 2.0
 		"MovementSpeed"		"285"
 		"VisionDaytimeRange"		"1800"
 		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
@@ -18073,11 +18046,11 @@
 		"AttackRange"		"150"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
 		"AttributeBaseStrength"		"19"
-		"AttributeStrengthGain"		"2.500000"
+		"AttributeStrengthGain"		"2.5" // 原值: 2.5
 		"AttributeBaseAgility"		"21"
-		"AttributeAgilityGain"		"2.600000"
+		"AttributeAgilityGain"		"4.6" // 原值: 2.6
 		"AttributeBaseIntelligence"		"20"
-		"AttributeIntelligenceGain"		"1.900000"
+		"AttributeIntelligenceGain"		"1.9" // 原值: 1.9
 		"MovementSpeed"		"325"
 		"StatusHealthRegen"		"0.75"
 		"StatusManaRegen"	"0.5"
@@ -18386,11 +18359,11 @@
 		"ProjectileSpeed"		"900"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
 		"AttributeBaseStrength"		"16"
-		"AttributeStrengthGain"		"2.0000"
+		"AttributeStrengthGain"		"2.0" // 原值: 2.0
 		"AttributeBaseAgility"		"17"
-		"AttributeAgilityGain"		"3.3"
+		"AttributeAgilityGain"		"5.3" // 原值: 3.3
 		"AttributeBaseIntelligence"		"20"
-		"AttributeIntelligenceGain"		"2.00000"
+		"AttributeIntelligenceGain"		"2.0" // 原值: 2.0
 		"StatusHealthRegen"		"1.25"
 		"StatusManaRegen"	"0.5"
 		"MovementSpeed"		"275"
@@ -18457,8 +18430,8 @@
 				"SlotText"		"#LoadoutSlot_Misc"
 				"TextureWidth"		"256"
 				"TextureHeight"		"256"
-				"MaxPolygonsLOD0"		"2000"
-				"MaxPolygonsLOD1"		"800"
+				"MaxPolygonsLOD0"		"1000"
+				"MaxPolygonsLOD1"		"400"
 			}
 			"5"
 			{
@@ -18657,11 +18630,11 @@
 		"ProjectileSpeed"		"1100"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"		"25"
-		"AttributeStrengthGain"		"2.5"
+		"AttributeStrengthGain"		"2.5" // 原值: 2.5
 		"AttributeBaseAgility"		"15"
-		"AttributeAgilityGain"		"1.200000"
+		"AttributeAgilityGain"		"1.2" // 原值: 1.2
 		"AttributeBaseIntelligence"		"26"
-		"AttributeIntelligenceGain"		"3.000000"
+		"AttributeIntelligenceGain"		"5.0" // 原值: 3.0
 		"MovementSpeed"		"290"
 		"MovementTurnRate"		"0.8"
 		"particle_folder"		"particles/units/heroes/hero_jakiro"
@@ -18940,11 +18913,11 @@
 		"ProjectileSpeed"		"900"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_ALL"
 		"AttributeBaseStrength"		"23"
-		"AttributeStrengthGain"		"2.9"
+		"AttributeStrengthGain"		"3.6" // 原值: 2.9
 		"AttributeBaseAgility"		"15"
-		"AttributeAgilityGain"		"1.8"
+		"AttributeAgilityGain"		"2.5" // 原值: 1.8
 		"AttributeBaseIntelligence"		"22"
-		"AttributeIntelligenceGain"		"2.9"
+		"AttributeIntelligenceGain"		"3.6" // 原值: 2.9
 		"StatusHealthRegen"		"1.75"
 		"MovementSpeed"		"330"
 		"MovementTurnRate"		"0.900000"
@@ -19189,11 +19162,11 @@
 		"ProjectileSpeed"		"1100"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"		"23"
-		"AttributeStrengthGain"		"2.7"     //"2.00000"
+		"AttributeStrengthGain"		"2.0" // 原值: 2.0
 		"AttributeBaseAgility"		"15"
-		"AttributeAgilityGain"		"2.100000"
+		"AttributeAgilityGain"		"2.1" // 原值: 2.1
 		"AttributeBaseIntelligence"		"19"
-		"AttributeIntelligenceGain"		"3.200000"
+		"AttributeIntelligenceGain"		"5.2" // 原值: 3.2
 		"StatusManaRegen"	"0.5"
 		"MovementSpeed"		"305"
 		"particle_folder"		"particles/units/heroes/hero_chen"
@@ -19414,11 +19387,11 @@
 		}
 		"AttributePrimary"		"DOTA_ATTRIBUTE_ALL"
 		"AttributeBaseStrength"		"21"
-		"AttributeStrengthGain"		"2.5"
+		"AttributeStrengthGain"		"3.2" // 原值: 2.5
 		"AttributeBaseAgility"		"25"
-		"AttributeAgilityGain"		"2.100000"
+		"AttributeAgilityGain"		"2.8" // 原值: 2.1
 		"AttributeBaseIntelligence"		"16"
-		"AttributeIntelligenceGain"		"1.7"
+		"AttributeIntelligenceGain"		"2.4" // 原值: 1.7
 		"StatusHealthRegen"		"1.0"
 		"MovementSpeed"		"290"
 		"particle_folder"		"particles/units/heroes/hero_spectre"
@@ -19645,11 +19618,11 @@
 		"AttackRange"		"200"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"		"24"
-		"AttributeStrengthGain"		"3.8"
+		"AttributeStrengthGain"		"5.8" // 原值: 3.8
 		"AttributeBaseAgility"		"15"
-		"AttributeAgilityGain"		"1.5"
+		"AttributeAgilityGain"		"1.5" // 原值: 1.5
 		"AttributeBaseIntelligence"		"15"
-		"AttributeIntelligenceGain"		"1.7"
+		"AttributeIntelligenceGain"		"1.7" // 原值: 1.7
 		"StatusHealthRegen"		"1.25"
 
 		"MovementSpeed"		"290"
@@ -19833,7 +19806,7 @@
 		"Ability2"		"ancient_apparition_ice_vortex"
 		"Ability3"		"ancient_apparition_chilling_touch"
 		"Ability4"		"ancient_apparition_death_rime"
-		"Ability5"		"ancient_apparition_hanshuangzuzhou"//"generic_hidden"
+		"Ability5"		"ancient_apparition_hanshuangzuzhou"    //"generic_hidden"
 		"Ability6"		"ancient_apparition_ice_blast"
 		"Ability7"		"ancient_apparition_ice_blast_release"
 
@@ -19883,11 +19856,11 @@
 		"ProjectileSpeed"		"1250"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"		"20"
-		"AttributeStrengthGain"		"1.900000"
+		"AttributeStrengthGain"		"1.9" // 原值: 1.9
 		"AttributeBaseAgility"		"20"
-		"AttributeAgilityGain"		"2"
+		"AttributeAgilityGain"		"2.0" // 原值: 2.0
 		"AttributeBaseIntelligence"		"23"
-		"AttributeIntelligenceGain"		"3.100000"
+		"AttributeIntelligenceGain"		"5.1" // 原值: 3.1
 		"MovementSpeed"		"285"
 		"particle_folder"		"particles/units/heroes/hero_ancient_apparition"
 		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_ancient_apparition.vsndevts"
@@ -20106,11 +20079,11 @@
 		"AttackRange"		"150"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
 		"AttributeBaseStrength"		"25"
-		"AttributeStrengthGain"		"2.4"
+		"AttributeStrengthGain"		"2.4" // 原值: 2.4
 		"AttributeBaseAgility"		"18"
-		"AttributeAgilityGain"		"2.8"
+		"AttributeAgilityGain"		"4.8" // 原值: 2.8
 		"AttributeBaseIntelligence"		"16"
-		"AttributeIntelligenceGain"		"1.5"
+		"AttributeIntelligenceGain"		"1.5" // 原值: 1.5
 		"MovementSpeed"		"310"
 		"StatusHealthRegen"		"1.0"
 		"particle_folder"		"particles/units/heroes/hero_ursa"
@@ -20312,11 +20285,11 @@
 		"AttackRange"		"170"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"		"28"
-		"AttributeStrengthGain"		"3.300000"
+		"AttributeStrengthGain"		"5.3" // 原值: 3.3
 		"AttributeBaseAgility"		"17"
-		"AttributeAgilityGain"		"1.700000"
+		"AttributeAgilityGain"		"1.7" // 原值: 1.7
 		"AttributeBaseIntelligence"		"14"
-		"AttributeIntelligenceGain"		"1.800000"
+		"AttributeIntelligenceGain"		"1.8" // 原值: 1.8
 		"StatusHealthRegen"		"1.25"
 		"StatusManaRegen"		"0.5"
 		"MovementSpeed"		"295"
@@ -20541,11 +20514,11 @@
 		"ProjectileModel"		"particles/units/heroes/hero_gyrocopter/gyro_base_attack.vpcf"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
 		"AttributeBaseStrength"		"22"
-		"AttributeStrengthGain"		"2.500000"
+		"AttributeStrengthGain"		"2.5" // 原值: 2.5
 		"AttributeBaseAgility"		"25"
-		"AttributeAgilityGain"		"3.2"
+		"AttributeAgilityGain"		"5.2" // 原值: 3.2
 		"AttributeBaseIntelligence"		"21"
-		"AttributeIntelligenceGain"		"2.400000"
+		"AttributeIntelligenceGain"		"2.4" // 原值: 2.4
 		"MovementSpeed"		"320"
 		"HasAggressiveStance"		"1"
 		"particle_folder"		"particles/units/heroes/hero_gyrocopter"
@@ -20803,11 +20776,11 @@
 		"AttackRange"		"150"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"		"23"
-		"AttributeStrengthGain"		"2.7"
+		"AttributeStrengthGain"		"4.7" // 原值: 2.7
 		"AttributeBaseAgility"		"22"
-		"AttributeAgilityGain"		"1.500000"
+		"AttributeAgilityGain"		"1.5" // 原值: 1.5
 		"AttributeBaseIntelligence"		"25"
-		"AttributeIntelligenceGain"		"1.800000"
+		"AttributeIntelligenceGain"		"1.8" // 原值: 1.8
 		"MovementSpeed"		"295"
 		"HasAggressiveStance"		"1"
 		"particle_folder"		"particles/units/heroes/hero_alchemist"
@@ -21037,8 +21010,7 @@
 		"Ability14"		"invoker_forge_spirit"
 		"Ability15"		"invoker_ice_wall"
 		"Ability16"		"invoker_deafening_blast"
-		//"Ability17"		"invoker_again"
-		"Ability26"		"invoker_mastermind"
+		"Ability26"		"invoker_again"
 
 		"Facets"
 		{
@@ -21092,16 +21064,17 @@
 			"Ability10"		"invoker_ghost_walk_ad"
 		}		
 		"AbilityDraftIgnoreCount" "16"
-		"AbilityTalentStart" "18"
+		"AbilityTalentStart" "17"
 
-		"Ability18"		"special_bonus_unique_invoker_ice_wall_dps"
-		"Ability19"		"special_bonus_unique_invoker_3"
-		"Ability20"		"special_bonus_unique_invoker_11"
-		"Ability21"		"special_bonus_unique_invoker_9"
-		"Ability22"		"special_bonus_unique_invoker_additional_chaos_meteors"
-		"Ability23"		"special_bonus_unique_invoker_5"
-		"Ability24"		"special_bonus_unique_invoker_2"
-		"Ability25"		"special_bonus_unique_invoker_13"
+		"Ability17"		"special_bonus_unique_invoker_ice_wall_dps"
+		"Ability18"		"special_bonus_unique_invoker_3"
+		"Ability19"		"special_bonus_unique_invoker_11"
+		"Ability20"		"special_bonus_unique_invoker_9"
+		"Ability21"		"special_bonus_unique_invoker_additional_chaos_meteors"
+		"Ability22"		"special_bonus_unique_invoker_5"
+		"Ability23"		"special_bonus_unique_invoker_2"
+		"Ability24"		"special_bonus_unique_invoker_13"
+		"Ability25"		""
 		"ArmorPhysical"		"-1"
 		"StatusHealthRegen"		"0.25"
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -21115,11 +21088,11 @@
 		"ProjectileSpeed"		"900"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"		"19"
-		"AttributeStrengthGain"		"2.5"
+		"AttributeStrengthGain"		"2.5" // 原值: 2.5
 		"AttributeBaseAgility"		"14"
-		"AttributeAgilityGain"		"2.0"
+		"AttributeAgilityGain"		"2.0" // 原值: 2.0
 		"AttributeBaseIntelligence"		"20"
-		"AttributeIntelligenceGain"		"4.7"
+		"AttributeIntelligenceGain"		"6.7" // 原值: 4.7
 		"MovementSpeed"		"285"
 		"VoiceFile"		"soundevents/voscripts/game_sounds_vo_invoker.vsndevts"
 		"particle_folder"		"particles/units/heroes/hero_invoker"
@@ -21465,7 +21438,7 @@
 		"Ability2"		"silencer_glaives_of_wisdom"
 		"Ability3"		"silencer_last_word"
 		"Ability4"		"silencer_brain_drain"
-		"Ability5"		"silencer_last_word_fun"   //"generic_hidden"
+		"Ability5"		"silencer_last_word_fun"    //"generic_hidden"
 		"Ability6"		"silencer_global_silence"
 
 		"AbilityDraftAbilities"
@@ -21522,11 +21495,11 @@
 		"ProjectileSpeed"		"900"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"		"19"
-		"AttributeStrengthGain"		"2.200000"
+		"AttributeStrengthGain"		"2.2" // 原值: 2.2
 		"AttributeBaseAgility"		"22"
-		"AttributeAgilityGain"		"2.200000"
+		"AttributeAgilityGain"		"2.2" // 原值: 2.2
 		"AttributeBaseIntelligence"		"25"
-		"AttributeIntelligenceGain"		"2.900000"
+		"AttributeIntelligenceGain"		"4.9" // 原值: 2.9
 		"MovementSpeed"		"290"
 		"particle_folder"		"particles/units/heroes/hero_silencer"
 		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_silencer.vsndevts"
@@ -21750,11 +21723,11 @@
 		"ProjectileSpeed"		"900"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"		"21"
-		"AttributeStrengthGain"		"2.90000"
+		"AttributeStrengthGain"		"2.9" // 原值: 2.9
 		"AttributeBaseAgility"		"22"
-		"AttributeAgilityGain"		"1.60000"
+		"AttributeAgilityGain"		"1.6" // 原值: 1.6
 		"AttributeBaseIntelligence"		"30"
-		"AttributeIntelligenceGain"		"4.200000"
+		"AttributeIntelligenceGain"		"6.2" // 原值: 4.2
 		"MovementSpeed"		"315"
 		"StatusHealthRegen"		"1"
 		"HealthBarOffset"		"300"
@@ -21979,11 +21952,11 @@
 		}
 		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"		"28"
-		"AttributeStrengthGain"		"3.4"
+		"AttributeStrengthGain"		"5.4" // 原值: 3.4
 		"AttributeBaseAgility"		"18"
-		"AttributeAgilityGain"		"1.7"
+		"AttributeAgilityGain"		"1.7" // 原值: 1.7
 		"AttributeBaseIntelligence"		"23"
-		"AttributeIntelligenceGain"		"1.7"
+		"AttributeIntelligenceGain"		"1.7" // 原值: 1.7
 		"MovementSpeed"		"305"
 		"BoundsHullName"		"DOTA_HULL_SIZE_SMALL"
 		"particle_folder"		"particles/units/heroes/hero_lycan"
@@ -22170,7 +22143,7 @@
 		"Ability2"		"brewmaster_cinder_brew"
 		"Ability3"		"brewmaster_drunken_brawler"
 		"Ability4"		"brewmaster_primal_companion"
-		"Ability5"		"huoyanhuxi"
+		"Ability5"		"generic_hidden"
 		"Ability6"		"brewmaster_primal_split"
 		"Ability7"		"brewmaster_belligerent"
 
@@ -22216,11 +22189,11 @@
 		"AttackRange"		"150"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_ALL"
 		"AttributeBaseStrength"		"23"
-		"AttributeStrengthGain"		"3.700000"
+		"AttributeStrengthGain"		"4.4" // 原值: 3.7
 		"AttributeBaseAgility"		"19"
-		"AttributeAgilityGain"		"2.0000"
+		"AttributeAgilityGain"		"2.7" // 原值: 2.0
 		"AttributeBaseIntelligence"		"17"
-		"AttributeIntelligenceGain"		"1.60000"
+		"AttributeIntelligenceGain"		"2.3" // 原值: 1.6
 		"StatusHealthRegen"		"0.5"
 		"MovementSpeed"		"310"
 		"HasAggressiveStance"		"1"
@@ -22440,11 +22413,11 @@
 		"ProjectileSpeed"		"900"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"		"23"
-		"AttributeStrengthGain"		"2.6"
+		"AttributeStrengthGain"		"2.6" // 原值: 2.6
 		"AttributeBaseAgility"		"18"
-		"AttributeAgilityGain"		"2.2"
+		"AttributeAgilityGain"		"2.2" // 原值: 2.2
 		"AttributeBaseIntelligence"		"22"
-		"AttributeIntelligenceGain"		"3.6"
+		"AttributeIntelligenceGain"		"5.6" // 原值: 3.6
 		"MovementSpeed"		"290"
 		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
 		"particle_folder"		"particles/units/heroes/hero_shadow_demon"
@@ -22671,11 +22644,11 @@
 		"ProjectileSpeed"		"900"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
 		"AttributeBaseStrength"		"18"
-		"AttributeStrengthGain"		"2.5"
+		"AttributeStrengthGain"		"2.5" // 原值: 2.5
 		"AttributeBaseAgility"		"20"
-		"AttributeAgilityGain"		"2.8"
+		"AttributeAgilityGain"		"4.8" // 原值: 2.8
 		"AttributeBaseIntelligence"		"13"
-		"AttributeIntelligenceGain"		"1.4"
+		"AttributeIntelligenceGain"		"1.4" // 原值: 1.4
 		"StatusHealthRegen"		"0.25"
 		"MovementSpeed"		"325"
 		"particle_folder"		"particles/units/heroes/hero_lone_druid"
@@ -22939,11 +22912,11 @@
 		"AttackRange"		"150"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"		"24"
-		"AttributeStrengthGain"		"3.100000"
+		"AttributeStrengthGain"		"5.1" // 原值: 3.1
 		"AttributeBaseAgility"		"18"
-		"AttributeAgilityGain"		"1.8"
+		"AttributeAgilityGain"		"1.8" // 原值: 1.8
 		"AttributeBaseIntelligence"		"18"
-		"AttributeIntelligenceGain"		"1.200000"
+		"AttributeIntelligenceGain"		"1.2" // 原值: 1.2
 		"MovementSpeed"		"325"
 		"particle_folder"		"particles/units/heroes/hero_chaos_knight"
 		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_chaos_knight.vsndevts"
@@ -23234,11 +23207,11 @@
 		"AttackRange"		"150"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
 		"AttributeBaseStrength"		"24"
-		"AttributeStrengthGain"		"2.200000"
+		"AttributeStrengthGain"		"2.2" // 原值: 2.2
 		"AttributeBaseAgility"		"17"
-		"AttributeAgilityGain"		"2.100000"
+		"AttributeAgilityGain"		"4.1" // 原值: 2.1
 		"AttributeBaseIntelligence"		"18"
-		"AttributeIntelligenceGain"		"1.900000"
+		"AttributeIntelligenceGain"		"1.9" // 原值: 1.9
 		"BoundsHullName"		"DOTA_HULL_SIZE_SMALL"
 		"StatusHealthRegen"		"0.25"
 		"StatusManaRegen"	"0.25"
@@ -23457,11 +23430,11 @@
 		"AttackRange"		"150"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"		"25"
-		"AttributeStrengthGain"		"3.400000"
+		"AttributeStrengthGain"		"5.4" // 原值: 3.4
 		"AttributeBaseAgility"		"15"
-		"AttributeAgilityGain"		"1.8000000"
+		"AttributeAgilityGain"		"1.8" // 原值: 1.8
 		"AttributeBaseIntelligence"		"20"
-		"AttributeIntelligenceGain"		"1.800000"
+		"AttributeIntelligenceGain"		"1.8" // 原值: 1.8
 		"StatusManaRegen"	"0.25"
 		"VisionDaytimeRange"		"1800"
 		"MovementSpeed"		"280"
@@ -23675,11 +23648,11 @@
 		}
 		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"		"23"
-		"AttributeStrengthGain"		"4.2"
+		"AttributeStrengthGain"		"6.2" // 原值: 4.2
 		"AttributeBaseAgility"		"14"
-		"AttributeAgilityGain"		"1.5"
+		"AttributeAgilityGain"		"1.5" // 原值: 1.5
 		"AttributeBaseIntelligence"		"0"
-		"AttributeIntelligenceGain"		"0"
+		"AttributeIntelligenceGain"		"0.0" // 原值: 0.0
 		"StatusHealthRegen"		"1.5"
 		"StatusMana"			"120"
 		"MovementSpeed"		"290"
@@ -23905,11 +23878,11 @@
 		"AttackRange"		"150"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"		"22"
-		"AttributeStrengthGain"		"2.400000"
+		"AttributeStrengthGain"		"4.4" // 原值: 2.4
 		"AttributeBaseAgility"		"10"
-		"AttributeAgilityGain"		"1.200000"
+		"AttributeAgilityGain"		"1.2" // 原值: 1.2
 		"AttributeBaseIntelligence"		"27"
-		"AttributeIntelligenceGain"		"2.800000"
+		"AttributeIntelligenceGain"		"2.8" // 原值: 2.8
 		"StatusHealthRegen"	"-0.25"
 		"StatusManaRegen"	"0.25"
 		"StatusHealthRegen"		"-0.25"
@@ -24087,12 +24060,12 @@
 		"Ability4"		"rubick_empty1"
 		"Ability5"		"rubick_empty2"
 		"Ability6"		"rubick_spell_steal"
-		"Ability7"		"rubick_telekinesis_land"//"rubick_asynchronous_coincide"
-		"Ability8"		"rubick_hidden1"//"rubick_telekinesis_land"
-		"Ability9"		"rubick_hidden2"//"rubick_hidden1"
-		"Ability10"		"rubick_might_and_magus"//"rubick_hidden2"
-		"Ability11"		"rubick_telekinesis_land_self"//"rubick_might_and_magus"
-		"Ability12"		"rubick_asynchronous_coincide"//"rubick_telekinesis_land_self"
+		"Ability7"		"rubick_asynchronous_coincide"
+		"Ability8"		"rubick_telekinesis_land"
+		"Ability9"		"rubick_hidden1"
+		"Ability10"		"rubick_hidden2"
+		"Ability11"		"rubick_might_and_magus"
+		"Ability12"		"rubick_telekinesis_land_self"
 		"Ability13"		"special_bonus_unique_rubick_8"
 		"Ability14"		"special_bonus_unique_rubick_2"
 		"Ability15"		"special_bonus_unique_rubick_6"
@@ -24123,7 +24096,7 @@
 			"Ability2"		"rubick_fade_bolt"
 			"Ability3"		"rubick_arcane_supremacy"
 		}
-		"AbilityTalentStart"	"12"
+		"AbilityTalentStart"	"13"
 		"ArmorPhysical"		"1.000000"
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
 		"AttackDamageMin"		"25"
@@ -24143,11 +24116,11 @@
 		"ProjectileSpeed"		"1125"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"		"21"
-		"AttributeStrengthGain"		"2.00000"
+		"AttributeStrengthGain"		"2.0" // 原值: 2.0
 		"AttributeBaseAgility"		"23"
-		"AttributeAgilityGain"		"2.500000"
+		"AttributeAgilityGain"		"2.5" // 原值: 2.5
 		"AttributeBaseIntelligence"		"24"
-		"AttributeIntelligenceGain"		"3.700000"
+		"AttributeIntelligenceGain"		"5.7" // 原值: 3.7
 		"MovementSpeed"		"290"
 		"MovementTurnRate"		"0.700000"
 		"particle_folder"		"particles/units/heroes/hero_rubick"
@@ -24366,11 +24339,11 @@
 		"ProjectileSpeed"		"1200"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"		"21"
-		"AttributeStrengthGain"		"2.400000"
+		"AttributeStrengthGain"		"2.4" // 原值: 2.4
 		"AttributeBaseAgility"		"15"
-		"AttributeAgilityGain"		"1.400000"
+		"AttributeAgilityGain"		"1.4" // 原值: 1.4
 		"AttributeBaseIntelligence"		"20"
-		"AttributeIntelligenceGain"		"2.900000"
+		"AttributeIntelligenceGain"		"4.9" // 原值: 2.9
 		"MovementSpeed"		"295"
 		"particle_folder"		"particles/units/heroes/hero_disruptor"
 		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_disruptor.vsndevts"
@@ -24598,11 +24571,11 @@
 		"AttackRange"		"150"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_ALL"
 		"AttributeBaseStrength"		"17"
-		"AttributeStrengthGain"		"2.7"
+		"AttributeStrengthGain"		"3.4" // 原值: 2.7
 		"AttributeBaseAgility"		"18"
-		"AttributeAgilityGain"		"2.9"
+		"AttributeAgilityGain"		"3.6" // 原值: 2.9
 		"AttributeBaseIntelligence"		"21"
-		"AttributeIntelligenceGain"		"2.6"
+		"AttributeIntelligenceGain"		"3.3" // 原值: 2.6
 		"StatusHealthRegen"		"2.0"
 		"MovementSpeed"		"310"
 		"particle_folder"		"particles/units/heroes/hero_nyx_assassin"
@@ -24818,11 +24791,11 @@
 		"AttackRange"		"150"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
 		"AttributeBaseStrength"		"21"
-		"AttributeStrengthGain"		"2.400000"
+		"AttributeStrengthGain"		"2.4" // 原值: 2.4
 		"AttributeBaseAgility"		"21"
-		"AttributeAgilityGain"		"3.3"
+		"AttributeAgilityGain"		"5.3" // 原值: 3.3
 		"AttributeBaseIntelligence"		"21"
-		"AttributeIntelligenceGain"		"2.0000"
+		"AttributeIntelligenceGain"		"2.0" // 原值: 2.0
 		"MovementSpeed"		"330"
 		"StatusHealthRegen"		"1.0"
 		"BoundsHullName"		"DOTA_HULL_SIZE_SMALL"
@@ -25066,11 +25039,11 @@
 		"ProjectileSpeed"		"900"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"		"18"
-		"AttributeStrengthGain"		"2.300000"
+		"AttributeStrengthGain"		"2.3" // 原值: 2.3
 		"AttributeBaseAgility"		"15"
-		"AttributeAgilityGain"		"1.600000"
+		"AttributeAgilityGain"		"1.6" // 原值: 1.6
 		"AttributeBaseIntelligence"		"23"
-		"AttributeIntelligenceGain"		"3.3"
+		"AttributeIntelligenceGain"		"5.3" // 原值: 3.3
 		"MovementSpeed"		"320"
 		"MovementTurnRate"		"0.70000"
 		"particle_folder"		"particles/units/heroes/hero_keeper_of_the_light"
@@ -25228,9 +25201,9 @@
 		"Ability4"		"wisp_spirits_in"
 		"Ability5"		"wisp_spirits_out"
 		"Ability6"		"wisp_relocate"
-		"Ability7"		"wisp_tether_break"
-		"Ability8"		"wisp_sight_seer"
-		"Ability9"		"wisp_overcharge_fun"
+		"Ability7"		"wisp_overcharge_fun"
+		"Ability8"		"wisp_tether_break"
+		"Ability9"		"wisp_sight_seer"
 
 		"AbilityDraftAbilities"
 		{
@@ -25265,7 +25238,7 @@
 			}
 		}
 		
-		"AbilityDraftIgnoreCount" "8"
+		"AbilityDraftIgnoreCount" "9"
 		"ArmorPhysical"		"1"
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
 		"AttackDamageMin"		"21"
@@ -25278,11 +25251,11 @@
 		"ProjectileSpeed"		"1200"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_ALL"
 		"AttributeBaseStrength"		"17"
-		"AttributeStrengthGain"		"3.0"
+		"AttributeStrengthGain"		"3.7" // 原值: 3.0
 		"AttributeBaseAgility"		"14"
-		"AttributeAgilityGain"		"1.6"
+		"AttributeAgilityGain"		"2.3" // 原值: 1.6
 		"AttributeBaseIntelligence"		"23"
-		"AttributeIntelligenceGain"		"1.7"
+		"AttributeIntelligenceGain"		"2.4" // 原值: 1.7
 		"MovementSpeed"		"320"
 		"MovementTurnRate"		"0.700000"
 		"particle_folder"		"particles/units/heroes/hero_wisp"
@@ -25466,11 +25439,11 @@
 		"ProjectileSpeed"		"1400"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_ALL"
 		"AttributeBaseStrength"		"22"
-		"AttributeStrengthGain"		"2.8"
+		"AttributeStrengthGain"		"3.5" // 原值: 2.8
 		"AttributeBaseAgility"		"11"
-		"AttributeAgilityGain"		"1.3"
+		"AttributeAgilityGain"		"2.0" // 原值: 1.3
 		"AttributeBaseIntelligence"		"22"
-		"AttributeIntelligenceGain"		"2.9"
+		"AttributeIntelligenceGain"		"3.6" // 原值: 2.9
 		"MovementSpeed"		"285"
 		"particle_folder"		"particles/units/heroes/hero_visage"
 		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_visage.vsndevts"
@@ -25663,11 +25636,11 @@
 		"ProjectileSpeed"		"0"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
 		"AttributeBaseStrength"		"20"
-		"AttributeStrengthGain"		"2.100000"
+		"AttributeStrengthGain"		"2.1" // 原值: 2.1
 		"AttributeBaseAgility"		"21"
-		"AttributeAgilityGain"		"1.500000"
+		"AttributeAgilityGain"		"3.5" // 原值: 1.5
 		"AttributeBaseIntelligence"		"16"
-		"AttributeIntelligenceGain"		"1.900000"
+		"AttributeIntelligenceGain"		"1.9" // 原值: 1.9
 		"VisionDaytimeRange"		"1800"
 		"VisionNighttimeRange"		"1800"
 		"StatusHealthRegen"		"0.25"
@@ -25713,8 +25686,8 @@
 				"SlotText"		"#LoadoutSlot_Arms"
 				"TextureWidth"		"256"
 				"TextureHeight"		"256"
-				"MaxPolygonsLOD0"		"2500"
-				"MaxPolygonsLOD1"		"1000"
+				"MaxPolygonsLOD0"		"1500"
+				"MaxPolygonsLOD1"		"600"
 			}
 			"3"
 			{
@@ -25732,9 +25705,9 @@
 				"SlotName"		"shoulder"
 				"SlotText"		"#LoadoutSlot_Shoulder"
 				"TextureWidth"		"512"
-				"TextureHeight"		"512"
-				"MaxPolygonsLOD0"		"4000"
-				"MaxPolygonsLOD1"		"1600"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"2500"
+				"MaxPolygonsLOD1"		"1000"
 			}
 			"5"
 			{
@@ -25930,11 +25903,11 @@
 		"ProjectileSpeed"		"1200"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
 		"AttributeBaseStrength"		"0"
-		"AttributeStrengthGain"		"0"
+		"AttributeStrengthGain"		"0.0" // 原值: 0.0
 		"AttributeBaseAgility"		"22"
-		"AttributeAgilityGain"		"3.6"
+		"AttributeAgilityGain"		"5.6" // 原值: 3.6
 		"AttributeBaseIntelligence"		"25"
-		"AttributeIntelligenceGain"		"3.6"
+		"AttributeIntelligenceGain"		"3.6" // 原值: 3.6
 		"StatusHealthRegen"		"0.25"
 		"VisionDaytimeRange"		"1800"
 		"MovementSpeed"		"275"
@@ -26150,11 +26123,11 @@
 		"ProjectileSpeed"		"1200"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
 		"AttributeBaseStrength"		"21"
-		"AttributeStrengthGain"		"2.500000"
+		"AttributeStrengthGain"		"2.5" // 原值: 2.5
 		"AttributeBaseAgility"		"23"
-		"AttributeAgilityGain"		"3.30000"
+		"AttributeAgilityGain"		"5.3" // 原值: 3.3
 		"AttributeBaseIntelligence"		"13"
-		"AttributeIntelligenceGain"		"1.000000"
+		"AttributeIntelligenceGain"		"1.0" // 原值: 1.0
 		"StatusHealthRegen"		"0.25"
 		"VisionDaytimeRange"		"1800"
 		"MovementSpeed"		"290"
@@ -26311,13 +26284,12 @@
 		"GibType"		"default"
 		"Ability1"		"centaur_hoof_stomp"
 		"Ability2"		"centaur_double_edge"
-		"Ability3"		"centaur_zhanzhengjianta"//"centaur_return"
+		"Ability3"		"centaur_zhanzhengjianta"      //"centaur_return"
 		"Ability4"		"centaur_mount"
 		"Ability5"		"centaur_work_horse"
 		"Ability6"		"centaur_stampede"
 		"Ability7"		"centaur_rawhide"
 		"Ability8"		"centaur_return"
-
 		"AbilityDraftAbilities"
 		{
 			"Ability1"	"centaur_hoof_stomp"
@@ -26371,11 +26343,11 @@
 		"AttackRange"		"150"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"		"27"
-		"AttributeStrengthGain"		"4.0"
+		"AttributeStrengthGain"		"6.0" // 原值: 4.0
 		"AttributeBaseAgility"		"15"
-		"AttributeAgilityGain"		"1.0000"
+		"AttributeAgilityGain"		"1.0" // 原值: 1.0
 		"AttributeBaseIntelligence"		"15"
-		"AttributeIntelligenceGain"		"1.600000"
+		"AttributeIntelligenceGain"		"1.6" // 原值: 1.6
 		"VisionDaytimeRange"		"1800"
 		"MovementSpeed"		"305"
 		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
@@ -26432,7 +26404,7 @@
 				"SlotName"		"shoulder"
 				"SlotText"		"#LoadoutSlot_Shoulder"
 				"TextureWidth"		"512"
-				"TextureHeight"		"512"
+				"TextureHeight"		"256"
 				"MaxPolygonsLOD0"		"2000"
 				"MaxPolygonsLOD1"		"800"
 			}
@@ -26472,7 +26444,7 @@
 				"SlotName"		"tail"
 				"SlotText"		"#LoadoutSlot_Tail"
 				"TextureWidth"		"256"
-				"TextureHeight"		"256"
+				"TextureHeight"		"128"
 				"MaxPolygonsLOD0"		"500"
 				"MaxPolygonsLOD1"		"300"
 			}
@@ -26587,7 +26559,6 @@
 		"Ability5"		"magnataur_solid_core"
 		"Ability6"		"magnataur_reverse_polarity"
 		"Ability7"		"magnataur_dianshao"
-
 		"AbilityDraftAbilities"
 		{
 			"Ability1"		"magnataur_shockwave"
@@ -26656,11 +26627,11 @@
 		"AttackRange"		"200"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_ALL"
 		"AttributeBaseStrength"		"23"
-		"AttributeStrengthGain"		"3.1"
+		"AttributeStrengthGain"		"3.8" // 原值: 3.1
 		"AttributeBaseAgility"		"12"
-		"AttributeAgilityGain"		"2.0"
+		"AttributeAgilityGain"		"2.7" // 原值: 2.0
 		"AttributeBaseIntelligence"		"20"
-		"AttributeIntelligenceGain"		"2.1"
+		"AttributeIntelligenceGain"		"2.8" // 原值: 2.1
 		"StatusHealthRegen"		"0.5"
 		"StatusManaRegen"	"0.5"
 		"VisionDaytimeRange"		"1800"
@@ -26885,11 +26856,11 @@
 		"AttackRange"		"150"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"		"26"
-		"AttributeStrengthGain"		"3.5"
+		"AttributeStrengthGain"		"5.5" // 原值: 3.5
 		"AttributeBaseAgility"		"16"
-		"AttributeAgilityGain"		"1.6"
+		"AttributeAgilityGain"		"1.6" // 原值: 1.6
 		"AttributeBaseIntelligence"		"23"
-		"AttributeIntelligenceGain"		"2.7"
+		"AttributeIntelligenceGain"		"2.7" // 原值: 2.7
 		"StatusManaRegen"	"0.5"
 		"MovementSpeed"		"285"
 		"particle_folder"		"particles/units/heroes/hero_shredder"
@@ -27069,7 +27040,7 @@
 		"Ability2"		"bristleback_quill_spray"
 		"Ability3"		"bristleback_bristleback"
 		"Ability4"		"bristleback_hairball"
-		"Ability5"		"bristleback_back"//"generic_hidden"
+		"Ability5"		"generic_hidden"
 		"Ability6"		"bristleback_warpath"
 		"Ability7"		"bristleback_prickly"
 		"AbilityDraftAbilities"
@@ -27122,11 +27093,11 @@
 		"AttackRange"		"150"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"		"22"
-		"AttributeStrengthGain"		"2.700000"
+		"AttributeStrengthGain"		"4.7" // 原值: 2.7
 		"AttributeBaseAgility"		"17"
-		"AttributeAgilityGain"		"1.800000"
+		"AttributeAgilityGain"		"1.8" // 原值: 1.8
 		"AttributeBaseIntelligence"		"14"
-		"AttributeIntelligenceGain"		"2.800000"
+		"AttributeIntelligenceGain"		"2.8" // 原值: 2.8
 		"StatusManaRegen"	"0.4"
 		"StatusHealthRegen"		"1"
 		"MovementSpeed"		"295"
@@ -27460,11 +27431,11 @@
 		"AttackRange"		"150"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"		"23"
-		"AttributeStrengthGain"		"3.900"
+		"AttributeStrengthGain"		"5.9" // 原值: 3.9
 		"AttributeBaseAgility"		"23"
-		"AttributeAgilityGain"		"2.100000"
+		"AttributeAgilityGain"		"2.1" // 原值: 2.1
 		"AttributeBaseIntelligence"		"18"
-		"AttributeIntelligenceGain"		"1.700000"
+		"AttributeIntelligenceGain"		"1.7" // 原值: 1.7
 		"MovementSpeed"		"310"
 		"MovementTurnRate"		"0.700000"
 		"StatusHealthRegen"		"1"
@@ -27737,11 +27708,11 @@
 		"ProjectileSpeed"		"1000"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"		"21"
-		"AttributeStrengthGain"		"2.000000"
+		"AttributeStrengthGain"		"2.0" // 原值: 2.0
 		"AttributeBaseAgility"		"13"
-		"AttributeAgilityGain"		"0.800000"
+		"AttributeAgilityGain"		"0.8" // 原值: 0.8
 		"AttributeBaseIntelligence"		"23"
-		"AttributeIntelligenceGain"		"4.100000"
+		"AttributeIntelligenceGain"		"6.1" // 原值: 4.1
 		"StatusManaRegen"	"0.25"
 		"MovementSpeed"		"325"
 		"HasAggressiveStance"		"1"
@@ -28053,11 +28024,11 @@
 		"AttackRange"		"150"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_ALL"
 		"AttributeBaseStrength"		"22"
-		"AttributeStrengthGain"		"2.6"
+		"AttributeStrengthGain"		"3.3" // 原值: 2.6
 		"AttributeBaseAgility"		"23"
-		"AttributeAgilityGain"		"1.5"
+		"AttributeAgilityGain"		"2.2" // 原值: 1.5
 		"AttributeBaseIntelligence"		"18"
-		"AttributeIntelligenceGain"		"2.0"
+		"AttributeIntelligenceGain"		"2.7" // 原值: 2.0
 		"StatusManaRegen"	"0"
 		"StatusHealthRegen"		"1"
 		"MovementSpeed"		"325"
@@ -28243,7 +28214,7 @@
 		"Ability2"		"elder_titan_ancestral_spirit"
 		"Ability3"		"elder_titan_natural_order"
 		"Ability4"		"elder_titan_move_spirit"
-		"Ability5"		"elder_titan_earth_splitter_hexagram" //"generic_hidden"
+		"Ability5"		"elder_titan_earth_splitter_hexagram"     //"generic_hidden"
 		"Ability6"		"elder_titan_earth_splitter"
 		"Ability7"		"elder_titan_return_spirit"
 		"Ability8"		"elder_titan_tip_the_scales"
@@ -28298,11 +28269,11 @@
 		"AttackRange"		"150"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"		"26"
-		"AttributeStrengthGain"		"3.000000"
+		"AttributeStrengthGain"		"5.0" // 原值: 3.0
 		"AttributeBaseAgility"		"16"
-		"AttributeAgilityGain"		"1.800000"
+		"AttributeAgilityGain"		"1.8" // 原值: 1.8
 		"AttributeBaseIntelligence"		"23"
-		"AttributeIntelligenceGain"		"1.600000"
+		"AttributeIntelligenceGain"		"1.6" // 原值: 1.6
 				"StatusHealthRegen"		"0.75"
 		"StatusManaRegen"	"0.25"
 		"MovementSpeed"		"310"
@@ -28507,11 +28478,11 @@
 		"AttackRange"		"150"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"		"24"
-		"AttributeStrengthGain"		"3.100000"
+		"AttributeStrengthGain"		"5.1" // 原值: 3.1
 		"AttributeBaseAgility"		"18"
-		"AttributeAgilityGain"		"1.700000"
+		"AttributeAgilityGain"		"1.7" // 原值: 1.7
 		"AttributeBaseIntelligence"		"20"
-		"AttributeIntelligenceGain"		"2.200000"
+		"AttributeIntelligenceGain"		"2.2" // 原值: 2.2
 		"MovementSpeed"		"325"
 		"particle_folder"		"particles/units/heroes/hero_legion_commander"
 		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_legion_commander.vsndevts"
@@ -28696,45 +28667,21 @@
 			"Ability3"		"ember_spirit_flame_guard"
 			"Ability4"		"ember_spirit_fire_remnant"
 		}
-
-//===================================================================================
-
-		"Ability1"		"ember_spirit_flame_charge"
-		"Ability2"		"ember_spirit_flame_sword_technique"
-		"Ability3"		"generic_hidden"
-		"Ability4"		"ember_spirit_hot_sword_soul" 
-		"Ability5"		"ember_spirit_immolation"//"generic_hidden"//"ember_huoyanpohuai"                 //"generic_hidden"
-		"Ability6"		"ember_spirit_sword_soul"
-		//"Ability7"	"ember_spirit_flame_charge"
-		"Ability8"		"ember_spirit_flame_charge_two"
-		"Ability9"		"ember_spirit_flame_charge_close"
-
-		"Ability10"		"special_bonus_attack_damage_30"
-		"Ability11"		"special_bonus_mp_regen_2"
-		"Ability12"		"special_bonus_unique_flame_charge_interval"	
-		"Ability13"		"special_bonus_unique_flame_charge_damage"	
-		"Ability14"		"special_bonus_unique_hot_sword_soul_unlocking_number"
-		"Ability15"		"special_bonus_unique_ember_spirit_sword_soul_percent_damage_per"
-		"Ability16"		"special_bonus_unique_flame_charge_travel_distance"	
-		"Ability17"		"special_bonus_unique_ember_spirit_sword_soul_damage"
-
-//===================================================================================
-
-		//"Ability1"		"ember_spirit_searing_chains"
-		//"Ability2"		"ember_spirit_sleight_of_fist"
-		//"Ability3"		"ember_spirit_flame_guard"
-		//"Ability4"		"ember_spirit_activate_fire_remnant"
-		//"Ability5"		"ember_spirit_immolation"
-		//"Ability6"		"ember_spirit_fire_remnant"
-		//"Ability7"		"ember_huoyanpohuai"
-		//"Ability10"		"special_bonus_attack_damage_12"
-		//"Ability11"		"special_bonus_unique_ember_spirit_1"
-		//"Ability12"		"special_bonus_unique_ember_spirit_3"
-		//"Ability13"		"special_bonus_unique_ember_spirit_2"
-		//"Ability14"		"special_bonus_unique_ember_spirit_chains_dps"
-		//"Ability15"		"special_bonus_unique_ember_spirit_6"
-		//"Ability16"		"special_bonus_unique_ember_spirit_4"
-		//"Ability17"		"special_bonus_unique_ember_spirit_5"
+		"Ability1"		"ember_spirit_searing_chains"
+		"Ability2"		"ember_spirit_sleight_of_fist"
+		"Ability3"		"ember_spirit_flame_guard"
+		"Ability4"		"ember_spirit_activate_fire_remnant"
+		"Ability5"		"ember_spirit_immolation"
+		"Ability6"		"ember_spirit_fire_remnant"
+		"Ability7"		"ember_huoyanpohuai"
+		"Ability10"		"special_bonus_attack_damage_12"
+		"Ability11"		"special_bonus_unique_ember_spirit_1"
+		"Ability12"		"special_bonus_unique_ember_spirit_3"
+		"Ability13"		"special_bonus_unique_ember_spirit_2"
+		"Ability14"		"special_bonus_unique_ember_spirit_chains_dps"
+		"Ability15"		"special_bonus_unique_ember_spirit_6"
+		"Ability16"		"special_bonus_unique_ember_spirit_4"
+		"Ability17"		"special_bonus_unique_ember_spirit_5"
 		"Facets"
 		{
 			"ember_spirit_double_impact"		
@@ -28760,11 +28707,11 @@
 		"AttackRange"		"150"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
 		"AttributeBaseStrength"		"22"
-		"AttributeStrengthGain"		"2.3"
+		"AttributeStrengthGain"		"2.3" // 原值: 2.3
 		"AttributeBaseAgility"		"22"
-		"AttributeAgilityGain"		"3.2"
+		"AttributeAgilityGain"		"5.2" // 原值: 3.2
 		"AttributeBaseIntelligence"		"20"
-		"AttributeIntelligenceGain"		"2.2"
+		"AttributeIntelligenceGain"		"2.2" // 原值: 2.2
 		"MovementTurnRate"		"0.800000"
 		"MovementSpeed"		"300"
 		"HasAggressiveStance"		"1"
@@ -28989,11 +28936,11 @@
 		"AttackRange"		"150"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"		"22"
-		"AttributeStrengthGain"		"3.800000"
+		"AttributeStrengthGain"		"5.8" // 原值: 3.8
 		"AttributeBaseAgility"		"17"
-		"AttributeAgilityGain"		"2.400000"
+		"AttributeAgilityGain"		"2.4" // 原值: 2.4
 		"AttributeBaseIntelligence"		"18"
-		"AttributeIntelligenceGain"		"2.100000"
+		"AttributeIntelligenceGain"		"2.1" // 原值: 2.1
 		"StatusHealthRegen"		"1"
 		"MovementSpeed"		"290"
 		"HasAggressiveStance"		"1"
@@ -29176,12 +29123,10 @@
 		"Ability1"		"terrorblade_reflection"
 		"Ability2"		"terrorblade_conjure_image"
 		"Ability3"		"terrorblade_metamorphosis"
-		"Ability4"		"terrorblade_Metamorphosis_fun"//"terrorblade_demon_zeal"
+		"Ability4"		"terrorblade_demon_zeal"
 		"Ability5"		"terrorblade_terror_wave"
 		"Ability6"		"terrorblade_sunder"
 		"Ability7"		"terrorblade_dark_unity"
-		"Ability8"		"terrorblade_the_hunger_of_the_betrayer"//"terrorblade_Metamorphosis_fun"
-		"Ability9"		"terrorblade_demon_zeal"
 		"Ability10"		"special_bonus_unique_terrorblade_2"
 		"Ability11"		"special_bonus_unique_terrorblade_4"
 		"Ability12"		"special_bonus_unique_terrorblade_metamorphosis_cooldown"
@@ -29228,11 +29173,11 @@
 		"ProjectileSpeed"		"900"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
 		"AttributeBaseStrength"		"18"
-		"AttributeStrengthGain"		"2.0"
+		"AttributeStrengthGain"		"2.0" // 原值: 2.0
 		"AttributeBaseAgility"		"22"
-		"AttributeAgilityGain"		"4.000000"
+		"AttributeAgilityGain"		"6.0" // 原值: 4.0
 		"AttributeBaseIntelligence"		"19"
-		"AttributeIntelligenceGain"		"1.60000"
+		"AttributeIntelligenceGain"		"1.6" // 原值: 1.6
 		"StatusHealthRegen"		"1.5"
 		"MovementSpeed"		"315"
 		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
@@ -29456,11 +29401,11 @@
 		"ProjectileSpeed"		"1100"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"		"23"
-		"AttributeStrengthGain"		"3.3"
+		"AttributeStrengthGain"		"5.3" // 原值: 3.3
 		"AttributeBaseAgility"		"12"
-		"AttributeAgilityGain"		"1.5"
+		"AttributeAgilityGain"		"1.5" // 原值: 1.5
 		"AttributeBaseIntelligence"		"16"
-		"AttributeIntelligenceGain"		"1.8"
+		"AttributeIntelligenceGain"		"1.8" // 原值: 1.8
 		"StatusHealthRegen"		"2.0"
 		"MovementSpeed"		"280"
 		"MovementTurnRate"		"0.900000"
@@ -29491,8 +29436,8 @@
 				"SlotText"		"#LoadoutSlot_Wings"
 				"TextureWidth"		"512"
 				"TextureHeight"		"512"
-				"MaxPolygonsLOD0"		"10000"
-				"MaxPolygonsLOD1"		"4000"
+				"MaxPolygonsLOD0"		"5000"
+				"MaxPolygonsLOD1"		"2000"
 				"no_import"		"1" //imported using template
 			}
 
@@ -29518,8 +29463,8 @@
 //				"LoadoutPreviewMode"		"transformation"
 				"TextureWidth"		"512"
 				"TextureHeight"		"512"
-				"MaxPolygonsLOD0"		"5000"
-				"MaxPolygonsLOD1"		"2000"
+				"MaxPolygonsLOD0"		"3000"
+				"MaxPolygonsLOD1"		"1200"
 				"no_import"		"1" //imported using template
 				"GeneratesUnits"
 				{
@@ -29644,9 +29589,9 @@
 		"Ability10"		"special_bonus_unique_oracle_2"
 		"Ability11"		"special_bonus_unique_oracle_9"
 		"Ability12"		"special_bonus_unique_oracle_damage_per_purge"
-		"Ability13"		"special_bonus_unique_oracle_8"
+		"Ability13"		"special_bonus_unique_oracle_5"
 		"Ability14"		"special_bonus_unique_oracle_6"
-		"Ability15"		"special_bonus_unique_oracle_5"
+		"Ability15"		"special_bonus_unique_oracle_8"
 		"Ability16"		"special_bonus_unique_oracle_7"
 		"Ability17"		"special_bonus_unique_oracle"
 		
@@ -29701,11 +29646,11 @@
 		"ProjectileSpeed"		"900"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"		"20"
-		"AttributeStrengthGain"		"2.400000"
+		"AttributeStrengthGain"		"2.4" // 原值: 2.4
 		"AttributeBaseAgility"		"15"
-		"AttributeAgilityGain"		"1.700000"
+		"AttributeAgilityGain"		"1.7" // 原值: 1.7
 		"AttributeBaseIntelligence"		"26"
-		"AttributeIntelligenceGain"		"3.6"
+		"AttributeIntelligenceGain"		"5.6" // 原值: 3.6
 		"StatusManaRegen"	"0.5"
 		"MovementSpeed"		"295"
 		"MovementTurnRate"		"0.700000"
@@ -29999,11 +29944,11 @@
 		"ProjectileSpeed"		"900"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_ALL"
 		"AttributeBaseStrength"		"19"
-		"AttributeStrengthGain"		"2.6"
+		"AttributeStrengthGain"		"3.3" // 原值: 2.6
 		"AttributeBaseAgility"		"14"
-		"AttributeAgilityGain"		"1.8"
+		"AttributeAgilityGain"		"2.5" // 原值: 1.8
 		"AttributeBaseIntelligence"		"25"
-		"AttributeIntelligenceGain"		"2.8"
+		"AttributeIntelligenceGain"		"3.5" // 原值: 2.8
 		"StatusManaRegen"	"1.0"
 		"StatusHealthRegen"		"1.0"
 		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
@@ -30090,9 +30035,9 @@
 				"SlotName"		"mount"
 				"SlotText"		"#LoadoutSlot_Techies_Cart"
 				"TextureWidth"		"512"
-				"TextureHeight"		"512"
-				"MaxPolygonsLOD0"	"6500"
-				"MaxPolygonsLOD1"	"2600"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"	"5000"
+				"MaxPolygonsLOD1"	"2000"
 			}
 			"6"
 			{
@@ -30216,11 +30161,11 @@
 		"ProjectileSpeed"			"900"
 		"AttributePrimary"			"DOTA_ATTRIBUTE_AGILITY"
 		"AttributeBaseStrength"		"31"
-		"AttributeStrengthGain"		"0.0"
+		"AttributeStrengthGain"		"0.0" // 原值: 0.0
 		"AttributeBaseAgility"		"0"
-		"AttributeAgilityGain"		"0.0"
+		"AttributeAgilityGain"		"2.0" // 原值: 0.0
 		"AttributeBaseIntelligence"	"0"
-		"AttributeIntelligenceGain"	"0.0"
+		"AttributeIntelligenceGain"	"0.0" // 原值: 0.0
 		"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
 		"RingRadius"				"70"
 
@@ -30283,7 +30228,7 @@
 		"Ability2"		"winter_wyvern_splinter_blast"
 		"Ability3"		"winter_wyvern_cold_embrace"
 		"Ability4"		"winter_wyvern_eldwurm_scholar"
-		"Ability5"		"winter_wyvern_zuanshihua"//"generic_hidden"
+		"Ability5"		"winter_wyvern_zuanshihua"      //"generic_hidden"
 		"Ability6"		"winter_wyvern_winters_curse"
 
 		"AbilityDraftAbilities"
@@ -30369,11 +30314,11 @@
 		"ProjectileSpeed"		"700"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"		"22"
-		"AttributeStrengthGain"		"2.5"
+		"AttributeStrengthGain"		"2.5" // 原值: 2.5
 		"AttributeBaseAgility"		"16"
-		"AttributeAgilityGain"		"1.7"
+		"AttributeAgilityGain"		"1.7" // 原值: 1.7
 		"AttributeBaseIntelligence"	"26"
-		"AttributeIntelligenceGain"	"3.6"
+		"AttributeIntelligenceGain"	"5.6" // 原值: 3.6
 		"VisionNighttimeRange"		"1200"
 		"BaseAttackSpeed"		"100"
 		"StatusManaRegen"	"0.5"
@@ -30522,11 +30467,11 @@
 		}
 		// Abilities
 		//-------------------------------------------------------------------------------------------------------------
-		"Ability1"		"arc_warden_flux"
+		"Ability1"		"arc_warden_flux_fun"     //"arc_warden_flux"
 		"Ability2"		"arc_warden_magnetic_field"
 		"Ability3"		"arc_warden_spark_wraith"
 		"Ability4"		"arc_warden_runic_infusion"
-		"Ability5"		"arc_warden_rune_forge" //"generic_hidden"
+		"Ability5"		"arc_warden_rune_forge"  //"generic_hidden"
 		"Ability6"		"arc_warden_tempest_double"
 		"Ability10"		"special_bonus_unique_arc_warden_5"
 		"Ability11"		"special_bonus_hp_200"
@@ -30606,11 +30551,11 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AttributePrimary"		"DOTA_ATTRIBUTE_ALL"
 		"AttributeBaseStrength"		"20"
-		"AttributeStrengthGain"		"2.4"
+		"AttributeStrengthGain"		"3.1" // 原值: 2.4
 		"AttributeBaseAgility"		"20"
-		"AttributeAgilityGain"		"3"
+		"AttributeAgilityGain"		"3.7" // 原值: 3.0
 		"AttributeBaseIntelligence"		"24"
-		"AttributeIntelligenceGain"		"2.6"
+		"AttributeIntelligenceGain"		"3.3" // 原值: 2.6
 		"StatusHealthRegen"		"0.25"
 
 		// Movement
@@ -30834,11 +30779,11 @@
 		"AttackRange"		"200"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"		"25"
-		"AttributeStrengthGain"		"3"
+		"AttributeStrengthGain"		"5.0" // 原值: 3.0
 		"AttributeBaseAgility"		"12"
-		"AttributeAgilityGain"		"1.600000"
+		"AttributeAgilityGain"		"1.6" // 原值: 1.6
 		"AttributeBaseIntelligence"		"17"
-		"AttributeIntelligenceGain"		"2.300000"
+		"AttributeIntelligenceGain"		"2.3" // 原值: 2.3
 		"MovementSpeed"		"290"
 		"MovementSpeedActivityModifiers"
 		{
@@ -31003,20 +30948,19 @@
 		"Ability1"		"monkey_king_boundless_strike"
 		"Ability2"		"monkey_king_tree_dance"
 		"Ability3"		"monkey_king_primal_spring"
-		"Ability4"		"monkey_king_huitianmiedi"//"monkey_king_jingu_mastery"
+		"Ability4"		"monkey_king_huitianmiedi"        //"monkey_king_jingu_mastery"
 		"Ability5"		"monkey_king_mischief"
 		"Ability6"		"monkey_king_wukongs_command"
-		"Ability7"		"monkey_king_primal_spring_early"
-		"Ability8"		"monkey_king_untransform"
-		"Ability9"		"monkey_king_jingu_mastery"
-
+		"Ability7"		"monkey_king_jingu_mastery"
+		"Ability8"		"monkey_king_primal_spring_early"
+		"Ability9"		"monkey_king_untransform"
 		"Ability10"		"special_bonus_unique_monkey_king_3"
 		"Ability11"		"special_bonus_unique_monkey_king_9"
 		"Ability12"		"special_bonus_unique_monkey_king_7"
-		"Ability13"		"special_bonus_unique_monkey_king_10"//"special_bonus_unique_monkey_king_2"
+		"Ability13"		"special_bonus_unique_monkey_king_2"
 		"Ability14"		"special_bonus_unique_monkey_king_8"
-		"Ability15"		"special_bonus_unique_monkey_king_11"//"special_bonus_unique_monkey_king_10"
-		"Ability16"		"special_bonus_unique_monkey_king_2"//"special_bonus_unique_monkey_king_11"
+		"Ability15"		"special_bonus_unique_monkey_king_10"
+		"Ability16"		"special_bonus_unique_monkey_king_11"
 		"Ability17"		"special_bonus_unique_monkey_king_6"
 		"Facets"
 		{
@@ -31063,11 +31007,11 @@
 		}
 		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
 		"AttributeBaseStrength"		"19"
-		"AttributeStrengthGain"		"2.8"
+		"AttributeStrengthGain"		"2.8" // 原值: 2.8
 		"AttributeBaseAgility"		"24"
-		"AttributeAgilityGain"		"3.700000"
+		"AttributeAgilityGain"		"5.7" // 原值: 3.7
 		"AttributeBaseIntelligence"		"20"
-		"AttributeIntelligenceGain"		"1.8"
+		"AttributeIntelligenceGain"		"1.8" // 原值: 1.8
 		"StatusHealthRegen"		"1.0"
 		"MovementSpeed"			"300"
 		"MovementSpeedActivityModifiers"
@@ -31257,7 +31201,7 @@
 			}
 
 		}
-		"AbilityDraftIgnoreCount"	"8"
+		"AbilityDraftIgnoreCount"	"7"
 		"ArmorPhysical"				"2"
 		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
 		"AttackDamageMin"			"28"
@@ -31274,11 +31218,11 @@
 		"AttackRange"				"150"
 		"AttributePrimary"			"DOTA_ATTRIBUTE_ALL"
 		"AttributeBaseStrength"		"19"
-		"AttributeStrengthGain"		"2.7"	
+		"AttributeStrengthGain"		"3.4" // 原值: 2.7
 		"AttributeBaseAgility"		"18"
-		"AttributeAgilityGain"		"3.2"
+		"AttributeAgilityGain"		"3.9" // 原值: 3.2
 		"AttributeBaseIntelligence"	"16"
-		"AttributeIntelligenceGain"	"2.2"	
+		"AttributeIntelligenceGain"	"2.9" // 原值: 2.2
 		"StatusHealthRegen"			"1.25"
 		"MovementSpeed"				"295"
 		"MovementTurnRate"			"0.900000"
@@ -31511,11 +31455,11 @@
 		"ProjectileSpeed"		"1200"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"		"20"
-		"AttributeStrengthGain"		"2.0"
+		"AttributeStrengthGain"		"2.0" // 原值: 2.0
 		"AttributeBaseAgility"		"18"
-		"AttributeAgilityGain"		"1.6"
+		"AttributeAgilityGain"		"1.6" // 原值: 1.6
 		"AttributeBaseIntelligence"		"21"
-		"AttributeIntelligenceGain"		"3.5"
+		"AttributeIntelligenceGain"		"5.5" // 原值: 3.5
 		"StatusHealthRegen"		"0.75"
 		"MovementSpeed"		"290"
 		"MovementTurnRate"		"0.700000"
@@ -31778,11 +31722,11 @@
 		"ProjectileSpeed"			"900"
 		"AttributePrimary"			"DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"		"21"
-		"AttributeStrengthGain"		"2.400000"
+		"AttributeStrengthGain"		"2.4" // 原值: 2.4
 		"AttributeBaseAgility"		"18"
-		"AttributeAgilityGain"		"1.900000"
+		"AttributeAgilityGain"		"1.9" // 原值: 1.9
 		"AttributeBaseIntelligence"	"25"
-		"AttributeIntelligenceGain"	"3.800000"
+		"AttributeIntelligenceGain"	"5.8" // 原值: 3.8
 		"MovementSpeed"				"290"
 		"BoundsHullName"			"DOTA_HULL_SIZE_HERO"
 		"particle_folder"			"particles/units/heroes/hero_grimstroke"
@@ -31949,11 +31893,10 @@
 		"Ability2"		"mars_gods_rebuke"
 		"Ability3"		"mars_bulwark"
 		"Ability4"		"mars_dauntless"
-		"Ability5"		"mars_arena_of_blood_fun_3" //"generic_hidden"
+		"Ability5"		"mars_arena_of_blood_fun_3"   //"generic_hidden"
 		"Ability6"		"mars_arena_of_blood"
-		"Ability7"		"mars_arena_of_blood_fun_1"
-		"Ability8"		"mars_arena_of_blood_fun_2"
-
+		"Ability7"		"mars_arena_of_blood_fun_1" 
+		"Ability8"		"mars_arena_of_blood_fun_2" 
 		"AbilityDraftAbilities"
 		{
 			"Ability1"		"mars_spear"
@@ -32009,11 +31952,11 @@
 		}
 		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"		"23"
-		"AttributeStrengthGain"		"3.700000"
+		"AttributeStrengthGain"		"5.7" // 原值: 3.7
 		"AttributeBaseAgility"		"20"
-		"AttributeAgilityGain"		"1.7"
+		"AttributeAgilityGain"		"1.7" // 原值: 1.7
 		"AttributeBaseIntelligence"		"21"
-		"AttributeIntelligenceGain"		"2.2"
+		"AttributeIntelligenceGain"		"2.2" // 原值: 2.2
 		"StatusManaRegen"	"0.5"
 		"MovementSpeed"		"310"
 		"MovementTurnRate"		"0.800000"
@@ -32171,7 +32114,7 @@
 		"Ability2"					"void_spirit_dissimilate"
 		"Ability3"					"void_spirit_resonant_pulse"
 		"Ability4"					"void_spirit_intrinsic_edge"
-		"Ability5"					"void_spirit_wuyingzhan" //"generic_hidden"
+		"Ability5"					"void_spirit_wuyingzhan"     //"generic_hidden"
 		"Ability6"					"void_spirit_astral_step"
 
 		"AbilityDraftAbilities"
@@ -32239,11 +32182,11 @@
 		"AttackRange"				"200"
 		"AttributePrimary"			"DOTA_ATTRIBUTE_ALL"
 		"AttributeBaseStrength"		"22"
-		"AttributeStrengthGain"		"2.6"
+		"AttributeStrengthGain"		"3.3" // 原值: 2.6
 		"AttributeBaseAgility"		"19"
-		"AttributeAgilityGain"		"2.200000"
+		"AttributeAgilityGain"		"2.9" // 原值: 2.2
 		"AttributeBaseIntelligence"	"24"
-		"AttributeIntelligenceGain"	"3.1"
+		"AttributeIntelligenceGain"	"3.8" // 原值: 3.1
 		"StatusManaRegen"			"0.6"
 		"MovementSpeed"				"290"
 		"MovementTurnRate"			"0.700000"
@@ -32471,11 +32414,11 @@
 		"ProjectileSpeed"			"1800"
 		"AttributePrimary"			"DOTA_ATTRIBUTE_ALL"
 		"AttributeBaseStrength"		"21"
-		"AttributeStrengthGain"		"3.5"
+		"AttributeStrengthGain"		"4.2" // 原值: 3.5
 		"AttributeBaseAgility"		"16"
-		"AttributeAgilityGain"		"1.9"
+		"AttributeAgilityGain"		"2.6" // 原值: 1.9
 		"AttributeBaseIntelligence"	"21"
-		"AttributeIntelligenceGain"	"2.2"
+		"AttributeIntelligenceGain"	"2.9" // 原值: 2.2
 		"MovementSpeed"				"300"
 		"StatusHealthRegen"			"0.75"
 		"MovementSpeedActivityModifiers"
@@ -32730,11 +32673,11 @@
 		"ProjectileSpeed"		"1800"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
 		"AttributeBaseStrength"		"17"
-		"AttributeStrengthGain"		"2.00000"
+		"AttributeStrengthGain"		"2.0" // 原值: 2.0
 		"AttributeBaseAgility"		"25"
-		"AttributeAgilityGain"		"3.60000"
+		"AttributeAgilityGain"		"5.6" // 原值: 3.6
 		"AttributeBaseIntelligence"		"21"
-		"AttributeIntelligenceGain"		"2.90000"
+		"AttributeIntelligenceGain"		"2.9" // 原值: 2.9
 		"StatusHealthRegen"		"0.250000"
 		"MovementSpeed"				"310"
 		"MovementTurnRate"		"0.9"
@@ -32939,11 +32882,11 @@
 		}
 		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"		"25"
-		"AttributeStrengthGain"		"3.40000"
+		"AttributeStrengthGain"		"5.4" // 原值: 3.4
 		"AttributeBaseAgility"		"14"
-		"AttributeAgilityGain"		"1.700000"
+		"AttributeAgilityGain"		"1.7" // 原值: 1.7
 		"AttributeBaseIntelligence"		"20"
-		"AttributeIntelligenceGain"		"2.000000"
+		"AttributeIntelligenceGain"		"2.0" // 原值: 2.0
 		"HasAggressiveStance"		"1"
 		"MovementSpeed"		"300"
 		"MovementTurnRate"		"0.600000"
@@ -33196,11 +33139,11 @@
 		"ProjectileSpeed"			"0"
 		"AttributePrimary"			"DOTA_ATTRIBUTE_ALL"
 		"AttributeBaseStrength"		"23"
-		"AttributeStrengthGain"		"3"
+		"AttributeStrengthGain"		"3.7" // 原值: 3.0
 		"AttributeBaseAgility"		"20"
-		"AttributeAgilityGain"		"1.8"
+		"AttributeAgilityGain"		"2.5" // 原值: 1.8
 		"AttributeBaseIntelligence"	"19"
-		"AttributeIntelligenceGain"	"1.9"
+		"AttributeIntelligenceGain"	"2.6" // 原值: 1.9
 		"StatusManaRegen"			"0.0"
 		"MovementSpeed"			"315"
 		"MovementTurnRate"		"0.900000"
@@ -33233,7 +33176,7 @@
 				"SlotText"		"#LoadoutSlot_Head"
 				"TextureWidth"		"512"
 				"TextureHeight"		"512"
-				"MaxPolygonsLOD0"		"3000"
+				"MaxPolygonsLOD0"		"2500"
 				"MaxPolygonsLOD1"		"1250"
 			}
 			"1"
@@ -33243,8 +33186,8 @@
 				"SlotText"		"#LoadoutSlot_Armor"
 				"TextureWidth"		"512"
 				"TextureHeight"		"512"
-				"MaxPolygonsLOD0"		"7500"
-				"MaxPolygonsLOD1"		"3400"
+				"MaxPolygonsLOD0"		"4000"
+				"MaxPolygonsLOD1"		"2000"
 			}
 			"2"
 			{
@@ -33253,8 +33196,8 @@
 				"SlotText"		"#LoadoutSlot_shoulder"
 				"TextureWidth"		"512"
 				"TextureHeight"		"512"
-				"MaxPolygonsLOD0"		"4000"
-				"MaxPolygonsLOD1"		"1600"
+				"MaxPolygonsLOD0"		"3000"
+				"MaxPolygonsLOD1"		"1500"
 			}
 			"3"
 			{
@@ -33262,8 +33205,8 @@
 				"SlotName"		"back"
 				"SlotText"		"#LoadoutSlot_Back"
 				"TextureWidth"		"512"
-				"TextureHeight"		"512"
-				"MaxPolygonsLOD0"		"3000"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"2500"
 				"MaxPolygonsLOD1"		"1250"
 			}
 			"4"
@@ -33407,11 +33350,11 @@
 		}
 		"AttributePrimary"			"DOTA_ATTRIBUTE_STRENGTH"
 		"AttributeBaseStrength"		"26"
-		"AttributeStrengthGain"		"4.300000"
+		"AttributeStrengthGain"		"6.3" // 原值: 4.3
 		"AttributeBaseAgility"		"15"
-		"AttributeAgilityGain"		"1.000000"
+		"AttributeAgilityGain"		"1.0" // 原值: 1.0
 		"AttributeBaseIntelligence"	"16"
-		"AttributeIntelligenceGain"	"1.700000"
+		"AttributeIntelligenceGain"	"1.7" // 原值: 1.7
 		"ShowcasePlayIdleExpression" "0"
 		"MovementSpeed"				"305"
 		"MovementTurnRate"			"0.600000"
@@ -33585,9 +33528,9 @@
 		"Ability12"		"special_bonus_unique_muerta_calling_hp_regen"
 		"Ability13"		"special_bonus_unique_muerta_gunslinger_bonus_damage"
 		"Ability14"		"special_bonus_unique_muerta_dead_shot_charges"
-		"Ability15"		"special_bonus_unique_muerta_the_calling_num_revenants"
+		"Ability15"		"special_bonus_attack_range_125"      //"special_bonus_unique_muerta_the_calling_num_revenants"
 		"Ability16"		"special_bonus_unique_muerta_gunslinger_double_shot_chance"
-		"Ability17"		"special_bonus_magic_resistance_25"
+		"Ability17"		"special_bonus_magic_resistance_35"
 		"Facets"
 		{
 			"muerta_dance_of_the_dead" 
@@ -33632,11 +33575,11 @@
 		"ProjectileSpeed"		"3000"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"		"19"
-		"AttributeStrengthGain"		"2.000000"
+		"AttributeStrengthGain"		"2.0" // 原值: 2.0
 		"AttributeBaseAgility"		"20"
-		"AttributeAgilityGain"		"2.700000"
+		"AttributeAgilityGain"		"2.7" // 原值: 2.7
 		"AttributeBaseIntelligence"		"23"
-		"AttributeIntelligenceGain"		"3.4"
+		"AttributeIntelligenceGain"		"5.4" // 原值: 3.4
 		"MovementSpeed"		"295"
 		"MovementTurnRate"		"0.700000"
 		"MovementSpeedActivityModifiers"
@@ -33778,13 +33721,13 @@
 		"HeroSelectSoundEffect"		"Hero_RingMaster.Pick"
 		"HealthBarOffset"		"240"
 		"GibType"		"motor"
-		"Ability1"		"ringmaster_fracture_domain_sweep"//"ringmaster_tame_the_beasts"
-		"Ability2" 		"ringmaster_hard_shield_magic_defense"//"ringmaster_the_box"
-		"Ability3"		"ringmaster_strike_swift_shadow"//"ringmaster_impalement"
-		"Ability4"		"ringmaster_impalement_fun"//"ringmaster_empty_souvenir"
-		"Ability5"		"ringmaster_the_box_fun"//"ringmaster_spotlight"
-		"Ability6"		"ringmaster_you_are_strengthened_Come_on"//"ringmaster_wheel"
-		"Ability7"		"ringmaster_innate_fun"//"ringmaster_tame_the_beasts_crack"
+		"Ability1"		"ringmaster_tame_the_beasts"
+		"Ability2" 		"ringmaster_the_box"
+		"Ability3"		"ringmaster_impalement"
+		"Ability4"		"ringmaster_empty_souvenir"
+		"Ability5"		"ringmaster_spotlight"
+		"Ability6"		"ringmaster_wheel"
+		"Ability7"		"ringmaster_tame_the_beasts_crack"
 
 		"AbilityDraftAbilities"
 		{
@@ -33794,18 +33737,18 @@
 			"Ability4"	"ringmaster_wheel"
 		}
 
-		"Ability10"		"special_bonus_unique_ringmaster_hard_shield_magic_defense_radius"//"special_bonus_unique_ringmaster_whip_radius"
-		"Ability11"		"special_bonus_unique_ringmaster_strike_swift_shadow_cooldown"//"special_bonus_unique_ringmaster_box_cast_range"
-		"Ability12"		"special_bonus_unique_you_are_strengthened_Come_on_duration"//"special_bonus_unique_ringmaster_dagger_penetrates"
-		"Ability13"		"special_bonus_unique_ringmaster_innate_fun_item"//"special_bonus_unique_ringmaster_whip_debuff_immunity"
-		"Ability14"		"special_bonus_unique_ringmaster_strike_swift_shadow_bonus_attack_speed"//"special_bonus_unique_ringmaster_dagger_bleed_and_slow_duration"
-		"Ability15"		"special_bonus_unique_ringmaster_fracture_domain_sweep_dmg"//"special_bonus_unique_ringmaster_whip_damage"
-		"Ability16"		"special_bonus_unique_ringmaster_hard_shield_magic_defense_rooted"//"special_bonus_unique_ringmaster_wheel_radius"
-		"Ability17"		"special_bonus_unique_you_are_strengthened_Come_on_charges"//"special_bonus_unique_ringmaster_the_box_strong_dispel_and_flying"
-		//"Ability18"		"ringmaster_dark_carnival_souvenirs"
-		//"Ability19"		"ringmaster_funhouse_mirror"
-		//"Ability20"		"ringmaster_strongman_tonic"
-		//"Ability21"		"ringmaster_whoopee_cushion"
+		"Ability10"		"special_bonus_unique_ringmaster_whip_radius"
+		"Ability11"		"special_bonus_unique_ringmaster_box_cast_range"
+		"Ability12"		"special_bonus_unique_ringmaster_dagger_penetrates"
+		"Ability13"		"special_bonus_unique_ringmaster_whip_debuff_immunity"
+		"Ability14"		"special_bonus_unique_ringmaster_dagger_bleed_and_slow_duration"
+		"Ability15"		"special_bonus_unique_ringmaster_whip_damage"
+		"Ability16"		"special_bonus_unique_ringmaster_wheel_radius"
+		"Ability17"		"special_bonus_unique_ringmaster_the_box_strong_dispel_and_flying"
+		"Ability18"		"ringmaster_dark_carnival_souvenirs"
+		"Ability19"		"generic_hidden"
+		"Ability20"		"generic_hidden"
+		"Ability21"		"generic_hidden"
 		"ArmorPhysical"		"1"
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
 		"AttackDamageMin"		"23"
@@ -33823,11 +33766,11 @@
 		"ProjectileSpeed"		"1200"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"		"21"
-		"AttributeStrengthGain"		"2.1"
+		"AttributeStrengthGain"		"2.1" // 原值: 2.1
 		"AttributeBaseAgility"		"13"
-		"AttributeAgilityGain"		"1.4"
+		"AttributeAgilityGain"		"1.4" // 原值: 1.4
 		"AttributeBaseIntelligence"		"25"
-		"AttributeIntelligenceGain"		"3.0"
+		"AttributeIntelligenceGain"		"5.0" // 原值: 3.0
 		"MovementSpeed"				"310"
 		"HasAggressiveStance"		"1"
 		"MovementSpeedActivityModifiers"
@@ -34050,7 +33993,6 @@
 		"Ability18"					"special_bonus_unique_kez_mark_damage"
 		"Ability19"					"special_bonus_unique_kez_echo_slash_strike_count"
 		"AbilityTalentStart"		"12"
-		"AbilityDraftIgnoreCount"	"11"
 
 		"AbilityDraftAbilities"
 		{
@@ -34093,11 +34035,11 @@
 		"AttackRange"		"225"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_AGILITY"
 		"AttributeBaseStrength"		"19"
-		"AttributeStrengthGain"		"2.8"
+		"AttributeStrengthGain"		"2.8" // 原值: 2.8
 		"AttributeBaseAgility"		"27"
-		"AttributeAgilityGain"		"3.5"
+		"AttributeAgilityGain"		"5.5" // 原值: 3.5
 		"AttributeBaseIntelligence"		"20"
-		"AttributeIntelligenceGain"		"1.7"
+		"AttributeIntelligenceGain"		"1.7" // 原值: 1.7
 		"StatusHealthRegen"				"1.0"
 		"MovementSpeed"		"315"
 		"AttackSpeedActivityModifiers"

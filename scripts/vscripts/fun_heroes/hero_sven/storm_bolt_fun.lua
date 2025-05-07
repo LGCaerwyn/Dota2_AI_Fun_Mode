@@ -1,12 +1,12 @@
 ﻿
 
 function seven( keys )
-    
+    if not IsServer() then return true end
     local caster = keys.caster
     caster.hasAttack = false
     local ability = keys.ability
 	local caster_team=caster:GetTeamNumber()
-	target = keys.target
+	local target = keys.target
     local talent =  caster:FindAbilityByName("special_bonus_unique_sven_4")
     local talent_stun = 0
     
@@ -33,27 +33,36 @@ function seven( keys )
 		iVisionRadius = 600,
 		iSourceAttachment = DOTA_PROJECTILE_ATTACHMENT_ATTACK_2,
     }
-    ability.projectile = ProjectileManager:CreateTrackingProjectile( projectileTable )
+    local projectile = ProjectileManager:CreateTrackingProjectile(projectileTable)
 
-	local offset = caster:GetAbsOrigin() + Vector( 0, 0, 1000 )
-	local fx = ParticleManager:CreateParticle( "particles/units/heroes/hero_sven/sven_spell_storm_bolt_lightning.vpcf", PATTACH_CUSTOMORIGIN,caster )
+	local offset = caster:GetAbsOrigin() + Vector(0, 0, 1000 )
+	local fx = ParticleManager:CreateParticle( "particles/units/heroes/hero_sven/sven_spell_storm_bolt_lightning.vpcf", PATTACH_CUSTOMORIGIN, caster)
 	ParticleManager:SetParticleControlEnt( fx, 0, caster, PATTACH_POINT_FOLLOW, "attach_sword",caster:GetAbsOrigin() , true )
 	ParticleManager:SetParticleControl( fx, 1, offset )
 	ParticleManager:ReleaseParticleIndex( fx )
 
+    local modifier_blot = nil
     if not ability:GetAutoCastState() then
-        ability:ApplyDataDrivenModifier(caster, caster, "modifier_sven_storm_bolt_fun",{ duration = 30 })
+        modifier_blot = ability:ApplyDataDrivenModifier(caster, caster, "modifier_sven_storm_bolt_fun",{ duration = 30 })
+        modifier_blot.target = target
+        modifier_blot.projectile = projectile
 	end
 
 end
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-function flyHorizonal( keys )
-
+function flyHorizonal(keys)
+    if not IsServer() then return true end
     local caster = keys.caster
-    local ability = keys.ability	
- 
+    local ability = keys.ability
+    local target = nil
+    local projectile = 0
+    local modifier_blot = caster:FindModifierByName("modifier_sven_storm_bolt_fun")
+    if modifier_blot then 
+        target = modifier_blot.target 
+        projectile = modifier_blot.projectile
+    end 
     caster:StartGesture(ACT_DOTA_OVERRIDE_ABILITY_1)
 
     local target_loc = GetGroundPosition(target:GetAbsOrigin(), target)
@@ -64,15 +73,18 @@ function flyHorizonal( keys )
     	caster:InterruptMotionControllers(true)		
     	OnMotionDone(caster)
     end
-    caster:SetAbsOrigin(ProjectileManager:GetTrackingProjectileLocation(ability.projectile))
+    caster:SetAbsOrigin(ProjectileManager:GetTrackingProjectileLocation(projectile))
  
 end
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 function OnMotionDone(caster)
-
-    if caster:FindModifierByName("modifier_sven_storm_bolt_fun") then
+    if not IsServer() then return true end
+    local target = nil
+    local modifier_blot = caster:FindModifierByName("modifier_sven_storm_bolt_fun")
+    if modifier_blot then
+        target = modifier_blot.target
         caster:RemoveModifierByName("modifier_sven_storm_bolt_fun")
 	end
 
@@ -91,11 +103,12 @@ end
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 function no_flying(keys)
-    
+    if not IsServer() then return true end
     local caster = keys.caster
     local ability = keys.ability
     local isFinish = keys.isFinish --判断投射物结束方式
-    
+    local target = keys.target
+
     --终止位移
     if caster:HasModifier("modifier_sven_storm_bolt_fun") then
         caster:InterruptMotionControllers(true)	
@@ -141,6 +154,7 @@ function no_flying(keys)
                 attacker = caster,
                 damage = dam,
                 damage_type = DAMAGE_TYPE_MAGICAL,
+                ability = keys.ability
         }
         if caster:HasScepter() then
             hero:Purge(true, false, false, false, false)
@@ -158,16 +172,9 @@ function no_flying(keys)
 		caster:PerformAttack(target, true, true, true, true, true, false, true)
         caster.hasAttack = true
         --ProjectileManager:DestroyTrackingProjectile(ability.projectile) --导致闪退
-        ability.projectile = nil
-      --  GameRules:SendCustomMessage("<font color=\"#FF0000\">斯温的风暴之拳发动了攻击。</font>", DOTA_TEAM_BADGUYS,0) --测试BUG情况
-
-
+        --ability.projectile = nil
+        --GameRules:SendCustomMessage("<font color=\"#FF0000\">斯温的风暴之拳发动了攻击。</font>", DOTA_TEAM_BADGUYS,0) --测试BUG情况
     end
-	
-	
-	
-	
-	
 end
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------

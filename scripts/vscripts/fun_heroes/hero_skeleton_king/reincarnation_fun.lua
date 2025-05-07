@@ -1,18 +1,15 @@
 
 function reincarnation_fun(keys)
-
+     if not IsServer() then return true end
      local caster = keys.caster
      local target = keys.target
      local ability = caster:FindAbilityByName("skeleton_king_reincarnation_fun")
      local ultimate = caster:FindAbilityByName("skeleton_king_reincarnation")
      local ulti_level = ultimate:GetLevel()
      local ifSucceed = false --成功施法将为自身添加特效
-		local Modifier_skeleton = "modifier_skeleton_king_reincarnation_fun"
+	 local Modifier_skeleton = "modifier_skeleton_king_reincarnation_fun"
      --print("这个玩家的ID是："..target:GetPlayerID())
- 
- 
- 
- 
+     
  
      if ulti_level > 0 and ultimate:IsCooldownReady()  and not caster:HasModifier(Modifier_skeleton)  then
 
@@ -63,7 +60,8 @@ function reincarnation_fun(keys)
 
               --print("对队友施放成功！")
               local cooldown = ultimate:GetEffectiveCooldown(ulti_level - 1)    --受冷却时间降低的影响
-              ability:ApplyDataDrivenModifier(caster, keys.target, "modifier_respawn_for_allies",  {duration=70})
+              local dur = ability:GetSpecialValueFor("respawn_duration")
+              ability:ApplyDataDrivenModifier(caster, keys.target, "modifier_respawn_for_allies", { duration = dur })
               ultimate:StartCooldown(cooldown)
               ifSucceed = true
           else 
@@ -84,11 +82,10 @@ end
 ---------------------------------------------------------------------------
 
 function remove_reincarnation(keys)
-
+     if not IsServer() then return true end
      local caster = keys.caster
      local target = keys.target
-	 print(caster)
-	 print(target)
+
      target:RemoveModifierByNameAndCaster("modifier_special_bonus_reincarnation", caster)
      --print("重生BUFF移除成功！")
      return
@@ -116,7 +113,7 @@ end
 
 
 function cannot_be_stolen(keys)
-
+     if not IsServer() then return true end
      --print("这个技能不可以被拉比克偷取！")
      local caster = keys.caster
      local ability = caster:FindAbilityByName("skeleton_king_reincarnation_fun")

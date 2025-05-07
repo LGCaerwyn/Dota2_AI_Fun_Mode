@@ -79,14 +79,13 @@ abilities_table = {
 	--14、小小
 	{   heros_name = "npc_dota_hero_tiny",        heros_name_cn = "小小",       abilities = {"tiny_qiquwaibiao"},                   abilities_name_cn = {"崎岖外表"}         },
 	--15、灰烬之灵
-	{   heros_name = "npc_dota_hero_ember_spirit",heros_name_cn = "灰烬之灵",   abilities = {"ember_huoyanpohuai"},                 abilities_name_cn = {"炼焰灼"}           },
+	{   heros_name = "npc_dota_hero_ember_spirit",heros_name_cn = "灰烬之灵",   abilities = {"ember_huoyanpohuai"},                 abilities_name_cn = {"烈焰灼烧"}         },
 	--16、风行者
 	{   heros_name = "npc_dota_hero_windrunner",  heros_name_cn = "风行者",     abilities = {"windrunner_fensanhuoli"},             abilities_name_cn = {"分散火力"}         },
 	--17、昆卡
 	{   heros_name = "npc_dota_hero_kunkka",      heros_name_cn = "昆卡",       abilities = {"kunkka_ghostship_fun"},               abilities_name_cn = {"搁浅之地"}         },
 	--18、主宰
-	{   heros_name = "npc_dota_hero_juggernaut",  heros_name_cn = "主宰",       abilities = {"juggernaut_omni_slash_fun"},               abilities_name_cn = {"无敌斩"}             },
-	--juggernaut_omni_slash_fun
+	{   heros_name = "npc_dota_hero_juggernaut",  heros_name_cn = "主宰",       abilities = {"juggernaut_jiansheng"},               abilities_name_cn = {"剑圣"}             },
 	--19、莉娜
 	{   heros_name = "npc_dota_hero_lina",        heros_name_cn = "莉娜",       abilities = {"special_bonus_unique_lina_laguna_blade_fun"},              abilities_name_cn = {"重破斩"}           },
 	--20、食人魔法师

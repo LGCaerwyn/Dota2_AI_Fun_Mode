@@ -1,7 +1,7 @@
 
 --毒药是消耗品，消耗完能量点后会被摧毁，导致后续效果的相关键值失效，需要等到后续产生的光环到期后再彻底摧毁
 function item_fun_poison_OnSpellStart(keys)
-    
+    if not IsServer() then return true end
     local ability = keys.ability
     local caster = keys.caster
     local target = keys.target
@@ -41,7 +41,7 @@ function item_fun_poison_OnSpellStart(keys)
 end
 
 function item_fun_poison_OnProjectileHitUnit(keys)
-    
+    if not IsServer() then return true end
     local dmg_table = {
 	    victim = keys.target,
 		attacker = keys.caster,
@@ -56,6 +56,7 @@ function item_fun_poison_OnProjectileHitUnit(keys)
 end
 
 function item_fun_poison_OnProjectileFinish(keys)
+    if not IsServer() then return true end
     --print("投射物结束")
     local ability = keys.ability
 	local target = keys.target
@@ -80,6 +81,7 @@ function item_fun_poison_OnProjectileFinish(keys)
 end
 
 function item_fun_poison_thinker_OnDestroy(keys)
+    if not IsServer() then return true end
     local ability = keys.ability
 	local target = keys.target  --通过DeepPrintTable(keys)可以知道target是modifier_thinker
 	if target.isLast == true then

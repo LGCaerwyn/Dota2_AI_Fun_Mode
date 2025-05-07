@@ -1,5 +1,5 @@
 ﻿function static_field_fun(keys)
-    
+    if not IsServer() then return true end
     local caster = keys.caster
 	local target = keys.target
 	local ability = keys.ability
@@ -66,13 +66,6 @@
         ability:ApplyDataDrivenModifier(caster, target, modifier, nil)
 		ability:ApplyDataDrivenModifier(caster, target, modifier_aura, nil)
 	end
-	local playerID = caster:GetPlayerID()
-	
-	if 	PlayerResource:IsFakeClient(playerID)  then
-	stack_count = stack_count * 2
-	end
-	
-	
 	target:SetModifierStackCount(modifier, caster, stack_count)
 
 	--print("此处应削减魔法抗性："..reduction)
@@ -82,6 +75,7 @@
 end
 
 function remove(keys)
+    if not IsServer() then return true end
 	local target = keys.target
     local modifier = "modifier_tianshenxiafan_magic_armor_reduction_2"
 	local modifier_aura = "modifier_tianshenxiafan_magic_armor_reduction_tooltip"
@@ -93,7 +87,7 @@ end
 -------------------------------------------------------------------------------------
 
 function modifier_tianshenxiafan_OnCreated(keys)
-
+    if not IsServer() then return true end
     local ability = keys.ability
 	local caster = keys.caster
 	local modifier_amp = "modifier_tianshenxiafan_spell_amplification"
@@ -108,7 +102,7 @@ end
 -------------------------------------------------------------------------------------
 
 function modifier_tianshenxiafan_OnDestroy(keys)
-
+    if not IsServer() then return true end
     local ability = keys.ability
 	local caster = keys.caster
 	local modifier_amp = "modifier_tianshenxiafan_spell_amplification"
@@ -116,7 +110,7 @@ function modifier_tianshenxiafan_OnDestroy(keys)
 end
 
 function modifier_tianshenxiafan_OnStateChanged(keys)
-
+    if not IsServer() then return true end
     local ability = keys.ability
 	local caster = keys.caster
 	local modifier_amp = "modifier_tianshenxiafan_spell_amplification"
@@ -126,26 +120,4 @@ function modifier_tianshenxiafan_OnStateChanged(keys)
 	    ability:ApplyDataDrivenModifier(caster, caster, modifier_amp, nil)
 	end
 end
-
-function zuus_static_field_fun_OnAbilityExecuted(keys)
---失效
---[[
-    local ability = keys.ability
-	local caster = keys.caster
-	local event_ability = keys.event_ability
-	local tether = caster:FindAbilityByName("zuus_thundergods_wrath")
-	local playerID = caster:GetPlayerID()
-	--if zuus.kill then tether:OnSpellStart() end --偶尔失效
-	if not	PlayerResource:IsFakeClient(playerID)  then
-	return
-	end
-
-	
-	--]]
-end
-
-
-
-
-
 

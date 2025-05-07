@@ -106,4 +106,5 @@ disabled_abilities = {
     { ability_name = "doom_bringer_doom",     cn_name = "末日"       },
     { ability_name = "enigma_black_hole",     cn_name = "黑洞"       },
     { ability_name = "heidong",               cn_name = "闪耀黑洞"   },
+    { ability_name = "primal_beast_pulverize",cn_name = "捶"         },
 }

@@ -1,5 +1,5 @@
 ﻿function last_word_fun(keys)
-
+     if not IsServer() then return true end
      local caster = keys.caster
      local target = keys.unit
      local ability = keys.ability
@@ -20,21 +20,51 @@
              if caster:PassivesDisabled() or 
                 caster:IsSilenced() or
                 caster:IsStunned() or
+                caster:IsHexed() or
+                not caster:IsAlive() or
                 target:IsMagicImmune() or 
-                target:HasModifier(modifier_cooldown) 
+                target:HasModifier(modifier_cooldown) or
+                not caster:CanEntityBeSeenByMyTeam(target)
              then 
                  return 
              end  
-             
-             if event_ability:IsItem() or event_ability:IsChanneling() or not event_ability:ProcsMagicStick() then return end  --物品类技能、持续施法类技能还未结束时、技能不充能魔棒不触发
+
+             --物品类技能、持续施法类技能还未结束时、技能不充能魔棒（数据驱动类技能除外）不触发
+             if event_ability:IsItem() or 
+                event_ability:IsChanneling() or 
+                (not event_ability:ProcsMagicStick() and event_ability:GetClassname() ~= "ability_datadriven")
+             then 
+                 return 
+             end  
 
              target:EmitSound("Hero_Silencer.Curse")
              target:EmitSound("Hero_Silencer.Curse.Impact")
 
-             ability:ApplyDataDrivenModifier(caster, target, modifier_debuff_1, { duration = time})        --沉默和锁闭
-             ability:ApplyDataDrivenModifier(caster, target, modifier_debuff_2, { duration = time})        --减速和缴械
-             ability:ApplyDataDrivenModifier(caster, target, modifier_cooldown, { duration = cooldown})    --内置冷却          
+             ability:ApplyDataDrivenModifier(caster, target, modifier_debuff_2, { duration = time})        --沉默和减速
+             --ability:ApplyDataDrivenModifier(caster, target, modifier_cooldown, { duration = cooldown})    --内置冷却          
          end
      })
      
+end
+
+function last_word_fun_OnCreated(keys)
+    if not IsServer() then return true end
+    local caster = keys.caster
+    local target = keys.target
+    local ability = keys.ability
+    local particleName = "particles/units/heroes/hero_silencer/silencer_global_silence_hero.vpcf"
+    local particle = ParticleManager:CreateParticle(particleName, PATTACH_ABSORIGIN, target)
+    ParticleManager:SetParticleControl(particle, 0, target:GetAbsOrigin())
+    ParticleManager:SetParticleControlEnt(particle, 1, target, PATTACH_POINT_FOLLOW, "attach_hitloc", Vector(0,0,0), false)
+end
+
+function last_word_fun_OnDestroy(keys)
+    if not IsServer() then return true end
+    local caster = keys.caster
+    local target = keys.target
+    local ability = keys.ability
+    local cooldown = ability:GetSpecialValueFor("cooldown")
+    local modifier_cooldown = "modifier_last_word_fun_cooldown"
+    ability:ApplyDataDrivenModifier(caster, target, modifier_cooldown, { duration = cooldown})    --内置冷却
+
 end

@@ -9,11 +9,7 @@ building_Data_for_player = {
             Resistance = 0,
             HPRegen = 75,
             MPRegen = 0,
-			Abilities = {"Fun_Nian_Blocker","Fun_Borrowed_Time_v2"}
-           -- Abilities = {"Fun_Nian_Blocker","Fun_Illusion_Breaker"}
-            --Abilities = {"Fun_Borrowed_Time","Fun_Nian_Blocker"} 
-            --最后的回光返照："Fun_Borrowed_Time" 需要手动修改npc_units.txt文件，将技能直接添加到遗迹上，否则被动效果不会生效
-            --天辉夜魇基地都添加了回光返照，初始化的时候删除AI方的技能
+            Abilities = {"Fun_Borrowed_Time_v2","Fun_Nian_Blocker","Fun_Illusion_Breaker"}
         },
 
         tower1_top = {
@@ -23,7 +19,7 @@ building_Data_for_player = {
             Resistance = 0,
             HPRegen = 3,
             MPRegen = 0,
-            Abilities = {"Fun_Guard_Aura","Fun_Reactive_Armor_Lv1","Fun_Degen_Aura"}
+            Abilities = {"Fun_Guard_Aura","Fun_Degen_Aura","Fun_Reactive_Armor_Lv1"}
         },
 
         tower1_mid = {
@@ -117,7 +113,7 @@ building_Data_for_AI = {
             Resistance = 0,
             HPRegen = 5,
             MPRegen = 0,
-            Abilities = {"Fun_Guard_Aura","Fun_Reactive_Armor_Lv1","Fun_Degen_Aura"}
+            Abilities = {}
         },
 
         tower1_mid = {
@@ -127,7 +123,7 @@ building_Data_for_AI = {
             Resistance = 0,
             HPRegen = 5,
             MPRegen = 0,
-            Abilities = {"Fun_Support_Aura",}
+            Abilities = {}
         },
 
         tower1_bot = {
@@ -137,7 +133,7 @@ building_Data_for_AI = {
             Resistance = 0,
             HPRegen = 5,
             MPRegen = 0,
-            Abilities = {"Fun_True_Sight_Eyes","Fun_Prospecting_Aura","Fun_Guard_Aura_v2",}
+            Abilities = {}
         },
 
         tower2 = {
@@ -193,9 +189,10 @@ MegaCreeps_Data_for_AI = {
             MPRegen = 0,
             BaseDamageMin = 72,
             BaseDamageMax = 88,
-            ModelScale = 1.5,
+            ModelScale = 1.4,
             Abilities = {}
         },
+
         ranged_upgraded_mega = {
             HP = 1275,
             MP = 0,
@@ -205,12 +202,12 @@ MegaCreeps_Data_for_AI = {
             MPRegen = 0,
             BaseDamageMin = 82,
             BaseDamageMax = 92,
-            ModelScale = 1.5,
+            ModelScale = 1.4,
             Abilities = {}
         },
 
         flagbearer_upgraded_mega = {
-            HP = 2000,
+            HP = 1400,
             MP = 0,
             Armor = 6,
             Resistance = 50,
@@ -218,7 +215,7 @@ MegaCreeps_Data_for_AI = {
             MPRegen = 0,
             BaseDamageMin = 72,
             BaseDamageMax = 88,
-            ModelScale = 1.6,
+            ModelScale = 1.4,
             Abilities = {}
         },
 
