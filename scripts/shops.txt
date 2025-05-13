@@ -159,10 +159,11 @@
 		"item"		"item_pipe"			
 		"item"		"item_guardian_greaves"
 		"item"		"item_boots_of_bearing"
-		"item"		"item_devastator"
+		"item"		"item_solar_crest"
+
 
                                 //Fun自制物品
-                                "item"                       "item_fun_Aghanims_Robe"
+		"item"		"item_fun_Aghanims_Robe"
 		"item"		"item_fun_spirit_vessel"
 		"item"		"item_fun_pipe_v2"
 		"item"		"item_necronomicon"             //原版死灵书
@@ -179,7 +180,7 @@
 		"item"		"item_rod_of_atos"
 		"item"		"item_dagon"
 		"item"		"item_orchid"	
-		"item"		"item_solar_crest"
+		"item"		"item_devastator"
 		"item"		"item_ultimate_scepter"
 		"item"		"item_refresher"
 		"item"		"item_octarine_core"

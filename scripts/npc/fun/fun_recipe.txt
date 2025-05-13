@@ -288,7 +288,7 @@
                 //===========================================
                 //卷轴：大师之笛-全才
                 //===========================================
-                "item_recipe_fun_grandmasters_glaive_all"     
+	"item_recipe_fun_grandmasters_glaive_all"     
 	{
 		"BaseClass"	                "item_datadriven"
 		"AbilityTextureName"	"item_recipe_grandmasters_glaive_all"

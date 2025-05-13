@@ -242,7 +242,7 @@
 				}
 			}
                                                 //全属性
-			"modifier_hero_blessing_fun_all attributes"
+			"modifier_hero_blessing_fun_all_attributes"
 			{
 				"TextureName"	"frostivus2018_decorate_tree"
 				"Properties"

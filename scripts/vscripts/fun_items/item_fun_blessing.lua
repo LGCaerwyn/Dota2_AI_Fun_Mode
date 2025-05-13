@@ -1,35 +1,35 @@
 
 blessing_table = {
 	--1
-    {   modifier = "modifier_hero_blessing_fun_all attributes",                name_cn = "+8全属性"                    },
+    {   modifier = "modifier_hero_blessing_fun_all_attributes",                name_cn = "+8全属性" ,	name = "+8 All Attributes"			          },
 	--2
-	{   modifier = "modifier_hero_blessing_bonus_gold",                        name_cn = "+800金钱"                    },
+	{   modifier = "modifier_hero_blessing_bonus_gold",                        name_cn = "+800金钱" ,	name = "+800 Bonus Gold"                    },
 	--3
-	{   modifier = "modifier_hero_blessing_bonus_resistance",                  name_cn = "+10%状态抗性"                },
+	{   modifier = "modifier_hero_blessing_bonus_resistance",                  name_cn = "+10%状态抗性" ,	name = "+10% Status Resistance"                },
 	--4
-	{   modifier = "modifier_hero_blessing_bonus_movespeed",                   name_cn = "+30移动速度"                 },
+	{   modifier = "modifier_hero_blessing_bonus_movespeed",                   name_cn = "+30移动速度" ,	name = "+30 Movement Speed"                 },
 	--5
-	{   modifier = "modifier_hero_blessing_bonus_damage_percent",              name_cn = "+13%攻击力"                  },
+	{   modifier = "modifier_hero_blessing_bonus_damage_percent",              name_cn = "+13%攻击力" ,	name = "+13% Attack Damage"                  },
 	--6
-	{   modifier = "modifier_hero_blessing_bonus_base_damage",                 name_cn = "+17基础攻击力"               },
+	{   modifier = "modifier_hero_blessing_bonus_base_damage",                 name_cn = "+17基础攻击力" ,	name = "+17 Base Attack Damage"               },
 	--7
-	{   modifier = "modifier_hero_blessing_bonus_mana_cost_percent",           name_cn = "-10%魔法消耗"                },
+	{   modifier = "modifier_hero_blessing_bonus_mana_cost_percent",           name_cn = "-10%魔法消耗" ,	name = "-10% Mana Cost"                },
 	--8 
-	{   modifier = "modifier_hero_blessing_bonus_spell_amplify_percent",       name_cn = "+8%技能增强"                 },
+	{   modifier = "modifier_hero_blessing_bonus_spell_amplify_percent",       name_cn = "+8%技能增强" ,	name = "+8% Spell Amplification"                 },
 	--9
-	{   modifier = "modifier_hero_blessing_bonus_cooldown_percent",            name_cn = "+8%冷却时间减少"             },
+	{   modifier = "modifier_hero_blessing_bonus_cooldown_percent",            name_cn = "+8%冷却时间减少" ,	name = "+8% Cooldown Reduction"             },
 	--10
-	{   modifier = "modifier_hero_blessing_bonus_incoming_spell_percent",      name_cn = "+9%魔法抗性"                 },
+	{   modifier = "modifier_hero_blessing_bonus_incoming_spell_percent",      name_cn = "+9%魔法抗性" ,	name = "+9% Magic Resistance"                 },
 	--11
-	{   modifier = "modifier_hero_blessing_bonus_incoming_physical_percent",   name_cn = "+9%物理伤害减免"             },
+	{   modifier = "modifier_hero_blessing_bonus_incoming_physical_percent",   name_cn = "+9%物理伤害减免" ,	name = "+9% Physical Damage Taken Reduction"             },
 	--12
-	{   modifier = "modifier_hero_blessing_bonus_incoming_damage_percent",     name_cn = "+6%全类型伤害减免"           },
-    --13
-	{   modifier = "modifier_hero_blessing_bonus_vision",                      name_cn = "夜间具有+250顺畅视野"        },
+	{   modifier = "modifier_hero_blessing_bonus_incoming_damage_percent",     name_cn = "+6%全类型伤害减免" ,	name = "+6% All Damage Taken Reduction"           },
+    	--13
+	{   modifier = "modifier_hero_blessing_bonus_vision",                      name_cn = "夜间具有+250顺畅视野" ,	name = "+250 unobstructed night vision"        },
 	--14
-	{   modifier = "modifier_hero_blessing_bonus_health_regen",                name_cn = "+15生命恢复"                 },
+	{   modifier = "modifier_hero_blessing_bonus_health_regen",                name_cn = "+15生命恢复" ,	name = "+15 Health Regeneration"                 },
 	--15
-	{   modifier = "modifier_hero_blessing_bonus_mana_regen",                  name_cn = "+5魔法恢复"                  } 
+	{   modifier = "modifier_hero_blessing_bonus_mana_regen",                  name_cn = "+5魔法恢复" ,	name = "+5 Mana Regeneration"                  } 
 }
 
 
@@ -76,6 +76,7 @@ function item_fun_blessing( keys )
 
     local index_1 = -1 
 	local temp_str_buff = PlayerResource:GetPlayerName(target:GetPlayerID()).."获得祝福："
+	local temp_str_buff_eng = PlayerResource:GetPlayerName(target:GetPlayerID()).."Gain Blessing:"
 	local buff = target:FindModifierByName(target.blessing_table["buff"])
 
     if GameRules.isDemo == true then
@@ -93,6 +94,7 @@ function item_fun_blessing( keys )
 		target.blessing_table["buff"] = blessing_table[index_1].modifier	
 
 		temp_str_buff = temp_str_buff.."<font color=\"#00FF00\">"..blessing_table[index_1].name_cn.."</font> "
+		temp_str_buff_eng = temp_str_buff_eng.."<font color=\"#00FF00\">"..blessing_table[index_1].name.."</font> "
 
 	else
 		--对战地图内只能从随机的几项选择一项，出兵前可以随意更换
@@ -110,6 +112,7 @@ function item_fun_blessing( keys )
 				--target:RemoveItem(tier1_token)
 			elseif target.blessing_table["buff"] == "modifier_hero_blessing_bonus_gold" and (target:GetGold() < gold) then
 			    GameRules:SendCustomMessage(PlayerResource:GetPlayerName(target:GetPlayerID()).. " : " .."<font color=\"#FFD700\">重置祝福失败，金钱回收失败。</font> ", DOTA_TEAM_BADGUYS,0)
+			    GameRules:SendCustomMessage(PlayerResource:GetPlayerName(target:GetPlayerID()).. " : " .."<font color=\"#FFD700\">Reset Blessing Faliure，Lose Gold.</font> ", DOTA_TEAM_BADGUYS,0)
 				return
 		    end
 
@@ -127,24 +130,29 @@ function item_fun_blessing( keys )
 		    for i = 1, reset_times + 1 do
 			    if i == target.blessing_table["times"] + 1 then
 				    temp_str_buff = temp_str_buff.."<font color=\"#00FF00\">"..blessing_table[index_1].name_cn.."（已激活）</font> "
+				    temp_str_buff_eng = temp_str_buff_eng.."<font color=\"#00FF00\">"..blessing_table[index_1].name.."（Activated）</font> "
 				else
 				    local temp_index_1 = target.blessing_table["optional_buff"][i]
 				    temp_str_buff = temp_str_buff.."<font color=\"#FF0000\">"..blessing_table[temp_index_1].name_cn.."（未激活）</font> "
+				    temp_str_buff_eng = temp_str_buff_eng.."<font color=\"#FF0000\">"..blessing_table[temp_index_1].name_cn.."（Unactivated）</font> "
                 end
 				if i ~= reset_times + 1 then
 				    temp_str_buff = temp_str_buff.." "
+				    temp_str_buff_eng = temp_str_buff_eng.." "
 				end
 			end
 
 		else
 		    --没有祝福效果的情况下，出兵后只能使用一次
 			GameRules:SendCustomMessage(PlayerResource:GetPlayerName(target:GetPlayerID()).. " : " .."<font color=\"#FFD700\">重置祝福失败，已开始游戏。</font> ", DOTA_TEAM_BADGUYS,0)
+			GameRules:SendCustomMessage(PlayerResource:GetPlayerName(target:GetPlayerID()).. " : " .."<font color=\"#FFD700\">Reset Blessing Failure，Game Already Started。</font> ", DOTA_TEAM_BADGUYS,0)
 			return	    
 		end	  
 
 	end
 
 	GameRules:SendCustomMessage(temp_str_buff, DOTA_TEAM_BADGUYS,0)
+	GameRules:SendCustomMessage(temp_str_buff_eng, DOTA_TEAM_BADGUYS,0)
 
 end
 
