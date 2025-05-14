@@ -123,3 +123,12 @@ function HasSpellAbsorb(target)
 	end
 	return target
 end
+
+
+function IsEntitySafe( entity )
+    return entity and IsValidEntity( entity ) and not entity:IsNull() 
+end
+
+function IsModifierSafe( entity )
+    return entity and not entity:IsNull() 
+end

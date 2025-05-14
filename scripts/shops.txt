@@ -53,14 +53,14 @@
 		"item"		"item_staff_of_wizardry"
 		"item"		"item_diadem"
 
-                                //Fun自制物品
-                                "item"                       "item_fun_Mercurys_gloves"
-                                "item"                       "item_fun_Aghanims_Fake_Scepter"	
-                                "item"                       "item_fun_trident_three_phase_power"	
-                                "item"                       "item_fun_grandmasters_glaive_str" 
-                                "item"                       "item_fun_grandmasters_glaive_agi"
-                                "item"                       "item_fun_grandmasters_glaive_int" 
-                                "item"                       "item_fun_grandmasters_glaive_all" 		
+		//Fun自制物品
+		"item"                       "item_fun_Mercurys_gloves"
+		"item"                       "item_fun_Aghanims_Fake_Scepter"	
+		"item"                       "item_fun_trident_three_phase_power"	
+		"item"                       "item_fun_grandmasters_glaive_str" 
+		"item"                       "item_fun_grandmasters_glaive_agi"
+		"item"                       "item_fun_grandmasters_glaive_int" 
+		"item"                       "item_fun_grandmasters_glaive_all" 		
 	}
 
 	"weapons_armor"
@@ -82,12 +82,12 @@
 		"item"		"item_claymore"				
 		"item"		"item_mithril_hammer"	
 
-                                //Fun自制物品
-                                "item"                       "item_fun_monkey_king_bar"	
-                                "item"                       "item_fun_super_blink_dagger"
-                                "item"                       "item_bfury_v2"
-                                "item"                       "item_desolator_v2"  
-                                "item"                       "item_greater_crit_v2"
+		//Fun自制物品
+		"item"                       "item_fun_monkey_king_bar"	
+		"item"                       "item_fun_super_blink_dagger"
+		"item"                       "item_bfury_v2"
+		"item"                       "item_desolator_v2"  
+		"item"                       "item_greater_crit_v2"
 	}
 			
 	"misc"
@@ -109,7 +109,7 @@
 		"item"		"item_ring_of_health"
 		"item"		"item_void_stone"
 
-                                //Fun自制物品	
+		//Fun自制物品	
 		"item"		"item_fun_shivas_guard_v2"
 		"item"		"item_fun_lotus_orb_v2"
 		"item"		"item_fun_assault_armor_v2"
@@ -135,10 +135,12 @@
 		"item"		"item_travel_boots"		
 		"item"		"item_moon_shard"	
 
-                                //Fun自制物品
-                                "item"                       "item_fun_greater_mango"
-                                "item"                       "item_fun_Jade_boots"
-                                "item"                       "item_fun_aeon_disk_v2"
+		//Fun自制物品
+		"item"                       "item_fun_greater_mango"
+		"item"                       "item_fun_Jade_boots"
+		"item"                       "item_fun_aeon_disk_v2"
+
+		"item"                       "item_lucky_dice"
 	}
 
 	// Level 2 - Blue Recipes
@@ -162,7 +164,7 @@
 		"item"		"item_solar_crest"
 
 
-                                //Fun自制物品
+		//Fun自制物品
 		"item"		"item_fun_Aghanims_Robe"
 		"item"		"item_fun_spirit_vessel"
 		"item"		"item_fun_pipe_v2"

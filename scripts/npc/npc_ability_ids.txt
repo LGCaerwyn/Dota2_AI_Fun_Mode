@@ -3570,6 +3570,15 @@
 			"item_recipe_fun_spirit_vessel"                               "81619"
 			"item_recipe_fun_pipe_v2"                                     "81620"
 			"item_recipe_fun_assault_armor_v2"                       "81621"
+
+			"item_lucky_dice"				"881001"
+			"item_lucky_dice_2"				"881002"
+			"item_lucky_dice_3"				"881003"
+			
+			"item_recipe_lucky_dice"			"882001"
+			"item_recipe_lucky_dice_2"			"882002"
+			"item_recipe_lucky_dice_3"			"882003"
+
 		}
 	}
 }

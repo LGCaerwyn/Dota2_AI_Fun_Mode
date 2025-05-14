@@ -18995,8 +18995,8 @@
 		//"DOTA_Tooltip_ability_tiny_grow_tree_bonus_damage_pct"	                "%<font color=\"#FFA500\">抓树时攻击力加成：</font>"
 
 		//"DOTA_Tooltip_ability_enigma_black_hole_shard_description"	                "黑洞在3600范围内具有非打断的牵引效果。牵引速度为每秒300距离。"
-		"DOTA_Tooltip_ability_special_bonus_unique_phantom_assassin"	"	+4 shift dagger"
-		//"DOTA_Tooltip_ability_alchemist_chemical_rage_bonus_mana_regen"	"魔法回复提升："
+		"DOTA_Tooltip_ability_special_bonus_unique_phantom_assassin"				"+4 shift dagger"
+		//"DOTA_Tooltip_ability_alchemist_chemical_rage_bonus_mana_regen"			"魔法回复提升："
 
 		//"DOTA_Tooltip_ability_invoker_quas_Description"			"允许祈求者掌控冰元素。每级被动获得+%strength_bonus% 力量。每个<font color='#7998b5'>冰元素</font>都会让祈求者的技能具有技能吸血效果。<br><br><font color=\"#FFA500\">可以在眩晕和持续施法状态下切换。</font>"
 	        //"DOTA_Tooltip_ability_invoker_wex_Description"			"允许祈求者掌控雷元素。每级被动获得+%agility_bonus% 敏捷。每个<font color='#d671a9'>雷元素</font>都会提供冷却时间减少和移动速度。<br><br><font color=\"#FFA500\">可以在眩晕和持续施法状态下切换。</font>"
@@ -19007,15 +19007,15 @@
 		//"DOTA_Tooltip_ability_invoker_ice_wall_Description"			"在祈求者前方创造一堵寒冰之墙，持续时间取决于<font color='#7998b5'>冰元素</font>的等级。冰霜之墙放射出的寒冰之气将对敌方单位造成减速和伤害，减速效果取决于<font color='#7998b5'>冰元素</font>的等级，每秒伤害取决于<font color='#cabe68'>火元素</font>的等级。<br><br><font color=\"#FFA500\">具有两点能量。</font>"
 
 		"DOTA_Tooltip_ability_special_bonus_unique_void_spirit_2"		"+{s:bonus_impact_damage} / +{s:bonus_pull_duration} Resonant Pulse Damage/Pull Duration"
-		"DOTA_Tooltip_Facet_windrunner_tangled_Description"		"Shackleshot affects additional enemies, and each shackled target grants attack damage.<font color="#FFA500">Increases Shackleshot's detection angle and distance.</font>"
-		"DOTA_Tooltip_ability_windrunner_shackleshot_Facet_windrunner_tangled"			"Shackleshot applies to all units and trees behind the target. Each additional shackled unit or tree grants Windranger bonus attack damage. Non-hero units and trees provide reduced damage.<font color="#FFA500">Increases Shackleshot's detection angle and distance.</font>"
+		"DOTA_Tooltip_Facet_windrunner_tangled_Description"		"Shackleshot affects additional enemies, and each shackled target grants attack damage.<font color=\"#FFA500\">Increases Shackleshot's detection angle and distance.</font>"
+		"DOTA_Tooltip_ability_windrunner_shackleshot_Facet_windrunner_tangled"			"Shackleshot applies to all units and trees behind the target. Each additional shackled unit or tree grants Windranger bonus attack damage. Non-hero units and trees provide reduced damage.<font color=\"#FFA500\">Increases Shackleshot's detection angle and distance.</font>"
 		"DOTA_Tooltip_ability_windrunner_shackleshot_shackle_distance"             "Shackle Distance:"
 		"DOTA_Tooltip_ability_windrunner_shackleshot_shackle_angle"                 "Shackle Angle:"	
-		"DOTA_Tooltip_Facet_windrunner_killshot_Description"	                "Powershot instantly kills enemy heroes below a health threshold.<font color="#FFA500">Increases Powershot's damage.</font>"
-		"DOTA_Tooltip_ability_windrunner_powershot_Facet_windrunner_killshot"	"Enemy heroes hit below a critical health threshold are instantly killed. The execution threshold scales with the arrow's charge power.<font color="#FFA500">Increases Powershot's damage.</font>"
-		"DOTA_Tooltip_ability_oracle_rain_of_destiny_Description"		"Summons a torrential downpour over the target area. Enemies within the storm take damage per second and suffer reduced healing amplification. Allies in the area are healed and gain enhanced healing amplification.<font color="#FFA500">Upgradable by Aghanim's Scepter to increase Rain of Destiny's potency at the cost of higher mana consumption.</font>"
-		"DOTA_Tooltip_Facet_crystal_maiden_glacial_guard_description"	"Crystal Nova has an expanded radius and grants allied heroes a physical damage shield. Crystal Maiden receives an augmented shield value.<font color="#FFA500">Crystal Nova damage talents proportionally increase shield strength.</font>"
-		"DOTA_Tooltip_ability_crystal_maiden_crystal_nova_Facet_crystal_maiden_glacial_guard"	"Crystal Nova has an expanded radius and grants allied heroes a physical damage shield. Crystal Maiden receives an augmented shield value.<font color="#FFA500">Crystal Nova damage talents proportionally increase shield strength.</font>"
+		"DOTA_Tooltip_Facet_windrunner_killshot_Description"	                "Powershot instantly kills enemy heroes below a health threshold.<font color=\"#FFA500\">Increases Powershot's damage.</font>"
+		"DOTA_Tooltip_ability_windrunner_powershot_Facet_windrunner_killshot"	"Enemy heroes hit below a critical health threshold are instantly killed. The execution threshold scales with the arrow's charge power.<font color=\"#FFA500\">Increases Powershot's damage.</font>"
+		"DOTA_Tooltip_ability_oracle_rain_of_destiny_Description"		"Summons a torrential downpour over the target area. Enemies within the storm take damage per second and suffer reduced healing amplification. Allies in the area are healed and gain enhanced healing amplification.<font color=\"#FFA500\">Upgradable by Aghanim's Scepter to increase Rain of Destiny's potency at the cost of higher mana consumption.</font>"
+		"DOTA_Tooltip_Facet_crystal_maiden_glacial_guard_description"	"Crystal Nova has an expanded radius and grants allied heroes a physical damage shield. Crystal Maiden receives an augmented shield value.<font color=\"#FFA500\">Crystal Nova damage talents proportionally increase shield strength.</font>"
+		"DOTA_Tooltip_ability_crystal_maiden_crystal_nova_Facet_crystal_maiden_glacial_guard"	"Crystal Nova has an expanded radius and grants allied heroes a physical damage shield. Crystal Maiden receives an augmented shield value.<font color=\"#FFA500\">Crystal Nova damage talents proportionally increase shield strength.</font>"
                                 //============================================================
                                 //0.1、自定义天赋
                                 //============================================================
@@ -19044,15 +19044,15 @@
                                 //============================================================
                                 //一、游戏界面设置
                                 //============================================================
-		"dota_play"	                                "play New Beginner AI "
-		"dota_play_disabled_local_mods"			"Detected New Beginner AI  FUN files.\n Play has been disabled."
+		"dota_play"	                                "play New Beginner AI"
+		"dota_play_disabled_local_mods"			"Detected New Beginner AI FUN files.\n Play has been disabled."
 
                                 //============================================================
                                 //二、AI与玩家的基本设定
                                 //============================================================
 
                                 //--------游戏的基本设定
-		"DOTA_Tooltip_ability_Fun_BaseGameMode"	         "Activate New Beginner AI  Fun Mode"
+		"DOTA_Tooltip_ability_Fun_BaseGameMode"	         "Activate New Beginner AI Fun Mode"
 		"DOTA_Tooltip_modifier_Fun_BaseGameMode_Essence_Tooltip"                                                                  "Essence Reversion"
 		"DOTA_Tooltip_modifier_Fun_BaseGameMode_Essence_Tooltip_Description"                                                "<font color=\"#FF8C00\">Strengthened Attributes:</font><br><font color=\"#d9534f\">Strength:</font> Grants <font color=\"#d9534f\">0.08%% Effective HP</font> and Magic Resistance per point<br><font color=\"#5cb85c\">Agility:</font> Grants <font color=\"#5cb85c\">+0.12 Flat Movement Speed</font> per point<br><font color=\"#5bc0de\">Intelligence:</font> Grants <font color=\"#5bc0de\">0.08%% Spell Amplification</font> per point<br><br>Primary attributes gain <font color=\"#FFFFFF\">+25%% effect</font> for non-Universal heroes. Universal heroes receive <font color=\"#FFFFFF\">35%%</font> of all three effects from every attribute."
 
@@ -19761,12 +19761,47 @@
 		"DOTA_Tooltip_ability_item_fun_assault_armor_v2_bonus_attack_speed"           "+$attack"
 		"DOTA_Tooltip_ability_item_fun_assault_armor_v2_bonus_armor"                  "+$armor"
 		"DOTA_Tooltip_ability_item_fun_assault_armor_v2_bonus_attack_armor"           "%+ Physical Damage Reduction"
-		"DOTA_Tooltip_ability_item_fun_assault_armor_v2_Lore"   			"Forged in the depths of Sanzu River, this infernal armor empowers entire legions with enhanced armor and attack speed."
+		"DOTA_Tooltip_ability_item_fun_assault_armor_v2_Lore"   					  "Forged in the depths of Sanzu River, this infernal armor empowers entire legions with enhanced armor and attack speed."
 		"DOTA_Tooltip_modifier_item_assault_v2_datadriven_ally_aura"                  "Assault Armor"
 		"DOTA_Tooltip_modifier_item_assault_v2_datadriven_enemy_aura_visible"         "Assault Armor"
 		"DOTA_Tooltip_modifier_item_assault_v2_datadriven_enemy_aura_visible_Description" "Armor reduced by 10"
 		"DOTA_Tooltip_modifier_item_assault_v2_datadriven_ally_aura_Description"      "Increases armor by %dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%.\nIncreases attack speed by %dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%."
 
+        "DOTA_Tooltip_ability_item_lucky_dice"											"Gefion's Lucky Dice"
+        "DOTA_Tooltip_ability_item_lucky_dice_bonus_health"								"+$health"
+        "DOTA_Tooltip_ability_item_lucky_dice_bonus_health_regen"						"+$hp_regen"
+        "DOTA_Tooltip_ability_item_lucky_dice_bonus_mana_regen"							"+$mana_regen"
+        "DOTA_Tooltip_ability_item_lucky_dice_Description" 								"<h1>Unique Passive: Lucky</h1> Increases the frequency of chance-based effects by %bonus_chance%%%, diminishingly."
+        "DOTA_Tooltip_ability_item_lucky_dice_Lore" 									"A pair of smoothly hewn pebbles, they feel lucky."
+        
+        "DOTA_Tooltip_ability_item_lucky_dice_2"										"Gefion's Shrouded Dice"
+        "DOTA_Tooltip_ability_item_lucky_dice_2_bonus_health"							"+$health"
+        "DOTA_Tooltip_ability_item_lucky_dice_2_bonus_health_regen"						"+$hp_regen"
+        "DOTA_Tooltip_ability_item_lucky_dice_2_bonus_mana_regen"                       "+$mana_regen"
+        "DOTA_Tooltip_ability_item_lucky_dice_2_Description"                            "<h1>Unique Passive: Lucky</h1> Increases the frequency of chance-based effects by %bonus_chance%%%, diminishingly."
+        "DOTA_Tooltip_ability_item_lucky_dice_2_Lore"                                   "A pair of smoothly hewn pebbles, they feel lucky."
+        
+        "DOTA_Tooltip_ability_item_lucky_dice_3"                                        "Gefion's Fiery Dice"
+        "DOTA_Tooltip_ability_item_lucky_dice_3_bonus_health"							"+$health"
+        "DOTA_Tooltip_ability_item_lucky_dice_3_bonus_health_regen"						"+$hp_regen"
+        "DOTA_Tooltip_ability_item_lucky_dice_3_bonus_mana_regen"                       "+$mana_regen"
+        "DOTA_Tooltip_ability_item_lucky_dice_3_Description"                            "<h1>Unique Passive: Lucky</h1> Increases the frequency of chance-based effects by %bonus_chance%%%, diminishingly."
+        "DOTA_Tooltip_ability_item_lucky_dice_3_Lore"                                   "A pair of smoothly hewn pebbles, they feel lucky."
+        
+        "DOTA_Tooltip_ability_item_lucky_dice_4"                                        "Gefion's Sacred Dice"
+        "DOTA_Tooltip_ability_item_lucky_dice_4_bonus_health"							"+$health"
+        "DOTA_Tooltip_ability_item_lucky_dice_4_bonus_health_regen"						"+$hp_regen"
+        "DOTA_Tooltip_ability_item_lucky_dice_4_bonus_mana_regen"                       "+$mana_regen"
+        "DOTA_Tooltip_ability_item_lucky_dice_4_Description"                            "<h1>Unique Passive: Lucky</h1> Increases the frequency of chance-based effects by %bonus_chance%%%, diminishingly."
+        "DOTA_Tooltip_ability_item_lucky_dice_4_Lore"                                   "A pair of smoothly hewn pebbles, they feel lucky."
+        
+        "DOTA_Tooltip_ability_item_lucky_dice_5"  										"Gefion's Lost Dice"
+        "DOTA_Tooltip_ability_item_lucky_dice_5_bonus_health"							"+$health"
+        "DOTA_Tooltip_ability_item_lucky_dice_5_bonus_health_regen"						"+$hp_regen"
+        "DOTA_Tooltip_ability_item_lucky_dice_5_bonus_mana_regen"                       "+$mana_regen"
+        "DOTA_Tooltip_ability_item_lucky_dice_5_Description"                            "<h1>Unique Passive: Lucky</h1> Increases the frequency of chance-based effects by %bonus_chance%%%, diminishingly."
+        "DOTA_Tooltip_ability_item_lucky_dice_5_Lore"                                   "A pair of smoothly hewn pebbles, they feel lucky."
+        
                                 //============================================================
                                 //五、阿哈利姆之书技能
                                 //============================================================
@@ -19865,7 +19900,7 @@
 		"DOTA_Tooltip_modifier_hoof_stomp_Description"                  "Position marked for echo damage"
 
 		"DOTA_Tooltip_ability_ancient_apparition_hanshuangzuzhou"                   "Frostbite Curse"
-		"DOTA_Tooltip_ability_ancient_apparition_hanshuangzuzhou_Description"       "<font color='#1FCBF6'>Requires Aghanim's Shard upgrade</font><br><br>Ancient Apparition gains bonus attack range and imbues attacks with:<br>• Deals %bonus_damage% magic damage<br>• Applies Frostbite Curse debuff to heroes lasting %debuff_duration% seconds"
+		"DOTA_Tooltip_ability_ancient_apparition_hanshuangzuzhou_Description"       "<font color='#1FCBF6'>Requires Aghanim's Shard upgrade</font><br><br>Ancient Apparition gains bonus attack range and imbues attacks with:<br>• Deals %bonus_damage% magic damage<br>• Applies Frostbite Curse debuff to heroes"
 		"DOTA_Tooltip_ability_ancient_apparition_hanshuangzuzhou_Lore"              "From Kaldr's glacial core emanates primordial storms, freezing mortals into frozen monuments of eternal power."
 		"DOTA_Tooltip_ability_ancient_apparition_hanshuangzuzhou_Note0"             "Illusions only inherit the attack range bonus."
 		"DOTA_Tooltip_ability_ancient_apparition_hanshuangzuzhou_攻击距离"          "%Attack Range Bonus:"

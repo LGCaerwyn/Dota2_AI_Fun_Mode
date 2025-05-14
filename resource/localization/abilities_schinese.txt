@@ -19614,6 +19614,42 @@
 		"DOTA_Tooltip_modifier_item_assault_v2_datadriven_ally_aura_Description"	      "护甲提升%dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%点。\n攻击速度提升%dMODIFIER_PROPERTY_ATTACKSPEED_BONUS_CONSTANT%。"
 		"DOTA_Tooltip_ability_item_fun_assault_armor_v2_Lore"	                                                      "在三途川的深处锻造而成，这件地狱盔甲能提高整支军队的护甲和攻击速度。"
 
+		"DOTA_Tooltip_ability_item_lucky_dice"                                                              "盖芬的幸运骰"
+		"DOTA_Tooltip_ability_item_lucky_dice_bonus_health"                                                 "+$生命值"
+		"DOTA_Tooltip_ability_item_lucky_dice_bonus_health_regen"                                           "+$生命恢复"
+		"DOTA_Tooltip_ability_item_lucky_dice_bonus_mana_regen"                                             "+$魔法恢复"
+		"DOTA_Tooltip_ability_item_lucky_dice_Description"                                                  "<h1>独特被动：幸运</h1> 以递减方式提高 %bonus_chance%%% 概率触发的效果频率。"
+		"DOTA_Tooltip_ability_item_lucky_dice_Lore"                                                         "这对经过精心打磨的鹅卵石，握在手中仿佛能带来好运。"
+
+        
+        "DOTA_Tooltip_ability_item_lucky_dice_2"                                                            "盖芬的幽影骰"
+        "DOTA_Tooltip_ability_item_lucky_dice_2_bonus_health"                                               "+$生命值"
+        "DOTA_Tooltip_ability_item_lucky_dice_2_bonus_health_regen"                                         "+$生命恢复"
+        "DOTA_Tooltip_ability_item_lucky_dice_2_bonus_mana_regen"                                           "+$魔法恢复"
+        "DOTA_Tooltip_ability_item_lucky_dice_2Description"                                                  "<h1>独特被动：幸运</h1> 以递减方式提高 %bonus_chance%%% 概率触发的效果频率。"
+        "DOTA_Tooltip_ability_item_lucky_dice_2_Lore"                                                         "这对经过精心打磨的鹅卵石，握在手中仿佛能带来好运。"
+        
+        "DOTA_Tooltip_ability_item_lucky_dice_3"                                                            "盖芬的炽炎骰"
+        "DOTA_Tooltip_ability_item_lucky_dice_3_bonus_health"                                               "+$生命值"
+        "DOTA_Tooltip_ability_item_lucky_dice_3_bonus_health_regen"                                         "+$生命恢复"
+        "DOTA_Tooltip_ability_item_lucky_dice_3_bonus_mana_regen"                                           "+$魔法恢复"
+        "DOTA_Tooltip_ability_item_lucky_dice_3Description"                                                  "<h1>独特被动：幸运</h1> 以递减方式提高 %bonus_chance%%% 概率触发的效果频率。"
+        "DOTA_Tooltip_ability_item_lucky_dice_3_Lore"                                                         "这对经过精心打磨的鹅卵石，握在手中仿佛能带来好运。"
+        
+        "DOTA_Tooltip_ability_item_lucky_dice_4"                                                            "盖芬的圣裁骰"
+        "DOTA_Tooltip_ability_item_lucky_dice_4_bonus_health"                                               "+$生命值"
+        "DOTA_Tooltip_ability_item_lucky_dice_4_bonus_health_regen"                                         "+$生命恢复"
+        "DOTA_Tooltip_ability_item_lucky_dice_4_bonus_mana_regen"                                           "+$魔法恢复"
+        "DOTA_Tooltip_ability_item_lucky_dice_4Description"                                                  "<h1>独特被动：幸运</h1> 以递减方式提高 %bonus_chance%%% 概率触发的效果频率。"
+        "DOTA_Tooltip_ability_item_lucky_dice_4_Lore"                                                         "这对经过精心打磨的鹅卵石，握在手中仿佛能带来好运。"
+        
+        "DOTA_Tooltip_ability_item_lucky_dice_5"                                                            "盖芬的遗落骰"
+        "DOTA_Tooltip_ability_item_lucky_dice_5_bonus_health"                                               "+$生命值"
+        "DOTA_Tooltip_ability_item_lucky_dice_5_bonus_health_regen"                                         "+$生命恢复"
+        "DOTA_Tooltip_ability_item_lucky_dice_5_bonus_mana_regen"                                           "+$魔法恢复"
+        "DOTA_Tooltip_ability_item_lucky_dice_5Description"                                                  "<h1>独特被动：幸运</h1> 以递减方式提高 %bonus_chance%%% 概率触发的效果频率。"
+        "DOTA_Tooltip_ability_item_lucky_dice_5_Lore"                                                         "这对经过精心打磨的鹅卵石，握在手中仿佛能带来好运。"
+        
                                 //============================================================
                                 //五、阿哈利姆之书技能
                                 //============================================================
