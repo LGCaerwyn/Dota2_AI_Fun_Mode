@@ -242,6 +242,8 @@
 			"model"		"models/creeps/roshan_aghanim/roshan_aghanim.vmdl"
 			"model"		"models/props_structures/tower_good.vmdl"
 			"model"		"models/props_structures/tower_bad.vmdl"
+
+			"scripts"		"scripts/vscripts/fun_items/item_fun_lucky_dice.lua"
 		}
 		// Special4
 		// -------------------------------------------------------------------------------------------------------------

@@ -209,6 +209,7 @@
 				"token_english"			"#npc_dota_hero_antimage_persona1__en"
 				"Model"					"models/heroes/antimage_female/antimage_female.vmdl"	// For tools only
 				"ModelScale"		"1.05"
+				"mvp_map_override"		"maps/scenes/mvp/mvp_antimage_persona.vmap"
 			}
 		}
 		"HeroOrderID"	"1"
@@ -424,7 +425,7 @@
 				//
 				"TextureWidth"		"512"
 				"TextureHeight"		"512"
-				"MaxPolygonsLOD0"		"2500"
+				"MaxPolygonsLOD0"		"3000"
 				"MaxPolygonsLOD1"		"1250"
 				"no_import"		 "1"
 			}
@@ -652,8 +653,8 @@
 				"SlotIndex"		"0"
 				"SlotName"		"weapon"
 				"SlotText"		"#LoadoutSlot_Weapon"
-				"TextureWidth"		"256"
-				"TextureHeight"		"256"
+				"TextureWidth"		"512"
+				"TextureHeight"		"512"
 				"MaxPolygonsLOD0"		"2500"
 				"MaxPolygonsLOD1"		"1000"
 			}
@@ -1001,7 +1002,6 @@
 				"TextureHeight"		"512"
 				"MaxPolygonsLOD0"		"3000"
 				"MaxPolygonsLOD1"		"1200"
-
 			}
 			"2"
 			{
@@ -1010,31 +1010,28 @@
 				"SlotText"		"#LoadoutSlot_Shoulder"
 				"TextureWidth"		"512"
 				"TextureHeight"		"512"
-				"MaxPolygonsLOD0"		"2000"
-				"MaxPolygonsLOD1"		"1200"
-
+				"MaxPolygonsLOD0"		"4000"
+				"MaxPolygonsLOD1"		"1600"
 			}
 			"3"
 			{
 				"SlotIndex"		"3"
 				"SlotName"		"arms"
 				"SlotText"		"#LoadoutSlot_Arms"
-				"TextureWidth"		"256"
+				"TextureWidth"		"512"
 				"TextureHeight"		"256"
-				"MaxPolygonsLOD0"		"1500"
-				"MaxPolygonsLOD1"		"600"
-
+				"MaxPolygonsLOD0"		"2000"
+				"MaxPolygonsLOD1"		"800"
 			}
 			"4"
 			{
 				"SlotIndex"		"4"
 				"SlotName"		"back"
 				"SlotText"		"#LoadoutSlot_Back"
-				"TextureWidth"		"256"
-				"TextureHeight"		"256"
-				"MaxPolygonsLOD0"		"2000"
-				"MaxPolygonsLOD1"		"800"
-
+				"TextureWidth"		"512"
+				"TextureHeight"		"512"
+				"MaxPolygonsLOD0"		"2500"
+				"MaxPolygonsLOD1"		"1000"
 			}
 			"5"
 			{
@@ -1196,7 +1193,7 @@
 			"Ability4"	"bloodseeker_rupture"
 		}
 
-		"Ability10"		"special_bonus_unique_bloodseeker_5"
+		"Ability10"		"special_bonus_hp_175"
 		"Ability11"		"special_bonus_unique_bloodseeker_6"
 		"Ability12"		"special_bonus_unique_bloodseeker_7"
 		"Ability13"		"special_bonus_unique_bloodseeker_2"
@@ -1219,6 +1216,15 @@
 				"Color"				"Gray"
 				"GradientID"		"1"
 			}
+			"bloodseeker_old_blood" 
+			{
+				"Icon"				"debuff"
+				"Color"				"Gray"
+				"GradientID"		"1"
+			}
+
+			
+
 		}
 		
 		"ArmorPhysical"		"2"
@@ -1351,6 +1357,13 @@
 				"SlotIndex"		"11"
 				"SlotName"		"hero_effigy"
 				"SlotText"		"#LoadoutSlot_HeroEffigy"
+			}
+			"12"
+			{
+				"SlotIndex"		"12"
+				"SlotName"	"ability_effects_4"
+				"SlotText"	"bloodseeker_rupture"
+				"DisplayInLoadout" "0"
 			}
 		}
 		"Bot"
@@ -1626,6 +1639,7 @@
 				"token"					"#npc_dota_hero_crystal_maiden_persona1"
 				"token_english"			"#npc_dota_hero_crystal_maiden_persona1__en"
 				"Model"					"models/heroes/crystal_maiden_persona/crystal_maiden_persona.vmdl"	// For tools only
+				"mvp_map_override"		"maps/scenes/mvp/mvp_crystal_maiden_persona.vmap"
 			}
 		}
 		"ItemSlots"
@@ -2322,6 +2336,13 @@
 						"AbilityName"	"earthshaker_slugger"
 					}
 				}
+			}
+
+			"earthshaker_reverberating_ridge"
+			{
+				"Icon"				"ricochet"
+				"Color"				"Gray"
+				"GradientID"		"2"
 			}
 		}
 		"ArmorPhysical"		"2"
@@ -3313,6 +3334,7 @@
 				"token"					"#npc_dota_hero_mirana_persona1"
 				"token_english"			"#npc_dota_hero_mirana_persona1__en"
 				"Model"					"models/heroes/mirana_persona/mirana_persona_base.vmdl"	// For tools only
+				"mvp_map_override"		"maps/scenes/mvp/mvp_mirana_persona.vmap"
 			}
 		}
 		"MovementSpeedActivityModifiers"
@@ -3939,7 +3961,7 @@
 				"Icon"				"illusion"
 				"Color"				"Yellow"
 				"GradientID"		"0"
-				"Deprecated"		"true"
+
 			} 
 			"phantom_lancer_divergence" 
 			{
@@ -4246,10 +4268,10 @@
 				"SlotIndex"		"2"
 				"SlotName"		"tail"
 				"SlotText"		"#LoadoutSlot_Tail"
-				"TextureWidth"		"256"
-				"TextureHeight"		"256"
-				"MaxPolygonsLOD0"		"2000"
-				"MaxPolygonsLOD1"		"800"
+				"TextureWidth"		"512"
+				"TextureHeight"		"512"
+				"MaxPolygonsLOD0"		"4000"
+				"MaxPolygonsLOD1"		"1600"
 			}
 			"3"
 			{
@@ -4258,8 +4280,8 @@
 				"SlotText"		"#LoadoutSlot_Wings"
 				"TextureWidth"		"512"
 				"TextureHeight"		"512"
-				"MaxPolygonsLOD0"		"2000"
-				"MaxPolygonsLOD1"		"800"
+				"MaxPolygonsLOD0"		"4000"
+				"MaxPolygonsLOD1"		"1600"
 			}
 			"4"
 			{
@@ -4344,6 +4366,7 @@
 				"token"					"#npc_dota_hero_pudge_persona1"
 				"token_english"			"#npc_dota_hero_pudge_persona1__en"
 				"Model"					"models/heroes/pudge_cute/pudge_cute.vmdl"	// For tools only
+				"mvp_map_override"		"maps/scenes/mvp/mvp_pudge_persona.vmap"
 			}
 		}
 		"HeroUnlockOrder"		"3"
@@ -4410,7 +4433,7 @@
 				"Icon"				"pudge_hook"
 				"Color"				"Red"
 				"GradientID"		"0"
-				"Deprecated"		"true"
+
 			}
 			"pudge_rotten_core"
 			{
@@ -5188,6 +5211,8 @@
 				"Icon"				"vision"
 				"Color"				"Gray"
 				"GradientID"		"3"
+				"Deprecated"		"true"
+
 			}
 			"sand_king_dust_devil" 
 			{
@@ -5195,7 +5220,21 @@
 				"Icon"				"speed"
 				"Color"				"Yellow"
 				"GradientID"		"1"
+				"Deprecated"		"true"
+
 			} 
+			"sand_king_obscurity" 
+			{
+				"Icon"				"no_vision"
+				"Color"				"Yellow"
+				"GradientID"		"3"
+			}			
+			"sand_king_pinpoint" 
+			{
+				"Icon"				"area_of_effect"
+				"Color"				"Red"
+				"GradientID"		"1"
+			}						
 			
 		}
 		
@@ -5253,10 +5292,10 @@
 				"SlotIndex"		"1"
 				"SlotName"		"shoulder"
 				"SlotText"		"#LoadoutSlot_Shoulder"
-				"TextureWidth"		"256"
-				"TextureHeight"		"256"
-				"MaxPolygonsLOD0"		"2000"
-				"MaxPolygonsLOD1"		"800"
+				"TextureWidth"		"512"
+				"TextureHeight"		"512"
+				"MaxPolygonsLOD0"		"4500"
+				"MaxPolygonsLOD1"		"1800"
 			}
 			"2"
 			{
@@ -5265,15 +5304,15 @@
 				"SlotText"		"#LoadoutSlot_Legs"
 				"TextureWidth"		"256"
 				"TextureHeight"		"256"
-				"MaxPolygonsLOD0"		"1500"
-				"MaxPolygonsLOD1"		"600"
+				"MaxPolygonsLOD0"		"3000"
+				"MaxPolygonsLOD1"		"1200"
 			}
 			"3"
 			{
 				"SlotIndex"		"3"
 				"SlotName"		"arms"
 				"SlotText"		"#LoadoutSlot_Arms"
-				"TextureWidth"		"256"
+				"TextureWidth"		"512"
 				"TextureHeight"		"256"
 				"MaxPolygonsLOD0"		"2500"
 				"MaxPolygonsLOD1"		"1000"
@@ -5285,8 +5324,8 @@
 				"SlotText"		"#LoadoutSlot_Back"
 				"TextureWidth"		"512"
 				"TextureHeight"		"512"
-				"MaxPolygonsLOD0"		"3000"
-				"MaxPolygonsLOD1"		"1200"
+				"MaxPolygonsLOD0"		"3500"
+				"MaxPolygonsLOD1"		"1400"
 			}
 			"5"
 			{
@@ -5542,18 +5581,18 @@
 				"SlotText"		"#LoadoutSlot_Armor"
 				"TextureWidth"		"512"
 				"TextureHeight"		"512"
-				"MaxPolygonsLOD0"		"3000"
-				"MaxPolygonsLOD1"		"1200"
+				"MaxPolygonsLOD0"		"7500"
+				"MaxPolygonsLOD1"		"3000"
 			}
 			"2"
 			{
 				"SlotIndex"		"3"
 				"SlotName"		"arms"
 				"SlotText"		"#LoadoutSlot_Arms"
-				"TextureWidth"		"256"
+				"TextureWidth"		"512"
 				"TextureHeight"		"256"
-				"MaxPolygonsLOD0"		"2000"
-				"MaxPolygonsLOD1"		"800"
+				"MaxPolygonsLOD0"		"3500"
+				"MaxPolygonsLOD1"		"1400"
 			}
 			"3"
 			{
@@ -5731,8 +5770,8 @@
 				"SlotIndex"		"0"
 				"SlotName"		"weapon"
 				"SlotText"		"#LoadoutSlot_Weapon"
-				"TextureWidth"		"256"
-				"TextureHeight"		"256"
+				"TextureWidth"		"512"
+				"TextureHeight"		"512"
 				"MaxPolygonsLOD0"		"2500"
 				"MaxPolygonsLOD1"		"1000"
 			}
@@ -5789,8 +5828,8 @@
 				"SlotText"		"#LoadoutSlot_Back"
 				"TextureWidth"		"256"
 				"TextureHeight"		"256"
-				"MaxPolygonsLOD0"		"300"
-				"MaxPolygonsLOD1"		"200"
+				"MaxPolygonsLOD0"		"1000"
+				"MaxPolygonsLOD1"		"400"
 			}
 			"7"
 			{
@@ -6938,7 +6977,7 @@
 		"Ability10"		"special_bonus_mp_regen_175"
 		"Ability11"		"special_bonus_hp_200"
 		"Ability12"		"special_bonus_unique_zeus_4"
-		"Ability13"		"special_bonus_unique_zeus"
+		"Ability13"		"special_bonus_unique_zeus_6"
 		"Ability14"		"special_bonus_unique_zeus_2"
 		"Ability15"		"special_bonus_unique_zeus_3"
 		"Ability16"		"special_bonus_unique_zeus_5"
@@ -7873,6 +7912,13 @@
 				"Color"				"Gray"
 				"GradientID"		"0"
 			}
+			"lich_cryophobia"		
+			{
+				"Icon"				"vision"
+				"Color"				"Red"
+				"GradientID"		"0"
+			}
+
 		}
 		
 		"StatusHealthRegen"		"0.5"
@@ -8545,8 +8591,8 @@
 				"SlotText"		"#LoadoutSlot_Belt"
 				"TextureWidth"		"512"
 				"TextureHeight"		"512"
-				"MaxPolygonsLOD0"		"2000"
-				"MaxPolygonsLOD1"		"800"
+				"MaxPolygonsLOD0"		"3000"
+				"MaxPolygonsLOD1"		"1200"
 			}
 			"3"
 			{
@@ -9070,40 +9116,40 @@
 				"SlotIndex"		"0"
 				"SlotName"		"weapon"
 				"SlotText"		"#LoadoutSlot_Weapon"
-				"TextureWidth"		"256"
-				"TextureHeight"		"256"
-				"MaxPolygonsLOD0"		"2500"
-				"MaxPolygonsLOD1"		"1000"
+				"TextureWidth"		"512"
+				"TextureHeight"		"512"
+				"MaxPolygonsLOD0"		"3000"
+				"MaxPolygonsLOD1"		"1200"
 			}
 			"1"
 			{
 				"SlotIndex"		"1"
 				"SlotName"		"offhand_weapon"
 				"SlotText"		"#LoadoutSlot_OffHand_Weapon"
-				"TextureWidth"		"256"
-				"TextureHeight"		"256"
-				"MaxPolygonsLOD0"		"2500"
-				"MaxPolygonsLOD1"		"1000"
+				"TextureWidth"		"512"
+				"TextureHeight"		"512"
+				"MaxPolygonsLOD0"		"3000"
+				"MaxPolygonsLOD1"		"1200"
 			}
 			"2"
 			{
 				"SlotIndex"		"2"
 				"SlotName"		"belt"
 				"SlotText"		"#LoadoutSlot_Belt"
-				"TextureWidth"		"256"
-				"TextureHeight"		"256"
-				"MaxPolygonsLOD0"		"1500"
-				"MaxPolygonsLOD1"		"600"
+				"TextureWidth"		"512"
+				"TextureHeight"		"512"
+				"MaxPolygonsLOD0"		"3000"
+				"MaxPolygonsLOD1"		"1200"
 			}
 			"3"
 			{
 				"SlotIndex"		"3"
 				"SlotName"		"arms"
 				"SlotText"		"#LoadoutSlot_Arms"
-				"TextureWidth"		"256"
+				"TextureWidth"		"512"
 				"TextureHeight"		"256"
-				"MaxPolygonsLOD0"		"1500"
-				"MaxPolygonsLOD1"		"600"
+				"MaxPolygonsLOD0"		"2000"
+				"MaxPolygonsLOD1"		"800"
 			}
 			"4"
 			{
@@ -9122,8 +9168,8 @@
 				"SlotText"		"#LoadoutSlot_Back"
 				"TextureWidth"		"512"
 				"TextureHeight"		"512"
-				"MaxPolygonsLOD0"		"3000"
-				"MaxPolygonsLOD1"		"1200"
+				"MaxPolygonsLOD0"		"3700"
+				"MaxPolygonsLOD1"		"1480"
 			}
 			"6"
 			{
@@ -9341,7 +9387,6 @@
 				"Icon"				"nuke"
 				"Color"				"Red"
 				"GradientID"		"2"
-				"Deprecated"		"1"
 			}
 
 			"witch_doctor_cleft_death"
@@ -9349,6 +9394,13 @@
 				"Icon"				"death_ward"
 				"Color"				"Purple"
 				"GradientID"		"0"
+			}
+
+			"witch_doctor_malpractice"
+			{
+				"Icon"				"nuke"
+				"Color"				"Red"
+				"GradientID"		"2"
 			}
 		}
 		"ArmorPhysical"		"0"
@@ -9730,10 +9782,10 @@
 				"SlotIndex"		"3"
 				"SlotName"		"shoulder"
 				"SlotText"		"#LoadoutSlot_Shoulder"
-				"TextureWidth"		"256"
-				"TextureHeight"		"256"
-				"MaxPolygonsLOD0"		"2500"
-				"MaxPolygonsLOD1"		"1000"
+				"TextureWidth"		"512"
+				"TextureHeight"		"512"
+				"MaxPolygonsLOD0"		"4000"
+				"MaxPolygonsLOD1"		"1600"
 			}
 			"4"
 			{
@@ -10206,7 +10258,7 @@
 		"AbilityDraftAbilities"
 		{
 			"Ability1"		"tinker_laser"
-			"Ability2"		"tinker_heat_seeking_missile"
+			"Ability2"		"tinker_march_of_the_machines"
 			"Ability3"		"tinker_defense_matrix"
 			"Ability4"		"tinker_rearm"
 		}
@@ -10455,7 +10507,7 @@
 				"GradientID"		"0"
 			}
 		}
-		"ArmorPhysical"		"-1"
+		"ArmorPhysical"		"0"
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
 		"AttackDamageMin"		"13"
 		"AttackDamageMax"		"19"
@@ -12161,7 +12213,7 @@
 			"Ability1"	"faceless_void_time_walk"
 			"Ability2"	"faceless_void_time_dilation"
 			"Ability3"	"faceless_void_time_lock"
-			"Ability4"	"faceless_void_chronosphere"
+			"Ability4"	"faceless_void_chronosphere,faceless_void_time_zone"
 		}
 
 		"Ability10"		"special_bonus_unique_faceless_void_6"
@@ -12524,8 +12576,8 @@
 				"SlotIndex"		"0"
 				"SlotName"		"weapon"
 				"SlotText"		"#LoadoutSlot_Weapon"
-				"TextureWidth"		"256"
-				"TextureHeight"		"256"
+				"TextureWidth"		"512"
+				"TextureHeight"		"512"
 				"MaxPolygonsLOD0"		"2500"
 				"MaxPolygonsLOD1"		"1000"
 				"LoadoutPreviewMode"		"hero"
@@ -12882,7 +12934,7 @@
 				"SlotText"		"#LoadoutSlot_Legs"
 				"no_import"		"1"
 				"TextureWidth"		"512"
-				"TextureHeight"		"256"
+				"TextureHeight"		"512"
 				"MaxPolygonsLOD0"		"3000"
 				"MaxPolygonsLOD1"		"1200"
 			}
@@ -12919,9 +12971,9 @@
 				"SlotName"		"misc"
 				"SlotText"		"#LoadoutSlot_misc"
 				"TextureWidth"		"256"
-				"TextureHeight"		"128"
-				"MaxPolygonsLOD0"		"900"
-				"MaxPolygonsLOD1"		"360"
+				"TextureHeight"		"256"
+				"MaxPolygonsLOD0"		"1000"
+				"MaxPolygonsLOD1"		"400"
 			}
 			"6"
 			{
@@ -13195,6 +13247,7 @@
 					"token"					"#npc_dota_hero_phantom_assassin_persona1"
 					"token_english"			"#npc_dota_hero_phantom_assassin_persona1__en"
 					"Model"					"models/heroes/phantom_assassin_persona/phantom_assassin_persona.vmdl"	// For tools only
+					"mvp_map_override"		"maps/scenes/mvp/mvp_phantom_assassin_persona.vmap"
 				}
 			}
 		"animation_transitions"
@@ -14583,6 +14636,7 @@
 				"token"					"#npc_dota_hero_dragon_knight_persona1"
 				"token_english"			"#npc_dota_hero_dragon_knight_persona1__en"
 				"Model"					"models/heroes/dragon_knight_persona/dk_persona_base.vmdl"	// For tools only
+				"mvp_map_override"		"maps/scenes/mvp/mvp_dragon_knight_persona.vmap"
 			}
 		}
 		"LastHitChallengeRival"		"npc_dota_hero_sven"
@@ -14829,7 +14883,7 @@
 				"SlotText"		"#LoadoutSlot_Elder_Dragon"
 				"no_import"		"1"
 				"TextureWidth"		"1024"
-				"TextureHeight"		"512"
+				"TextureHeight"		"1024"
 				"MaxPolygonsLOD0"		"16000"
 				"MaxPolygonsLOD1"		"6400"
 				"LoadoutPreviewMode"		"transformation"
@@ -15292,6 +15346,13 @@
 				"Color"				"Red"
 				"GradientID"		"2"
 			}
+
+			"rattletrap_junk_mail"
+			{
+				"Icon"				"armor"
+				"Color"				"Yellow"
+				"GradientID"		"1"
+			}
 		}
 		
 		"ArmorPhysical"		"1"
@@ -15561,8 +15622,8 @@
 				"SlotText"		"#LoadoutSlot_Misc"
 				"TextureWidth"		"256"
 				"TextureHeight"		"256"
-				"MaxPolygonsLOD0"		"1000"
-				"MaxPolygonsLOD1"		"400"
+				"MaxPolygonsLOD0"		"1500"
+				"MaxPolygonsLOD1"		"600"
 			}
 			"1"
 			{
@@ -15581,8 +15642,8 @@
 				"SlotText"		"#LoadoutSlot_Back"
 				"TextureWidth"		"512"
 				"TextureHeight"		"512"
-				"MaxPolygonsLOD0"		"2500"
-				"MaxPolygonsLOD1"		"1000"
+				"MaxPolygonsLOD0"		"4000"
+				"MaxPolygonsLOD1"		"1600"
 			}
 			"3"
 			{
@@ -15591,8 +15652,8 @@
 				"SlotText"		"#LoadoutSlot_Tail"
 				"TextureWidth"		"512"
 				"TextureHeight"		"512"
-				"MaxPolygonsLOD0"		"2500"
-				"MaxPolygonsLOD1"		"1000"
+				"MaxPolygonsLOD0"		"4000"
+				"MaxPolygonsLOD1"		"1600"
 			}
 			"4"
 			{
@@ -15739,6 +15800,21 @@
 				"Icon"				"siege"
 				"Color"				"Blue"
 				"GradientID"		"2"
+				"Deprecated"		"true"
+			}
+			"furion_natures_profit"
+			{
+				"Icon"				"gold"
+				"Color"				"Yellow"
+				"GradientID"		"2"
+				"Abilities"
+				{
+					"Ability1"
+					{
+						"AbilityName"	"furion_natures_profit"
+						"AbilityIndex"	"7"
+					}
+				}
 			}
 
 		}
@@ -16786,8 +16862,8 @@
 				"SlotIndex"		"0"
 				"SlotName"		"weapon"
 				"SlotText"		"#LoadoutSlot_Weapon"
-				"TextureWidth"		"256"
-				"TextureHeight"		"256"
+				"TextureWidth"		"512"
+				"TextureHeight"		"512"
 				"MaxPolygonsLOD0"		"2500"
 				"MaxPolygonsLOD1"		"1000"
 			}
@@ -17758,7 +17834,7 @@
 		"CMEnabled"		"1"
 		"PickSound"		"broodmother_broo_spawn_01"
 		"BanSound"		"broodmother_broo_anger_01"
-		"NameAliases"		"bm;Arachnia"
+		"NameAliases"		"bm;Arachnia;spider"
 		"workshop_guide_name"		"Broodmother"
 		"new_player_enable"		"1"
 		"SimilarHeroes"		"92,38,82"
@@ -17791,9 +17867,9 @@
 
 		"Ability10"		"special_bonus_unique_broodmother_3"
 		"Ability11"		"special_bonus_unique_broodmother_6"
-		"Ability12"		"special_bonus_unique_broodmother_5"
+		"Ability12"		"special_bonus_unique_broodmother_2"
 		"Ability13"		"special_bonus_unique_broodmother_7"
-		"Ability14"		"special_bonus_unique_broodmother_2"
+		"Ability14"		"special_bonus_unique_broodmother_5"
 		"Ability15"		"special_bonus_attack_speed_35"
 		"Ability16"		"special_bonus_unique_broodmother_1"
 		"Ability17"		"special_bonus_unique_broodmother_4"
@@ -18003,7 +18079,7 @@
 		}
 
 		"Ability10"		"special_bonus_unique_bounty_hunter_5"
-		"Ability11"		"special_bonus_attack_damage_20"
+		"Ability11"		"special_bonus_attack_damage_25"
 		"Ability12"		"special_bonus_unique_bounty_hunter_9"
 		"Ability13"		"special_bonus_unique_bounty_hunter_3"
 		"Ability14"		"special_bonus_unique_bounty_hunter_8"
@@ -18430,8 +18506,8 @@
 				"SlotText"		"#LoadoutSlot_Misc"
 				"TextureWidth"		"256"
 				"TextureHeight"		"256"
-				"MaxPolygonsLOD0"		"1000"
-				"MaxPolygonsLOD1"		"400"
+				"MaxPolygonsLOD0"		"2000"
+				"MaxPolygonsLOD1"		"800"
 			}
 			"5"
 			{
@@ -18562,7 +18638,7 @@
 				"Icon"				"nuke"
 				"Color"				"Red"
 				"GradientID"		"0"
-				"Deprecated"		"true"
+				
 
 				"Abilities"
 				{
@@ -18580,7 +18656,7 @@
 				"Icon"				"snowflake"
 				"Color"				"Blue"
 				"GradientID"		"1"
-				"Deprecated"		"true"
+				
 
 				"Abilities"
 				{
@@ -18880,25 +18956,18 @@
 		"Ability17"		"special_bonus_unique_batrider_2"
 		"Facets"
 		{
-			"batrider_buff_on_displacement" 
+			"batrider_buff_on_displacement"
 			{
-				"Icon"				"speed"
-				"Color"				"Yellow"
-				"GradientID"		"1"
-
-				"Abilities"
-				{
-					"Ability1"
-					{
-						"AbilityName"	"batrider_stoked"
-					}
-				}
+				"Icon"				"nuke"
+				"Color"				"Red"
+				"GradientID"		"0"
 			}
 			"batrider_arsonist" 
 			{
-				"Icon"				"siege"
-				"Color"				"Red"
-				"GradientID"		"0"
+				"Icon"				"damage"
+				"Color"				"Yellow"
+				"GradientID"		"1"
+				"MaxHeroAttributeLevel"	"6"
 			}
 		}
 		"ArmorPhysical"		"2"
@@ -19071,7 +19140,7 @@
 		"Ability11"		"special_bonus_unique_chen_3"
 		"Ability12"		"special_bonus_unique_chen_5"
 		"Ability13"		"special_bonus_unique_chen_8"
-		"Ability14"		"special_bonus_unique_chen_7"
+		"Ability14"		"special_bonus_unique_chen_divine_favor_healing"
 		"Ability15"		"special_bonus_unique_chen_4"
 		"Ability16"		"special_bonus_unique_chen_12"
 		"Ability17"		"special_bonus_unique_chen_2"
@@ -19094,7 +19163,7 @@
 				"Icon"				"damage"
 				"Color"				"Yellow"
 				"GradientID"		"2"
-				"Deprecated"		"true"
+				
 				"AbilityIconReplacements"
 				{
 					"chen_summon_convert"	"chen_summon_convert_wolf"
@@ -19152,8 +19221,8 @@
 
 		"ArmorPhysical"		"-1"
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"		"27"
-		"AttackDamageMax"		"37"
+		"AttackDamageMin"		"29"
+		"AttackDamageMax"		"39"
 		"AttackRate"		"1.700000"
 		"AttackAnimationPoint"		"0.500000"
 		"AttackAcquisitionRange"		"800"
@@ -20266,7 +20335,7 @@
 				"Icon"				"movement"
 				"Color"				"Blue"
 				"GradientID"		"2"
-				"Deprecated"		"true"
+				
 			}
 			"spirit_breaker_bulls_hit"
 			{
@@ -20643,6 +20712,21 @@
 				"SlotName"		"hero_effigy"
 				"SlotText"		"#LoadoutSlot_HeroEffigy"
 			}
+			"14"
+			{
+				"SlotIndex"		"14"
+				"SlotName"		"ability3"
+				"SlotText"		"#LoadoutSlot_Gyrocopter_SideGunner"
+				"TextureWidth"		"512"
+				"TextureHeight"		"512"
+				"MaxPolygonsLOD0"		"3500"
+				"MaxPolygonsLOD1"		"1400"
+				"no_import"		"1"
+				"GeneratesUnits"
+				{
+					"0" "npc_dota_side_gunner"
+				}
+			}
 		}
 		"RenderablePortrait"
 		{
@@ -20800,8 +20884,8 @@
 				"SlotIndex"		"0"
 				"SlotName"		"weapon"
 				"SlotText"		"#LoadoutSlot_Weapon"
-				"TextureWidth"		"256"
-				"TextureHeight"		"256"
+				"TextureWidth"		"512"
+				"TextureHeight"		"512"
 				"MaxPolygonsLOD0"		"2500"
 				"MaxPolygonsLOD1"		"1000"
 			}
@@ -20963,6 +21047,7 @@
 				"token"					"#npc_dota_hero_invoker_persona1"
 				"token_english"			"#npc_dota_hero_invoker_persona1__en"
 				"Model"					"models/heroes/invoker_kid/invoker_kid.vmdl"	// For tools only
+				"mvp_map_override"		"maps/scenes/mvp/mvp_invoker_kid.vmap"
 			}
 		}
 		"SoundSet"		"Hero_Invoker"
@@ -21010,25 +21095,9 @@
 		"Ability14"		"invoker_forge_spirit"
 		"Ability15"		"invoker_ice_wall"
 		"Ability16"		"invoker_deafening_blast"
-		"Ability26"		"invoker_again"
 
 		"Facets"
 		{
-			"invoker_agnostic"
-			{
-				"Icon"				"invoker_passive"
-				"Color"				"Purple"
-				"GradientID"		"0"
-				"Deprecated"		"true"
-			}			
-			"invoker_elitist"
-			{
-				"Icon"				"invoker_active"
-				"Color"				"Gray"
-				"GradientID"		"0"
-				"Deprecated"		"true"
-			}
-
 			"invoker_quas_focus"
 			{
 				"Icon"				"invoker_quas"
@@ -21078,8 +21147,8 @@
 		"ArmorPhysical"		"-1"
 		"StatusHealthRegen"		"0.25"
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"		"15"
-		"AttackDamageMax"		"21"
+		"AttackDamageMin"		"19"
+		"AttackDamageMax"		"25"
 		"AttackRate"		"1.700000"
 		"AttackAnimationPoint"		"0.400000"
 		"AttackAcquisitionRange"		"800"
@@ -21481,6 +21550,28 @@
 				"Color"				"Gray"
 				"GradientID"		"3"
 			}
+
+			"silencer_spread_the_knowledge" 
+			{
+				"Icon"				"ricochet"
+				"Color"				"Purple"
+				"GradientID"		"1"
+				"MaxHeroAttributeLevel"	"6"
+			}
+			"silencer_oppressive_silence"
+			{
+				"Icon"				"debuff"
+				"Color"				"Gray"
+				"GradientID"		"3"
+
+				"Abilities"
+				{
+					"Ability1"
+					{
+						"AbilityName"	"silencer_oppressive_silence"
+					}
+				}
+			}			
 		}
 		"ArmorPhysical"		"0"
 		"BaseAttackSpeed"		"110"
@@ -22160,7 +22251,7 @@
 		"Ability12"		"special_bonus_unique_brewmaster_5"
 		"Ability13"		"special_bonus_unique_brewmaster_8"
 		"Ability14"		"special_bonus_unique_brewmaster"
-		"Ability15"		"special_bonus_attack_speed_100"
+		"Ability15"		"special_bonus_attack_speed_110"
 		"Ability16"		"special_bonus_unique_brewmaster_6"
 		"Ability17"		"special_bonus_unique_brewmaster_4"
 		"Facets"
@@ -22214,8 +22305,8 @@
 				"SlotIndex"		"0"
 				"SlotName"		"weapon"
 				"SlotText"		"#LoadoutSlot_Weapon"
-				"TextureWidth"		"256"
-				"TextureHeight"		"256"
+				"TextureWidth"		"512"
+				"TextureHeight"		"512"
 				"MaxPolygonsLOD0"		"2500"
 				"MaxPolygonsLOD1"		"1000"
 			}
@@ -23403,6 +23494,14 @@
 				"Icon"				"damage"
 				"Color"				"Yellow"
 				"GradientID"		"2"
+
+				"Abilities"
+				{
+					"Ability1"
+					{
+						"AbilityName"	"treant_innate_attack_damage"
+					}
+				}
 			}
 			"treant_sapling" 		
 			{
@@ -23870,8 +23969,8 @@
 		}
 		"ArmorPhysical"		"1"
 		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
-		"AttackDamageMin"		"31"
-		"AttackDamageMax"		"39"
+		"AttackDamageMin"		"33"
+		"AttackDamageMax"		"41"
 		"AttackRate"		"1.700000"
 		"AttackAnimationPoint"		"0.300000"
 		"AttackAcquisitionRange"		"600"
@@ -24074,6 +24173,8 @@
 		"Ability18"		"special_bonus_unique_rubick_4"
 		"Ability19"		"special_bonus_unique_rubick"
 		"Ability20"		"special_bonus_unique_rubick_5"
+		"Ability21"		"rubick_hidden3"
+		"Ability22"		"rubick_hidden4"
 		"Facets"
 		{
 			"rubick_frugal_filch" 
@@ -24294,9 +24395,9 @@
 		"Ability10"		"special_bonus_movement_speed_20"
 		"Ability11"		"special_bonus_unique_disruptor_consecutive_strike_damage"
 		"Ability12"		"special_bonus_unique_disruptor_9"
-		"Ability13"		"special_bonus_unique_disruptor_7"
+		"Ability13"		"special_bonus_unique_disruptor"
 		"Ability14"		"special_bonus_unique_disruptor_5"
-		"Ability15"		"special_bonus_unique_disruptor"
+		"Ability15"		"special_bonus_unique_disruptor_7"
 		"Ability16"		"special_bonus_unique_disruptor_4"
 		"Ability17"		"special_bonus_unique_disruptor_8"
 		
@@ -24324,6 +24425,12 @@
 						"AutoLevelAbility" 	"false"
 					}
 				}
+			}
+			"disruptor_conduit"
+			{
+				"Icon"				"vortex_out"
+				"Color"				"Gray"
+				"GradientID"		"0"
 			}
 		}
 		
@@ -24734,7 +24841,7 @@
 		"Ability14"		"special_bonus_unique_naga_siren_5"
 		"Ability15"		"special_bonus_unique_naga_siren"
 		"Ability16"		"special_bonus_unique_naga_siren_6"
-		"Ability17"		"special_bonus_unique_naga_siren_net_breaks"
+		"Ability17"		"special_bonus_agility_25"
 		"Facets"
 		{
 			"naga_siren_passive_riptide" 	
@@ -25686,8 +25793,8 @@
 				"SlotText"		"#LoadoutSlot_Arms"
 				"TextureWidth"		"256"
 				"TextureHeight"		"256"
-				"MaxPolygonsLOD0"		"1500"
-				"MaxPolygonsLOD1"		"600"
+				"MaxPolygonsLOD0"		"2500"
+				"MaxPolygonsLOD1"		"1000"
 			}
 			"3"
 			{
@@ -25705,9 +25812,9 @@
 				"SlotName"		"shoulder"
 				"SlotText"		"#LoadoutSlot_Shoulder"
 				"TextureWidth"		"512"
-				"TextureHeight"		"256"
-				"MaxPolygonsLOD0"		"2500"
-				"MaxPolygonsLOD1"		"1000"
+				"TextureHeight"		"512"
+				"MaxPolygonsLOD0"		"4000"
+				"MaxPolygonsLOD1"		"1600"
 			}
 			"5"
 			{
@@ -26383,8 +26490,8 @@
 				"SlotIndex"		"0"
 				"SlotName"		"weapon"
 				"SlotText"		"#LoadoutSlot_Weapon"
-				"TextureWidth"		"256"
-				"TextureHeight"		"256"
+				"TextureWidth"		"512"
+				"TextureHeight"		"512"
 				"MaxPolygonsLOD0"		"2500"
 				"MaxPolygonsLOD1"		"1000"
 			}
@@ -26404,7 +26511,7 @@
 				"SlotName"		"shoulder"
 				"SlotText"		"#LoadoutSlot_Shoulder"
 				"TextureWidth"		"512"
-				"TextureHeight"		"256"
+				"TextureHeight"		"512"
 				"MaxPolygonsLOD0"		"2000"
 				"MaxPolygonsLOD1"		"800"
 			}
@@ -26415,7 +26522,7 @@
 				"SlotText"		"#LoadoutSlot_Belt"
 				"TextureWidth"		"256"
 				"TextureHeight"		"256"
-				"MaxPolygonsLOD0"		"1000"
+				"MaxPolygonsLOD0"		"1500"
 				"MaxPolygonsLOD1"		"600"
 			}
 			"4"
@@ -26433,10 +26540,10 @@
 				"SlotIndex"		"5"
 				"SlotName"		"back"
 				"SlotText"		"#LoadoutSlot_Back"
-				"TextureWidth"		"256"
-				"TextureHeight"		"256"
-				"MaxPolygonsLOD0"		"2000"
-				"MaxPolygonsLOD1"		"800"
+				"TextureWidth"		"512"
+				"TextureHeight"		"512"
+				"MaxPolygonsLOD0"		"2500"
+				"MaxPolygonsLOD1"		"1000"
 			}
 			"6"
 			{
@@ -26444,7 +26551,7 @@
 				"SlotName"		"tail"
 				"SlotText"		"#LoadoutSlot_Tail"
 				"TextureWidth"		"256"
-				"TextureHeight"		"128"
+				"TextureHeight"		"256"
 				"MaxPolygonsLOD0"		"500"
 				"MaxPolygonsLOD1"		"300"
 			}
@@ -26588,8 +26695,7 @@
 			{
 				"Icon"				"vortex_in"
 				"Color"				"Gray"
-				"GradientID"		"3"
-				"Deprecated"		"true"	
+				"GradientID"		"3"	
 			}
 			"magnataur_eternal_empowerment"
 			{
@@ -26609,7 +26715,7 @@
 				"Icon"				"vortex_out"
 				"Color"				"Gray"
 				"GradientID"		"0"
-				"Deprecated"		"true"
+				
 				"AbilityIconReplacements"
 				{
 					"magnataur_reverse_polarity"	"magnataur_reversed_reverse_polarity"
@@ -26656,8 +26762,8 @@
 				"SlotIndex"		"0"
 				"SlotName"		"weapon"
 				"SlotText"		"#LoadoutSlot_Weapon"
-				"TextureWidth"		"256"
-				"TextureHeight"		"256"
+				"TextureWidth"		"512"
+				"TextureHeight"		"512"
 				"MaxPolygonsLOD0"		"2500"
 				"MaxPolygonsLOD1"		"1000"
 			}
@@ -27067,7 +27173,7 @@
 				"Icon"				"damage"
 				"Color"				"Yellow"
 				"GradientID"		"0"
-				"Deprecated"		"true"
+				
 			}
 			"bristleback_snot_rocket" 
 			{
@@ -27643,12 +27749,12 @@
 		}
 
 		"Ability10"		"special_bonus_mp_regen_150"
-		"Ability11"		"special_bonus_unique_skywrath_2"
+		"Ability11"		"special_bonus_unique_skywrath_6"
 		"Ability12"		"special_bonus_unique_skywrath"
 		"Ability13"		"special_bonus_unique_skywrath_concussive_shot_slow"
 		"Ability14"		"special_bonus_unique_skywrath_4"
 		"Ability15"		"special_bonus_unique_skywrath_3"
-		"Ability16"		"special_bonus_unique_skywrath_6"
+		"Ability16"		"special_bonus_unique_skywrath_2"
 		"Ability17"		"special_bonus_unique_skywrath_5"
 
 		"Facets"
@@ -28006,6 +28112,13 @@
 			"abaddon_mephitic_shroud" 
 			{
 				"Icon"				"barrier"
+				"Color"				"Blue"
+				"GradientID"		"1"
+			}
+
+			"abaddon_mists_of_fate"
+			{
+				"Icon"				"phantom_ass_dagger"
 				"Color"				"Blue"
 				"GradientID"		"1"
 			}
@@ -28501,8 +28614,8 @@
 				"SlotIndex"		"0"
 				"SlotName"		"weapon"
 				"SlotText"		"#LoadoutSlot_Weapon"
-				"TextureWidth"		"256"
-				"TextureHeight"		"256"
+				"TextureWidth"		"512"
+				"TextureHeight"		"512"
 				"MaxPolygonsLOD0"		"2500"
 				"MaxPolygonsLOD1"		"1000"
 			}
@@ -29436,8 +29549,8 @@
 				"SlotText"		"#LoadoutSlot_Wings"
 				"TextureWidth"		"512"
 				"TextureHeight"		"512"
-				"MaxPolygonsLOD0"		"5000"
-				"MaxPolygonsLOD1"		"2000"
+				"MaxPolygonsLOD0"		"10000"
+				"MaxPolygonsLOD1"		"4000"
 				"no_import"		"1" //imported using template
 			}
 
@@ -29463,8 +29576,8 @@
 //				"LoadoutPreviewMode"		"transformation"
 				"TextureWidth"		"512"
 				"TextureHeight"		"512"
-				"MaxPolygonsLOD0"		"3000"
-				"MaxPolygonsLOD1"		"1200"
+				"MaxPolygonsLOD0"		"5000"
+				"MaxPolygonsLOD1"		"2000"
 				"no_import"		"1" //imported using template
 				"GeneratesUnits"
 				{
@@ -29589,9 +29702,9 @@
 		"Ability10"		"special_bonus_unique_oracle_2"
 		"Ability11"		"special_bonus_unique_oracle_9"
 		"Ability12"		"special_bonus_unique_oracle_damage_per_purge"
-		"Ability13"		"special_bonus_unique_oracle_5"
+		"Ability13"		"special_bonus_unique_oracle_8"
 		"Ability14"		"special_bonus_unique_oracle_6"
-		"Ability15"		"special_bonus_unique_oracle_8"
+		"Ability15"		"special_bonus_unique_oracle_5"
 		"Ability16"		"special_bonus_unique_oracle_7"
 		"Ability17"		"special_bonus_unique_oracle"
 		
@@ -29641,7 +29754,7 @@
 			"fastest"	"350"
 		}
 		"AttackAcquisitionRange"		"800"
-		"AttackRange"		"620"
+		"AttackRange"		"625"
 		"ProjectileModel"		"particles/units/heroes/hero_oracle/oracle_base_attack.vpcf"
 		"ProjectileSpeed"		"900"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
@@ -29873,9 +29986,10 @@
 		"Ability1"		"techies_sticky_bomb"
 		"Ability2"		"techies_reactive_tazer"
 		"Ability3"		"techies_suicide"
-		"Ability4"		"techies_reactive_tazer_stop"
+		"Ability4"		"generic_hidden"
 		"Ability5"		"techies_minefield_sign"
 		"Ability6"		"techies_land_mines"
+		"Ability7"		"techies_reactive_tazer_stop"
 		"Ability10"		"special_bonus_magic_resistance_20"
 		"Ability11"		"special_bonus_unique_techies_3"
 		"Ability12"		"special_bonus_unique_techies"
@@ -29986,7 +30100,7 @@
 			{
 				"SlotIndex"		"1"
 				"SlotName"		"head"
-				"SlotText"		"#LoadoutSlot_Techies_Squee"
+				"SlotText"		"#LoadoutSlot_Techies_Spleen"
 				"TextureWidth"		"512"
 				"TextureHeight"		"512"
 				"MaxPolygonsLOD0"		"3500"
@@ -30006,7 +30120,7 @@
 			{
 				"SlotIndex"			"3"
 				"SlotName"			"shoulder"
-				"SlotText"			"#LoadoutSlot_Techies_Spleen"
+				"SlotText"			"#LoadoutSlot_Techies_Squee"
 				"TextureWidth"		"512"
 				"TextureHeight"		"512"
 				"MaxPolygonsLOD0"	"3500"
@@ -30035,9 +30149,9 @@
 				"SlotName"		"mount"
 				"SlotText"		"#LoadoutSlot_Techies_Cart"
 				"TextureWidth"		"512"
-				"TextureHeight"		"256"
-				"MaxPolygonsLOD0"	"5000"
-				"MaxPolygonsLOD1"	"2000"
+				"TextureHeight"		"512"
+				"MaxPolygonsLOD0"	"6500"
+				"MaxPolygonsLOD1"	"2600"
 			}
 			"6"
 			{
@@ -30240,7 +30354,7 @@
 		}
 
 		"Ability10"		"special_bonus_unique_winter_wyvern_5"
-		"Ability11"		"special_bonus_attack_damage_30"
+		"Ability11"		"special_bonus_attack_damage_35"
 		"Ability12"		"special_bonus_unique_winter_wyvern_6"
 		"Ability13"		"special_bonus_unique_winter_wyvern_2"
 		"Ability14"		"special_bonus_unique_winter_wyvern_1"
@@ -30254,7 +30368,7 @@
 				"Icon"				"mana"
 				"Color"				"Blue"
 				"GradientID"		"0"
-				"Deprecated"		"True"
+				
 
 				"Abilities"
 				{
@@ -30270,7 +30384,7 @@
 				"Icon"				"damage"
 				"Color"				"Gray"
 				"GradientID"		"3"
-				"Deprecated"		"True"
+				
 
 				"Abilities"
 				{
@@ -30397,6 +30511,13 @@
 				"SlotName"		"hero_effigy"
 				"SlotText"		"#LoadoutSlot_HeroEffigy"
 			}
+			"7"
+			{
+				"SlotIndex"	"7"
+				"SlotName" "ability_effects_2"
+				"SlotText" "winter_wyvern_splinter_blast"
+				"DisplayInLoadout" "0"
+			}
 		}
 		"Bot"
 		{
@@ -30489,7 +30610,7 @@
 				"Icon"				"arc_warden"
 				"Color"				"Gray"
 				"GradientID"		"3"
-				"Deprecated"		"true"
+				
 			}
 
 			"arc_warden_disorder" 
@@ -30497,7 +30618,7 @@
 				"Icon"				"arc_warden_alt"
 				"Color"				"Gray"
 				"GradientID"		"0"
-				"Deprecated"		"true"
+				
 			}
 
 			"arc_warden_runed_replica" 
@@ -30969,6 +31090,7 @@
 				"Icon"				"summons"
 				"Color"				"Red"
 				"GradientID"		"2"
+				"Deprecated"		"true"
 			}
 			"monkey_king_simian_stride" 
 			{
@@ -30977,8 +31099,24 @@
 				"GradientID"		"4"
 				"MaxHeroAttributeLevel"	"6"
 			}
+			"monkey_king_transfiguration"
+			{
+				"Icon"				"summons"
+				"Color"				"Red"
+				"GradientID"		"2"
+				"Abilities"
+				{
+					"Ability1"
+					{
+						"AbilityName"	"monkey_king_transfiguration"
+						"AbilityIndex"	"9"
+					}
+				}
+			}
+
+
+			
 		}
-		"AbilityDraftIgnoreCount" "8"
 		"AbilityDraftAbilities"
 		{
 			"Ability1"		"monkey_king_boundless_strike"
@@ -31163,11 +31301,12 @@
 		"Ability1"					"pangolier_swashbuckle"
 		"Ability2"					"pangolier_shield_crash"
 		"Ability3"					"pangolier_lucky_shot"
-		"Ability4"					"pangolier_fortune_favors_the_bold"
+		"Ability4"					"generic_hidden"
 		"Ability5"					"pangolier_rollup"
 		"Ability6"					"pangolier_gyroshell"
 		"Ability7"					"pangolier_gyroshell_stop"
 		"Ability8"					"pangolier_rollup_stop"
+		"Ability9"					"pangolier_fortune_favors_the_bold"
 
 		"AbilityDraftAbilities"
 		{
@@ -31420,7 +31559,7 @@
 				"Icon"				"area_of_effect"
 				"Color"				"Green"
 				"GradientID"		"4"
-				"Deprecated"		"true"
+				
 			}
 			"dark_willow_shattering_crown" 
 			{
@@ -32125,10 +32264,10 @@
 			"Ability4"				"void_spirit_astral_step"
 		}
 
-		"Ability10"					"special_bonus_mp_regen_175"
-		"Ability11"					"special_bonus_unique_void_spirit_2"
-		"Ability12"					"special_bonus_unique_void_spirit_7"
-		"Ability13"					"special_bonus_unique_void_spirit_4"
+		"Ability10"					"special_bonus_mp_regen_150"
+		"Ability11"					"special_bonus_unique_void_spirit_4"
+		"Ability12"					"special_bonus_unique_void_spirit_resonant_pulse_barrier"
+		"Ability13"					"special_bonus_unique_void_spirit_2"
 		"Ability14"					"special_bonus_unique_void_spirit_dissimilate_outerring"
 		"Ability15"					"special_bonus_unique_void_spirit_1"
 		"Ability16"					"special_bonus_unique_void_spirit_8"
@@ -32147,7 +32286,7 @@
 				"Icon"				"nuke"
 				"Color"				"Gray"
 				"GradientID"		"3"
-				"Deprecated"		"true"
+				
 
 				"Abilities"
 				{
@@ -32370,7 +32509,7 @@
 		"Ability12"				"special_bonus_unique_snapfire_2"
 		"Ability13"				"special_bonus_unique_snapfire_3"
 		"Ability14"				"special_bonus_unique_snapfire_8"
-		"Ability15"				"special_bonus_unique_snapfire_mortimer_kisses_impact_damage"
+		"Ability15"				"special_bonus_unique_snapfire_firesnap_cookie_additional_charge"
 		"Ability16"				"special_bonus_unique_snapfire_6"
 		"Ability17"				"special_bonus_unique_snapfire_1"
 		"AbilityDraftAbilities"
@@ -32624,7 +32763,7 @@
 				"Icon"				"tree"
 				"Color"				"Green"
 				"GradientID"		"0"
-				"Deprecated"		"true"
+				
 			}
 			"hoodwink_hipshot" 
 			{
@@ -32850,7 +32989,7 @@
 				"Icon"				"dawnbreaker_hammer"
 				"Color"				"Yellow"
 				"GradientID"		"1"
-				"Deprecated"		"true"
+				
 			}
 			"dawnbreaker_blaze"	
 			{
@@ -33078,7 +33217,7 @@
 				"Icon"				"healing"
 				"Color"				"Gray"
 				"GradientID"		"3"
-				"Deprecated"		"true"
+				
 				"Abilities"
 				{
 					"Ability1"
@@ -33094,7 +33233,7 @@
 				"Icon"				"ricochet"
 				"Color"				"Blue"
 				"GradientID"		"1"
-				"Deprecated"		"true"
+				
 				"Abilities"
 				{
 					"Ability1"
@@ -33176,7 +33315,7 @@
 				"SlotText"		"#LoadoutSlot_Head"
 				"TextureWidth"		"512"
 				"TextureHeight"		"512"
-				"MaxPolygonsLOD0"		"2500"
+				"MaxPolygonsLOD0"		"3000"
 				"MaxPolygonsLOD1"		"1250"
 			}
 			"1"
@@ -33186,8 +33325,8 @@
 				"SlotText"		"#LoadoutSlot_Armor"
 				"TextureWidth"		"512"
 				"TextureHeight"		"512"
-				"MaxPolygonsLOD0"		"4000"
-				"MaxPolygonsLOD1"		"2000"
+				"MaxPolygonsLOD0"		"7500"
+				"MaxPolygonsLOD1"		"3400"
 			}
 			"2"
 			{
@@ -33196,8 +33335,8 @@
 				"SlotText"		"#LoadoutSlot_shoulder"
 				"TextureWidth"		"512"
 				"TextureHeight"		"512"
-				"MaxPolygonsLOD0"		"3000"
-				"MaxPolygonsLOD1"		"1500"
+				"MaxPolygonsLOD0"		"4000"
+				"MaxPolygonsLOD1"		"1600"
 			}
 			"3"
 			{
@@ -33205,8 +33344,8 @@
 				"SlotName"		"back"
 				"SlotText"		"#LoadoutSlot_Back"
 				"TextureWidth"		"512"
-				"TextureHeight"		"256"
-				"MaxPolygonsLOD0"		"2500"
+				"TextureHeight"		"512"
+				"MaxPolygonsLOD0"		"3000"
 				"MaxPolygonsLOD1"		"1250"
 			}
 			"4"
@@ -33311,7 +33450,7 @@
 				"Icon"				"speed"
 				"Color"				"Red"
 				"GradientID"		"0"
-				"Deprecated"		"true"
+				
 			}
 
 			"primal_beast_provoke_the_beast"
@@ -33555,6 +33694,13 @@
 					}
 				}
 			}
+
+			"muerta_slingshot"
+			{
+				"Icon"				"ricochet"
+				"Color"				"Red"
+				"GradientID"		"1"
+			}
 		}
 		"ArmorPhysical"		"0"
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
@@ -33657,9 +33803,9 @@
 				// this slot is overridden via a workshop template!
 				//
 				"TextureWidth"		"1024"  
-				"TextureHeight"		"512"
-				"MaxPolygonsLOD0"	"5000"
-				"MaxPolygonsLOD1"	"3000"
+				"TextureHeight"		"1024"
+				"MaxPolygonsLOD0"	"16000"
+				"MaxPolygonsLOD1"	"6400"
 				"no_import"		"1"
 			}
 			"5"
@@ -33738,7 +33884,7 @@
 		}
 
 		"Ability10"		"special_bonus_unique_ringmaster_whip_radius"
-		"Ability11"		"special_bonus_unique_ringmaster_box_cast_range"
+		"Ability11"		"special_bonus_unique_ringmaster_dagger_impact_damage"
 		"Ability12"		"special_bonus_unique_ringmaster_dagger_penetrates"
 		"Ability13"		"special_bonus_unique_ringmaster_whip_debuff_immunity"
 		"Ability14"		"special_bonus_unique_ringmaster_dagger_bleed_and_slow_duration"
@@ -33985,11 +34131,11 @@
 		"Ability10"					"kez_ravens_veil"
 		"Ability11"					"kez_shodo_sai_parry_cancel"
 		"Ability12"					"special_bonus_magic_resistance_12"
-		"Ability13"					"special_bonus_mp_regen_150"
+		"Ability13"					"special_bonus_unique_kez_raptor_dance_radius"
 		"Ability14"					"special_bonus_unique_kez_falcon_rush_duration"
-		"Ability15"					"special_bonus_unique_kez_ravens_veil_mark_parry_bonus"
+		"Ability15"					"special_bonus_unique_kez_raptor_dance_strikes"
 		"Ability16"					"special_bonus_unique_kez_kazura_katana_bleed_damage"
-		"Ability17"					"special_bonus_unique_kez_falcon_rush_evasion"
+		"Ability17"					"special_bonus_unique_kez_talon_toss_attack_factor"
 		"Ability18"					"special_bonus_unique_kez_mark_damage"
 		"Ability19"					"special_bonus_unique_kez_echo_slash_strike_count"
 		"AbilityTalentStart"		"12"
@@ -34039,9 +34185,10 @@
 		"AttributeBaseAgility"		"27"
 		"AttributeAgilityGain"		"5.5" // 原值: 3.5
 		"AttributeBaseIntelligence"		"20"
-		"AttributeIntelligenceGain"		"1.7" // 原值: 1.7
-		"StatusHealthRegen"				"1.0"
-		"MovementSpeed"		"315"
+		"AttributeIntelligenceGain"		"1.7"
+		"StatusHealthRegen"				"1.5"
+		"MovementSpeed"			"315"
+		"BaseAttackSpeed"		"110"
 		"AttackSpeedActivityModifiers"
 		{
 			"fast"		"150"

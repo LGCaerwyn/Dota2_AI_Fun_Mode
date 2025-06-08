@@ -132,3 +132,34 @@ end
 function IsModifierSafe( entity )
     return entity and not entity:IsNull() 
 end
+
+function CDOTA_BaseNPC:FindModifierByNameAndAbility( modifierName, ability )
+    local modifiers = self:FindAllModifiersByName( modifierName )
+    local returnTable = {}
+    for _,modifier in pairs(modifiers) do
+        if modifier:GetAbility() == ability then
+            return modifier
+        end
+    end
+end
+
+function CDOTA_BaseNPC:RefreshAllIntrinsicModifiers()
+    for i=DOTA_ITEM_SLOT_1, DOTA_ITEM_SLOT_6 do
+        local current_item = self:GetItemInSlot(i)
+        if current_item then
+            local passive = self:FindModifierByNameAndAbility( current_item:GetIntrinsicModifierName(), current_item )
+            if passive then
+                passive:Destroy()
+            end
+            current_item:RefreshIntrinsicModifier()
+        end
+    end
+    local neutralItem = self:GetItemInSlot(DOTA_ITEM_NEUTRAL_ACTIVE_SLOT)  
+    if neutralItem then
+        local passive = self:FindModifierByNameAndAbility( neutralItem:GetIntrinsicModifierName(), neutralItem )
+        if passive then
+            passive:Destroy()
+        end
+        neutralItem:RefreshIntrinsicModifier()
+    end
+end

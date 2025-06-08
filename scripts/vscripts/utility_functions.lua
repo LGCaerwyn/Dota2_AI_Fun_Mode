@@ -394,3 +394,61 @@ function Util_FindEnemiesAroundUnit_Farthest( hUnit, fRadius, bIgnoreInvis )
 end
 
 --------------------------------------------------------------------------------
+
+function IsEntitySafe( entity )
+    return entity and IsValidEntity( entity ) and not entity:IsNull() 
+end
+
+function IsModifierSafe( entity )
+    return entity and not entity:IsNull() 
+end
+
+function CDOTA_BaseNPC:RefreshAllIntrinsicModifiers()
+    for i=DOTA_ITEM_SLOT_1, DOTA_ITEM_SLOT_6 do
+        local current_item = self:GetItemInSlot(i)
+        if current_item then
+            local passive = self:FindModifierByNameAndAbility( current_item:GetIntrinsicModifierName(), current_item )
+            if passive then
+                passive:Destroy()
+            end
+            current_item:RefreshIntrinsicModifier()
+        end
+    end
+    local neutralItem = self:GetItemInSlot(DOTA_ITEM_NEUTRAL_ACTIVE_SLOT)  
+    if neutralItem then
+        local passive = self:FindModifierByNameAndAbility( neutralItem:GetIntrinsicModifierName(), neutralItem )
+        if passive then
+            passive:Destroy()
+        end
+        neutralItem:RefreshIntrinsicModifier()
+    end
+    for i = 0, self:GetAbilityCount() - 1 do
+        local ability = self:GetAbilityByIndex( i )
+        if ability then
+            local passive = self:FindModifierByNameAndAbility( ability:GetIntrinsicModifierName(), ability )
+            if passive then
+                local stacks = 0
+                local stackData = table.copy(passive._stackFollowList)
+                if passive then
+                    stacks = passive:GetStackCount()
+                    passive:Destroy()
+                end
+                Timers:CreateTimer(1, function()
+                    ability:RefreshIntrinsicModifier()
+                    passive = self:FindModifierByNameAndAbility( ability:GetIntrinsicModifierName(), ability )
+                    if IsModifierSafe( passive ) then
+                        passive._stackFollowList = stackData
+                        if passive._stackFollowList then
+                            passive:AddIndependentStack({stacks = 0, duration = 0})
+                        end
+                        passive:SetStackCount( stacks )
+                    else
+                        return 1
+                    end
+                end)
+            end
+        end
+    end
+    self:CalculateGenericBonuses()
+    if self:IsHero() then self:CalculateStatBonus(true) end
+end

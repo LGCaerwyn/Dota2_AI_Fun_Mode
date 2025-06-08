@@ -825,7 +825,7 @@
 		"Model"	                "models/gameplay/attrib_tome_str.vmdl"
 		// Item Info
 		// -------------------------------------------------------------------------------------------------------------
-		"ItemCost"	"1000"
+		"ItemCost"	"2000"
 		"ItemSellable"	"1"
 		"ItemShareability"	"ITEM_NOT_SHAREABLE"
 		"ItemPurchasable"	"1"
@@ -838,7 +838,7 @@
 		// -------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-			"bonus_stat"	"5"
+			"bonus_stat"	"10"
 		}
 		"skin"	"1"
 		"ItemDisplayCharges"	"1"
@@ -862,7 +862,7 @@
 		"Model"	"models/gameplay/attrib_tome_agi.vmdl"
 		// Item Info
 		// -------------------------------------------------------------------------------------------------------------
-		"ItemCost"	"1000"
+		"ItemCost"	"2000"
 		"ItemSellable"	"1"
 		"ItemShareability"	"ITEM_NOT_SHAREABLE"
 		"ItemPurchasable"	"1"
@@ -875,7 +875,7 @@
 		// -------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-			"bonus_stat"	"5"
+			"bonus_stat"	"10"
 		}
 		"skin"	"2"
 		"ItemDisplayCharges"	"1"
@@ -899,7 +899,7 @@
 		"Model"	                "models/gameplay/attrib_tome_int.vmdl"
 		// Item Info
 		// -------------------------------------------------------------------------------------------------------------
-		"ItemCost"	"1000"
+		"ItemCost"	"2000"
 		"ItemSellable"	"1"
 		"ItemShareability"	"ITEM_NOT_SHAREABLE"
 		"ItemPurchasable"	"1"
@@ -912,7 +912,7 @@
 		// -------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-			"bonus_stat"	"5"
+			"bonus_stat"	"10"
 		}
 		"ItemDisplayCharges"	"1"
 	}
@@ -2902,8 +2902,8 @@
         "ItemRequirements"
         {
             "01"                        "item_vitality_booster;item_vitality_booster;item_pers"
-            "04"                        "item_vitality_booster;item_vanguard;item_void_stone"
-            "06"                        "item_vitality_booster;item_vitality_booster;item_ring_of_health;item_void_stone"
+            //"04"                        "item_vitality_booster;item_vanguard;item_void_stone"
+            //"06"                        "item_vitality_booster;item_vitality_booster;item_ring_of_health;item_void_stone"
         }
     }
     //=================================================================================================================
@@ -2914,7 +2914,7 @@
         // General
         //-------------------------------------------------------------------------------------------------------------
         "BaseClass"                     "item_lua"
-        "ScriptFile"                    "scripts/vscripts/fun_items/item_lucky_dice.lua"
+        "ScriptFile"                    "Fun_items/item_lucky_dice"
         "AbilityTextureName"            "lucky_dice/lucky_dice"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
@@ -2976,7 +2976,7 @@
         // General
         //-------------------------------------------------------------------------------------------------------------
         "BaseClass"                     "item_lua"
-        "ScriptFile"                    "scripts/vscripts/fun_items/item_lucky_dice.lua"
+        "ScriptFile"                    "Fun_items/item_lucky_dice"
         "AbilityTextureName"            "lucky_dice/lucky_dice_2"
         "AbilityBehavior"               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
 
@@ -3038,7 +3038,7 @@
         // General
         //-------------------------------------------------------------------------------------------------------------
         "BaseClass"                                     "item_lua"
-        "ScriptFile"                                    "scripts/vscripts/fun_items/item_lucky_dice.lua"
+        "ScriptFile"                                    "Fun_items/item_lucky_dice"
         "AbilityTextureName"                            "lucky_dice/lucky_dice_3"
         "AbilityBehavior"                               "DOTA_ABILITY_BEHAVIOR_PASSIVE"
         

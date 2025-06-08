@@ -75,8 +75,8 @@ function item_fun_blessing( keys )
 	--3、斧王岛不限制可选项，每次使用都会更换成新的效果
 
     local index_1 = -1 
-	local temp_str_buff = PlayerResource:GetPlayerName(target:GetPlayerID()).."获得祝福："
-	local temp_str_buff_eng = PlayerResource:GetPlayerName(target:GetPlayerID()).."Gain Blessing:"
+	local temp_str_buff = PlayerResource:GetPlayerName(target:GetPlayerID()).." 获得祝福："
+	local temp_str_buff_eng = PlayerResource:GetPlayerName(target:GetPlayerID()).." Gain Blessing:"
 	local buff = target:FindModifierByName(target.blessing_table["buff"])
 
     if GameRules.isDemo == true then
@@ -134,7 +134,7 @@ function item_fun_blessing( keys )
 				else
 				    local temp_index_1 = target.blessing_table["optional_buff"][i]
 				    temp_str_buff = temp_str_buff.."<font color=\"#FF0000\">"..blessing_table[temp_index_1].name_cn.."（未激活）</font> "
-				    temp_str_buff_eng = temp_str_buff_eng.."<font color=\"#FF0000\">"..blessing_table[temp_index_1].name_cn.."（Unactivated）</font> "
+				    temp_str_buff_eng = temp_str_buff_eng.."<font color=\"#FF0000\">"..blessing_table[temp_index_1].name.."（Unactivated）</font> "
                 end
 				if i ~= reset_times + 1 then
 				    temp_str_buff = temp_str_buff.." "
