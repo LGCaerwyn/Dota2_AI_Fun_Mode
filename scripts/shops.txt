@@ -142,8 +142,6 @@
 		"item"                       "item_fun_greater_mango"
 		"item"                       "item_fun_Jade_boots"
 		"item"                       "item_fun_aeon_disk_v2"
-
-		//"item"                       "item_lucky_dice"
 	}
 
 	// Level 2 - Blue Recipes
@@ -168,6 +166,8 @@
 		"item"		"item_pipe"
 		"item"		"item_guardian_greaves"
 		"item"		"item_boots_of_bearing"
+		"item"		"item_essence_distiller"
+		
 		//Fun自制物品
 		"item"		"item_fun_Aghanims_Robe"
 		"item"		"item_fun_spirit_vessel"

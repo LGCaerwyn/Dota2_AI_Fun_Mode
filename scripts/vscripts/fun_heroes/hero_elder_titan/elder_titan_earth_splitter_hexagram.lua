@@ -7,7 +7,8 @@ function elder_titan_earth_splitter_hexagram( keys )
 	local caster = keys.caster
 	local target = keys.target
 	local caster_point = caster:GetAbsOrigin()
-	local targetPoint = keys.target_points[1]
+	--local targetPoint = keys.target_points[1]
+	local targetPoint = keys.ability:GetCursorPosition()
 
     local caster_ForwardVector = caster:GetForwardVector()
 

@@ -942,14 +942,14 @@ end
 neutral_items = {
 
     item_tier1 = {
-	        "item_trusty_shovel",
 			"item_occult_bracelet",
-			"item_unstable_wand",
-			"item_mana_draught",
+			"item_kobold_cup",
+			"item_chipped_vest",
 			"item_polliwog_charm",
-			"item_spark_of_courage",
-			"item_rippers_lash",
-			"item_orb_of_destruction",
+			"item_dormant_curio",
+			"item_duelist_gloves",
+			"item_weighted_dice",
+			"item_ash_legion_shield",
     },
 
     enhancements_tier1 = {
@@ -962,11 +962,11 @@ neutral_items = {
 
     item_tier2 = {
 			"item_essence_ring",
-			"item_iron_talon",
-			"item_gossamer_cape",
-			"item_searing_signet",
-			"item_misericorde",
-			"item_pogo_stick",
+			"item_mana_draught",
+            "item_poor_mans_shield",
+            "item_searing_signet",
+            "item_pogo_stick",
+            "item_defiant_shell",
     },
 
     enhancements_tier2 = {
@@ -983,11 +983,11 @@ neutral_items = {
 
     item_tier3 = {
 			"item_serrated_shiv",
-			"item_nemesis_curse",
-			"item_gale_guard",
 			"item_gunpowder_gauntlets",
 			"item_whisper_of_the_dread",
-			"item_ninja_gear",		
+			"item_jidi_pollen_bag",
+			"item_psychic_headband",
+			"item_unrelenting_eye",	
     },
     enhancements_tier3 = {
         		{ name = "item_enhancement_mystical",  lvl = 3 },
@@ -1002,12 +1002,12 @@ neutral_items = {
     },
 
     item_tier4 = {
-			"item_ogre_seal_totem",
 			"item_crippling_crossbow",
-			"item_magnifying_monocle",
-			"item_ceremonial_robe",
-			"item_mind_breaker",
-			"item_pyrrhic_cloak",
+			"item_giant_maul",
+			"item_rattlecage",
+			"item_idol_of_screeauk",
+			"item_flayers_bota",
+			"item_metamorphic_mandible",
     },
 
     enhancements_tier4 = {
@@ -1028,9 +1028,9 @@ neutral_items = {
 			"item_demonicon",
 			"item_minotaur_horn",
 			"item_spider_legs",
-			"item_panic_button",
-			"item_unrelenting_eye",
-			"item_pirate_hat",	
+			"item_riftshadow_prism",
+			"item_dezun_bloodrite",        
+			"item_divine_regalia",
     },
 
     enhancements_tier5 = {

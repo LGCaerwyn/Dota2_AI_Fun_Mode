@@ -5,7 +5,8 @@
 	Blinks the target to the target point, if the point is beyond max blink range then blink the maximum range]]
 function Blink(keys)
     if not IsServer() then return true end
-	local point = keys.target_points[1]
+	--local point = keys.target_points[1]
+	local point = keys.ability:GetCursorPosition()
 	local caster = keys.caster
 	local casterPos = caster:GetAbsOrigin()
 	local pid = caster:GetPlayerID()
