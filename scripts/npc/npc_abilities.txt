@@ -197,7 +197,6 @@
 			"active_duration"		"420"
 			"inactive_duration"		"120"
 			"duration"				"420"
-			"active_radius"			"800"
 		}
 	}
 
@@ -869,6 +868,10 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityCooldown"				"15.0"
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
+		"AbilityValues"
+		{
+			"status_resistance"			"25"
+		}
 	}
 
 	//=================================================================================================================
@@ -1488,8 +1491,8 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{		
-			"damage"		"100"
-			"bounces"			"4 6 8 12"
+			"damage"				"80 95 110 125"
+			"bounces"				"4 6 8 12"
 			"bounce_range"			"500"
 			"duration"				"1"
 			"slow"					"100"
@@ -1885,10 +1888,11 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-			"damage_absorb"		"2000"
-			"absorb_bonus_per_interval"	"20"
-			"regen_per_second"	"40"
-			"regen_bonus_per_interval"	"3.5"
+			"damage_absorb"					"3000"
+			"absorb_bonus_per_interval"		"50"
+			"regen_per_second"				"20"
+			"regen_bonus_per_interval"		"5"
+			"status_resistance"				"25"
 		}
 	}
 
@@ -1904,8 +1908,14 @@
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-				"passive_reflection_pct"			"50"
+				"passive_reflection_pct"					"30"
 				"passive_reflection_bonus_per_interval"		"2"
+				"passive_reflection_base"					"0"
+				"passive_reflection_base_per_interval"		"0"
+				"radius"						"1200"
+				"speed"							"700"
+				"wave_interval"					"1.0"
+				"preview_duration"				"0.8"
 		}
 	}
 
@@ -1922,7 +1932,8 @@
 		"AbilityValues"
 		{
 				"aura_radius"			"1000"
-				"aura_damage"			"60"
+				"aura_damage"				"20"
+				"aura_damage_per_upgrade"	"2"
 				"aura_interval"			"0.2"
 				"attack_timer_duration"		"10"
 		}
@@ -1942,6 +1953,22 @@
 				"aura_duration"			"10"
 				"hp_restoration_pct"			"2"
 				"radius"			"900"
+		}
+	}
+
+	"miniboss_fortification"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"MaxLevel"						"1"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityType"					"ABILITY_TYPE_BASIC"
+
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"damage_reduction_per_tower" "0"
 		}
 	}
 
@@ -2022,7 +2049,6 @@
 		"AbilityValues"
 		""
 	}
-
 
 	//=================================================================================================================
 	// Heavy (Replacing legacy Siege Attack Type / Structure Defend type)
@@ -2216,6 +2242,7 @@
 				"bonus_health_regen"					"3"
 				"radius"								"700"
 				"bonus_gold"							"10"
+				"bonus_xp"								"3"
 				"bonus_magic_resistance_per_interval"	"4"
 				"maximum_intervals"						"15"
 				"total_magic_resistance"
@@ -2349,7 +2376,7 @@
 		"AbilityValues"
 		{
 			"burn_amount"			"20 25 30 35"
-			"int_multiplier"		"2 2.5 3 4"
+			"int_multiplier"		"1 1.5 2 2.5"
 		}
 		"AbilityCastAnimation"		"ACT_DOTA_CAST_ABILITY_1"
 	}
@@ -2375,7 +2402,7 @@
 		"AbilityCastRange"				"700"
 		"AbilityCastPoint"				"0.5"
 		"AbilityCooldown"				"8.0"
-		"AbilityDamage"					"160"
+		"AbilityDamage"					"140 160 180 200"
 		"AbilityManaCost"				"100"
 
 		// Special
@@ -2672,7 +2699,7 @@
 		{
 			"initial_damage"
 			{
-				"value" "140 180 220 260"
+				"value" "120 170 220 270"
 			}
 			"jump_range"
 			{
@@ -3249,7 +3276,11 @@
 			"projectile_width"				"100"
 			"damage"						"250 275 300 325"
 			"duration"						"1.4"
-			"range"							"300"
+			"range"
+			{
+				"value"						"300"
+				"affected_by_aoe_increase"	"1"
+			}
 			"speed"							"725"
 			"projectile_count"				"6"
 			"neutral_shared_cooldown"		"5.0"		// 0 disables
@@ -3361,7 +3392,11 @@
 		"AbilityValues"
 		{
 			"duration"			"10"
-			"radius"			"675"		
+			"radius"
+			{
+				"value"			"675"
+				"affected_by_aoe_increase"	"1"
+			}
 			"heal_pct"			"50"
 			"damage_absorb"
 			{
@@ -10421,6 +10456,26 @@
 	//=================================================================================================================
 	// Ability: Special Bonus
 	//=================================================================================================================
+	"special_bonus_agility_81"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"BaseClass"						"special_bonus_base"
+		"SpecialBonusIntrinsicModifier" "modifier_special_bonus_agility"
+		"AbilityValues"
+		{
+			"value"
+			{
+				"value" "81"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
 	"special_bonus_agility_100"
 	{
 		// General
@@ -11637,6 +11692,24 @@
 			"value"
 			{
 				"value" "252"
+			}
+		}
+	}
+
+	//=================================================================================================================
+	// Ability: Special Bonus
+	//=================================================================================================================
+	"special_bonus_attack_damage_253"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"ABILITY_TYPE_ATTRIBUTES"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE"
+		"AbilityValues"
+		{
+			"value"
+			{
+				"value" "253"
 			}
 		}
 	}
@@ -15599,4 +15672,176 @@
 	//=================================================================================================================
 	//=================================================================================================================
 
+
+	//=================================================================================================================
+	//=================================================================================================================
+	// Begin Deity's Blessing Abilities
+	//=================================================================================================================
+	//=================================================================================================================
+
+	"deity_blessing_goddess_of_luck"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"ABILITY_TYPE_HIDDEN"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"MaxLevel"						"1"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"ability_points"			"1"
+			"level_decrease"			"1"
+		}
+	}
+
+	"deity_blessing_spirit_of_nature"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"ABILITY_TYPE_HIDDEN"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"MaxLevel"						"1"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"initial_stat_main"			"3"
+			"main_stat"					"1"
+			"initial_universal"			"1"
+			"stat_universal"			".5"
+		}
+	}
+
+	"deity_blessing_omniscience"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"ABILITY_TYPE_HIDDEN"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"MaxLevel"						"1"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"xp_gain"					"75"
+			"lowest_overall_bonus"		"100"
+
+			"tick_interval"				"4"
+		}
+	}
+
+	"deity_blessing_imperator"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"ABILITY_TYPE_HIDDEN"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"MaxLevel"						"1"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"slow_resist"			"35"
+			"enemy_decrease"		"7"
+		}
+	}
+
+	"deity_blessing_seven_hells"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"ABILITY_TYPE_HIDDEN"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"MaxLevel"						"1"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{			
+			"debuff_amp_per_kill"	"0.33"
+			"death_loss"		"50"
+		}
+	}
+
+	"deity_blessing_aghanim"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"ABILITY_TYPE_HIDDEN"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"MaxLevel"						"1"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"innate_scale"				"4"
+			"ability_points"			"1"
+			"level_decrease"			"1"
+		}
+	}
+
+	"deity_blessing_fundamentals"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"ABILITY_TYPE_HIDDEN"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"MaxLevel"						"1"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"next_tier_choices"			"2"
+			"current_tier_choices"		"3"
+		}
+	}
+
+	"deity_blessing_flayed_twins"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"ABILITY_TYPE_HIDDEN"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"MaxLevel"						"1"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"debuff_self"			"8"
+			"debuff_enemy"			"12"
+			"debuff_enemy_duration"	"5"
+		}
+	}
+
+	"deity_blessing_deep_ones"
+	{
+		// General
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityType"					"ABILITY_TYPE_HIDDEN"
+		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_PASSIVE | DOTA_ABILITY_BEHAVIOR_HIDDEN | DOTA_ABILITY_BEHAVIOR_NOT_LEARNABLE"
+		"MaxLevel"						"1"
+		
+		// Special
+		//-------------------------------------------------------------------------------------------------------------
+		"AbilityValues"
+		{
+			"hp_regen_amp"				"20"
+			"mana_regen_amp"			"25"
+			"movement_speed"			"10"
+		}
+	}
+
+	//=================================================================================================================
+	//=================================================================================================================
+	// End Deity's Blessing Abilities
+	//=================================================================================================================
+	//=================================================================================================================
 }

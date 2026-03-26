@@ -47,6 +47,7 @@
 //  #80194       钢背兽：反击针刺                      "bristleback_back"
 //  #80195       祈求者：祈艺大师                      "invoker_again"
 //  #80196       天穹守望者：乱流（重置版）      "arc_warden_flux_fun"
+//  #80197       祈求者：法术冲击	      "invoker_mastermind"
 
 //====================================
 "DOTAAbilities"
@@ -2746,7 +2747,7 @@
 			{
 				"ScriptFile"	"scripts/vscripts/fun_heroes/hero_legion_commander/duel.lua"
 				"Function"	"legion_commander_duel_datadriven_on_spell_start"
-                                                                "Duration"                "%duration"
+				"Duration"                "%duration"
 			}
 		}
 		"Modifiers"
@@ -2791,7 +2792,7 @@
 			"modifier_duel_damage_datadriven"
 			{
 				"IsBuff"	                "1"
-                                                                "Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
+				"Attributes"	"MODIFIER_ATTRIBUTE_PERMANENT | MODIFIER_ATTRIBUTE_IGNORE_INVULNERABLE"
 				"Properties"
 				{
 					"MODIFIER_PROPERTY_PREATTACK_BONUS_DAMAGE"	"1"
@@ -2825,8 +2826,8 @@
 		"AbilityValues"
 		{
 			"duration"	                "5.5"
-			"reward_damage"	"50"
-                                                "duel_radius"            
+			"reward_damage"				"50"
+			"duel_radius"            
 			{
 				"value"			"800"
 				"affected_by_aoe_increase"	"1"

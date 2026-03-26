@@ -148,6 +148,9 @@ function modifier_duel_datadriven_on_destroy(keys)
 	target:SetForceAttackTarget(nil)
 	caster:SetForceAttackTarget(nil)
 
+    target:RemoveModifierByName(modifier_duel)
+    caster:RemoveModifierByName(modifier_duel)
+	
 	for k,rF in pairs(units_target) do
 		rF:SetForceAttackTarget(nil)
 	end

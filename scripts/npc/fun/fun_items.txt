@@ -821,7 +821,7 @@
 		"Model"	                "models/gameplay/attrib_tome_str.vmdl"
 		// Item Info
 		// -------------------------------------------------------------------------------------------------------------
-		"ItemCost"	"2000"
+		"ItemCost"	"5000"
 		"ItemSellable"	"1"
 		"ItemShareability"	"ITEM_NOT_SHAREABLE"
 		"ItemPurchasable"	"1"
@@ -834,7 +834,7 @@
 		// -------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-			"bonus_stat"	"10"
+			"bonus_stat"	"25"
 		}
 		"skin"	"1"
 		"ItemDisplayCharges"	"1"
@@ -858,7 +858,7 @@
 		"Model"	"models/gameplay/attrib_tome_agi.vmdl"
 		// Item Info
 		// -------------------------------------------------------------------------------------------------------------
-		"ItemCost"	"2000"
+		"ItemCost"	"5000"
 		"ItemSellable"	"1"
 		"ItemShareability"	"ITEM_NOT_SHAREABLE"
 		"ItemPurchasable"	"1"
@@ -871,7 +871,7 @@
 		// -------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-			"bonus_stat"	"10"
+			"bonus_stat"	"25"
 		}
 		"skin"	"2"
 		"ItemDisplayCharges"	"1"
@@ -895,7 +895,7 @@
 		"Model"	                "models/gameplay/attrib_tome_int.vmdl"
 		// Item Info
 		// -------------------------------------------------------------------------------------------------------------
-		"ItemCost"	"2000"
+		"ItemCost"	"5000"
 		"ItemSellable"	"1"
 		"ItemShareability"	"ITEM_NOT_SHAREABLE"
 		"ItemPurchasable"	"1"
@@ -908,7 +908,7 @@
 		// -------------------------------------------------------------------------------------------------------------
 		"AbilityValues"
 		{
-			"bonus_stat"	"10"
+			"bonus_stat"	"25"
 		}
 		"ItemDisplayCharges"	"1"
 	}
@@ -2382,9 +2382,10 @@
 				"bonus_agility"		"15"
 				"bonus_hp_regen"		"18"
 				"bonus_armor"		"28"
+				"bonus_aoe"				"75"
 				"aura_radius"		
 				{
-					"value"	"1200"
+					"value"	"1500"
 					"affected_by_aoe_increase"	"1"
 				}
 				"aura_attack_speed"		"-100"

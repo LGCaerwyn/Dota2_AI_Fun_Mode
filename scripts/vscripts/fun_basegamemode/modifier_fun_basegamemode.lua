@@ -950,6 +950,10 @@ neutral_items = {
 			"item_duelist_gloves",
 			"item_weighted_dice",
 			"item_ash_legion_shield",
+			"item_dagger_of_ristul",
+			"item_stonefeather_satchel",
+			"item_possessed_mask",
+			"item_foragers_kit",
     },
 
     enhancements_tier1 = {
@@ -958,6 +962,7 @@ neutral_items = {
                 { name = "item_enhancement_alert",     lvl = 1 },
                 { name = "item_enhancement_tough",     lvl = 1 },
                 { name = "item_enhancement_quickened", lvl = 1 },					
+                { name = "item_enhancement_vital",     lvl = 1 },
     },
 
     item_tier2 = {
@@ -967,6 +972,9 @@ neutral_items = {
             "item_searing_signet",
             "item_pogo_stick",
             "item_defiant_shell",
+			"item_crippling_crossbow",
+			"item_medallion_of_courage",		
+			"item_seeds_of_serenity",
     },
 
     enhancements_tier2 = {
@@ -977,17 +985,25 @@ neutral_items = {
                 { name = "item_enhancement_quickened", lvl = 2 },	
                 { name = "item_enhancement_keen_eyed", lvl = 1 },
                 { name = "item_enhancement_vast",      lvl = 1 },
-                --{ name = "item_enhancement_greedy",    lvl = 1 },
-                { name = "item_enhancement_vampiric",  lvl = 1 },				
+                { name = "item_enhancement_greedy",    lvl = 1 },
+                { name = "item_enhancement_vampiric",  lvl = 1 },
+                { name = "item_enhancement_crude",    lvl = 1 },
+                { name = "item_enhancement_nimble",  lvl = 1 },
+                { name = "item_enhancement_titanic",  lvl = 1 },				
     },
 
     item_tier3 = {
 			"item_serrated_shiv",
 			"item_gunpowder_gauntlets",
-			"item_whisper_of_the_dread",
+			--"item_whisper_of_the_dread",
 			"item_jidi_pollen_bag",
 			"item_psychic_headband",
-			"item_unrelenting_eye",	
+			"item_unrelenting_eye",
+
+			"item_cloak_of_flames",
+			"item_spellslinger",
+			"item_stormcrafter",
+			"item_partisans_brand",		
     },
     enhancements_tier3 = {
         		{ name = "item_enhancement_mystical",  lvl = 3 },
@@ -997,17 +1013,24 @@ neutral_items = {
                 { name = "item_enhancement_quickened", lvl = 3 },	
                 { name = "item_enhancement_keen_eyed", lvl = 2 },
                 { name = "item_enhancement_vast",      lvl = 2 },
-                --{ name = "item_enhancement_greedy",    lvl = 2 },
-                { name = "item_enhancement_vampiric",  lvl = 2 },	
+                { name = "item_enhancement_greedy",    lvl = 2 },
+                { name = "item_enhancement_vampiric",  lvl = 2 },
+                { name = "item_enhancement_crude",    lvl = 2 },
+				{ name = "item_enhancement_nimble",  lvl = 2 },
+                { name = "item_enhancement_titanic",  lvl = 2 },
     },
 
     item_tier4 = {
-			"item_crippling_crossbow",
+			--"item_crippling_crossbow",
 			"item_giant_maul",
 			"item_rattlecage",
 			"item_idol_of_screeauk",
 			"item_flayers_bota",
 			"item_metamorphic_mandible",
+			"item_dandelion_amulet",
+			"item_enchanters_bauble",
+			"item_prophets_pendulum",
+			"item_conjurers_catalyst",
     },
 
     enhancements_tier4 = {
@@ -1018,8 +1041,10 @@ neutral_items = {
                 { name = "item_enhancement_quickened", lvl = 4 },	
                 { name = "item_enhancement_vampiric",  lvl = 3 },	
                 { name = "item_enhancement_timeless",  lvl = 1 },
-                { name = "item_enhancement_titanic",   lvl = 1 },	
-                { name = "item_enhancement_crude",     lvl = 1 },				
+                { name = "item_enhancement_titanic",   lvl = 3 },	
+                { name = "item_enhancement_crude",     lvl = 3 },
+                { name = "item_enhancement_nimble",     lvl = 3 },
+				{ name = "item_enhancement_keen_eyed", lvl = 3 },				
     },
 
     item_tier5 = {
@@ -1031,18 +1056,20 @@ neutral_items = {
 			"item_riftshadow_prism",
 			"item_dezun_bloodrite",        
 			"item_divine_regalia",
+			"item_harmonizer",
+			"item_heavy_blade",
     },
 
     enhancements_tier5 = {
                 { name = "item_enhancement_timeless",    lvl = 2 },
-                { name = "item_enhancement_titanic",     lvl = 2 },	
-                { name = "item_enhancement_crude",       lvl = 2 },	
                 { name = "item_enhancement_feverish",    lvl = 1 },	
                 { name = "item_enhancement_fleetfooted", lvl = 1 },	
                 { name = "item_enhancement_audacious",   lvl = 1 },	
                 { name = "item_enhancement_evolved",     lvl = 1 },					
                 { name = "item_enhancement_boundless",   lvl = 1 },	
-                --{ name = "item_enhancement_wise",        lvl = 1 },									
+                { name = "item_enhancement_vampiric",	 lvl = 1 },
+                { name = "item_enhancement_hulking",	 lvl = 1 },
+                { name = "item_enhancement_manic",	 	 lvl = 1 },					
     },
 }
 
