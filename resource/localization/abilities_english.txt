@@ -982,11 +982,13 @@
 		"DOTA_Tooltip_ability_mirana_selemenes_faithful_Description"						"Healing Lotuses are %bonus_lotus%%% more effective on Mirana and her allies."
 
 		"DOTA_Tooltip_ability_mirana_celestial_quiver"									"Celestial Quiver"
-		"DOTA_Tooltip_ability_mirana_celestial_quiver_Description"						"When a charge is available, Mirana's next attack will deal bonus magic damage.<br><br>Gains a charge every %levels_per_quiver_tooltip% hero levels."
+		"DOTA_Tooltip_ability_mirana_celestial_quiver_Description"						"When a charge is available, Mirana's next attack will deal bonus magic damage."
 		"DOTA_Tooltip_ability_mirana_celestial_quiver_bonus_damage"						"BONUS DAMAGE:"
 		"DOTA_Tooltip_ability_mirana_celestial_quiver_shard_Description"				"Grants %quiver_restore% temporary Charges while Leap's buff is active."
 		"DOTA_Tooltip_modifier_mirana_celestial_quiver"									"Celestial Quiver"
 		"DOTA_Tooltip_ability_special_bonus_unique_mirana_quiver_damage"				"+{s:bonus_bonus_damage} Celestial Quiver Damage"
+		"DOTA_Tooltip_ability_mirana_celestial_quiver_AbilityCharges"						"MAX CHARGES:"
+		"DOTA_Tooltip_ability_mirana_celestial_quiver_AbilityChargeRestoreTime"				"CHARGE RESTORE TIME:"
 
 
 		"DOTA_Tooltip_Facet_mirana_moonlight"											"Moonlight Shadow Facet"
@@ -1265,7 +1267,7 @@
 		"DOTA_Tooltip_ability_windrunner_windrun_Lore"									"Lyralei enchants gusts of winds to fight incoming attacks."
 		"DOTA_Tooltip_ability_windrunner_windrun_Note0"									"Activating Windrun will evade incoming projectiles."
 		"DOTA_Tooltip_ability_windrunner_windrun_evasion_pct_tooltip"					"%EVASION:"
-		"DOTA_Tooltip_ability_windrunner_windrun_duration"								"DURATION:"
+		"DOTA_Tooltip_ability_windrunner_windrun_AbilityDuration"						"DURATION:"
 		"DOTA_Tooltip_ability_windrunner_windrun_movespeed_bonus_pct"					"%MOVE SPEED BONUS:"
 
 		"DOTA_Tooltip_modifier_windrunner_shackle_shot"				"Shackleshot"
@@ -1650,7 +1652,7 @@
 		"DOTA_Tooltip_ability_juggernaut_bladeform"											"Bladeform"
 		"DOTA_Tooltip_ability_juggernaut_bladeform_Description"								"Juggernaut gains a stack of Bladeform every %stack_gain_time%s that Juggernaut does not take damage. Each stack grants bonus base Agility and Movement Speed. Stacks fade after %linger_duration%s upon taking any damage."
 		"DOTA_Tooltip_ability_juggernaut_bladeform_max_stacks"								"MAX STACKS:"
-		"DOTA_Tooltip_ability_juggernaut_bladeform_agi_bonus_pct_per_stack"					"%BASE AGILITY PCT PER STACK:"
+		"DOTA_Tooltip_ability_juggernaut_bladeform_agi_bonus_pct_per_stack"					"%BASE AGILITY PER STACK:"
 		"DOTA_Tooltip_ability_juggernaut_bladeform_movement_speed_pct_per_stack"			"%MOVEMENT SPEED PER STACK:"
 		"DOTA_Tooltip_ability_juggernaut_bladeform_linger_duration"							"LINGER DURATION:"
 
@@ -2448,7 +2450,7 @@
 		"DOTA_Tooltip_ability_morphling_morph_str_Note1"								"Leveling up Strength Gain will also level up Agility Gain."
 		"DOTA_Tooltip_ability_morphling_morph_str_mana_cost"							"MANA COST PER SECOND:"
 		"DOTA_Tooltip_ability_morphling_replicate"										"Morph"
-		"DOTA_Tooltip_ability_morphling_replicate_Description"							"Morphling changes his form to match the targeted enemy, gaining their basic abilities. Can be toggled for the duration of the ability."
+		"DOTA_Tooltip_ability_morphling_replicate_Description"							"Morphling changes his form to match the targeted enemy, gaining their basic abilities and changing his primary attribute based on his target. Can be toggled for the duration of the ability."
 		"DOTA_Tooltip_ability_morphling_replicate_scepter_description"					"Adds an alt-cast to Morph. When enabled, a strong illusion is created of the target hero that can cast all of the hero's basic abilities. If the illusion is alive when Morphling toggles the ability, he will take the place of the illusion, destroying it."
 		"DOTA_Tooltip_ability_morphling_replicate_Lore"									"Staring into Morphling produces a reflection that mimics the beholder."
 		"DOTA_Tooltip_ability_morphling_replicate_Note0"								"You can't target yourself with Morph."
@@ -3677,8 +3679,6 @@
 		"DOTA_Tooltip_ability_tidehunter_kraken_shell_Description"						"Thickens Tidehunter's hide to passively block a portion of any incoming physical attack damage. Reduced block amount versus creeps. The hide also removes negative status effects if the damage taken crosses a threshold.\n\nCan be activated to double the block amount at the cost of %active_move_speed_penalty_pct%%% movement speed. Lasts %active_duration%s.\n\nDISPEL TYPE: Strong Dispel"
 		"DOTA_Tooltip_ability_tidehunter_kraken_shell_Facet_tidehunter_kraken_swell"		"Kraken Shell gains permanent Damage Block when an enemy hero dies under the effects of Anchor Smash."
 		"DOTA_Tooltip_ability_tidehunter_kraken_shell_Lore"								"Claddish navymen tell tales of a mighty sea-faring beast that suffered spear and sword but continued to lay waste to the fleet."
-		"DOTA_Tooltip_ability_tidehunter_kraken_shell_Note0"							"Break disables the gaining of new Kraken Swell stacks."
-		"DOTA_Tooltip_ability_tidehunter_kraken_shell_Note1"							"Break does not disable the bonuses from existing Kraken Swell stacks."
 		"DOTA_Tooltip_ability_tidehunter_kraken_shell_Note2"							"Does not stack with items that provide Damage Block."
 		"DOTA_Tooltip_ability_tidehunter_kraken_shell_damage_cleanse"					"DAMAGE CLEANSE THRESHOLD:"
 		"DOTA_Tooltip_ability_tidehunter_kraken_shell_damage_reset_interval"			"DAMAGE RESET INTERVAL:"
@@ -3748,23 +3748,24 @@
 		"DOTA_Tooltip_Facet_tidehunter_sizescale28"										"Lion's Mane Jellyfish Eater"
 		"DOTA_Tooltip_Facet_tidehunter_sizescale29"										"Titanic Eater"
 		"DOTA_Tooltip_Facet_tidehunter_sizescale30"										"Stuffed Eater"
-		"DOTA_Tooltip_Facet_tidehunter_sizescale_Description"							"Tidehunter grows larger and gains extra bonuses per level."
-		"DOTA_Tooltip_Ability_tidehunter_krill_eater"									"Leviathan's Catch"
-		"DOTA_Tooltip_Ability_tidehunter_krill_eater_Description"						"Whenever an enemy hero is killed by Tidehunter or dies under his debuffs, a fish appears in their place for %fish_duration% seconds. Tidehunter can eat the fish to permanently gain %fish_health_bonus% Health, %fish_attack_range% Attack Range, and %fish_damage_block% Bonus Damage Block. Tidehunter eats a fish every level up."
-		"DOTA_Tooltip_Ability_tidehunter_krill_eater_Note0"								"Enemies can destroy the fish."
-		"DOTA_Tooltip_Ability_tidehunter_krill_eater_Note1"								"Bonus Damage Block only applies if another source of Damage Block will be affecting the incoming physical attack."
-		"DOTA_Tooltip_Ability_tidehunter_krill_eater_permanent_health_gain"				"HEALTH GAINED:"
-		"DOTA_Tooltip_Ability_tidehunter_krill_eater_permanent_attack_range_gain"		"ATTACK RANGE GAINED:"
-		"DOTA_Tooltip_Ability_tidehunter_krill_eater_permanent_damage_block_gain"		"BONUS DAMAGE BLOCK GAINED:"
+		"DOTA_Tooltip_Facet_tidehunter_sizescale_Description"								"Tidehunter grows larger and gains extra bonuses per level."
+		"DOTA_Tooltip_Ability_tidehunter_leviathans_catch"									"Leviathan's Catch"
+		"DOTA_Tooltip_Ability_tidehunter_leviathans_catch_Description"						"Whenever an enemy hero is killed by Tidehunter or dies under his debuffs, a fish appears in their place; Tidehunter can eat the fish to permanently gain %fish_health_bonus% Health, %fish_attack_range% Attack Range, and %fish_damage_block% Bonus Damage Block.<br><br>Tidehunter eats a free fish every time he reaches an even hero level."
+		"DOTA_Tooltip_Ability_tidehunter_leviathans_catch_Note0"							"Enemies can destroy the fish."
+		"DOTA_Tooltip_Ability_tidehunter_leviathans_catch_Note1"							"Bonus Damage Block only applies if another source of Damage Block will be affecting the incoming physical attack."
+		"DOTA_Tooltip_Ability_tidehunter_leviathans_catch_permanent_health_gain"			"HEALTH GAINED:"
+		"DOTA_Tooltip_Ability_tidehunter_leviathans_catch_permanent_attack_range_gain"		"ATTACK RANGE GAINED:"
+		"DOTA_Tooltip_Ability_tidehunter_leviathans_catch_permanent_damage_block_gain"		"BONUS DAMAGE BLOCK GAINED:"
 
-		"DOTA_Tooltip_modifier_tidehunter_krill_eater_counter"							"Leviathan's Catch"
-		"DOTA_Tooltip_modifier_tidehunter_krill_eater_counter_Description"				"Eaten %dMODIFIER_PROPERTY_TOOLTIP% yummy fish."
+		"DOTA_Tooltip_modifier_tidehunter_leviathans_catch_counter"							"Leviathan's Catch"
+		"DOTA_Tooltip_modifier_tidehunter_leviathans_catch_counter_Description"				"Eaten %dMODIFIER_PROPERTY_TOOLTIP% yummy fish."
+		"DOTA_Tooltip_modifier_tidehunter_leviathans_catch_counter_PostGame"				"Fish eaten by Tidehunter"
 
-		"DOTA_Tooltip_Ability_tidehunter_krill_eater_attack_range_tooltip"				"ATTACK RANGE:"
-		"DOTA_Tooltip_Ability_tidehunter_krill_eater_anchor_smash_range_tooltip"		"ANCHOR SMASH RANGE:"
+		"DOTA_Tooltip_Ability_tidehunter_leviathans_catch_attack_range_tooltip"				"ATTACK RANGE:"
+		"DOTA_Tooltip_Ability_tidehunter_leviathans_catch_anchor_smash_range_tooltip"		"ANCHOR SMASH RANGE:"
 		
 		"DOTA_Tooltip_modifier_tidehunter_kraken_shell"									"Kraken Shell"
-		"DOTA_Tooltip_modifier_tidehunter_kraken_shell_Description"									"Physical damage block increased by an additional %dMODIFIER_PROPERTY_TOOLTIP%."
+		"DOTA_Tooltip_modifier_tidehunter_kraken_shell_Description"						"Physical damage block increased by an additional %dMODIFIER_PROPERTY_TOOLTIP%."
 
 
 		"DOTA_Tooltip_modifier_tidehunter_dead_in_the_water"							"Dead in the Water"
@@ -4053,7 +4054,7 @@
 		"npc_dota_tinker_turret1"			 				"Keen Cannon"
 		"DOTA_Tooltip_ability_tinker_deploy_turrets"				"Deploy Turrets"
 		"DOTA_Tooltip_ability_tinker_deploy_turrets_description"	"Deploys <b>3</b> uncontrollable turrets at the target location. Enemies hit by the impact take damage and are pushed away from the landing point. If Tinker is hit, he also gets pushed by the impact. Once deployed, the turret fires missiles in the direction of the nearest enemy hero."
-		"DOTA_Tooltip_ability_tinker_deploy_turrets_scepter_description"		"Turrets activate faster, and fire missiles %missile_attack_rate_tooltip%%% faster."
+		"DOTA_Tooltip_ability_tinker_deploy_turrets_scepter_description"		"Turrets fire missiles %missile_attack_rate_tooltip%%% faster."
 		"DOTA_Tooltip_ability_tinker_deploy_turrets_turret_duration"				"TURRET DURATION:"
 		"DOTA_Tooltip_ability_tinker_deploy_turrets_turret_hp"				"TURRET HP:"
 		"DOTA_Tooltip_ability_tinker_deploy_turrets_missile_spawn_interval" "ATTACK INTERVAL:" 
@@ -5488,7 +5489,7 @@
 		"DOTA_Tooltip_ability_night_stalker_crippling_fear_mana_pct_cost"				"%MANA COST:"
 		"DOTA_Tooltip_ability_night_stalker_hunter_in_the_night"						"Hunter in the Night"
 		"DOTA_Tooltip_ability_night_stalker_hunter_in_the_night_Description"			"Night Stalker is in his element at night, attacking and moving with great swiftness."
-		"DOTA_Tooltip_ability_night_stalker_hunter_in_the_night_Scepter_Description"	"Increases bonus movement speed and attack speed. Killing an enemy hero resets all basic ability cooldowns."
+		"DOTA_Tooltip_ability_night_stalker_hunter_in_the_night_Scepter_Description"	"Increases bonus movement speed by %bonus_bonus_movement_speed_pct_night%%% and attack speed by %bonus_bonus_attack_speed_night%. Killing an enemy hero resets all basic ability cooldowns."
 		"DOTA_Tooltip_ability_night_stalker_hunter_in_the_night_shard_description"		"Hunter in the Night may be cast on a creep, instantly killing it and restoring some of Night Stalker's maximum health and mana. Cannot target ancients during the daytime."		
 		"DOTA_Tooltip_ability_night_stalker_hunter_in_the_night_Facet_night_stalker_dayswap"			"Increases the max level of Hunter in the Night to %max_level_tooltip%. Night Stalker starts with a bonus level of Hunter in the Night."		
 		"DOTA_Tooltip_ability_night_stalker_hunter_in_the_night_Lore"					"The hunting prowess of Balanar improves as the night beckons."
@@ -6249,7 +6250,7 @@
 		"DOTA_Tooltip_ability_ancient_apparition_bone_chill_str_reduction_duration"	"DURATION:"
 		"DOTA_Tooltip_ability_ancient_apparition_bone_chill_str_reduction"			"STRENGTH REDUCTION:"
 		"DOTA_Tooltip_ability_ancient_apparition_bone_chill_movement_slow_pct"		"MOVEMENT SLOW:"
-		"DOTA_Tooltip_ability_ancient_apparition_bone_chill_scepter_Description"	"Increases Base Strength Reduction."
+		"DOTA_Tooltip_ability_ancient_apparition_bone_chill_scepter_Description"	"Increases Base Strength Reduction by %tooltip_scepter_bonus%."
 		"DOTA_Tooltip_modifier_ancient_apparition_bone_chill_debuff"				"Bone Chill"
 		"DOTA_Tooltip_modifier_ancient_apparition_bone_chill_debuff_Description"	"Slowed by %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%% and losing %fMODIFIER_PROPERTY_STATS_STRENGTH_BONUS% Strength from taking damage from Ancient Apparition."
 		
@@ -6479,7 +6480,7 @@
 		"DOTA_Tooltip_ability_spirit_breaker_nether_strike_abilitydraft_note"			"Greater Bash must be drafted for stun.  Bonus damage still applies without Greater Bash."
 		"DOTA_Tooltip_ability_spirit_breaker_nether_strike_knockback_amp"			"%KNOCKBACK AMPLIFICATION:"
 		"DOTA_Tooltip_ability_spirit_breaker_nether_strike_knockback_amp_duration"	"KNOCKBACK AMPLIFICATION DURATION:"
-		"DOTA_Tooltip_ability_spirit_breaker_nether_strike_scepter_description"		    "Increases knockback.\n\nIf the knocked back victim collides with another unit, that unit is bashed and the original target takes an additional instance of Greater Bash damage (%cascading_bashes_creep_multiplier%%% if the unit is a creep)."
+		"DOTA_Tooltip_ability_spirit_breaker_nether_strike_scepter_description"		    "Greatly increases knockback."
 
 		"DOTA_Tooltip_ability_spirit_breaker_planar_pocket"								"Planar Pocket"
 		"DOTA_Tooltip_ability_spirit_breaker_planar_pocket_Lore"						"Barathrum's unyielding focus forms a pocket of planar convergence from which not even the most powerful arcane energies can escape."
@@ -6555,7 +6556,7 @@
 		"DOTA_Tooltip_ability_alchemist_goblins_greed"								"Greevil's Greed"		
 		"DOTA_Tooltip_ability_alchemist_goblins_greed_Description"					"Alchemist synthesizes additional gold from his enemies and bounty runes. With each kill, Alchemist earns base bonus gold and extra bonus gold. If Alchemist kills another unit which yields gold within the next %duration% seconds, an additional instance of Extra Bonus Gold is added to the total. Additionally, causes bounty runes to yield more gold."
 		"DOTA_Tooltip_ability_alchemist_goblins_greed_Facet_alchemist_dividends"	"Alchemist gains %gpm_increase_per_stack% GPM for each Aghanim's Scepter he has granted to allies."
-		"DOTA_Tooltip_ability_alchemist_goblins_greed_scepter_description"		    "Alchemist melts down Aghanim's Scepter to grant an allied hero all Aghanim's Scepter upgrades. Alchemist will gain bonus damage and %bonus_gold_per_scepter% additional base and max Greevil's Greed Extra Gold for each melted Scepter."
+		"DOTA_Tooltip_ability_alchemist_goblins_greed_scepter_description"		    "Alchemist melts down Aghanim's Scepter to grant an allied hero all Aghanim's Scepter upgrades. Alchemist will gain bonus %scepter_bonus_damage% damage and %bonus_gold_per_scepter% additional base and max Greevil's Greed Extra Gold for each melted Scepter."
 		"DOTA_Tooltip_ability_alchemist_goblins_greed_abilitydraft_note"			"Chemical Rage Aghanim's Scepter has been moved to Greevil's Greed for Ability Draft. Use Aghanim's Scepter on an allied hero to grant them all Aghanim's Scepter upgrades. When you have a Scepter of your own, you will gain bonus damage and spell amplification for each gifted Scepter."
 		"DOTA_Tooltip_ability_alchemist_goblins_greed_duration"						"RECENT KILL WINDOW:"
 		"DOTA_Tooltip_ability_alchemist_goblins_greed_bonus_gold_tooltip"					"BASE BONUS GOLD:"
@@ -6676,7 +6677,7 @@
 		"DOTA_Tooltip_ability_invoker_empty2"										"Invoked Spell"
 		"DOTA_Tooltip_ability_invoker_empty2_Description"							"Casting Invoke will replace this slot with one of ten unique spells based on Invoker's currently active <font color='#7998b5'>Quas</font>, <font color='#d671a9'>Wex</font>, and <font color='#cabe68'>Exort</font> buffs."
 		"DOTA_Tooltip_ability_invoker_invoke"										"Invoke"
-		"DOTA_Tooltip_ability_invoker_invoke_Description"							"Combines the properties of the elements currently being manipulated to create a new spell for Invoker to use. Invoke cooldown is reduced by %cooldown_reduction_per_orb% seconds for each orb level.<br><br>Invoker's vast knowledge of magic allows him to choose from Multiple Aghanim's Scepter and Shard options.  The items must be activated before they can be used, and cannot be changed after they are chosen.<br><br> Click the help button to see the list of possible spells."
+		"DOTA_Tooltip_ability_invoker_invoke_Description"							"Combines the properties of the elements currently being manipulated to create a new spell for Invoker to use. Invoke cooldown is reduced by %cooldown_reduction_per_orb% seconds for each orb level.  Invoker gains a bonus ability point for his orbs at levels %first_ability_level%, %second_ability_level%, and %third_ability_level%.<br><br>Invoker's vast knowledge of magic allows him to choose from Multiple Aghanim's Scepter and Shard options.  The items must be activated before they can be used, and cannot be changed after they are chosen.<br><br> Click the help button to see the list of possible spells."
 		"DOTA_Tooltip_ability_invoker_invoke_Lore"									"So begins a new age of knowledge."
 		"DOTA_Tooltip_ability_invoker_invoke_Note0"									"The arrangement of instances does not matter."
 		"DOTA_Tooltip_ability_invoker_invoke_Note1"									"Invoke will not cost mana or go on cooldown if the only effect is to swap the positions of existing spells."
@@ -6835,7 +6836,7 @@
 		"DOTA_Tooltip_modifier_invoker_deafening_blast_disarm"					"Deafening Blast Disarm"
 		"DOTA_Tooltip_modifier_invoker_deafening_blast_disarm_Description"		"Cannot attack."
 		"DOTA_Tooltip_modifier_forged_spirit_melting_strike_debuff"				"Melting Strike"
-		"DOTA_Tooltip_modifier_forged_spirit_melting_strike_debuff_Description"	"Armor reduced by %dMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%."
+		"DOTA_Tooltip_modifier_forged_spirit_melting_strike_debuff_Description"	"Armor reduced by %fMODIFIER_PROPERTY_PHYSICAL_ARMOR_BONUS%."
 		"DOTA_Tooltip_modifier_invoker_emp_pull"								"E.M.P."
 		"DOTA_Tooltip_modifier_invoker_emp_pull_Description"					"Being pulled to the center of the E.M.P."
 		"DOTA_Tooltip_modifier_invoker_magic_amp_debuff"						"Exort"
@@ -7864,7 +7865,7 @@
 		"DOTA_Tooltip_ability_meepo_ransack_Note0"						"Amount healed is amplified by Lifesteal Amplification"
 
 		"DOTA_Tooltip_ability_meepo_divided_we_stand"					"Divided We Stand"
-		"DOTA_Tooltip_ability_meepo_divided_we_stand_Description"		"Meepo summons another Meepo, which levels up and shares items with the main Meepo. Ability cooldowns are independent, but items share cooldowns between Meepos. Damage, attack speed, health / mana regeneration, mana burn, and proc chance bonuses from items are distributed equally among the amount of Meepos.<br><br>If any Meepo dies, they all die."
+		"DOTA_Tooltip_ability_meepo_divided_we_stand_Description"		"Meepo summons another Meepo, which levels up and shares items and experience with the main Meepo. Ability cooldowns are independent, but items share cooldowns between Meepos, except Teleport Scrolls. <br><br>Damage, attack speed, health, mana, regeneration, mana burn, and proc chance bonuses from items are distributed equally among the amount of Meepos, making them %dps_penalty_pct%%% less effective.<br><br>If any Meepo dies, they all die."
 		"DOTA_Tooltip_ability_meepo_divided_we_stand_Facet_meepo_more_meepo" "Can now be upgraded at level %required_level% and every %bonus_levels_between_upgrades% levels afterwards to a max level of %max_level%. Duplicate Meepos receive %main_meepo_stats_pct%%% of the main Meepo's bonus attributes."
 		"DOTA_Tooltip_ability_meepo_divided_we_stand_Facet_meepo_codependent" "All Meepos have a stackable aura that increases nearby Meepos' attack speed by %support_group_attack_speed_pct%%% and armor by %support_group_armor%. Radius: %support_radius%."
 		"DOTA_Tooltip_ability_meepo_divided_we_stand_Lore"				"Do I know you?"
@@ -8227,12 +8228,14 @@
 		"DOTA_Tooltip_ability_special_bonus_unique_rubick_curiosity_factor"		"{s:bonus_curiosity_factor}x Curiosity Bonuses"
 		"DOTA_Tooltip_modifier_rubick_curiosity_from_heroes_tracker"			"Curiosity"
 		"DOTA_Tooltip_modifier_rubick_curiosity_from_heroes_tracker_Description"	"Curiosity gained from enemy Heroes."		
+		"DOTA_Tooltip_modifier_rubick_curiosity_from_heroes_tracker_PostGame"		"Curiosity Rubick gained from enemy Heroes."
 
 
 		"DOTA_Tooltip_ability_rubick_spell_steal"								"Spell Steal"
 		"DOTA_Tooltip_ability_rubick_spell_steal_Description"				    "Rubick studies the trace magical essence of one enemy hero, learning the secrets of the last spell the hero cast. Rubick can use this spell as his own for several minutes or until he dies."
 		"DOTA_Tooltip_ability_rubick_spell_steal_Facet_rubick_frugal_filch"  "Stolen spells also have lower mana cost."
-		"DOTA_Tooltip_ability_rubick_spell_steal_scepter_description"		    "Increases the number of spells that can be stolen to 2. Increases cast range, and upgrades spells to their Scepter version."
+		"DOTA_Tooltip_ability_rubick_spell_steal_scepter_description"		    "Increases the number of spells that can be stolen to 2. Increases cast range, and upgrades stolen spells to their Scepter version."
+		"DOTA_Tooltip_ability_rubick_spell_steal_shard_description"				"Upgrades stolen spells to their Shard version."
 		"DOTA_Tooltip_ability_rubick_spell_steal_Lore"							"...but even their lesser magics can be a source of much utility."
 		"DOTA_Tooltip_ability_rubick_spell_steal_Note0"							"Cannot steal item abilities."
 		"DOTA_Tooltip_ability_rubick_spell_steal_Note1"							"Rubick will steal the Aghanim's Shard version of the ability, if he himself has an Aghanim's Shard."
@@ -9340,8 +9343,8 @@
 		"DOTA_Tooltip_ability_tusk_tag_team_radius"						"RADIUS:"
 
 		"DOTA_Tooltip_ability_tusk_drinking_buddies"							"Drinking Buddies"
-		"DOTA_Tooltip_ability_tusk_drinking_buddies_Description"				"Tusk reaches out to tag an allied unit, pulling them closer. Once tagged, both Tusk and his tagged ally gain movement speed and armor. Can be put on alt-cast to only pull Tusk towards his ally with %alt_cast_castrange_pct%%% reduced cast range."
-		"DOTA_Tooltip_ability_tusk_drinking_buddies_Lore"				"The only thing better than finding a good drinking buddy is finding an equally good enemy the two of you can punch. "
+		"DOTA_Tooltip_ability_tusk_drinking_buddies_Description"				"Tusk reaches out to tag an allied unit, pulling them closer. Once tagged, both Tusk and his tagged ally gain movement speed and armor."
+		"DOTA_Tooltip_ability_tusk_drinking_buddies_Lore"						"The only thing better than finding a good drinking buddy is finding an equally good enemy the two of you can punch. "
 		"DOTA_Tooltip_ability_tusk_drinking_buddies_Note0"						"Doesn't pull Tusk or targeted ally if they are within %min_distance% range of each other."
 		"DOTA_Tooltip_ability_tusk_drinking_buddies_Note1"						"Cannot be used during Snowball."
 
@@ -9709,7 +9712,7 @@
 		"DOTA_Tooltip_Facet_legion_commander_stonehall_plate_Description"			"Overwhelming Odds grants an all damage barrier based on the damage it deals to enemy heroes."
 
 		"DOTA_Tooltip_ability_legion_commander_outfight_them"					"Outfight Them!"
-		"DOTA_Tooltip_ability_legion_commander_outfight_them_Description"		"Passively grants Legion Commander armor.<br><br>If Legion or an allied Hero within %radius% range casts an ability, they gain bonus armor for %duration%s; allies gain %ally_factor%%% of the value.  This bonus stacks independently."
+		"DOTA_Tooltip_ability_legion_commander_outfight_them_Description"		"When Legion Commander or an allied Hero within %radius% range casts an ability, they gain bonus armor for %duration%s; allies gain %ally_factor%%% of the value.  This bonus stacks independently."
 		"DOTA_Tooltip_ability_legion_commander_outfight_them_armor"		"ARMOR:"		
 
 
@@ -10019,7 +10022,7 @@
 		"DOTA_Tooltip_ability_phoenix_launch_fire_spirit_attackspeed_slow"		"ATTACK SPEED SLOW:"
 		"DOTA_Tooltip_ability_phoenix_sun_ray"							"Sun Ray"
 		"DOTA_Tooltip_ability_phoenix_sun_ray_Description"				"Phoenix expels a beam of light at the cost of its own health. The beam damages enemies and heals allies for a base amount plus a percentage of their health. The percentage increases as the beam continues to fire."
-		"DOTA_Tooltip_ability_phoenix_sun_ray_shard_description"				"Allows Sun Ray to be cast during Supernova, and slows affected enemies by %shard_move_slow_pct%%%."
+		"DOTA_Tooltip_ability_phoenix_sun_ray_shard_description"				"Allows Sun Ray to be cast during Supernova."
 		"DOTA_Tooltip_ability_phoenix_sun_ray_abilitydraft_note"		"In Ability Draft, Sun Ray movement is disabled.  The hero can only turn in place while Sun Ray is active."
 		"DOTA_Tooltip_ability_phoenix_sun_ray_Lore"						"The vent through which such stellar energy flows is mere atoms wide."
 		"DOTA_Tooltip_ability_phoenix_sun_ray_hp_cost_perc_per_second"	"%HEALTH COST PER SECOND:"
@@ -10251,7 +10254,7 @@
 		// TECHIES
 		"DOTA_Tooltip_ability_techies_land_mines"						"Proximity Mines"
 		"DOTA_Tooltip_ability_techies_land_mines_Lore"			"The bane of Toterin!"
-		"DOTA_Tooltip_ability_techies_land_mines_Description"			"Plant an invisible mine that cannot be detected by True Sight, but is visible if an enemy is within the active %radius% AoE of the mine. Mines detonate if an enemy is standing within the active AoE for %proximity_threshold% seconds dealing damage and temporarily reducing the enemy's Magic Resistance. The explosion deals full damage if the target is within %min_distance% radius and decreases up to %outer_damage%%% on the edge. Deals %building_damage_pct%%% damage to buildings."
+		"DOTA_Tooltip_ability_techies_land_mines_Description"			"Plant an invisible mine that cannot be detected by True Sight, but is visible if an enemy is within the active %radius% AoE of the mine. Mines detonate if an enemy is standing within the active AoE for %proximity_threshold% seconds dealing damage and temporarily reducing the enemy's Magic Resistance. The explosion deals full damage if the target is within %min_distance% radius and decreases down to %outer_damage%%% on the edge. Deals %building_damage_pct%%% damage to buildings."
 		"DOTA_Tooltip_ability_techies_land_mines_damage"				"DAMAGE:"
 		"DOTA_Tooltip_ability_techies_land_mines_radius"	            "EXPLOSION RADIUS:"
 		"DOTA_Tooltip_ability_techies_land_mines_building_damage_pct"   "%BUILDING DAMAGE:"
@@ -12282,7 +12285,7 @@
 		"DOTA_Tooltip_modifier_largo_catchy_lick_buff_Description"				"Health regen increased by %dMODIFIER_PROPERTY_HEALTH_REGEN_CONSTANT%"
 
 		"DOTA_Tooltip_Ability_special_bonus_unique_largo_1"							"+{s:bonus_damage_per_stomp} Frogstomp Damage"
-		"DOTA_Tooltip_Ability_special_bonus_unique_largo_2"							"x{s:bonus_dispel_hp_regen} Catchy Lick Health Regen"
+		"DOTA_Tooltip_Ability_special_bonus_unique_largo_2"							"{s:bonus_dispel_hp_regen}x Catchy Lick Health Regen"
 		"DOTA_Tooltip_Ability_special_bonus_unique_largo_3"							"{s:bonus_damage_hp_pct}% Croak of Genius Max Health DPS"
 		"DOTA_Tooltip_Ability_special_bonus_unique_largo_4"							"+{s:bonus_AbilityCastRange} Catchy Lick Cast Range / +{s:bonus_pull_distance} Pull Distance"
 		"DOTA_Tooltip_Ability_special_bonus_unique_largo_5"							"+{s:bonus_damage} Catchy Lick Damage"
@@ -13237,6 +13240,7 @@
 		"DOTA_Tooltip_ability_special_bonus_unique_invoker_13"	"{s:bonus_move_speed_per_instance}x Quas/Wex/Exort Active Bonuses"
 		"DOTA_Tooltip_ability_special_bonus_unique_invoker_ice_wall_dps"	"+{s:bonus_damage_per_second} Ice Wall DPS"
 		"DOTA_Tooltip_ability_special_bonus_unique_invoker_additional_chaos_meteors"	"+{s:bonus_meteor_count} Chaos Meteors"
+		"DOTA_Tooltip_ability_special_bonus_unique_invoker_forged_spirit_armor_reduction"		"+{s:bonus_armor_removed}% Forged Spirit Armor Reduction"
 		"DOTA_Tooltip_ability_special_bonus_unique_abaddon"		"+{s:bonus_damage_absorb} Aphotic Shield Barrier Amount"
 		"DOTA_Tooltip_ability_special_bonus_unique_abaddon_2"				"+{s:bonus_damage_heal} Mist Coil Damage / Heal"
 		"DOTA_Tooltip_ability_special_bonus_unique_abaddon_3"	"+{s:bonus_curse_attack_speed} Curse of Avernus Attack Speed Bonus"
@@ -13295,7 +13299,7 @@
 		"DOTA_Tooltip_ability_special_bonus_unique_clinkz_10"	"-{s:bonus_AbilityCooldown}s Skeleton Walk Cooldown"
 		"DOTA_Tooltip_ability_special_bonus_unique_clinkz_11"	"Kills Reset Death Pact Cooldown"
 		"DOTA_Tooltip_ability_special_bonus_unique_clinkz_12"	"+{s:value} Burning Barrage arrows"
-		"DOTA_Tooltip_ability_special_bonus_unique_juggernaut"	"+{s:bonus_blade_fury_damage} Blade Fury DPS"
+		"DOTA_Tooltip_ability_special_bonus_unique_juggernaut"	"+{s:bonus_blade_fury_damage} Blade Fury Damage Per Second"
 		"DOTA_Tooltip_ability_special_bonus_unique_juggernaut_2"	"+{s:bonus_healing_ward_bonus_health} Healing Ward Hits to Kill"
 		"DOTA_Tooltip_ability_special_bonus_unique_juggernaut_3"	"-{s:bonus_stack_gain_time}s Bladeform Stack Gain Interval"
 		"DOTA_Tooltip_ability_special_bonus_unique_juggernaut_4"	"+{s:bonus_blade_dance_crit_mult}% Blade Dance Crit Damage"
@@ -13412,7 +13416,7 @@
 		"DOTA_Tooltip_ability_special_bonus_unique_windranger"	"+{s:bonus_radius} Windrun Radius"
 		"DOTA_Tooltip_ability_special_bonus_unique_windranger_2"	"Focus Fire Kills Advance Cooldown by {s:bonus_cooldown_reduction_per_kill}s"
 		"DOTA_Tooltip_ability_special_bonus_unique_windranger_3"	"-{s:bonus_damage_reduction}% Powershot Reduction"
-		"DOTA_Tooltip_ability_special_bonus_unique_windranger_4"	"+{s:bonus_duration}s Windrun Duration"
+		"DOTA_Tooltip_ability_special_bonus_unique_windranger_4"	"+{s:bonus_AbilityDuration}s Windrun Duration"
 		"DOTA_Tooltip_ability_special_bonus_unique_windranger_5"	"+{s:bonus_max_movespeed} Tailwind Max Movespeed"
 		"DOTA_Tooltip_ability_special_bonus_unique_windranger_6"	"+{s:bonus_stun_duration}s Shackleshot Duration"
 		"DOTA_Tooltip_ability_special_bonus_unique_windranger_7"	"Powershot Executes Enemy Heroes Under {s:bonus_max_execute_threshold}% Max HP"
@@ -13487,6 +13491,7 @@
 		"DOTA_Tooltip_ability_special_bonus_unique_tidehunter_8"	"50% chance of Anchor Smash on attack"
 		"DOTA_Tooltip_ability_special_bonus_unique_tidehunter_9"	"+{s:bonus_attack_damage} Anchor Smash Damage"
 		"DOTA_Tooltip_ability_special_bonus_unique_tidehunter_10"	"Anchor Smash affects buildings"
+		"DOTA_Tooltip_ability_special_bonus_unique_tidehunter_10_description"	"Deals {s:bonus_building_pct_damage}% damage to buildings."
 		"DOTA_Tooltip_ability_special_bonus_unique_tidehunter_ravage_cooldown"		"-{s:bonus_AbilityCooldown}s Ravage Cooldown"
 		"DOTA_Tooltip_ability_special_bonus_unique_tidehunter_smash_on_blubber"		"Kraken Shell Cleanse triggers Anchor Smash"
 		"DOTA_Tooltip_ability_special_bonus_unique_tidehunter_smash_on_blubber_description"		"Triggered attack has {s:bonus_smash_on_purge}% damage and is reflected damage."
@@ -13804,7 +13809,7 @@
 		"DOTA_Tooltip_ability_special_bonus_unique_drow_ranger_5"	"+{s:bonus_miss_chance}% Gust Blind" 
 		"DOTA_Tooltip_ability_special_bonus_unique_drow_ranger_6"	"-{s:bonus_AbilityCooldown}s Multishot Cooldown"
 		"DOTA_Tooltip_ability_special_bonus_unique_drow_ranger_7"	"-{s:bonus_AbilityManaCost}% Frost Arrows Mana Cost"
-		"DOTA_Tooltip_ability_special_bonus_unique_drow_ranger_8"	"+{s:bonus_wave_count} Multishot Wave"
+		"DOTA_Tooltip_ability_special_bonus_unique_drow_ranger_8"	"+{s:bonus_wave_count} Multishot Waves"
 		"DOTA_Tooltip_ability_special_bonus_unique_drow_ranger_gust_invis"					"Gust Reveals Invisible Units"
 		"DOTA_Tooltip_ability_special_bonus_unique_drow_ranger_gust_invis_Description"		"Does not reveal Wards"
 		
@@ -13934,7 +13939,7 @@
 		"DOTA_Tooltip_ability_special_bonus_unique_bloodseeker"	"-{s:bonus_damage_pct}% Bloodrage Max Health DPS"
 		"DOTA_Tooltip_ability_special_bonus_unique_bloodseeker_2"	"+{s:bonus_damage} Blood Rite Damage"
 		"DOTA_Tooltip_ability_special_bonus_unique_bloodseeker_3"	"+{s:bonus_AbilityCastRange} Rupture Cast Range"
-		"DOTA_Tooltip_ability_special_bonus_unique_bloodseeker_4"	"+{s:bonus_bonus_movement_speed}% Max Thirst MS"
+		"DOTA_Tooltip_ability_special_bonus_unique_bloodseeker_4"	"+{s:bonus_bonus_movement_speed}% Max Thirst Move Speed"
 		"DOTA_Tooltip_ability_special_bonus_unique_bloodseeker_5"	"+{s:bonus_attack_speed} Bloodrage Attack Speed"
 		"DOTA_Tooltip_ability_special_bonus_unique_bloodseeker_6"	"{s:bonus_spell_amp}% Bloodrage Spell Amplification"
 		"DOTA_Tooltip_ability_special_bonus_unique_bloodseeker_6_facet_bloodseeker_old_blood"	"+{s:bonus_base_damage_amp}% Bloodrage Base Damage Amp"
@@ -13970,7 +13975,7 @@
 		"DOTA_Tooltip_ability_special_bonus_unique_chen_5"	"+{s:bonus_damage_bonus}% Holy Persuasion Damage"
 		"DOTA_Tooltip_ability_special_bonus_unique_chen_6"	"-{s:value}s Divine Favor Cooldown"
 		"DOTA_Tooltip_ability_special_bonus_unique_chen_7"	"-{s:value}s Hand of God Cooldown"
-		"DOTA_Tooltip_ability_special_bonus_unique_chen_8"	"-{s:bonus_bonus_movement_speed}% Penitence Slow"
+		"DOTA_Tooltip_ability_special_bonus_unique_chen_8"	"+{s:bonus_bonus_movement_speed}% Penitence Slow"
 		"DOTA_Tooltip_ability_special_bonus_unique_chen_9"	"Holy Persuasion Targets Ancients"
 		"DOTA_Tooltip_ability_special_bonus_unique_chen_10"	"Global Divine Favor Aura"
 		"DOTA_Tooltip_ability_special_bonus_unique_chen_11"	"+{s:bonus_damage} Penitence Damage"
@@ -15686,6 +15691,7 @@
 			"DOTA_Tooltip_ability_item_black_king_bar_Description"					"<h1>Active: Avatar</h1> Applies a basic dispel. Grants %spell_reduce%%% magic resistance and immunity to reflected and pure damage. For the duration of the effect, any negative effect from enemy spells has no effect. <br><br>Duration: %duration%s <br>Dispel Type: <span class=\"GameplayValues GameplayVariable\">Basic Dispel</span>"
 		"DOTA_Tooltip_ability_item_black_king_bar_Lore"							"A powerful staff imbued with the strength of giants."
 		"DOTA_Tooltip_ability_item_black_king_bar_Note0"						"Purchasing another Black King Bar will not reset its immunity duration."		
+		"DOTA_Tooltip_ability_item_black_king_bar_Note1"						"Avatar duration is not affected by increases to buff duration."
 		
 		"DOTA_Tooltip_ability_item_black_king_bar_bonus_strength"				"+$str"
 		"DOTA_Tooltip_ability_item_black_king_bar_bonus_damage"					"+$damage"
@@ -15936,7 +15942,7 @@
 		"DOTA_Tooltip_modifier_item_tome_of_knowledge_consumed" "Tome of Knowledge"
 		"DOTA_Tooltip_modifier_item_tome_of_knowledge_consumed_Description" "Immediately grants 700 experience plus 135 per tome previously consumed by your team."
 
-		"DOTA_Tooltip_ability_item_dragon_lance_Note0"                          "Attack Range bonuses from Dragon Lance and its upgrades do not stack."
+		"DOTA_Tooltip_ability_item_dragon_lance_Note0"                          "Attack Range bonuses from Monkey King Bar and Dragon Lance and its upgrades do not stack."
 		"DOTA_Tooltip_ability_item_dragon_lance_bonus_agility"                  "+$agi"
 		"DOTA_Tooltip_ability_item_dragon_lance_bonus_strength"                 "+$str"
 		"DOTA_Tooltip_ability_item_dragon_lance_base_attack_range"              "+$attack_range"
@@ -15947,7 +15953,7 @@
 		"DOTA_Tooltip_Ability_item_hurricane_pike_Note0"                          "Self-cast will use Hurricane Pike on yourself."
 		"DOTA_Tooltip_Ability_item_hurricane_pike_Note1"                          "Hurricane Pike doesn't interrupt the target's actions."
 		"DOTA_Tooltip_Ability_item_hurricane_pike_Note2"                          "Will not work on a unit inside Chronosphere, Duel, or Black Hole."
-		"DOTA_Tooltip_ability_item_hurricane_pike_Note3"                          "Attack Range bonuses from Dragon Lance and its upgrades do not stack."
+		"DOTA_Tooltip_ability_item_hurricane_pike_Note3"                          "Attack Range bonuses from Monkey King Bar and Dragon Lance and its upgrades do not stack."
 		"DOTA_Tooltip_Ability_item_hurricane_pike_bonus_intellect"                "+$int"
 		"DOTA_Tooltip_Ability_item_hurricane_pike_bonus_agility"                  "+$agi"
 		"DOTA_Tooltip_Ability_item_hurricane_pike_bonus_strength"                 "+$str"
@@ -16297,11 +16303,10 @@
 		//"DOTA_Tooltip_ability_item_hood_of_defiance_barrier_block"	    	"BARRIER BLOCK:"
 		//"DOTA_Tooltip_ability_item_hood_of_defiance_barrier_duration"    	"BARRIER DURATION:"
 
-		"DOTA_Tooltip_ability_item_consecrated_wraps_Description"    		"<h1>Passive: Hallowed</h1> Gain a stack every %stack_gain_time%s, up to a maximum of %max_stacks% stacks. Upon gaining a stack, your movement speed is increased by %movement_speed_pct_on_stack_gain%%% for %duration%s.<br><br>Whenever you take damage from a player-controlled unit or Roshan, consume all stacks to gain an all damage barrier for %duration%s that absorbs %barrier_per_stack% damage per stack (%max_barrier_tooltip% max)."
-		"DOTA_Tooltip_ability_item_consecrated_wraps_Note0"	    			"Stacks cannot be gained for %stack_gain_time%s after you take damage from a player-controlled unit or Roshan."
-		"DOTA_Tooltip_ability_item_consecrated_wraps_Note1"	    			"Self-damage and HP Loss damage cannot remove stacks."
+		"DOTA_Tooltip_ability_item_consecrated_wraps_Description"    		"<h1>Passive: Hallowed</h1> Gain a charge every %AbilityChargeRestoreTime%s, up to a maximum of %AbilityCharges% charges. Upon gaining a charge, your movement speed is increased by %movement_speed_pct_on_stack_gain%%% for %duration%s.<br><br>Whenever you take damage from a player-controlled unit or Roshan, consume all charges to gain an all damage barrier for %duration%s that absorbs %barrier_per_stack% damage per charge (%max_barrier_tooltip% max)."
+		"DOTA_Tooltip_ability_item_consecrated_wraps_Note0"	    			"Charges cannot be gained for %stack_gain_time%s after you take damage from a player-controlled unit or Roshan."
+		"DOTA_Tooltip_ability_item_consecrated_wraps_Note1"	    			"Self-damage and HP Loss damage cannot remove charges."
 		"DOTA_Tooltip_ability_item_consecrated_wraps_Note2"					"Movement speed buff does not stack."
-		"DOTA_Tooltip_ability_item_consecrated_wraps_Note3"					"Movement speed buff is only provided if you have reached maximum stacks at least once while the item is equipped."
 		"DOTA_Tooltip_ability_item_consecrated_wraps_bonus_spell_resist"	"%+$spell_resist"
 		"DOTA_Tooltip_ability_item_consecrated_wraps_bonus_all_stats"		"+$all"
 		"DOTA_Tooltip_ability_item_consecrated_wraps_bonus_health"			"+$health"
@@ -16310,7 +16315,7 @@
 		"DOTA_Tooltip_modifier_item_consecrated_wraps_auto_barrier_Description"		"Absorbing Damage."
 
 		"DOTA_Tooltip_modifier_item_consecrated_wraps"						"Hallowed"
-		"DOTA_Tooltip_modifier_item_consecrated_wraps_Description"			"After taking damage, remove all stacks to gain an all damage barrier."
+		"DOTA_Tooltip_modifier_item_consecrated_wraps_Description"			"After taking damage, remove all Charges to gain an all damage barrier."
 
 		"DOTA_Tooltip_modifier_item_consecrated_wraps_speed_buff"					"Hallowed"
 		"DOTA_Tooltip_modifier_item_consecrated_wraps_speed_buff_Description"		"Movement speed increased by %dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%%."
@@ -16616,7 +16621,7 @@
 		"DOTA_Tooltip_modifier_item_bullwhip_buff"				        "Bullwhip"
 		"DOTA_Tooltip_modifier_item_bullwhip_buff_Description"          "%-dMODIFIER_PROPERTY_MOVESPEED_BONUS_PERCENTAGE%%% Movement Speed."
 
-		"DOTA_Tooltip_ability_item_psychic_headband_Description"						"<h1>Active: Psychic Push</h1>Pushes the target enemy unit away from you %push_length% distance."
+		"DOTA_Tooltip_ability_item_psychic_headband_Description"						"<h1>Active: Psychic Push</h1>Pushes the target unit away from you %push_length% distance."
 		"DOTA_Tooltip_ability_item_psychic_headband_Lore"						"A failed experiment in finer telekinetic control, still fit for other ends."
 		"DOTA_Tooltip_ability_item_psychic_headband_Note0"							"Does not trigger spell block or spell reflect."
 
@@ -16732,7 +16737,9 @@
 		"DOTA_Tooltip_ability_item_monkey_king_bar_bonus_damage"					"+$damage"	
 		"DOTA_Tooltip_ability_item_monkey_king_bar_bonus_attack_speed"					"+$attack"	
 		"DOTA_Tooltip_ability_item_monkey_king_bar_melee_attack_range"		"+$attack_range_melee"
-		
+		"DOTA_Tooltip_ability_item_monkey_king_bar_melee_attack_range_Note0"		"Attack Range bonuses from Monkey King Bar and Dragon Lance and its upgrades do not stack."
+
+
 		"DOTA_Tooltip_ability_item_mystic_staff_Lore"					"Enigmatic staff made of only the most expensive crystals."
 		"DOTA_Tooltip_ability_item_mystic_staff_bonus_intellect"				"+$int"
 		
@@ -17784,9 +17791,9 @@
 		"DOTA_Tooltip_Ability_item_trident_spell_lifesteal_amp"				"%+Spell Lifesteal Amplification"
 
 		
-		"DOTA_Tooltip_Ability_item_demonicon_Description"			"<h1>Active: Greater Demonic Summoning</h1> Summon 2 demonic warriors and 2 demonic archers that last %summon_duration% seconds. The <font color='#c04048'>Warrior</font> burns mana every hit, reveals invisible units, and deals magical damage to whoever kills it. The <font color='#0078d7'>Archer</font> has a basic dispel ability with a slow and a passive movement speed aura."
+		"DOTA_Tooltip_Ability_item_demonicon_Description"			"<h1>Active: Greater Demonic Summoning</h1> Summon 2 demonic warriors and 2 demonic archers that last %summon_duration% seconds. The <font color='#c04048'>Warrior</font> burns mana every hit and deals magical damage to whoever kills it. The <font color='#0078d7'>Archer</font> has a basic dispel ability with a slow and a passive movement speed aura."
 		"DOTA_Tooltip_Ability_item_demonicon_Lore"					"A record of the final reckoning. With one page torn out."
-		"DOTA_Tooltip_Ability_item_demonicon_Note0"					"The Demonic Warrior has 1600 Health, 4 Armor, 40% Magic Resistance, 380 Movement Speed, 134 Attack Damage, 50 Mana Burn on Hit, 800 Damage on Death, and 1000 True Sight Radius." 
+		"DOTA_Tooltip_Ability_item_demonicon_Note0"					"The Demonic Warrior has 1600 Health, 4 Armor, 40% Magic Resistance, 380 Movement Speed, 134 Attack Damage, 50 Mana Burn on Hit, and deals 800 Damage on Death." 
 		"DOTA_Tooltip_Ability_item_demonicon_Note1"					"The Demonic Archer has 1300 Health, 4 Armor, 40% Magic Resistance, 425 Movement Speed, 131 Attack Damage, a basic dispel ability with a slow on a 15s Cooldown, and a 9% Bonus Movement Speed Aura."
 		
 		"DOTA_Tooltip_Ability_item_fallen_sky_Description"                  "<h1>Active: Fallen Sky</h1> Transform into a meteor that strikes down at the target area after %land_time% seconds in a %impact_radius% AoE, stunning enemies for %stun_duration% seconds and dealing impact damage. Continues to deal damage every %burn_interval% seconds to enemy units and buildings for %burn_duration% seconds.<BR><BR>Building Impact Damage: %impact_damage_buildings% <BR>Building Over Time Damage: %burn_dps_buildings% <BR><BR>Non-Building Impact Damage: %impact_damage_units% <BR>Non-Building Over Time Damage: %burn_dps_units%<br><br>Fallen Sky cannot be used for %blink_damage_cooldown% seconds after taking damage from an enemy hero or Roshan."
@@ -17965,7 +17972,7 @@
 		"DOTA_Tooltip_Ability_item_hydras_breath_damage"				"+$damage"
 		"DOTA_Tooltip_ability_item_hydras_breath_base_attack_range"		"+$attack_range"
 		"DOTA_Tooltip_Ability_item_hydras_breath_Description"			"<h1>Passive: Miasma</h1>Attacks poison enemies, dealing %poison_damage_per_second%%% of the target's Max HP as Magical Damage per second for %poison_duration% seconds.\n\n<h1>Passive: Polycephaly</h1>Ranged attacks have a %proc_chance%%% chance to fire additional projectiles at up to %count% nearby enemies with %secondary_target_range_bonus% extra range and within a %secondary_target_angle% degree angle in front of the attacker. The additional projectiles deal %base_proc_dmg% + %proc_dmg_pct%%% damage of a normal attack and do not trigger on hit effects except for Miasma. The primary attack deals %base_proc_dmg% + %proc_dmg_pct_primary_tooltip%%% damage of a normal attack."
-		"DOTA_Tooltip_ability_item_hydras_breath_Note0"                  "Attack Range bonuses from Dragon Lance and its upgrades do not stack."
+		"DOTA_Tooltip_ability_item_hydras_breath_Note0"                  "Attack Range bonuses from Monkey King Bar and Dragon Lance and its upgrades do not stack."
 		"DOTA_Tooltip_modifier_item_hydras_breath_poison"				"Miasma"
 		"DOTA_Tooltip_modifier_item_hydras_breath_poison_Description"	"Taking poison damage per second."
 
@@ -18215,7 +18222,7 @@
 		"DOTA_Tooltip_Ability_item_dormant_curio_Lore"					"Everyone has an idea, but no one has a clue."
 		"DOTA_Tooltip_Ability_item_dormant_curio_Note0"							"Certain stats on the next artifact will be amplified. Will not amplify cooldown, mana cost, or cast range."
 
-		"DOTA_Tooltip_Ability_item_jidi_pollen_bag_Description"					"<h1>Active: Pollinate</h1>Spreads pollen on all enemy units in a %debuff_radius% unit radius for %debuff_duration% seconds, decreasing their health restoration by %health_regen_loss%%% and dealing damage equal to %hp_damage%%% of their maximum health per second."
+		"DOTA_Tooltip_Ability_item_jidi_pollen_bag_Description"					"<h1>Active: Pollinate</h1>Spreads pollen on all enemy units in a %debuff_radius% unit radius for %debuff_duration% seconds, decreasing their health restoration by %health_regen_loss%%% and dealing damage per second, the total equal to %hp_damage%%% of their maximum health."
 		"DOTA_Tooltip_Ability_item_jidi_pollen_bag_Lore"					"Very dangerous. Very difficult to obtain more."
 		"DOTA_Tooltip_Ability_item_jidi_pollen_bag_Note0"						"Damage is non-lethal and classified as HP Loss."
 		"DOTA_Tooltip_modifier_item_jidi_pollen_bag"							"Jidi Pollen Bag"
@@ -18972,6 +18979,8 @@
 		"DOTA_Tooltip_ability_Fun_Primal_Beast_Boss_Defense_Description" "<font color=\"#8B0000\">Status Resistance Overlord</font> - Immune to most disables, moves through terrain. Removes attackers' invisibility buffs. Limits damage taken per hit.<br><br><font color=\"#FFD700\">Passively blocks interrupting abilities:</font> Berserker's Call, Duel, Dismember, etc."
 		"DOTA_Tooltip_ability_Fun_Primal_Beast_Boss_Defense_max_damage1" "Max Damage (>50% HP):"
 		"DOTA_Tooltip_ability_Fun_Primal_Beast_Boss_Defense_max_damage2" "Max Damage (<50% HP):"
+		"DOTA_Tooltip_modifier_Fun_Primal_Beast_Boss_Defense"	"<font color=\"#8B0000\">Status Resistance Overlord</font> - Immune to most disables, moves through terrain. Removes attackers' invisibility buffs. Limits damage taken per hit.<br><br><font color=\"#FFD700\">Passively blocks interrupting abilities:</font> Berserker's Call, Duel, Dismember, etc."
+
 
 		// Tectonic Shift Ultimatum
 		"DOTA_Tooltip_ability_fun_aghsfort_primal_beast_tectonic_shift_boss" "Fissure Cataclysm"
@@ -19824,8 +19833,34 @@
 		"DOTA_Tooltip_ability_arc_warden_flux_fun_search_radius"  "Ally Search Radius:"
 		"DOTA_Tooltip_ability_arc_warden_flux_fun_damage_per_second"  "Damage Per Second:"
 		"DOTA_Tooltip_ability_arc_warden_flux_fun_move_speed_slow_pct" "Movement Speed Slow:%"
+ 
+ 
+		//Invoker
+		"DOTA_Tooltip_ability_invoker_random_spell_attack"                              "Invoke Master"
+		"DOTA_Tooltip_ability_invoker_random_spell_attack_description"                  "<font color='#1FCBF6'>Requires Aghanim's Shard upgrade</font><br><br>Whenever Invoker attacks, there is a <font color='#ffffff'>%chance%%%</font> chance to cast a random spell from his repertoire. This chance is reduced by half against non-hero units.\n\nAll required Elements (Quas, Wex, Exort) for the spell must be learned, and at least one of them must be currently active as an Orbs instance.\n\nThese triggered spells cost no mana and do not trigger original ability cooldowns.\n\n<font color='#1f61f6'>With Scepter Upgrade</font><br>Whenever Invoker kills an enemy hero or one dies within %min_distance% range, he gains a stack of Elemental Surge for %duration% s. With Aghanim's Scepter, Sun Strike has a chance to be upgraded to Cataclysm (triggered at half the frequency of normal Sun Strike)."
 
+		"DOTA_Tooltip_modifier_invoker_random_spell_attack"                             "Invoke Master"
+		"DOTA_Tooltip_modifier_invoker_random_spell_attack_description"                  "Chance to cast a random spell on attack."
+		//"DOTA_Tooltip_Ability_invoker_random_spell_attack_SummaryDescription_scepter"                 "<font color='#1f61f6'>With Scepter Upgrade</font><br>Whenever Invoker kills an enemy hero or one dies within %min_distance% range, he gains a stack of Elemental Surge for %duration% s. With Aghanim's Scepter, Sun Strike has a chance to be upgraded to Cataclysm (triggered at half the frequency of normal Sun Strike)."
+		
+		"DOTA_Tooltip_modifier_invoker_spell_amp_stack"                                 "Master Mind"
+		"DOTA_Tooltip_modifier_invoker_spell_amp_stack_description"                     "Providing <font color='#66ccff'> 2% </font> Spell Amplification per stack."
 
+		//"DOTA_Tooltip_ability_invoker_random_spell_attack_Lore"                         "Whenever Invoker kills an enemy hero or one dies within %min_distance% range, he gains a stack of Elemental Surge for %duration% s. With Aghanim's Scepter, Sun Strike has a chance to be upgraded to Cataclysm (triggered at half the frequency of normal Sun Strike)."
+
+		"DOTA_Tooltip_ability_invoker_random_spell_attack_Note0"                        "Alacrity: Prioritizes Invoker himself. If already buffed, it targets the nearest allied hero, then the nearest allied unit."
+		"DOTA_Tooltip_ability_invoker_random_spell_attack_Note1"                        "Ghost Walk: Only enters the random spell pool when Invoker's health is below 10%."
+		"DOTA_Tooltip_ability_invoker_random_spell_attack_Note2"                        "Cataclysm: Triggered at a 1:2 ratio relative to normal Sun Strike."
+
+		//Venomancer
+		"npc_venomancer_chimera_ward"                                                         "Chimera Botany • Plague Dragon"
+        "DOTA_Tooltip_modifier_venomancer_chimera_botany"                         "Fusion Materials Count"
+        "DOTA_Tooltip_Ability_venomancer_chimera_botany"                          "Chimera Botany • Venom Fusion"
+        "DOTA_Tooltip_Ability_venomancer_chimera_botany_description"              "Sacrifice ALL Plague Wards in the radius as fusion materials, then Fusion Summon the Chimera Bontany • Plague Dragon.\n The monster's ATK/HP equals to the number of Fusion Materials used for its Fusion Summon x Plague Ward's ATK/HP x %power_mul%.<br> The monster gains multishot with the number of shots equal to the number of Fusion Materials. Can multishoot at the same target."
+        "DOTA_Tooltip_Ability_venomancer_chimera_botany_lore"                     "Don't blink, this is the last monster you see! "
+        "DOTA_Tooltip_Ability_venomancer_chimera_botany_duration"                 "Ward Duration: "
+        "DOTA_Tooltip_Ability_venomancer_chimera_botany_ward_as"                  "Ward Attack Speed: "
+		
                                 //============================================================
                                 //6、身心技能
                                 //============================================================

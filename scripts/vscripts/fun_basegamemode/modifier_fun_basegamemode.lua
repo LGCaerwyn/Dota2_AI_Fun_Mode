@@ -32,7 +32,6 @@ require('timers')
 require('fun_filter')
 require('Fun_BaseGameMode/unit_data_table')
 require('Fun_Items/item_fun_tome_of_aghanim')
-
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 --天地星的基础设定，对人类和AI赋予不同的增益
 function modifier_Fun_BaseGameMode(keys)
@@ -968,17 +967,17 @@ neutral_items = {
     item_tier2 = {
 			"item_essence_ring",
 			"item_mana_draught",
-            "item_poor_mans_shield",
-            "item_searing_signet",
-            "item_pogo_stick",
-            "item_defiant_shell",
+			"item_poor_mans_shield",
+			"item_searing_signet",
+			"item_pogo_stick",
+			"item_defiant_shell",
 			"item_crippling_crossbow",
 			"item_medallion_of_courage",		
 			"item_seeds_of_serenity",
     },
 
     enhancements_tier2 = {
-        		{ name = "item_enhancement_mystical",  lvl = 2 },
+		{ name = "item_enhancement_mystical",  lvl = 2 },
                 { name = "item_enhancement_brawny",    lvl = 2 },
                 { name = "item_enhancement_alert",     lvl = 2 },
                 { name = "item_enhancement_tough",     lvl = 2 },
@@ -987,9 +986,9 @@ neutral_items = {
                 { name = "item_enhancement_vast",      lvl = 1 },
                 { name = "item_enhancement_greedy",    lvl = 1 },
                 { name = "item_enhancement_vampiric",  lvl = 1 },
-                { name = "item_enhancement_crude",    lvl = 1 },
-                { name = "item_enhancement_nimble",  lvl = 1 },
-                { name = "item_enhancement_titanic",  lvl = 1 },				
+                { name = "item_enhancement_crude",     lvl = 1 },
+                { name = "item_enhancement_nimble",    lvl = 1 },
+                { name = "item_enhancement_titanic",   lvl = 1 },				
     },
 
     item_tier3 = {
@@ -1006,7 +1005,7 @@ neutral_items = {
 			"item_partisans_brand",		
     },
     enhancements_tier3 = {
-        		{ name = "item_enhancement_mystical",  lvl = 3 },
+				{ name = "item_enhancement_mystical",  lvl = 3 },
                 { name = "item_enhancement_brawny",    lvl = 3 },
                 { name = "item_enhancement_alert",     lvl = 3 },
                 { name = "item_enhancement_tough",     lvl = 3 },
@@ -1015,9 +1014,9 @@ neutral_items = {
                 { name = "item_enhancement_vast",      lvl = 2 },
                 { name = "item_enhancement_greedy",    lvl = 2 },
                 { name = "item_enhancement_vampiric",  lvl = 2 },
-                { name = "item_enhancement_crude",    lvl = 2 },
-				{ name = "item_enhancement_nimble",  lvl = 2 },
-                { name = "item_enhancement_titanic",  lvl = 2 },
+                { name = "item_enhancement_crude",     lvl = 2 },
+				{ name = "item_enhancement_nimble",    lvl = 2 },
+                { name = "item_enhancement_titanic",   lvl = 2 },
     },
 
     item_tier4 = {
@@ -1034,7 +1033,7 @@ neutral_items = {
     },
 
     enhancements_tier4 = {
-        		{ name = "item_enhancement_mystical",  lvl = 4 },
+				{ name = "item_enhancement_mystical",  lvl = 4 },
                 { name = "item_enhancement_brawny",    lvl = 4 },
                 { name = "item_enhancement_alert",     lvl = 4 },
                 { name = "item_enhancement_tough",     lvl = 4 },
@@ -1043,7 +1042,7 @@ neutral_items = {
                 { name = "item_enhancement_timeless",  lvl = 1 },
                 { name = "item_enhancement_titanic",   lvl = 3 },	
                 { name = "item_enhancement_crude",     lvl = 3 },
-                { name = "item_enhancement_nimble",     lvl = 3 },
+                { name = "item_enhancement_nimble",    lvl = 3 },
 				{ name = "item_enhancement_keen_eyed", lvl = 3 },				
     },
 
@@ -1069,7 +1068,7 @@ neutral_items = {
                 { name = "item_enhancement_boundless",   lvl = 1 },	
                 { name = "item_enhancement_vampiric",	 lvl = 1 },
                 { name = "item_enhancement_hulking",	 lvl = 1 },
-                { name = "item_enhancement_manic",	 	 lvl = 1 },					
+                { name = "item_enhancement_manic",	     lvl = 1 },					
     },
 }
 

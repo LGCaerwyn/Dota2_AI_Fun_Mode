@@ -129,9 +129,12 @@ abilities_table = {
 	--39、钢背兽
 	{   heros_name = "npc_dota_hero_bristleback", heros_name_cn = "钢背兽",     heros_name_eng = "Bristleback",   abilities = {"bristleback_back"},                   abilities_name_cn = {"反击针刺"}  ,    abilities_name = {"Quill Retaliation"}   },
 	--40、祈求者
-	{   heros_name = "npc_dota_hero_invoker",     heros_name_cn = "祈求者",     heros_name_eng = "Invoker",   abilities = {"invoker_again"},                      abilities_name_cn = {"祈艺大师"}  ,    abilities_name = {"Arcane Virtuoso"}   },
-
-
+	--{   heros_name = "npc_dota_hero_invoker",     heros_name_cn = "祈求者",     heros_name_eng = "Invoker",   abilities = {"invoker_again"},                      abilities_name_cn = {"祈艺大师"}  ,    abilities_name = {"Arcane Virtuoso"}   },
+	--41、祈求者
+	{   heros_name = "npc_dota_hero_invoker", heros_name_cn = "祈求者",     heros_name_eng = "Invoker",   abilities = {"invoker_random_spell_attack"},                   abilities_name_cn = {"奇艺大师"}  ,    abilities_name = {"Invoke Master"}   },
+	--42、剧毒术士
+	{   heros_name = "npc_dota_hero_venomancer",     heros_name_cn = "剧毒术士",     heros_name_eng = "Venomancer",   abilities = {"venomancer_chimera_botany"},                      abilities_name_cn = {"奇美拉植物学"}  ,    abilities_name = {"Chimera Botany"}   },
+	
 		--npc_dota_hero_rubick= {"damodaoshi","大魔导师拉比克","大魔导师","Arcane Mastery"},
 		--npc_dota_hero_lich = {"lich_chain_frost_fun","巫妖","连环霜冻（二）"},
 		--npc_dota_hero_disruptor ={"far_seer_earthquake","干扰者","地震"}, 

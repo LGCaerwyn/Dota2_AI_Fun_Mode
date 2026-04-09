@@ -19120,6 +19120,7 @@
 		"ItemPermanent"					"0"
 		"ItemInitialCharges"			"1"
 		"AutoPickup"					"1"
+		"IsTempestDoubleClonable"		"0"
 
 
 		// Special	
@@ -19156,6 +19157,7 @@
 		"ItemStackable"					"1"
 		"ItemStackableMax"				"5"
 		"ItemInitialCharges"			"1"
+		"IsTempestDoubleClonable"		"0"
 
 		// Special	
 		//-------------------------------------------------------------------------------------------------------------
@@ -19195,6 +19197,7 @@
 		"ItemStackableMax"				"5"
 		"ItemPermanent"					"0"
 		"ItemInitialCharges"			"1"
+		"IsTempestDoubleClonable"		"0"
 
 
 		// Special	
@@ -19298,7 +19301,7 @@
 		// General
 		//-------------------------------------------------------------------------------------------------------------
 		"AbilityBehavior"				"DOTA_ABILITY_BEHAVIOR_NO_TARGET | DOTA_ABILITY_BEHAVIOR_DONT_CANCEL_MOVEMENT | DOTA_ABILITY_BEHAVIOR_IMMEDIATE | DOTA_ABILITY_BEHAVIOR_IGNORE_CHANNEL"
-		"Model"							"models/items/hex/fish_hex/fish_hex.vmdl"
+		"Model"							"models/heroes/tidehunter/tidehunter_fish_pickup.vmdl"
 
 		// Stats
 		//-------------------------------------------------------------------------------------------------------------
@@ -19316,7 +19319,6 @@
 
 		"AbilityValues"
 		{
-			"fish_duration"					"30"
 		}
 	}
 

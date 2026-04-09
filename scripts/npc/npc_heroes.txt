@@ -4900,7 +4900,6 @@
 				"Color"				"Gray"
 				"GradientID"		"0"
 				"Deprecated"		"true"
-				
 			}
 
 			"razor_spellamp"
@@ -7055,7 +7054,7 @@
 			"Ability4"		"zuus_thundergods_wrath"
 		}
 
-		"ArmorPhysical"		"2"
+		"ArmorPhysical"		"1"
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
 		"AttackDamageMin"		"30"
 		"AttackDamageMax"		"40"
@@ -8236,6 +8235,7 @@
 		"Ability4"		"lion_to_hell_and_back"
 		"Ability5"		"lion_emowushi"     //"generic_hidden"
 		"Ability6"		"lion_finger_of_death"
+		"Ability7"		""
 
 		"AbilityDraftAbilities"
 		{
@@ -9097,7 +9097,7 @@
 		"Ability4"		"tidehunter_dead_in_the_water"
 		"Ability5"		"generic_hidden"
 		"Ability6"		"tidehunter_ravage"
-		"Ability7"		"tidehunter_krill_eater"
+		"Ability7"		"tidehunter_leviathans_catch"
 
 		"AbilityDraftAbilities"
 		{
@@ -9134,13 +9134,6 @@
 				"KeyValueOverrides"
 				{
 					"AttributeStrengthGain"		"3.9"		// if updating this, change strength_gain_tooltip in tidehunter txt 
-				}
-				"Abilities"
-				{
-					"Ability1"
-					{
-						"AbilityName"	"tidehunter_krill_eater"
-					}
 				}
 			}
 		}
@@ -11532,7 +11525,7 @@
 		"Ability5"		"beastmaster_drums_of_slom"
 		"Ability6"		"beastmaster_primal_roar"
 		"Ability7"		"generic_hidden"
-		"Ability10"		"special_bonus_armor_5"
+		"Ability10"		"special_bonus_armor_4"
 		"Ability11"		"special_bonus_unique_beastmaster_9"
 		"Ability12"		"special_bonus_unique_beastmaster_5"
 		"Ability13"		"special_bonus_unique_beastmaster_4"
@@ -11560,7 +11553,7 @@
 		"AbilityDraftAbilities"
 		{
 			"Ability1"		"beastmaster_wild_axes"
-			"Ability2"		"beastmaster_summon_raptor"
+			"Ability2"		"beastmaster_summon_razorback"
 			"Ability3"		"beastmaster_summon_raptor"
 			"Ability4"		"beastmaster_primal_roar"
 		}
@@ -12052,7 +12045,7 @@
 		"Ability2"		"venomancer_snakebite"
 		"Ability3"		"venomancer_plague_ward"
 		"Ability4"		"venomancer_poison_sting"
-		"Ability5"		"generic_hidden"
+		//"Ability5"		"venomancer_chimera_botany"	//"generic_hidden"
 		"Ability6"		"venomancer_noxious_plague"
 
 		"AbilityDraftAbilities"
@@ -12562,7 +12555,7 @@
 		"Ability10"		"special_bonus_unique_wraith_king_2"
 		"Ability11"		"special_bonus_unique_wraith_king_facet_1"
 		"Ability12"		"special_bonus_unique_wraith_king_11"
-		"Ability13"		"special_bonus_hp_350"
+		"Ability13"		"special_bonus_hp_300"
 		"Ability14"		"special_bonus_attack_speed_50"
 		"Ability15"		"special_bonus_unique_wraith_king_facet_3"
 		"Ability16"		"special_bonus_unique_wraith_king_10"
@@ -15950,7 +15943,7 @@
 		"AttackAnimationPoint"		"0.400000"
 		"MovementTurnRate"		"0.900000"
 		"AttackAcquisitionRange"		"800"
-		"AttackRange"		"620"
+		"AttackRange"		"600"
 		"ProjectileModel"		"particles/units/heroes/hero_furion/furion_base_attack.vpcf"
 		"ProjectileSpeed"		"1125"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_ALL"
@@ -16731,7 +16724,7 @@
 		"AttributeIntelligenceGain"		"2.2"
 		"StatusHealthRegen"		"0.25"
 		"StatusManaRegen"	"0"
-		"MovementSpeed"		"290"
+		"MovementSpeed"		"285"
 		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
 		"HealthBarOffset"		"170"		
 		"VoiceFile"		"soundevents/voscripts/game_sounds_vo_clinkz.vsndevts"
@@ -17537,7 +17530,7 @@
 		"AttributeBaseIntelligence"		"18"
 		"AttributeIntelligenceGain"		"1.5" // 原值: 1.5
 		"StatusMana"		"0"
-		"MovementSpeed"		"295"
+		"MovementSpeed"		"290"
 		"HasAggressiveStance"		"1"
 		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
 		"VoiceFile"		"soundevents/voscripts/game_sounds_vo_huskar.vsndevts"
@@ -19123,7 +19116,7 @@
 				"Deprecated"		"true"
 			}
 		}
-		"ArmorPhysical"		"2"
+		"ArmorPhysical"		"1"
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
 		"AttackDamageMin"		"12"
 		"AttackDamageMax"		"16"
@@ -19570,7 +19563,7 @@
 		"Ability11"		"special_bonus_unique_spectre_2"
 		"Ability12"		"special_bonus_unique_spectre_shadow_step_duration"
 		"Ability13"		"special_bonus_unique_spectre_6"
-		"Ability14"		"special_bonus_hp_325"
+		"Ability14"		"special_bonus_hp_300"
 		"Ability15"		"special_bonus_unique_spectre_3"
 		"Ability16"		"special_bonus_unique_spectre_4"
 		"Ability17"		"special_bonus_unique_spectre_5"
@@ -19629,7 +19622,7 @@
 		"AttributeBaseIntelligence"		"16"
 		"AttributeIntelligenceGain"		"2.4" // 原值: 1.7
 		"StatusHealthRegen"		"1.0"
-		"MovementSpeed"		"290"
+		"MovementSpeed"		"295"
 		"particle_folder"		"particles/units/heroes/hero_spectre"
 		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_spectre.vsndevts"
 		"VoiceFile"		"soundevents/voscripts/game_sounds_vo_spectre.vsndevts"
@@ -19796,12 +19789,12 @@
 		"Ability6"		"doom_bringer_doom"
 		"Ability7"		"doom_bringer_lvl_pain"
 		"Ability8"		"doom_bringer_yanren"
-		"Ability10"		"special_bonus_unique_doom_3"
+		"Ability10"		"special_bonus_magic_resistance_10"
 		"Ability11"		"special_bonus_unique_doom_4"
 		"Ability12"		"special_bonus_unique_doom_6"
-		"Ability13"		"special_bonus_attack_damage_66"
+		"Ability13"		"special_bonus_unique_doom_1"
 		"Ability14"		"special_bonus_unique_doom_9"
-		"Ability15"		"special_bonus_unique_doom_1"
+		"Ability15"		"special_bonus_attack_damage_66"
 		"Ability16"		"special_bonus_unique_doom_10"
 		"Ability17"		"special_bonus_unique_doom_11"
 		"Facets"
@@ -19848,7 +19841,7 @@
 			"Ability4"		"doom_bringer_doom"
 		}
 
-		"ArmorPhysical"		"2"
+		"ArmorPhysical"		"1"
 		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
 		"AttackDamageMin"		"32"
 		"AttackDamageMax"		"42"
@@ -20750,7 +20743,7 @@
 
 		"ArmorPhysical"		"1"
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"BaseAttackSpeed"		"125"
+		"BaseAttackSpeed"		"115"
 		"AttackDamageMin"		"18"
 		"AttackDamageMax"		"24"
 		"AttackRate"		"1.700000"
@@ -20988,9 +20981,9 @@
 		"Ability5"		"alchemist_goblins_greed"
 		"Ability6"		"alchemist_chemical_rage"
 		"Ability7"		"alchemist_unstable_concoction_throw"	
-		"Ability10"		"special_bonus_unique_alchemist_5"
+		"Ability10"		"special_bonus_unique_alchemist_weaponry_power"
 		"Ability11"		"special_bonus_unique_alchemist"
-		"Ability12"		"special_bonus_unique_alchemist_weaponry_power"
+		"Ability12"		"special_bonus_unique_alchemist_5"
 		"Ability13"		"special_bonus_unique_alchemist_7"
 		"Ability14"		"special_bonus_unique_alchemist_8"
 		"Ability15"		"special_bonus_unique_alchemist_2"
@@ -21328,7 +21321,7 @@
 		"Ability19"		"special_bonus_unique_invoker_5"
 		"Ability20"		"special_bonus_unique_invoker_9"
 		"Ability21"		"special_bonus_unique_invoker_additional_chaos_meteors"
-		"Ability22"		"special_bonus_unique_invoker_orb_levels"
+		"Ability22"		"special_bonus_unique_invoker_forged_spirit_armor_reduction"
 		"Ability23"		"special_bonus_unique_invoker_2"
 		"Ability24"		"special_bonus_unique_invoker_13"
 		"Ability25"		""
@@ -21784,7 +21777,7 @@
 		"AttributeAgilityGain"		"2.2" // 原值: 2.2
 		"AttributeBaseIntelligence"		"25"
 		"AttributeIntelligenceGain"		"4.9" // 原值: 2.9
-		"MovementSpeed"		"290"
+		"MovementSpeed"		"300"
 		"particle_folder"		"particles/units/heroes/hero_silencer"
 		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_silencer.vsndevts"
 		"VoiceFile"		"soundevents/voscripts/game_sounds_vo_silencer.vsndevts"
@@ -22659,7 +22652,7 @@
 		"Ability7"		"shadow_demon_menace"
 		"Ability10"		"special_bonus_unique_shadow_demon_4"
 		"Ability11"		"special_bonus_strength_8"
-		"Ability12"		"special_bonus_movement_speed_25"
+		"Ability12"		"special_bonus_movement_speed_20"
 		"Ability13"		"special_bonus_unique_shadow_demon_3"
 		"Ability14"		"special_bonus_unique_shadow_demon_disseminate_damage"
 		"Ability15"		"special_bonus_unique_shadow_demon_9"
@@ -23460,9 +23453,9 @@
 		"Ability8"		"meepo_megameepo_fling"
 	
 		"Ability10"		"special_bonus_strength_7"
-		"Ability11"		"special_bonus_unique_meepo_2"
+		"Ability11"		"special_bonus_unique_meepo_3"
 		"Ability12"		"special_bonus_evasion_15"
-		"Ability13"		"special_bonus_unique_meepo_3"
+		"Ability13"		"special_bonus_unique_meepo_2"
 		"Ability14"		"special_bonus_unique_meepo_4"
 		"Ability15"		"special_bonus_unique_meepo_6"
 		"Ability16"		"special_bonus_hp_400"
@@ -23526,7 +23519,7 @@
 		"StatusHealthRegen"		"0.25"
 		"StatusManaRegen"	"0.25"
 		"VisionDaytimeRange"		"1800"
-		"MovementSpeed"		"315"
+		"MovementSpeed"		"310"
 		"MovementTurnRate"		"0.90000"
 		"particle_folder"		"particles/units/heroes/hero_meepo"
 		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_meepo.vsndevts"
@@ -24437,8 +24430,8 @@
 		"AbilityTalentStart"	"12"
 		"ArmorPhysical"		"1.000000"
 		"AttackCapabilities"		"DOTA_UNIT_CAP_RANGED_ATTACK"
-		"AttackDamageMin"		"26"
-		"AttackDamageMax"		"32"
+		"AttackDamageMin"		"25"
+		"AttackDamageMax"		"31"
 		"AttackRate"		"1.700000"
 		"BaseAttackSpeed"		"100"
 		"StatusManaRegen"	"0.5"
@@ -25134,7 +25127,7 @@
 		"AttackDamageMin"		"23"
 		"AttackDamageMax"		"25"
 		"AttackRate"		"1.700000"
-		"BaseAttackSpeed"		"110"
+		"BaseAttackSpeed"		"100"
 		"AttackAnimationPoint"		"0.500000"
 		"AttackAcquisitionRange"		"600"
 		"AttackRange"		"150"
@@ -25955,10 +25948,10 @@
 		"Ability11"		"special_bonus_unique_slark"
 		"Ability12"		"special_bonus_unique_slark_2"
 		"Ability13"		"special_bonus_unique_slark_8"
-		"Ability14"		"special_bonus_unique_slark_5"
+		"Ability14"		"special_bonus_unique_slark_4"
 		"Ability15"		"special_bonus_unique_slark_7"
 		"Ability16"		"special_bonus_unique_slark_3"
-		"Ability17"		"special_bonus_unique_slark_4"
+		"Ability17"		"special_bonus_unique_slark_5"
 		"Facets"
 		{
 			"slark_leeching_leash" 
@@ -26709,7 +26702,7 @@
 		"AttributeBaseIntelligence"		"15"
 		"AttributeIntelligenceGain"		"1.6" // 原值: 1.6
 		"VisionDaytimeRange"		"1800"
-		"MovementSpeed"		"305"
+		"MovementSpeed"		"300"
 		"BoundsHullName"		"DOTA_HULL_SIZE_HERO"
 		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_centaur.vsndevts"
 		"particle_folder"		"particles/units/heroes/hero_centaur"
@@ -27225,7 +27218,7 @@
 		"AttributeBaseIntelligence"		"23"
 		"AttributeIntelligenceGain"		"2.7" // 原值: 2.7
 		"StatusManaRegen"	"0.5"
-		"MovementSpeed"		"285"
+		"MovementSpeed"		"280"
 		"particle_folder"		"particles/units/heroes/hero_shredder"
 		"GameSoundsFile"		"soundevents/game_sounds_heroes/game_sounds_shredder.vsndevts"
 		"VoiceFile"		"soundevents/voscripts/game_sounds_vo_shredder.vsndevts"
@@ -28075,7 +28068,7 @@
 		"ProjectileSpeed"		"1000"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_INTELLECT"
 		"AttributeBaseStrength"		"21"
-		"AttributeStrengthGain"		"2.0" // 原值: 2.0
+		"AttributeStrengthGain"		"2.000000"
 		"AttributeBaseAgility"		"13"
 		"AttributeAgilityGain"		"0.8" // 原值: 0.8
 		"AttributeBaseIntelligence"		"23"
@@ -28644,7 +28637,7 @@
 		"AttributeAgilityGain"		"1.8" // 原值: 1.8
 		"AttributeBaseIntelligence"		"23"
 		"AttributeIntelligenceGain"		"1.6" // 原值: 1.6
-				"StatusHealthRegen"		"0.75"
+		"StatusHealthRegen"		"0.75"
 		"StatusManaRegen"	"0.25"
 		"MovementSpeed"		"305"
 		"particle_folder"		"particles/units/heroes/hero_elder_titan"
@@ -29315,7 +29308,7 @@
 		"ArmorPhysical"		"0.00000"
 		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
 		"AttackDamageMin"		"25"
-		"AttackDamageMax"		"35"
+		"AttackDamageMax"		"29"
 		"AttackRate"		"1.700000"
 		"AttackAnimationPoint"		"0.350000"
 		"AttackAcquisitionRange"		"600"
@@ -29785,7 +29778,7 @@
 		"AttackRate"		"1.700000"
 		"AttackAnimationPoint"		"0.350000"
 		"AttackAcquisitionRange"		"800"
-		"AttackRange"		"525"
+		"AttackRange"		"500"
 		"ProjectileModel"		"particles/units/heroes/hero_phoenix/phoenix_base_attack.vpcf"
 		"ProjectileSpeed"		"1100"
 		"AttributePrimary"		"DOTA_ATTRIBUTE_STRENGTH"
@@ -30271,7 +30264,7 @@
 		"Ability6"		"techies_land_mines"
 		"Ability7"		"techies_reactive_tazer_stop"
 		"Ability8"		"techies_focused_detonate"
-		"Ability10"		"special_bonus_magic_resistance_20"
+		"Ability10"		"special_bonus_magic_resistance_15"
 		"Ability11"		"special_bonus_unique_techies_3"
 		"Ability12"		"special_bonus_unique_techies"
 		"Ability13"		"special_bonus_unique_techies_tazer_duration"
@@ -31667,8 +31660,8 @@
 		}
 		"ArmorPhysical"				"2"
 		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
-		"AttackDamageMin"			"28"
-		"AttackDamageMax"			"34"
+		"AttackDamageMin"			"26"
+		"AttackDamageMax"			"32"
 		"AttackRate"				"1.700000"
 		"AttackAnimationPoint"		"0.330000"
 		"AttackSpeedActivityModifiers"
@@ -32640,8 +32633,8 @@
 		
 		"ArmorPhysical"				"-1"
 		"AttackCapabilities"		"DOTA_UNIT_CAP_MELEE_ATTACK"
-		"AttackDamageMin"			"22"
-		"AttackDamageMax"			"26"
+		"AttackDamageMin"			"18"
+		"AttackDamageMax"			"22"
 		"AttackRate"				"1.700000"
 		"AttackAnimationPoint"		"0.350000"
 		"AttackSpeedActivityModifiers"
@@ -33776,7 +33769,7 @@
 		"Ability5"				"primal_beast_onslaught_release"
 		"Ability6"				"primal_beast_pulverize"
 		"Ability7"				"primal_beast_colossal"
-		"Ability10"				"special_bonus_attack_damage_30"
+		"Ability10"				"special_bonus_attack_damage_25"
 		"Ability11"				"special_bonus_unique_primal_beast_trample_magic_resist"
 		"Ability12"				"special_bonus_unique_primal_beast_trample_cooldown"
 		"Ability13"				"special_bonus_unique_primal_beast_uproar_armor"
@@ -34540,8 +34533,8 @@
 		"AttributeIntelligenceGain"		"1.7"
 		"StatusHealthRegen"				"1.5"
 		"StatusManaRegen"	"0.25"
-		"MovementSpeed"			"315"
-		"BaseAttackSpeed"		"110"
+		"MovementSpeed"			"310"
+		"BaseAttackSpeed"		"100"
 		"AttackSpeedActivityModifiers"
 		{
 			"fast"		"150"

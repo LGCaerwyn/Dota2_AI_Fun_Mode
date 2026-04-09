@@ -11474,7 +11474,7 @@
 		//----------------------------------------------------------------
 		
 		"Ability1"					"forged_spirit_melting_strike"			// Ability 1.
-		"Ability2"					""			// Ability 2.
+		"Ability2"					"special_bonus_unique_invoker_forged_spirit_armor_reduction"			// Ability 2.
 		"Ability3"					""			// Ability 3.
 		"Ability4"					""			// Ability 4.
 		"Ability5"					""			// Ability 5.
